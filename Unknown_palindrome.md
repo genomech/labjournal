@@ -364,6 +364,14 @@ print('\n')
 input0.close()
 ```
 
-Заодно были получены данные по распределению палиндрома в геноме: два пика на 1 и 12 (([данные](./scripts_results/report_palida_190722.txt))).
+Заодно были получены данные по распределению палиндрома в геноме: два пика на 1 и 12 ([данные](./scripts_results/report_palida_190722.txt)).
 
-![График bridge](./scripts_results/graph_palida_190722.png)
+![График палиндрома](./scripts_results/graph_palida_190722.png)
+
+Результаты были проанализированы в трёх точках: на двух пиках (1 и 12), а также на плато (60) - [данные](./scripts_results/report_palida_analysis_190722.txt).
+
+![График позиция 1](./scripts_results/graph_palida_pos1.png)
+![График позиция 12](./scripts_results/graph_palida_pos12.png)
+![График позиция 60](./scripts_results/graph_palida_pos60.png)
+
+Таблица ODS, [если понадобится](./scripts_results/palida_results_190722.ods).
