@@ -374,4 +374,14 @@ input0.close()
 ![График позиция 12](./scripts_results/graph_palida_pos12.png)
 ![График позиция 60](./scripts_results/graph_palida_pos60.png)
 
+Из этого можно сделать следующие выводы:
+
+1. Скорее всего, я накосячил в скрипте с длиной палиндрома.
+Надо было прибавлять не `len(str)`, а `len(str) - 1`.
+
+2. Во всех трёх позициях до и после палиндрома встречаются фиксированные сочетания букв.
+    * Позиция 1: С**CTCAGCGCTGAG**_GATCC
+    * Позиция 12: GATCC**CTCAGCGCTGAG**_GATCC
+    * Позиция 60: GATCC**CTCAGCGCTGAG**. За ней следует что-то такое: _(G|A)(G|A)(T|A)(T|C)C.
+
 Таблица ODS, [если понадобится](./scripts_results/palida_results_190722.ods).
