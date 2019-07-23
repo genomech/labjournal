@@ -391,4 +391,25 @@ input0.close()
 ![График позиция 12](./scripts_results/graph_palida_pos12_20.png)
 ![График позиция 60](./scripts_results/graph_palida_pos60_20.png)
 
+Последовательности:
+
+* Позиция 1: C**CTCAGCGCTGAG**GGATCCCTCAGC
+* Позиция 12: GCTGAGGGATCC**CTCAGCGCTGAG**GGATCCCTCAGC___
+* Позиция 60: ___GCTGAGGGATCC**CTCAGCGCTGAG**G(A|G)(G|A)(A|T)(C|T)CGGAAGAGCACACGT
+
+В позиции 60 после палиндрома идёт нечто похожее на первый TruSeq-адаптер:
+
+```
+---------------------------GAGATCGGAAGAGCACACGTCTGAACTCCAGTCACATCACGATCTCGTAT
+___GCTGAGGGATCCCTCAGCGCTGAGGAGATCGGAAGAGCACACGT
+                            GATC
+```
+
+Второй вариант похож на те, что встречаются в позициях 1 и 12:
+
+```
+---GCTGAGGGATCCCTCAGCGCTGAGGGATCCctcagc___
+___GCTGAGGGATCCCTCAGCGCTGAGGGATCCggaagagcacacgt
+```
+
 Таблица ODS, [если понадобится](./scripts_results/palida_results_190722.ods).
