@@ -397,6 +397,15 @@ input0.close()
 * Позиция 12: GCTGAGGGATCC**CTCAGCGCTGAG**GGATCCCTCAGC___
 * Позиция 60: ___GCTGAGGGATCC**CTCAGCGCTGAG**G(A|G)(G|A)(A|T)(C|T)CGGAAGAGCACACGT
 
+Выравнивание 1 и 12 позиций:
+Можно утверждать, что в начале ридов есть большой процент **egdirb-bridge-GATC-egdirb-bridge-GATC-egdirb**:
+
+```
+CCTCAGCGCTGAGGGATCCCTCAGC
+-------GCTGAGGGATCCCTCAGCGCTGAGGGATCCCTCAGC
+CCTCAGCGCTGAGGGATCCCTCAGCGCTGAGGGATCCCTCAGCGCTGAGGGATC
+```
+
 В позиции 60 после палиндрома идёт нечто похожее на первый TruSeq-адаптер:
 
 ```
@@ -405,11 +414,13 @@ ___GCTGAGGGATCCCTCAGCGCTGAGGAGATCGGAAGAGCACACGT
                             GATC
 ```
 
-Второй вариант похож на те, что встречаются в позициях 1 и 12:
+Второй вариант позиции 60 похож на те, что встречаются в позициях 1 и 12.
 
 ```
 ---GCTGAGGGATCCCTCAGCGCTGAGGGATCCctcagc___
 ___GCTGAGGGATCCCTCAGCGCTGAGGGATCCggaagagcacacgt
+
 ```
+Т.е. можно утверждать, что в позиции 60 есть доля как **bridge-GATC-egdirb-bridge-TruSeq**, так и просто bridge-GATC-egdirb-bridge-GATC.
 
 Таблица ODS, [если понадобится](./scripts_results/palida_results_190722.ods).
