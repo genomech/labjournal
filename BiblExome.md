@@ -48,7 +48,13 @@ done
 $ samtools quickcheck -v -v -v ./*.bam > ./bad_bams.fofn
 ```
 
-5. Наложение фильтров с помощью *bcftools*.
+5. Компиляция индекса для bcftools из hg19.fa с помощью *faidx*:
+
+```
+$ samtools faidx ./hg19.fa
+```
+
+6. Наложение фильтров с помощью *bcftools*.
 
 ```bash
 #!/bin/bash
