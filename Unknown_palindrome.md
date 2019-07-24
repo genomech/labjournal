@@ -424,3 +424,5 @@ ___GCTGAGGGATCCCTCAGCGCTGAGGGATCCggaagagcacacgt
 Т.е. можно утверждать, что в позиции 60 есть доля как **bridge-GATC-egdirb-bridge-TruSeq**, так и просто bridge-GATC-egdirb-bridge-GATC.
 
 Таблица ODS, [если понадобится](./scripts_results/palida_results_190722.ods).
+
+**TODO**: Поискать палиндром в прочих сэмплах, а также в данных из статей.
