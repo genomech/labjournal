@@ -442,7 +442,35 @@ ___GCTGAGGGATCCCTCAGCGCTGAGGGATCCggaagagcacacgt
 
 * Значительное, но непостоянное количество палиндрома (~4-30%) обнаружено только в сэмплах под номером 1.
 В сэмплах 2 палиндрома почти нет (до 10-20 на 1 млн).
+**Поправка:** Сэмпл 2 из другого секвенирования, к текущему опыту не имеет отношения.
 
 ![График содержание палиндрома в прочих библиотеках](./scripts_results/paliall_190729.png)
 
 Таблица ODS, [если понадобится](./scripts_results/paliall_190729.ods).
+
+### Промежуточная задача -- работа с *fastq_dump*
+
+Данные из статей можно найти [здесь](https://www.ncbi.nlm.nih.gov/sra?term=SRP041253).
+
+Для получения результатов из статьи понадобился инструмент *fastq_dump*.
+Установка из сырцов оказачалась чересчур муторной, поэтому я нашёл скомпилированный вариант *sratoolkit*:
+
+```
+$ wget "http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/current/sratoolkit.current-centos_linux64.tar.gz"
+```
+
+Для задачи нам требовался всего 1 млн ридов, не было смысла выкачивать данные целиком.
+
+```
+# SRR1248196    targetedDNaseHiC-lincRNA-K562-rep2
+# SRR1248194    targetedDNaseHiC-lincRNA-K562-rep1
+# SRR1248191    targetedDNaseHiC-lincRNA-H1-rep2
+# SRR1248188    targetedDNaseHiC-lincRNA-H1-rep1
+# SRR1248183    targetedDNaseHiC-pe-K562-rep1
+# SRR1248180    targetedDNaseHiC-pe-H1-rep1
+# SRR1248178    DNaseHiC-WG-K562
+# SRR1248176    DNaseHiC-WG-H1
+
+$ cd ./bin
+$ ./fastq-dump -Z --split-3 SRR1248196 | head -n 4000000 > [output_path]/SRR1248196_short.fastq
+```
