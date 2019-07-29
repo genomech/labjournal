@@ -74,3 +74,5 @@ bcftools call --threads $THREADS -cv -Ou | bcftools filter -i "DP>$DEPTH & %QUAL
 echo File "$var" is ready.
 done
 ```
+
+7. Полученные файлы обрабатываются с помощью [VEP Ensembl, GRCH37](http://grch37.ensembl.org/Homo_sapiens/Tools/VEP).
