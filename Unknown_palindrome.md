@@ -474,3 +474,74 @@ $ wget "http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/current/sratoolkit.current-cen
 $ cd ./bin
 $ ./fastq-dump -Z --split-3 SRR1248196 | head -n 4000000 > [output_path]/SRR1248196_short.fastq
 ```
+
+Файлы были обработаны с помощью скрипта *ash.py*:
+
+```python
+import sys
+import pandas as pd
+import string
+
+def Out(found_, total_):
+    print("Found: %d | Total: %d (%4f%%)" % (found_, total_, found_ * 100 / total_), end='\r')
+
+filelist = ['SRR1248196', 'SRR1248194', 'SRR1248191', 'SRR1248188', 'SRR1248183', 'SRR1248180', 'SRR1248178', 'SRR1248176']
+seq = 'CTCAGCGCTGAG'
+
+print(f"\nHi there.\nWe're looking for: {seq}\n")
+
+for file_sn in filelist:
+
+    print(f"Open {file_sn}...\n")
+
+    input0 = open('/dev/datasets/ngs_data/article_DNAaseHiC_data/' + file_sn + '_1M_short.fastq', 'r')
+
+    counter = 0
+    total = 1
+    found = 0
+    tyk = 0
+    df = pd.DataFrame({
+        'count' : [0] * 150
+    })
+
+    for line in input0:
+
+        Out(found, total)
+
+        counter += 1
+        if counter == 5:
+            counter = 1
+
+        if (counter == 2):
+            total += 1
+            tyk = line.find(seq)
+            if (tyk != -1):
+                df.at[tyk, 'count'] += 1
+                found += 1
+
+    output0 = open('./report_' + file_sn + '.txt', 'w')
+    df.to_string(output0)
+    print('\n')
+
+    input0.close()
+    output0.close()
+```
+
+Результаты:
+
+| Образец    | Расшифровка                        | Палиндром (на 1М ридов) | %    |
+|------------|------------------------------------|-------------------------|------|
+| SRR1248196 | targetedDNaseHiC-lincRNA-K562-rep2 | 113523                  | 11.3 |
+| SRR1248194 | targetedDNaseHiC-lincRNA-K562-rep1 | 148812                  | 14.8 |
+| SRR1248191 | targetedDNaseHiC-lincRNA-H1-rep2   | 108244                  | 10.8 |
+| SRR1248188 | targetedDNaseHiC-lincRNA-H1-rep1   | 120374                  | 12.0 |
+| SRR1248183 | targetedDNaseHiC-pe-K562-rep1      | 191774                  | 19.1 |
+| SRR1248180 | targetedDNaseHiC-pe-H1-rep1        | 145528                  | 14.5 |
+| SRR1248178 | DNaseHiC-WG-K562                   | 175093                  | 17.5 |
+| SRR1248176 | DNaseHiC-WG-H1                     | 88565                   | 8.8  |
+
+Что интересно -- в данных из статей палиндром почти не встречается на протяжении рида, он чётко собран в два пика на позициях 1 и 12.
+
+![График содержание палиндрома в данных статьи](./scripts_results/ash_190730.png)
+
+Таблица ODS, [если понадобится](./scripts_results/ash_190730.ods).
