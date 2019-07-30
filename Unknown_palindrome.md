@@ -462,15 +462,6 @@ $ wget "http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/current/sratoolkit.current-cen
 Для задачи нам требовался всего 1 млн ридов, не было смысла выкачивать данные целиком.
 
 ```
-# SRR1248196    targetedDNaseHiC-lincRNA-K562-rep2
-# SRR1248194    targetedDNaseHiC-lincRNA-K562-rep1
-# SRR1248191    targetedDNaseHiC-lincRNA-H1-rep2
-# SRR1248188    targetedDNaseHiC-lincRNA-H1-rep1
-# SRR1248183    targetedDNaseHiC-pe-K562-rep1
-# SRR1248180    targetedDNaseHiC-pe-H1-rep1
-# SRR1248178    DNaseHiC-WG-K562
-# SRR1248176    DNaseHiC-WG-H1
-
 $ cd ./bin
 $ ./fastq-dump -Z --split-3 SRR1248196 | head -n 4000000 > [output_path]/SRR1248196_short.fastq
 ```

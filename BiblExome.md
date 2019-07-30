@@ -75,4 +75,59 @@ echo File "$var" is ready.
 done
 ```
 
-7. Полученные файлы обрабатываются с помощью [VEP Ensembl, GRCH37](http://grch37.ensembl.org/Homo_sapiens/Tools/VEP).
+7. Полученные файлы обрабатываются с помощью [VEP Ensembl, GRCH37](http://grch37.ensembl.org/Homo_sapiens/Tools/VEP), с подключением всех возможных инструментов.
+Результат скачивается в формате *vcf*.
+
+8. Дополнение полученных файлов.
+Было требование добавить в файл записи из базы данных [HGMD](http://www.hgmd.cf.ac.uk/ac/index.php), генотип, bai (SAM index).
+
+Предварительный вариант скрипта *vape.py*:
+
+```python
+import pandas as pd
+import re
+
+def parse_header(info):
+    re_list = re.split("\|", info)
+    re_list[0] = re.findall('\S+$', re_list[0])[0]
+    re_list[-1] = re.findall('^[^"]+', re_list[-1])[0]
+    return re_list
+
+filename = './test_short.vcf'
+input_file = open(filename, 'r')
+
+csq_header = list()
+vcf_header = ['CHROM', 'POS', 'ID', 'REF', 'ALT', 'QUAL', 'FILTER', 'FORMAT', 'SAMPLE']
+
+while 1:
+    line = input_file.readline()
+    if (re.match("^#[^#].*$", line) != None): 
+        break
+    if (re.match("^##INFO=<ID=CSQ.*$", line) != None):
+        csq_header = parse_header(line)
+
+csq_table = pd.DataFrame(columns=csq_header)
+vcf_table = pd.DataFrame(columns=vcf_header)
+
+for line in input_file:
+ 
+    line_list = re.split("\t", line)
+    info = line_list[7]
+    del line_list[7]
+
+    # Разбираем INFO. Кроме CSQ, прочие значения Динаре вроде как не нужны, поэтому с ними не работаем
+    
+    csq_block = pd.DataFrame(columns=csq_header)
+    csq_bigline = re.findall("[^=]+$", info)[0]
+    csq_lines = re.split(",", csq_bigline)
+    for csq_line in csq_lines:
+        csq_line_list = re.split("\|", csq_line)
+        csq_block = csq_block.append(pd.Series(csq_line_list, index=csq_header), ignore_index=True)
+ 
+    csq_table = csq_table.append(csq_block, ignore_index=True)
+    for it in range(len(csq_block.index)):
+        vcf_table = vcf_table.append(pd.Series(line_list, index=vcf_header), ignore_index=True)
+
+main_table = pd.concat([vcf_table, csq_table], axis=1)
+main_table.to_excel("./excel.xlsx", index=False)
+```
