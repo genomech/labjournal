@@ -933,3 +933,94 @@ length  count   expect  max.err error counts
 ![График распределение обрезанных ридов по длине](./scripts_results/ash_length_190802.png)
 
 Таблица ODS, [если понадобится](./scripts_results/ash_length_190802.ods).
+
+## Структура ридов
+
+Была проанализирована структура ридов по общим частям bridge- и blunt-адаптеров, а также по липкому концу bridge.
+Анализ производился скриптом *anal_seqs.py*:
+
+```python
+import gzip
+import sys
+import pandas as pd
+import numpy as np
+import string
+import re
+
+def Out(total_):
+    print("Total: %d" % (total_), end='\r')
+
+
+filename = '../trimmed/sample-1-1_R1_cut.fastq'
+output_file = './sample-1-1_cut_statistics.txt'
+seqs = pd.DataFrame(np.array([['-bridge-', 'GCTGAGG'], ['-egdirb-', 'CCTCAGC'], ['-gatc-', 'GATC']]), columns=['name', 'seq'])
+genome = '-genome-'
+
+print(f"\nHi there.\nWe're mapping reads with:\n")
+print(seqs)
+
+input0 = open(filename, 'r')
+
+counter = 0
+total = 0
+tyk = 0
+main_list = []
+main_table = pd.DataFrame(columns=['count', 'mask'])
+
+pd.set_option('max_colwidth',1000)
+
+for line in input0:
+    Out(total)
+
+    counter += 1
+    if counter == 5:
+        counter = 1
+
+    if (counter == 2):
+        line = line[0:-1]
+        for index, row in seqs.iterrows():
+            line = line.replace(row['seq'], row['name'])
+        for it in range(10):
+            its = str(it + 1)
+            line = re.sub("(^|-)[ATGCN]{" + its + "}($|-)", "--[" + its + "]--", line)
+
+        line = re.sub(r"[ATGCN]{11,}", genome, line)
+        # optimization
+        line = line.replace('ome--gatc--gen', '')
+        line = re.sub(r"^-gatc--genome-", genome, line)
+        line = re.sub(r"-genome--gatc-$", genome, line)
+
+        main_list.append(line)
+        total += 1
+
+shorted_list = list(set(main_list))
+for note in shorted_list:
+    main_table = main_table.append(pd.Series([main_list.count(note), note], index=['count', 'mask']), ignore_index=True)
+
+output0 = open(output_file, 'w')
+main_table.sort_values(by=['count'], ascending=False).to_string(output0)
+print('\n')
+
+input0.close()
+output0.close()
+```
+
+Результаты работы скрипта на данных статьи.
+Были проанализированы наиболее частые сочетания, в сумме покрывающие 91% ридов ([анализ](./scripts_results/anal_seqs_190805.ods), [полные данные](./scripts_results/anal_seqs_190805.txt)).
+
+Предположительно риды, содержащие HiC, составляют в сумме 16,3% всех ридов:
+
+| Reads, % | Sample                                                | Hypothesis                       |
+|----------|-------------------------------------------------------|----------------------------------|
+| 10,6878  | -genome-bridge-gatc-egdirb-genome-                    | HiC reads                        |
+| 0,2155   | -genome-bridge-gatc-egdirb-bridge-genome-             | HiC reads (?)                    |
+| 0,1584   | -genome-bridge-[6]-gatc-genome-                       | HiC reads (?)                    |
+| 0,1570   | -genome-gatc-[6]-egdirb-genome-                       | HiC reads (?)                    |
+| 1,7158   | -genome-bridge-genome-                                | HiC reads (blunt-ligated?)       |
+| 1,1809   | -genome-egdirb-genome-                                | HiC reads (blunt-ligated?)       |
+| 0,1547   | -genome-bridge-gatc-egdirb-bridge-gatc-egdirb-genome- | HiC reads (bouble double bridge) |
+| 0,5971   | -genome-gatc-egdirb-genome-                           | HiC reads (mutation in bridge)   |
+| 0,7807   | -genome-bridge-gatc-genome-                           | HiC reads (mutation in egdirb)   |
+| 0,2059   | -genome-bridge-[3]-egdirb-genome-                     | HiC reads (mutation in gatc)     |
+| 0,1077   | -genome-bridge-[4]-egdirb-genome-                     | HiC reads (mutation in gatc)     |
+| 0,3715   | -egdirb-genome-bridge-gatc-egdirb-genome-             | HiC reads with blunt on 3`       |
