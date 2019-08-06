@@ -1005,16 +1005,71 @@ input0.close()
 output0.close()
 ```
 
-Результаты работы скрипта на данных статьи.
+### Данные статей
+
 Были проанализированы наиболее частые сочетания, в сумме покрывающие 91% ридов ([анализ](./scripts_results/anal_seqs_190805.ods), [полные данные](./scripts_results/anal_seqs_190805.txt)).
 
 **Примечание.** bridge в контексте результатов скрипта -- общая часть bridge и blunt-адаптера (GCTGAGG).
 egdirb -- обратная последовательность (CCTCAGC).
 
-Предположительно риды, содержащие HiC, составляют в сумме 16,3% всех ридов:
+Предположительно риды, содержащие HiC, составляют в сумме 16,3% всех ридов.
+Прочих -- 75%.
 
 | Reads, % | Sample                                                | Hypothesis                       |
 |----------|-------------------------------------------------------|----------------------------------|
+| 56,0679  | -genome-                                              | Dangling ends                    |
+| 2,9728   | -egdirb-bridge-genome-                                | Dangling ends                    |
+| 2,9213   | -egdirb-genome-                                       | Dangling ends                    |
+| 1,7065   | -egdirb-bridge-gatc-egdirb-genome-                    | Dangling ends                    |
+| 1,2703   | -egdirb-bridge-gatc-genome-                           | Dangling ends                    |
+| 1,0760   | -bridge-gatc-egdirb-genome-                           | Dangling ends                    |
+| 0,4808   | -bridge-genome-                                       | Dangling ends                    |
+| 0,4787   | -bridge-gatc-genome-                                  | Dangling ends                    |
+| 0,3564   | -bridge-gatc-egdirb-bridge-gatc-egdirb-genome-        | Dangling ends                    |
+| 0,2460   | -genome-bridge-[2]-                                   | Dangling ends                    |
+| 0,2444   | -genome-bridge-                                       | Dangling ends                    |
+| 0,2364   | -genome-bridge-[1]-                                   | Dangling ends                    |
+| 0,2326   | -genome-bridge-[3]-                                   | Dangling ends                    |
+| 0,2231   | -genome-bridge-gatc-[6]-                              | Dangling ends                    |
+| 0,2219   | -genome-bridge-gatc-[5]-                              | Dangling ends                    |
+| 0,2217   | -genome-bridge-gatc-[3]-                              | Dangling ends                    |
+| 0,2168   | -genome-bridge-gatc-[1]-                              | Dangling ends                    |
+| 0,2160   | -genome-bridge-gatc-[4]-                              | Dangling ends                    |
+| 0,2152   | -genome-bridge-gatc-[2]-                              | Dangling ends                    |
+| 0,2091   | -[6]-gatc-genome-                                     | Dangling ends                    |
+| 0,2083   | -genome-bridge-gatc-                                  | Dangling ends                    |
+| 0,2073   | -genome-bridge-gatc-egdirb-[4]-                       | Dangling ends                    |
+| 0,2068   | -genome-bridge-gatc-egdirb-[6]-                       | Dangling ends                    |
+| 0,2068   | -genome-bridge-gatc-egdirb-[2]-                       | Dangling ends                    |
+| 0,2048   | -genome-bridge-gatc-egdirb-[3]-                       | Dangling ends                    |
+| 0,2044   | -genome-bridge-gatc-egdirb-                           | Dangling ends                    |
+| 0,2039   | -[5]-gatc-genome-                                     | Dangling ends                    |
+| 0,2039   | -genome-bridge-gatc-egdirb-[1]-                       | Dangling ends                    |
+| 0,2011   | -genome-bridge-gatc-egdirb-[9]-                       | Dangling ends                    |
+| 0,2002   | -genome-bridge-gatc-egdirb-[10]-                      | Dangling ends                    |
+| 0,1985   | -genome-bridge-gatc-egdirb-[8]-                       | Dangling ends                    |
+| 0,1966   | -genome-bridge-gatc-egdirb-[5]-                       | Dangling ends                    |
+| 0,1952   | -genome-bridge-gatc-egdirb-[7]-                       | Dangling ends                    |
+| 0,1918   | -[3]-gatc-genome-                                     | Dangling ends                    |
+| 0,1911   | -[4]-gatc-genome-                                     | Dangling ends                    |
+| 0,1683   | -[1]-gatc-genome-                                     | Dangling ends                    |
+| 0,1557   | -[6]-bridge-genome-                                   | Dangling ends                    |
+| 0,1543   | -genome-gatc-[1]-                                     | Dangling ends                    |
+| 0,1525   | -genome-gatc-[4]-                                     | Dangling ends                    |
+| 0,1515   | -genome-gatc-[2]-                                     | Dangling ends                    |
+| 0,1503   | -genome-gatc-[3]-                                     | Dangling ends                    |
+| 0,1481   | -bridge-gatc-egdirb-bridge-genome-                    | Dangling ends                    |
+| 0,1450   | -genome-gatc-[6]-                                     | Dangling ends                    |
+| 0,1438   | -genome-gatc-[5]-                                     | Dangling ends                    |
+| 0,1392   | -genome-gatc-[9]-                                     | Dangling ends                    |
+| 0,1381   | -[8]-gatc-genome-                                     | Dangling ends                    |
+| 0,1373   | -genome-gatc-[10]-                                    | Dangling ends                    |
+| 0,1369   | -[7]-gatc-genome-                                     | Dangling ends                    |
+| 0,1362   | -genome-gatc-[8]-                                     | Dangling ends                    |
+| 0,1356   | -[10]-gatc-genome-                                    | Dangling ends                    |
+| 0,1354   | -[2]-gatc-genome-                                     | Dangling ends                    |
+| 0,1340   | -[9]-gatc-genome-                                     | Dangling ends                    |
+| 0,1339   | -genome-gatc-[7]-                                     | Dangling ends                    |
 | 10,6878  | -genome-bridge-gatc-egdirb-genome-                    | HiC reads                        |
 | 0,2155   | -genome-bridge-gatc-egdirb-bridge-genome-             | HiC reads (?)                    |
 | 0,1584   | -genome-bridge-[6]-gatc-genome-                       | HiC reads (?)                    |
@@ -1027,3 +1082,75 @@ egdirb -- обратная последовательность (CCTCAGC).
 | 0,2059   | -genome-bridge-[3]-egdirb-genome-                     | HiC reads (mutation in gatc)     |
 | 0,1077   | -genome-bridge-[4]-egdirb-genome-                     | HiC reads (mutation in gatc)     |
 | 0,3715   | -egdirb-genome-bridge-gatc-egdirb-genome-             | HiC reads with blunt on 3`       |
+
+
+В таблице не учитывалось прочтение с двух сторон.
+
+### Наши данные
+
+Данные брались из библиотеки 1-1 с обрезанными адаптерами.
+Были проанализированы 489 сочетаний, покрывающих 88% ридов ([здесь](./scripts_results/anal_seqs_190806.txt)).
+В таблице приведены 60, покрывающие 75% ридов.
+
+| Reads, % | Sample                                                |
+|----------|-------------------------------------------------------|
+| 23,20194 | -genome-bridge-gatc-egdirb-genome-                    |
+| 15,50944 | -genome-                                              |
+| 3,73333  | -genome-bridge-gatc-egdirb-bridge-                    |
+| 3,61272  | -egdirb-bridge-gatc-egdirb-genome-                    |
+| 2,56678  | -genome-gatc-egdirb-genome-                           |
+| 2,54688  | -genome-bridge-gatc-genome-                           |
+| 2,02632  | -bridge-gatc-genome-                                  |
+| 1,58390  | -genome-gatc-egdirb-                                  |
+| 1,49109  | -genome-gatc-egdirb-bridge-                           |
+| 1,41024  | -genome-egdirb-genome-                                |
+| 1,36357  | -genome-bridge-gatc-egdirb-                           |
+| 1,29837  | -egdirb-bridge-gatc-genome-                           |
+| 1,23978  | -bridge-gatc-egdirb-genome-                           |
+| 1,23920  | -genome-bridge-genome-                                |
+| 1,00218  | -genome-egdirb-bridge-gatc-egdirb-genome-             |
+| 0,86352  | -genome-bridge-gatc-egdirb-bridge-gatc-genome-        |
+| 0,78528  | -genome-gatc-egdirb-bridge-gatc-egdirb-genome-        |
+| 0,72874  | -genome-bridge-gatc-egdirb-bridge-genome-             |
+| 0,53927  | -egdirb-genome-bridge-gatc-egdirb-genome-             |
+| 0,51149  | -genome-bridge-gatc-egdirb-genome-bridge-             |
+| 0,47763  | -genome-bridge-gatc-egdirb-[6]-                       |
+| 0,41552  | -[6]-bridge-gatc-egdirb-genome-                       |
+| 0,39511  | -genome-bridge-gatc-egdirb-genome-bridge-genome-      |
+| 0,39456  | -genome-egdirb-genome-bridge-gatc-egdirb-genome-      |
+| 0,39380  | -[6]-gatc-genome-                                     |
+| 0,37381  | -genome-bridge-[4]-egdirb-genome-                     |
+| 0,36194  | -genome-egdirb-bridge-                                |
+| 0,35317  | -genome-bridge-genome-bridge-gatc-egdirb-genome-      |
+| 0,35200  | -genome-bridge-gatc-egdirb-genome-egdirb-genome-      |
+| 0,27980  | -genome-gatc-[6]-                                     |
+| 0,27597  | -bridge-genome-                                       |
+| 0,26824  | -genome-egdirb-                                       |
+| 0,21815  | -egdirb-bridge-genome-                                |
+| 0,18650  | -genome-bridge-[6]-gatc-genome-                       |
+| 0,18044  | -genome-gatc-[6]-egdirb-genome-                       |
+| 0,17581  | -genome-bridge-gatc-egdirb-[7]-                       |
+| 0,17463  | -egdirb-bridge-gatc-egdirb-bridge-gatc-egdirb-genome- |
+| 0,17014  | -[5]-gatc-genome-                                     |
+| 0,15565  | -genome-bridge-gatc-egdirb-bridge-gatc-egdirb-genome- |
+| 0,15035  | -genome-gatc-[5]-                                     |
+| 0,14549  | -genome-bridge-gatc-[5]-bridge-genome-                |
+| 0,14409  | -genome-gatc-egdirb-[6]-                              |
+| 0,14056  | -genome-bridge-gatc-egdirb-bridge-gatc-egdirb-bridge- |
+| 0,13987  | -genome-gatc-egdirb-bridge-gatc-genome-               |
+| 0,13694  | -[3]-gatc-genome-                                     |
+| 0,13615  | -egdirb-genome-                                       |
+| 0,13576  | -genome-gatc-[3]-                                     |
+| 0,13476  | -genome-bridge-                                       |
+| 0,13124  | -genome-bridge-gatc-[6]-                              |
+| 0,12458  | -genome-egdirb-bridge-gatc-genome-                    |
+| 0,12144  | -genome-bridge-[6]-gatc-egdirb-genome-                |
+| 0,11740  | -egdirb-bridge-gatc-egdirb-genome-bridge-genome-      |
+| 0,11503  | -egdirb-bridge-gatc-egdirb-genome-egdirb-genome-      |
+| 0,10941  | -genome-egdirb-genome-bridge-gatc-egdirb-bridge-      |
+| 0,10790  | -[7]-gatc-genome-                                     |
+| 0,10744  | -bridge-gatc-genome-bridge-genome-                    |
+| 0,10626  | -genome-gatc-[1]-                                     |
+| 0,10625  | -[6]-bridge-gatc-genome-                              |
+| 0,10571  | -genome-bridge-gatc-egdirb-[10]-                      |
+| 0,10445  | -genome-gatc-[4]-                                     |
