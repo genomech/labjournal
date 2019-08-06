@@ -1167,3 +1167,10 @@ egdirb -- обратная последовательность (CCTCAGC).
 ```
 Прочие же требуют предварительной обработки перед выравниванием.
 
+## Обрезка с помощью *cutadapt*
+
+Был запущен *cutadapt* со следующими параметрами:
+
+```
+$ cutadapt -m 8 -j 10 -e 0.2 -O 7 -a GCTGAGGGATCCCTCAGCGCTGAGGGATCCCTCAGC$ -g ^GCTGAGGGATCCCTCAGCGCTGAGGGATCCCTCAGC -A GCTGAGGGATCCCTCAGCGCTGAGGGATCCCTCAGC$ -G ^GCTGAGGGATCCCTCAGCGCTGAGGGATCCCTCAGC -o ./sample-1-1_R1_STUFFLESS.fastq -p ./sample-1-1_R2_STUFFLESS.fastq ./sample-1-1_R1_cut.fastq ./sample-1-1_R2_cut.fastq
+```
