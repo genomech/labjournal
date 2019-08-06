@@ -1154,3 +1154,16 @@ egdirb -- обратная последовательность (CCTCAGC).
 | 0,10625  | -[6]-bridge-gatc-genome-                              |
 | 0,10571  | -genome-bridge-gatc-egdirb-[10]-                      |
 | 0,10445  | -genome-gatc-[4]-                                     |
+
+Как видно из результатов, значительное количество представляют обычные HiC-риды, у которых требуется только удалить мостик `-bridge-gatc-egdirb-`.
+Это сочетания, в сумме составляющие 28%:
+
+```
+-genome-bridge-gatc-egdirb-genome-
+-genome-gatc-egdirb-genome-
+-genome-bridge-gatc-genome-
+-genome-bridge-[4]-egdirb-genome-
+
+```
+Прочие же требуют предварительной обработки перед выравниванием.
+
