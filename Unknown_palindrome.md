@@ -1173,6 +1173,11 @@ egdirb -- обратная последовательность (CCTCAGC).
 
 ```
 $ cutadapt -m 8 -j 10 -e 0.2 -O 7 -a GCTGAGGGATCCCTCAGCGCTGAGGGATCCCTCAGCX -g XGCTGAGGGATCCCTCAGCGCTGAGGGATCCCTCAGC -A GCTGAGGGATCCCTCAGCGCTGAGGGATCCCTCAGCX -G XGCTGAGGGATCCCTCAGCGCTGAGGGATCCCTCAGC -o ./sample-1-1_R1_STUFFLESS.fastq -p ./sample-1-1_R2_STUFFLESS.fastq ./sample-1-1_R1_cut.fastq ./sample-1-1_R2_cut.fastq
+```
+
+<details> 
+<summary>Результаты</summary>
+<pre>
 This is cutadapt 1.18 with Python 3.7.3
 Command line parameters: -m 8 -j 10 -e 0.2 -O 7 -a GCTGAGGGATCCCTCAGCGCTGAGGGATCCCTCAGCX -g XGCTGAGGGATCCCTCAGCGCTGAGGGATCCCTCAGC -A GCTGAGGGATCCCTCAGCGCTGAGGGATCCCTCAGCX -G XGCTGAGGGATCCCTCAGCGCTGAGGGATCCCTCAGC -o ./sample-1-1_R1_STUFFLESS.fastq -p ./sample-1-1_R2_STUFFLESS.fastq ./sample-1-1_R1_cut.fastq ./sample-1-1_R2_cut.fastq
 Processing reads on 10 cores in paired-end mode ...
@@ -1398,7 +1403,9 @@ length  count   expect  max.err error counts
 41      40876   0.0     7       0 0 0 0 0 5448 10103 25325
 42      63936   0.0     7       0 0 0 0 0 0 37036 26900
 43      335448  0.0     7       0 0 0 0 0 0 0 335448
-```
+</pre>
+</details>
+
 
 Результаты анализа обрезанных библиотек скриптом `anal_seqs.py`, покрытие -- 84,8% ([данные](./scripts_results/anal_seqs_STUFFLESS_190807.txt)):
 
