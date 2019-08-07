@@ -1400,3 +1400,58 @@ length  count   expect  max.err error counts
 43      335448  0.0     7       0 0 0 0 0 0 0 335448
 ```
 
+Результаты анализа обрезанных библиотек скриптом `anal_seqs.py`, покрытие -- 84,8% ([данные](./scripts_results/anal_seqs_STUFFLESS_190807.txt)):
+
+| Reads, % | Sample                                                |
+|----------|-------------------------------------------------------|
+| 37,76377 | -genome-                                              |
+| 24,25352 | -genome-bridge-gatc-egdirb-genome-                    |
+| 2,70439  | -genome-gatc-egdirb-genome-                           |
+| 2,65510  | -genome-bridge-gatc-genome-                           |
+| 2,18447  | -genome-egdirb-genome-                                |
+| 1,99945  | -genome-bridge-genome-                                |
+| 1,01344  | -genome-egdirb-bridge-gatc-egdirb-genome-             |
+| 0,92177  | -bridge-gatc-genome-                                  |
+| 0,87586  | -genome-bridge-gatc-egdirb-bridge-gatc-genome-        |
+| 0,79379  | -genome-gatc-egdirb-bridge-gatc-egdirb-genome-        |
+| 0,73573  | -genome-bridge-gatc-egdirb-bridge-genome-             |
+| 0,66350  | -genome-gatc-egdirb-                                  |
+| 0,40780  | -genome-bridge-gatc-egdirb-genome-bridge-genome-      |
+| 0,40720  | -genome-egdirb-genome-bridge-gatc-egdirb-genome-      |
+| 0,40271  | -genome-egdirb-                                       |
+| 0,39904  | -genome-bridge-[4]-egdirb-genome-                     |
+| 0,36564  | -[6]-gatc-genome-                                     |
+| 0,36071  | -genome-bridge-genome-bridge-gatc-egdirb-genome-      |
+| 0,34996  | -genome-bridge-gatc-egdirb-genome-egdirb-genome-      |
+| 0,34249  | -bridge-genome-                                       |
+| 0,29278  | -genome-bridge-[6]-gatc-genome-                       |
+| 0,28617  | -genome-gatc-[6]-egdirb-genome-                       |
+| 0,28472  | -genome-gatc-[6]-                                     |
+| 0,26801  | -egdirb-genome-                                       |
+| 0,24271  | -[5]-gatc-genome-                                     |
+| 0,21115  | -genome-bridge-                                       |
+| 0,20791  | -[3]-gatc-genome-                                     |
+| 0,19732  | -genome-gatc-[3]-                                     |
+| 0,19691  | -genome-gatc-[1]-                                     |
+| 0,19076  | -genome-gatc-[5]-                                     |
+| 0,17192  | -genome-egdirb-[10]-                                  |
+| 0,17128  | -[1]-gatc-genome-                                     |
+| 0,16179  | -genome-gatc-[4]-                                     |
+| 0,16143  | -genome-bridge-gatc-egdirb-bridge-gatc-egdirb-genome- |
+| 0,15928  | -[7]-gatc-genome-                                     |
+| 0,15167  | -genome-bridge-gatc-[5]-bridge-genome-                |
+| 0,14709  | -genome-gatc-[7]-                                     |
+| 0,14257  | -genome-gatc-egdirb-bridge-gatc-genome-               |
+| 0,14095  | -[10]-bridge-genome-                                  |
+| 0,13987  | -[4]-gatc-genome-                                     |
+| 0,12811  | -genome-egdirb-bridge-gatc-genome-                    |
+| 0,12592  | -genome-bridge-[6]-gatc-egdirb-genome-                |
+| 0,12279  | -[2]-gatc-genome-                                     |
+| 0,12147  | -[10]-gatc-genome-                                    |
+| 0,11880  | -genome-gatc-[10]-                                    |
+| 0,11577  | -genome-gatc-[2]-                                     |
+| 0,10882  | -genome-gatc-[9]-                                     |
+| 0,10835  | -[9]-gatc-genome-                                     |
+| 0,10728  | -[6]-bridge-genome-                                   |
+| 0,10710  | -genome-gatc-[8]-                                     |
+| 0,10689  | -[8]-gatc-genome-                                     |
