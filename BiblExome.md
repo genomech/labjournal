@@ -215,3 +215,22 @@ for filename in filenames:
     input_file.close()
 
 ```
+
+9. Индекс с BAM-файлов снимался простым скриптом:
+
+```bash
+#!/bin/bash
+
+# bambai.sh
+  
+for INFILE in "$@"
+do
+echo Start $INFILE ...
+samtools index $INFILE
+echo Done.
+done
+```
+
+```
+$ ./bambai.sh ./*.bam
+```
