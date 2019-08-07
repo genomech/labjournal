@@ -544,7 +544,11 @@ for file_sn in filelist:
 
 ```
 $ cutadapt -m 8 -j 10 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT -o ./sample-1-1_R1_cut.fastq -p ./sample-1-1_R2_cut.fastq /dev/datasets/ngs_data/ExoC_Belopuz/30-213832944/sample-1-1_R1_001.fastq.gz /dev/datasets/ngs_data/ExoC_Belopuz/30-213832944/sample-1-1_R2_001.fastq.gz
+```
 
+<details> 
+<summary>Результаты</summary>
+<pre>
 This is cutadapt 1.18 with Python 3.7.3
 Command line parameters: -m 8 -j 10 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT -o ./sample-1-1_R1_cut.fastq -p ./sample-1-1_R2_cut.fastq /dev/datasets/ngs_data/ExoC_Belopuz/30-213832944/sample-1-1_R1_001.fastq.gz /dev/datasets/ngs_data/ExoC_Belopuz/30-213832944/sample-1-1_R2_001.fastq.gz
 Processing reads on 10 cores in paired-end mode ...
@@ -894,8 +898,8 @@ length  count   expect  max.err error counts
 148     27      0.0     5       25 0 2
 149     15      0.0     5       6 6 1 1 0 1
 150     901     0.0     5       405 405 62 10 13 6
-
-```
+</pre>
+</details>
 
 Обработка библиотеки с обрезанными адаптерами производилась с помощью модифицированного скрипта *ash.py*.
 
