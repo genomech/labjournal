@@ -1466,3 +1466,89 @@ length  count   expect  max.err error counts
 | 0,10728  | -[6]-bridge-genome-                                   |
 | 0,10710  | -genome-gatc-[8]-                                     |
 | 0,10689  | -[8]-gatc-genome-                                     |
+
+## Альтернативная методика обрезки
+
+Была предложена Е. Можейко.
+С помощью *cutadapt* поочерёдно отрезались составные части палиндрома.
+
+```bash
+#!/bin/bash
+#PBS -q xl230g9q -l select=1:ncpus=4:mem=80gb,walltime=20:0:0
+cd /mnt/scratch/ws/eamozheiko/201908091448ws2/fastq/exoC/s1/sample1_cutadapt/
+source ~/ExoC/bin/activate
+#time cutadapt -m 8 -a GCTGAGGX -A GCTGAGGX -o file1_cut_R1_test.fastq.gz -p file1_cut_R2_test.fastq.gz file1_cut_R1.fastq.gz file1_cut_R2.fastq.gz
+time cutadapt -m 1 -e 0.2 -O 7 -a GCTGAGGGATCCCTCAGCGCTGAGGGATCCCTCAGCX -g XGCTGAGGGATCCCTCAGCGCTGAGGGATCCCTCAGC -A GCTGAGGGATCCCTCAGCGCTGAGGGATCCCTCAGCX -G XGCTGAGGGATCCCTCAGCGCTGAGGGATCCCTCAGC -o file1_cut_R1_test1.fastq.gz -p file1_cut_R2_test1.fastq.gz file1_cut_R1.fastq.gz file1_cut_R2.fastq.gz
+##1
+time cutadapt -m 1 -e 0.2 -O 7 -a GCTGAGGX -g XGCTGAGG -A GCTGAGGX -G XGCTGAGG -o file1_cut_R1_test2.fastq.gz -p file1_cut_R2_test2.fastq.gz file1_cut_R1_test1.fastq.gz file1_cut_R2_test1.fastq.gz
+time cutadapt -m 1 -e 0.2 -O 7 -a CCTCAGCX -g XCCTCAGC -A CCTCAGCX -G XCCTCAGC -o file1_cut_R1_test1.fastq.gz -p file1_cut_R2_test1.fastq.gz file1_cut_R1_test2.fastq.gz file1_cut_R2_test2.fastq.gz
+time cutadapt -m 1 -e 0.2 -O 7 -a GATCCCTCAGCX -g XCCTCAGCGATC -A GATCCCTCAGCX -G XCCTCAGCGATC -o file1_cut_R1_test2.fastq.gz -p file1_cut_R2_test2.fastq.gz file1_cut_R1_test1.fastq.gz file1_cut_R2_test1.fastq.gz
+time cutadapt -m 1 -e 0.2 -O 7 -a GATCGCTGAGGX -g XGCTGAGGGATC -A GATCGCTGAGGX -G XGCTGAGGGATC -o file1_cut_R1_test1.fastq.gz -p file1_cut_R2_test1.fastq.gz file1_cut_R1_test2.fastq.gz file1_cut_R2_test2.fastq.gz
+##2
+time cutadapt -m 1 -e 0.2 -O 7 -a GCTGAGGX -g XGCTGAGG -A GCTGAGGX -G XGCTGAGG -o file1_cut_R1_test2.fastq.gz -p file1_cut_R2_test2.fastq.gz file1_cut_R1_test1.fastq.gz file1_cut_R2_test1.fastq.gz
+time cutadapt -m 1 -e 0.2 -O 7 -a CCTCAGCX -g XCCTCAGC -A CCTCAGCX -G XCCTCAGC -o file1_cut_R1_test1.fastq.gz -p file1_cut_R2_test1.fastq.gz file1_cut_R1_test2.fastq.gz file1_cut_R2_test2.fastq.gz
+time cutadapt -m 1 -e 0.2 -O 7 -a GATCCCTCAGCX -g XCCTCAGCGATC -A GATCCCTCAGCX -G XCCTCAGCGATC -o file1_cut_R1_test2.fastq.gz -p file1_cut_R2_test2.fastq.gz file1_cut_R1_test1.fastq.gz file1_cut_R2_test1.fastq.gz
+time cutadapt -m 1 -e 0.2 -O 7 -a GATCGCTGAGGX -g XGCTGAGGGATC -A GATCGCTGAGGX -G XGCTGAGGGATC -o file1_cut_R1_test1.fastq.gz -p file1_cut_R2_test1.fastq.gz file1_cut_R1_test2.fastq.gz file1_cut_R2_test2.fastq.gz
+
+#time cutadapt -a GCTGAGGX -o output.fastq.gz file1_cut_R2.fastq.gz
+#time cutadapt -a CCTCAGC -o output.fastq.gz output.fastq.gz
+#time cutadapt -a GATCCCTCAGC -o output.fastq.gz output.fastq.gz
+#time cutadapt -a GATCGCTGAGG -o output.fastq.gz output.fastq.gz
+
+#time cutadapt -a AACCGGTT -o output.fastq.gz output.fastq.gz
+#time cutadapt -a AACCGGTT -o output.fastq.gz output.fastq.gz
+#time cutadapt -a AACCGGTT -o output.fastq.gz output.fastq.gz
+#time cutadapt -a AACCGGTT -o output.fastq.gz output.fastq.gz
+
+```
+
+Результаты анализа скриптом *anal_seqs.py* ([данные](./scripts_results/anal_seqs_alternative_190808.txt)).
+В таблице приведены 45 значений, покрывающих 86% ридов.
+
+| Reads, % | Sample                                                |
+|----------|-------------------------------------------------------|
+| 41,79254 | -genome-                                              |
+| 24,56759 | -genome-bridge-gatc-egdirb-genome-                    |
+| 2,73849  | -genome-gatc-egdirb-genome-                           |
+| 2,68458  | -genome-bridge-gatc-genome-                           |
+| 2,28994  | -genome-egdirb-genome-                                |
+| 2,13361  | -genome-bridge-genome-                                |
+| 1,02473  | -genome-egdirb-bridge-gatc-egdirb-genome-             |
+| 0,88564  | -genome-bridge-gatc-egdirb-bridge-gatc-genome-        |
+| 0,80228  | -genome-gatc-egdirb-bridge-gatc-egdirb-genome-        |
+| 0,74462  | -genome-bridge-gatc-egdirb-bridge-genome-             |
+| 0,40450  | -genome-bridge-gatc-egdirb-genome-bridge-genome-      |
+| 0,40409  | -genome-bridge-[4]-egdirb-genome-                     |
+| 0,40307  | -genome-egdirb-genome-bridge-gatc-egdirb-genome-      |
+| 0,36261  | -genome-bridge-genome-bridge-gatc-egdirb-genome-      |
+| 0,35143  | -genome-bridge-gatc-egdirb-genome-egdirb-genome-      |
+| 0,31383  | -genome-bridge-[6]-gatc-genome-                       |
+| 0,30503  | -genome-gatc-[6]-egdirb-genome-                       |
+| 0,21100  | -genome-gatc-[1]-                                     |
+| 0,19663  | -genome-egdirb-[10]-                                  |
+| 0,18595  | -[1]-gatc-genome-                                     |
+| 0,16318  | -genome-bridge-gatc-egdirb-bridge-gatc-egdirb-genome- |
+| 0,15838  | -genome-gatc-[6]-                                     |
+| 0,15340  | -genome-bridge-gatc-[5]-bridge-genome-                |
+| 0,14750  | -[10]-bridge-genome-                                  |
+| 0,14419  | -genome-gatc-egdirb-bridge-gatc-genome-               |
+| 0,14182  | -[6]-gatc-genome-                                     |
+| 0,13823  | -[5]-gatc-genome-                                     |
+| 0,13130  | -[10]-gatc-genome-                                    |
+| 0,12975  | -genome-egdirb-bridge-gatc-genome-                    |
+| 0,12888  | -genome-gatc-[10]-                                    |
+| 0,12801  | -[3]-gatc-genome-                                     |
+| 0,12723  | -genome-bridge-[6]-gatc-egdirb-genome-                |
+| 0,12450  | -genome-gatc-[4]-                                     |
+| 0,12415  | -[2]-gatc-genome-                                     |
+| 0,12241  | -genome-gatc-[3]-                                     |
+| 0,11702  | -genome-gatc-[9]-                                     |
+| 0,11670  | -[9]-gatc-genome-                                     |
+| 0,11252  | -[4]-gatc-genome-                                     |
+| 0,11223  | -genome-gatc-[8]-                                     |
+| 0,11152  | -[8]-gatc-genome-                                     |
+| 0,10806  | -genome-gatc-[5]-                                     |
+| 0,10478  | -[6]-bridge-genome-                                   |
+| 0,10463  | -[6]-egdirb-genome-                                   |
+| 0,10460  | -genome-bridge-[6]-                                   |
+| 0,10115  | -[7]-gatc-genome-                                     |
