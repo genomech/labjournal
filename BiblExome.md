@@ -234,3 +234,51 @@ done
 ```
 $ ./bambai.sh ./*.bam
 ```
+
+10. Последняя задача, которую поставила Динара -- поискать соответствия в нескольких библиотеках.
+Не зря я сохранял пиклзы.
+
+```python
+import pandas as pd
+import functools
+import time
+import pickle
+
+in_path = './pickles/'
+filenames = ['le5_S11', 'le6_S12'] # .pickle
+out_path = './csv_merged/'
+
+print(f"\n=== MARGO 0.1 ===\n", end="\n")
+start_time = time.time()
+
+with open(f"{in_path}{filenames[0]}.pickle", 'rb') as f1:
+    table1 = pickle.load(f1)
+    
+print(f"Pickle {filenames[0]} is loaded [%f sec]" % (time.time() - start_time), end="\n")
+start_time = time.time()
+
+with open(f"{in_path}{filenames[1]}.pickle", 'rb') as f2:
+    table2 = pickle.load(f2)
+    
+print(f"Pickle {filenames[1]} is loaded [%f sec]" % (time.time() - start_time), end="\n")
+start_time = time.time()
+
+table_merged = pd.merge(table1, table2, how='inner')
+
+del table1
+del table2
+
+print(f"Merging tables is done [%f sec]" % (time.time() - start_time), end="\n")
+start_time = time.time()
+
+table_merged.to_csv(out_path + filenames[0] + "-" + filenames[1] + "_merged.csv", sep='\t', index=False, mode='w')
+    
+print(f"Writing to CSV file is done [%f sec]" % (time.time() - start_time), end="\n")
+
+```
+
+---
+
+**P.S.** Если бы кто-то погуглил прежде чем кодить, то узнал бы, что есть великолепная [библиотека для парсинга VCF](https://pyvcf.readthedocs.io/en/latest/).
+Достаточно шустрая и удобная.
+Так что, дорогой читатель, если ты вдруг захочешь сделать то же, что и я -- используй её, а не предыдущие костыли.
