@@ -2370,3 +2370,56 @@ removed '/dev/datasets/FairWind/trimmed/sample-1-1_R2_TEMP1.fastq.gz'
 </pre>
 </details>
 
+Анализ *anal_seqs.py*:
+
+| Reads, %| Sample                                                       |
+|---------|--------------------------------------------------------------|
+| 40,9060 |                                                     -genome- |
+| 24,0570 |                       -genome--bridge--gatc--egdirb--genome- |
+| 2,8805  |                               -genome--gatc--egdirb--genome- |
+| 2,7407  |                               -genome--bridge--gatc--genome- |
+| 2,3203  |                                     -genome--egdirb--genome- |
+| 2,1493  |                                     -genome--bridge--genome- |
+| 0,9897  |               -genome--egdirb--bridge--gatc--egdirb--genome- |
+| 0,7900  |         -genome--bridge--gatc--egdirb--bridge--gatc--genome- |
+| 0,7564  |         -genome--gatc--egdirb--bridge--gatc--egdirb--genome- |
+| 0,7334  |               -genome--bridge--gatc--egdirb--bridge--genome- |
+| 0,4793  |                        -genome--bridge--[4]--egdirb--genome- |
+| 0,4123  |       -genome--egdirb--genome--bridge--gatc--egdirb--genome- |
+| 0,4019  |       -genome--bridge--gatc--egdirb--genome--bridge--genome- |
+| 0,3540  |       -genome--bridge--gatc--egdirb--genome--egdirb--genome- |
+| 0,3506  |       -genome--bridge--genome--bridge--gatc--egdirb--genome- |
+| 0,3110  |                          -genome--bridge--[6]--gatc--genome- |
+| 0,3092  |                                         --[6]--gatc--genome- |
+| 0,3021  |                          -genome--gatc--[6]--egdirb--genome- |
+| 0,2615  |                                             -egdirb--genome- |
+| 0,2247  |                                         --[5]--gatc--genome- |
+| 0,2143  |                                         --[3]--gatc--genome- |
+| 0,2129  |                                         -genome--gatc--[1]-- |
+| 0,2089  |                                         -genome--gatc--[3]-- |
+| 0,1995  |                                             -genome--bridge- |
+| 0,1994  |                                         -genome--gatc--[6]-- |
+| 0,1901  |                                         --[1]--gatc--genome- |
+| 0,1818  |                                         -genome--gatc--[5]-- |
+| 0,1758  |                                         -genome--gatc--[4]-- |
+| 0,1720  |                                      -genome--egdirb--[10]-- |
+| 0,1491  |                  -genome--bridge--gatc--[5]--bridge--genome- |
+| 0,1478  |                                         --[4]--gatc--genome- |
+| 0,1471  |                                      --[10]--bridge--genome- |
+| 0,1347  | -genome--bridge--gatc--egdirb--bridge--gatc--egdirb--genome- |
+| 0,1340  |                                        --[10]--gatc--genome- |
+| 0,1333  |                 -genome--gatc--egdirb--bridge--gatc--genome- |
+| 0,1296  |                       -genome--egdirb--bridge--gatc--genome- |
+| 0,1287  |                                         --[2]--gatc--genome- |
+| 0,1248  |                                        -genome--gatc--[10]-- |
+| 0,1242  |                                         -genome--gatc--[2]-- |
+| 0,1206  |                  -genome--bridge--[6]--gatc--egdirb--genome- |
+| 0,1182  |                                         --[9]--gatc--genome- |
+| 0,1180  |                                         -genome--gatc--[8]-- |
+| 0,1169  |                                         --[7]--gatc--genome- |
+| 0,1121  |                                         -genome--gatc--[9]-- |
+| 0,1101  |                                         --[8]--gatc--genome- |
+| 0,1089  |                                         -genome--gatc--[7]-- |
+| 0,1034  |           -genome--bridge--gatc--egdirb--genome--gatc--[3]-- |
+| 0,1007  |                                       --[6]--bridge--genome- |
+| 0,1001  |            -genome--bridge--gatc--egdirb--[7]--gatc--genome- |
