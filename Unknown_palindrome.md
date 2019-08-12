@@ -3142,7 +3142,6 @@ length  count   expect  max.err error counts
 |         | Split Left                          |         | Split Right                         |
 |---------|-------------------------------------|---------|-------------------------------------|
 | Reads, %| Sample                              | Reads, %| Sample                              |
-|---------|-------------------------------------|---------|-------------------------------------|
 | 77,8051 | -genome-                            | 77,7498 | -genome-                            |
 | 2,719   | -genome--egdirb--genome-            | 2,681   | -genome--egdirb--genome-            |
 | 2,5641  | -genome--bridge--genome-            | 2,5861  | -genome--bridge--genome-            |
