@@ -3182,3 +3182,17 @@ length  count   expect  max.err error counts
 | 0,1056  | --[5]--egdirb--genome-              | 0,1127  | -genome--bridge--[6]--              |
 | 0,1038  | --[4]--egdirb--genome-              | 0,1068  | --[2]--egdirb--genome-              |
 | 0,0908  | -genome--bridge--[2]--              | 0,1012  | -genome--bridge--[5]--              |
+
+Результаты выравнивания bowtie2:
+
+```
+510264112 reads; of these:
+  510264112 (100.00%) were unpaired; of these:
+    109608850 (21.48%) aligned 0 times
+    211942675 (41.54%) aligned exactly 1 time
+    188712587 (36.98%) aligned >1 times
+78.52% overall alignment rate
+[bam_sort_core] merging from 156 files and 12 in-memory blocks...
+Files sample-1-1 are ready.
+
+```
