@@ -108,6 +108,9 @@ Cover 95%       = depth 2
 
 ![График coverage](./scripts_results/coverage_100.png)
 
+Любопытна форма графика -- чётные значения всегда больше нечётных.
+Было высказано предположение, что это из-за короткого insert-size -- парные риды частично перекрывают друг друга.
+
 ![График cumulate](./scripts_results/cumulate_100.png)
 
 Полные данные -- [svg coverage](./scripts_results/coverage_100.svg), [svg cumulate](./scripts_results/cumulate_100.svg), [результаты bedtools](./scripts_results/hist_coverage.txt).
