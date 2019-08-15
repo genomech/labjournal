@@ -41,3 +41,73 @@ bedtools coverage -hist -sorted -g /dev/datasets/FairWind/hg19.fa.fai -a /dev/da
 
 Ты можешь попробовать посчитать coverage без -sorted, мой юный друг, но помни -- в этом случае bam-файл уходит в оперативку полностью и процесс рискует убицца.
 Да, чуваки как-то не подумали.
+
+3. Нужные нам результаты оказались в конце - раздел `all`.
+Обработка производилась с помощью скрипта *kovoer.py*:
+
+```python
+import pickle
+import pandas as pd
+import matplotlib.pyplot as plt
+
+with open("../_pickles/csv/hist_coverage_[all].pd.pickle", 'rb') as f:
+    hist = pickle.load(f)
+
+hist = hist.apply(pd.to_numeric, errors='ignore')
+
+print("Pickle loaded.", end="\n")
+
+percents = hist['% of A at depth'].tolist()
+
+plt.plot(percents[:100])
+plt.ylabel('% from A at depth')
+plt.xlabel('Depth')
+plt.savefig("./coverage_100.svg")
+
+print("Coverage is ready.", end="\n")
+
+cover_50 = 0
+cover_75 = 0
+cover_90 = 0
+cover_95 = 0
+
+cumulate = []
+for it in range(len(percents)):
+    summa = sum(percents[it:])
+    cumulate += [summa]
+    if summa > 0.5: cover_50 = it
+    if summa > 0.75: cover_75 = it
+    if summa > 0.9: cover_90 = it
+    if summa > 0.95: cover_95 = it
+
+plt.clf()
+
+plt.plot(cumulate[:100])
+plt.ylabel('% of A with more depth')
+plt.xlabel('Depth')
+plt.savefig("./cumulate_100.svg")
+
+print("Cumulate is ready.", end="\n")
+
+print(f"Non-coverage = {percents[0] * 100}%", end="\n")
+print(f"Median = depth {cover_50}", end="\n")
+print(f"Cover 75% = depth {cover_75}", end="\n")
+print(f"Cover 90% = depth {cover_90}", end="\n")
+print(f"Cover 95% = depth {cover_95}", end="\n")
+```
+
+## Результаты
+
+```
+Non-coverage    = 2.836%
+Median          = depth 56
+Cover 75%       = depth 19
+Cover 90%       = depth 6
+Cover 95%       = depth 2
+```
+
+![График coverage](./scripts_results/coverage_100.png)
+
+![График cumulate](./scripts_results/cumulate_100.png)
+
+Полные данные -- [svg coverage](./scripts_results/coverage_100.svg), [svg cumulate](./scripts_results/cumulate_100.svg), [результаты bedtools](./scripts_results/hist_coverage.txt).
