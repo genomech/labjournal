@@ -96,21 +96,46 @@ print(f"Cover 90% = depth {cover_90}", end="\n")
 print(f"Cover 95% = depth {cover_95}", end="\n")
 ```
 
-## Результаты
+### Покрытие всего генома
+
+1. bed-файл для hg19:
 
 ```
-Non-coverage    = 2.836%
-Median          = depth 56
-Cover 75%       = depth 19
-Cover 90%       = depth 6
-Cover 95%       = depth 2
+$ awk '{print $1 "\t0\t" $2}' human_hg19.fa.fai > human_hg19.bed
 ```
 
-![График coverage](./scripts_results/coverage_100.png)
+2. Дальше запускается *bedtools* так же, как и выше.
+
+### Результаты
+
+```
+CAPTURE DATA
+Non-coverage = 2.8359699999999997%
+Median = depth 56
+Middle = depth 106.64814649999987
+Cover 75% = depth 19
+Cover 90% = depth 6
+Cover 95% = depth 2
+
+HG19 DATA
+Non-coverage = 39.479150000000004%
+Median = depth 2
+Middle = depth 8.624028099999986
+Cover 75% = depth 0
+Cover 90% = depth 0
+Cover 95% = depth 0
+```
+
+![График coverage capture](./scripts_results/coverage_100_capture.svg)
+![График coverage hg19](./scripts_results/coverage_100_hg19.svg)
 
 Любопытна форма графика -- чётные значения всегда больше нечётных.
 Было высказано предположение, что это из-за короткого insert-size -- парные риды частично перекрывают друг друга.
 
-![График cumulate](./scripts_results/cumulate_100.png)
+![График cumulate](./scripts_results/cumulate_100.svg)
 
-Полные данные -- [svg coverage](./scripts_results/coverage_100.svg), [svg cumulate](./scripts_results/cumulate_100.svg), [результаты bedtools](./scripts_results/hist_coverage.txt).
+Полные данные bedtools -- [capture](./scripts_results/hist_coverage.txt), [hg19](./scripts_results/hist_hg19.txt).
+
+## Покрытие букв возле сайтов рестрикции
+
+В разработке.
