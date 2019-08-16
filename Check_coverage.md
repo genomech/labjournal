@@ -134,7 +134,9 @@ Cover 95% = depth 0
 
 ![График cumulate](./scripts_results/cumulate_100.svg)
 
-Полные данные bedtools -- [capture](./scripts_results/hist_coverage.txt), [hg19](./scripts_results/hist_hg19.txt).
+Синий -- capture, красный -- hg19.
+
+Полные данные bedtools coverage -- [capture](./scripts_results/hist_coverage.txt), [hg19](./scripts_results/hist_hg19.txt).
 
 ## Покрытие букв возле сайтов рестрикции
 
