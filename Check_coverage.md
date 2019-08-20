@@ -140,4 +140,8 @@ Cover 95% = depth 0
 
 ## Покрытие букв возле сайтов рестрикции
 
-В разработке.
+**TODO:**
+
+1. Найти координаты сайтов рестрикции (хороший код [здесь](https://github.com/aidenlab/juicer/blob/master/PBS/scripts/generate_site_positions.py)).
+2. Получить coverage для каждой буквы.
+3. Совместить полученные массивы.
