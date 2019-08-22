@@ -282,3 +282,134 @@ print(f"Writing to CSV file is done [%f sec]" % (time.time() - start_time), end=
 **P.S.** Если бы кто-то погуглил прежде чем кодить, то узнал бы, что есть великолепная [библиотека для парсинга VCF](https://pyvcf.readthedocs.io/en/latest/).
 Достаточно шустрая и удобная.
 Так что, дорогой читатель, если ты вдруг захочешь сделать то же, что и я -- используй её, а не предыдущие костыли.
+
+## Уменьшение размера таблицы
+
+В ходе работы возникла следующая проблема -- таблицы чересчур большие, их сложно открывать на слабых компах.
+Было решено прочесать их на предмет повторяющихся транскриптов и оставить только самые длинные.
+
+БД транскриптов была скачана с Биомарта.
+Параметры: Ensembl Genes 97, Human genes (GRCh37.p13).
+Атрибуты:
+
+* Gene stable ID
+* Gene stable ID version
+* Transcript stable ID
+* Transcript stable ID version
+* Transcript start (bp)
+* Transcript end (bp)
+
+Подготовка БД производилась скриптом *trans_filter.py*:
+
+```python
+import pickle
+import pandas as pd
+
+with open("../_pickles/csv/Ensembl_transcripts_[all].pd.pickle", 'rb') as f:
+    transcripts = pickle.load(f)
+    
+transcripts['Transcript end (bp)'] = transcripts['Transcript end (bp)'].apply(pd.to_numeric, errors='ignore')
+transcripts['Transcript start (bp)'] = transcripts['Transcript start (bp)'].apply(pd.to_numeric, errors='ignore')
+
+transcripts['length'] = transcripts['Transcript end (bp)'] - transcripts['Transcript start (bp)']
+
+new_transcripts = pd.DataFrame(columns=transcripts.columns)
+
+dick = transcripts['Gene stable ID'].unique()
+
+did = 0
+total = len(dick)
+
+for cock in dick:
+    table = transcripts[transcripts['Gene stable ID'] == cock]
+    new_transcripts = new_transcripts.append(table.loc[table['length'].idxmax()], ignore_index=True)
+    did += 1
+    print("%.2f%%" % (did * 100 / total), end='\r')
+
+print("", end='\n')
+
+new_transcripts.to_csv("./Ensembl_maxlength.csv", sep="\t", index=False)
+
+print("Done", end='\n')
+
+```
+
+Номера NCBI можно скачать [отсюда](http://genome.ucsc.edu/cgi-bin/hgTables).
+Но не нужно.
+
+Изменения вносились с помощью скрипта *trans_removal.py*:
+
+```python
+import pandas as pd
+import time
+import pickle
+
+filenames = ['104_S3', '111_S6', '113_S2', '117_S5', '38_S4', '98_S1', 'le1_S7', 'le2_S8', 'le3_S9', 'le4_S10', 'le5_S11', 'le6_S12'] 
+out_path = './'
+
+# tables
+
+start_time = time.time()
+
+ensembl_all = pd.read_csv("/dev/datasets/FairWind/_db/Ensembl_maxlength.csv", sep='\t')
+ensembl_max = ensembl_all
+
+ensembl_all = ensembl_all.drop(['Gene stable ID version', 'Transcript stable ID', 'Transcript stable ID version', 'Transcript start (bp)', 'Transcript end (bp)', 'length'], axis=1)
+ensembl_all.rename(columns={'Gene stable ID':'Gene'}, inplace=True)
+ensembl_all['blacksign_inbase'] = True
+
+ensembl_max = ensembl_max.drop(['Gene stable ID version', 'Transcript stable ID', 'Transcript start (bp)', 'Transcript end (bp)', 'length'], axis=1)
+ensembl_max.rename(columns={'Gene stable ID':'Gene', 'Transcript stable ID version':'Feature'}, inplace=True)
+ensembl_max['blacksign_max'] = True
+
+print(f"Ensembl tables are done [%f sec]" % (time.time() - start_time), end="\n")
+
+for filename in filenames:
+	
+	print(f"\nStart file {filename} ...", end='\n')
+	
+	# pickle
+	
+	start_time = time.time()
+	
+	with open(f"/dev/datasets/FairWind/_results/dinara/pickles/{filename}.pickle", 'rb') as f:
+		main_table = pickle.load(f)
+	
+	order = main_table.columns.to_list()
+	
+	print(f"Big data is done [%f sec]" % (time.time() - start_time), end="\n")
+	
+	# merge
+	
+	start_time = time.time()
+	
+	main_table = pd.merge(ensembl_all, main_table, how='right', on=["Gene"])
+	main_table = pd.merge(ensembl_max, main_table, how='right', on=["Gene", "Feature"])
+	main_table[['blacksign_max', 'blacksign_inbase']] = main_table[['blacksign_max', 'blacksign_inbase']].fillna(False)
+	main_table = main_table.loc[~((main_table['blacksign_max'] == False) & (main_table['blacksign_inbase'] == True))]
+	main_table = main_table.drop(['blacksign_max', 'blacksign_inbase'], axis=1)
+	main_table = main_table[order]
+	main_table.sort_values(by=["CHROM","POS"], inplace=True)
+	
+	print(f"Merging is done [%f sec]" % (time.time() - start_time), end="\n")
+	
+	# pickling
+	
+	start_time = time.time()
+	    
+	with open(f"/dev/datasets/FairWind/_results/dinara/new_pickles/{filename}_light.pickle", 'wb') as f:
+		pickle.dump(main_table, f)
+	    
+	print(f"Pickling is done [%f sec]" % (time.time() - start_time), end="\n")
+	
+	# write to file
+	
+	start_time = time.time()
+	
+	main_table.to_csv(f"/dev/datasets/FairWind/_results/dinara/csv_light/{filename}_light.csv", sep='\t', index=False, mode='w')
+	del main_table
+	
+	print(f"Writing to file is done [%f sec]" % (time.time() - start_time), end="\n")
+```
+
+Слияние родственников производилось вышеописанным *margo.py*, без изменений.

@@ -138,6 +138,37 @@ Cover 95% = depth 0
 
 Полные данные bedtools coverage -- [capture](./scripts_results/hist_coverage.txt), [hg19](./scripts_results/hist_hg19.txt).
 
+### Результаты после переработки методов обрезки
+
+Удаление дупликатов с помощью *PicardTools*:
+
+```
+Non-coverage = 2.82994%
+Median = depth 23
+Middle = depth 29.127398900000014
+Cover 75% = depth 9
+Cover 90% = depth 4
+Cover 95% = depth 2
+```
+
+Полные данные:
+
+```
+Non-coverage = 2.82837%
+Median = depth 33
+Middle = depth 60.58574159999994
+Cover 75% = depth 12
+Cover 90% = depth 4
+Cover 95% = depth 2
+```
+
+Графики по полным данным:
+
+![График coverage](./scripts_results/coverage_100_capture_wd.svg)
+![График cumulate](./scripts_results/cumulate_100_wd.svg)
+
+**ANSWER:** Было решено взять DEPTH=10, QUAL=30 для наших библиотек, чтобы покрыть 80% данных.
+
 ## Покрытие букв возле сайтов рестрикции
 
 **TODO:**
@@ -145,3 +176,14 @@ Cover 95% = depth 0
 1. Найти координаты сайтов рестрикции (хороший код [здесь](https://github.com/aidenlab/juicer/blob/master/PBS/scripts/generate_site_positions.py)).
 2. Получить coverage для каждой буквы.
 3. Совместить полученные массивы.
+
+### Ход работы
+
+* Coverage для каждой буквы был получен с помощью *bedtools*:
+
+```
+$ bedtools coverage -d -sorted -g /dev/datasets/FairWind/_db/hg19/hg19.fa.fai -a /dev/datasets/FairWind/_db/hg19/hg19.bed -b /dev/datasets/FairWind/_results/cut_and_split/bam/sample-1-1_sorted.bam > /dev/datasets/FairWind/_results/cut_and_split/coverage/hg19_coverage_each.txt
+```
+
+В результате получается агроменный файлище в 100 Гб весом.
+Будьте осторожны, друзья.
