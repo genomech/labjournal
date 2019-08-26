@@ -3224,3 +3224,4 @@ Files sample-1-1 are ready.
 ## Анализ контекста букв возле сайтов лигирования
 
 Данные [здесь](http://htmlpreview.github.io/?https://github.com/regnveig/labjournal/blob/master/FastQC_results/split_analysis.html).
+И [здесь](http://htmlpreview.github.io/?https://github.com/regnveig/labjournal/blob/master/FastQC_results/split_analysis_2.html).
