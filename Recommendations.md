@@ -1,19 +1,26 @@
 # Мудрость биоинформатика
 
 * [Архивация](#zip)
+* [subprocess](#subprocess)
 * [Pickle](#pickle)
 * [Парсинг](#parsing)
 * [Контрольные суммы](#checksum)
 * [Таймстампы](#timestamp)
 * [Blister IO](#blister_io)
 * [Графики](#graph)
-* [subprocess](#subprocess)
 
 <a name="zip"></a>
 ## Архивация
 
 Не архивировать промежуточные файлы (e.g., сохранять не в .fastq.gz, а просто в .fastq).
 Скорость работы bash-скрипта возрастает в разы.
+
+<a name="subprocess"></a>
+## subprocess
+
+Использовать [subprocess](https://docs.python.org/3/library/subprocess.html) вместо bash-скриптов.
+Лучше отчётность, проще следить.
+Также помогает использовать уже готовые утилиты в скрипте.
 
 <a name="pickle"></a>
 ## Pickle
@@ -246,8 +253,3 @@ input_handle = gzip.open(filename, "rt") if blister_gzip_check(filename) else (b
 [MatPlotLib](https://matplotlib.org/3.1.1/index.html) в помощь.
 Хорош тем, что может писать вывод в SVG.
 Все мы знаем, что графики в растре -- это б-гомерзость.
-
-<a name="subprocess"></a>
-## subprocess
-
-Использовать [subprocess](https://docs.python.org/3/library/subprocess.html) вместо bash-скриптов.
