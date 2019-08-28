@@ -125,7 +125,8 @@ done
 ```python
 from PyQt5.QtCore import QFileInfo, QFile, QDir
 import glob
-import time
+import gzip
+import bzip2
 
 # Input file(s) handle. Can do file masks.
 
