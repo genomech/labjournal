@@ -7,6 +7,7 @@
 * [Таймстампы](#timestamp)
 * [Blister IO](#blister_io)
 * [Графики](#graph)
+* [subprocess](#subprocess)
 
 <a name="zip"></a>
 ## Архивация
@@ -245,3 +246,8 @@ input_handle = gzip.open(filename, "rt") if blister_gzip_check(filename) else (b
 [MatPlotLib](https://matplotlib.org/3.1.1/index.html) в помощь.
 Хорош тем, что может писать вывод в SVG.
 Все мы знаем, что графики в растре -- это б-гомерзость.
+
+<a name="subprocess"></a>
+## subprocess
+
+Использовать [subprocess](https://docs.python.org/3/library/subprocess.html) вместо bash-скриптов.
