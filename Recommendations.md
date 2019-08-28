@@ -6,6 +6,7 @@
 * [Контрольные суммы](#checksum)
 * [Таймстампы](#timestamp)
 * [Blister IO](#blister_io)
+* [Графики](#graph)
 
 <a name="zip"></a>
 ## Архивация
@@ -36,6 +37,7 @@ with open(dump_filename, 'rb') as f:
 ## Парсинг
 
 Использовать для парсинга уже имеющиеся библиотеки.
+Это круто по двум причинам: 1) не нужно изобретать велосипед; 2) Не нужно делать мусорные файлы head'ом для теста -- при правильной настройке функции отрезается нужное количество записей.
 
 1. VCF: [PyVCF](https://pyvcf.readthedocs.io/en/latest/)
     
@@ -48,7 +50,7 @@ for record in vcf_reader:
     # do stuff
 ```
 
-2. Sequence форматы: [BioPython](https://biopython.org/wiki/Documentation)
+2. Sequence форматы, а также SAM/BAM: [BioPython](https://biopython.org/wiki/Documentation)
 
 ```python
 from Bio import SeqIO
@@ -65,6 +67,15 @@ with open(output_filename, "w") as output_handle:
 # convert
 count = SeqIO.convert(input_filename, input_format, output_filename, output_format)
 print(f"Converted {count} records from {input_format} to {output_format}", end='\n')
+```
+
+3. CSV: [pandas](https://pandas.pydata.org/pandas-docs/stable/)
+
+```python
+import pandas as pd
+
+data = pd.read_csv(input_filename, sep=',', nrows=None)
+data.to_csv(output_filename, sep='\t', index=False, mode='w')
 ```
 
 <a name="checksum"></a>
@@ -93,7 +104,23 @@ print(f"Stuff is done [%.2f sec]" % (time.time() - start_time), end="\n")
 <a name="blister_io"></a>
 ## Blister IO
 
-Блистерная библиотечка для работы с файлами.
+В bash это делается довольно просто.
+
+```bash
+#!/bin/bash
+
+# dir
+mkdir -p /dir/path
+
+# files
+for file in `ls -d *.*`
+do
+# do stuff
+done
+```
+
+В питоне посложнее.
+Вот блистерная библиотечка для работы с файлами.
 
 ```python
 from PyQt5.QtCore import QFileInfo, QFile, QDir
@@ -210,3 +237,10 @@ if not new_filename: return 1
 # input_handle
 input_handle = gzip.open(filename, "rt") if blister_gzip_check(filename) else (bz2.open(filename, "rt") if blister_bzip2_check(filename) else open(filename, "rU"))
 ```
+
+<a name="graph"></a>
+## Графики
+
+[MatPlotLib](https://matplotlib.org/3.1.1/index.html) в помощь.
+Хорош тем, что может писать вывод в SVG.
+Все мы знаем, что графики в растре -- это б-гомерзость.
