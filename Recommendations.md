@@ -1,6 +1,22 @@
-# Основные рекомендации (мудрость биоинформатика)
+# Мудрость биоинформатика
 
-1. Всегда снимать [pickle](https://docs.python.org/3/library/pickle.html) при работе с большими библиотеками.
+* [Архивация](#zip)
+* [Pickle](#pickle)
+* [Парсинг](#parsing)
+* [Контрольные суммы](#checksum)
+* [Таймстампы](#timestamp)
+* [Blister](#blister)
+
+<a name="zip"></a>
+## Архивация
+
+Не архивировать промежуточные файлы (e.g., сохранять не в .fastq.gz, а просто в .fastq).
+Скорость работы bash-скрипта возрастает в разы.
+
+<a name="pickle"></a>
+## Pickle
+
+Всегда снимать [pickle](https://docs.python.org/3/library/pickle.html) при работе с большими библиотеками.
 Поверь, это лучше, чем отрезать куски от файла, и быстрее, чем парсить файл каждый раз.
 Но только pickles не снимать, обязательно дублировать в формате БД.
 
@@ -16,9 +32,12 @@ with open(dump_filename, 'rb') as f:
     data_new = pickle.load(f)
 ```
 
-2. Использовать для парсинга уже имеющиеся библиотеки.
+<a name="parsing"></a>
+## Парсинг
 
-    * VCF: [PyVCF](https://pyvcf.readthedocs.io/en/latest/)
+Использовать для парсинга уже имеющиеся библиотеки.
+
+1. VCF: [PyVCF](https://pyvcf.readthedocs.io/en/latest/)
     
 ```python
 import vcf
@@ -28,7 +47,8 @@ vcf_reader = vcf.Reader(open(vcf_filename, 'r'))
 for record in vcf_reader:
     # do stuff
 ```
-    * Sequence форматы: [BioPython](https://biopython.org/wiki/Documentation)
+
+2. Sequence форматы: [BioPython](https://biopython.org/wiki/Documentation)
 
 ```python
 from Bio import SeqIO
@@ -47,24 +67,33 @@ count = SeqIO.convert(input_filename, input_format, output_filename, output_form
 print(f"Converted {count} records from {input_format} to {output_format}", end='\n')
 ```
 
-2. Не архивировать промежуточные файлы (e.g., сохранять не в .fastq.gz, а просто в .fastq).
-Скорость работы bash-скрипта возрастает в разы.
+<a name="checksum"></a>
+## Контрольные суммы
 
-3. Сохранять контрольные суммы больших файлов и всегда их проверять перед работой.
-
-Снятие:
+Сохранять контрольные суммы больших файлов и всегда их проверять перед работой.
 
 ```
 $ md5sum [file] > [file].md5
+$ md5sum -c [file].md5
 ```
 
-Проверка:
+<a name="timestamp"></a>
+## Таймстампы
 
-```
-md5sum -c [file].md5
+```python
+import time
+
+start_time = time.time()
+
+# do stuff
+
+print(f"Stuff is done [%.2f sec]" % (time.time() - start_time), end="\n")
 ```
 
-4. Блистерная библиотечка для разных нужд.
+<a name="blister"></a>
+## Blister
+
+Блистерная библиотечка для разных нужд.
 
 ```python
 from PyQt5.QtCore import QFileInfo, QFile, QDir
