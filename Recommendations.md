@@ -5,7 +5,7 @@
 * [Парсинг](#parsing)
 * [Контрольные суммы](#checksum)
 * [Таймстампы](#timestamp)
-* [Blister](#blister)
+* [Blister IO](#blister_io)
 
 <a name="zip"></a>
 ## Архивация
@@ -90,10 +90,10 @@ start_time = time.time()
 print(f"Stuff is done [%.2f sec]" % (time.time() - start_time), end="\n")
 ```
 
-<a name="blister"></a>
-## Blister
+<a name="blister_io"></a>
+## Blister IO
 
-Блистерная библиотечка для разных нужд.
+Блистерная библиотечка для работы с файлами.
 
 ```python
 from PyQt5.QtCore import QFileInfo, QFile, QDir
