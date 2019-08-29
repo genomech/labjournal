@@ -191,6 +191,7 @@ $ bedtools coverage -d -sorted -g /dev/datasets/FairWind/_db/hg19/hg19.fa.fai -a
 * grep coverage.
 Очень медленный способ, рекомендую написать что-то побыстрее.
 `chr_list` был выдернут из fa.fai, кажется.
+Или даже из заголовка sam-файла.
 
 ```bash
 #!/bin/bash
@@ -281,4 +282,80 @@ for line in open(filename, mode='rt'):
 processing(chrseq, teststring, outpath + chrom + '.txt')
 ```
 
-* Слияние
+* Слияние. Слияние производилось скриптом *merge_coverage.py*:
+
+```python
+import pandas as pd
+import numpy as np
+import time
+from multiprocessing import cpu_count, Pool
+import functools
+import pickle
+import matplotlib.pyplot as plt
+
+def chrom_handler(chrom):
+    start_time = time.time()
+    
+    coverage = pd.read_csv('/dev/datasets/FairWind/_results/bowtie/coverage/grep_coverage/' + chrom + '.txt', header=None, names=['coverage'])
+    restrict = pd.read_csv('/dev/datasets/FairWind/_results/bowtie/coverage/restrict/' + chrom + '.txt', header=None, names=['restrict'])
+    
+    main_table = pd.concat([coverage, restrict], axis=1)
+    del coverage
+    del restrict
+    main_table = main_table.apply(pd.to_numeric, errors='ignore')
+    main_table = main_table.groupby(['restrict']).mean()
+    
+    print(f"{chrom} is done [%.2f sec]" % (time.time() - start_time), end="\n")
+    
+    return main_table
+
+THREADS_NUM = cpu_count()
+
+chr_list = []
+for line in open('/dev/datasets/FairWind/_results/bowtie/coverage/chr_list', 'rt'):
+    chr_list += [line[:-1]]
+
+pool = Pool(THREADS_NUM)
+
+results = pool.map(chrom_handler, chr_list)
+
+pool.close()
+pool.join()
+del pool
+
+start_time = time.time()
+large_table = pd.concat(results, axis=1)
+del results
+print(f"Concat is done [%f sec]" % (time.time() - start_time), end="\n")
+
+# large_table = large_table[:1000000]
+
+start_time = time.time()
+large_table = large_table.apply(np.nanmean, axis=1)
+print(f"Merging is done [%.2f sec]" % (time.time() - start_time), end="\n")
+
+start_time = time.time()
+with open("/dev/datasets/FairWind/_results/bowtie/coverage/merged_table.pickle", 'wb') as f:
+    pickle.dump(large_table, f)
+print(f"Pickling merged is done [%f sec]" % (time.time() - start_time), end="\n")
+
+start_time = time.time()
+large_table.to_csv("/dev/datasets/FairWind/_results/bowtie/coverage/merged_table.csv", sep='\t')
+print(f"Pickling merged is done [%f sec]" % (time.time() - start_time), end="\n")
+
+plt.plot(list(large_table[:500]))
+plt.ylabel('Depth average')
+plt.xlabel('Distance from restriction site, b')
+plt.suptitle('Distance coverage')
+plt.savefig("/dev/datasets/FairWind/_results/bowtie/coverage/distance_coverage_500.svg")
+```
+
+## Результаты
+
+Зависимость покрытия букв от расстояния от сайтов рестрикции показана на графиках.
+
+Как видно из результатов, покрытие даёт большой пик на расстоянии от 0 до 100 букв, затем мы наблюдаем значительную гористость на расстоянии 1500-2500 букв.
+После 5000 букв график уверенно выходит на ноль.
+
+![Зависимость покрытия от расстояния (500 букв)](./scripts_results/distance_coverage_500.svg)
+![Зависимость покрытия от расстояния (5000 букв)](./scripts_results/distance_coverage_5000.svg)
