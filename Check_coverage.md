@@ -208,6 +208,35 @@ echo "$chr" is done.
 done
 ```
 
+upd: написал побыстрее.
+
+```python
+import time
+
+chrom = 'huita'
+print(f"{chrom} is started ... ", end="")
+f = open("/dev/datasets/FairWind/_results/bowtie/coverage/grep_coverage_exoc/.txt", 'wt')
+start_time = time.time()
+
+for line in open('/dev/datasets/FairWind/_results/bowtie/coverage/1-2_hg19_coverage_each.txt', 'rt'):
+    
+    lst = line.split('\t')
+    
+    if lst[0] != chrom:
+        chrom = lst[0]
+        f.close()
+        print(f"Done [%.2f sec]" % (time.time() - start_time), end="\n")
+        f = open("/dev/datasets/FairWind/_results/bowtie/coverage/grep_coverage_exoc/" + chrom + ".txt", 'wt')
+        print(f"{chrom} is started ... ", end="")
+        start_time = time.time()
+    
+    coverage = lst[-1]
+    f.write(coverage)
+
+f.close()
+print(f"Done [%.2f sec]" % (time.time() - start_time), end="\n")
+```
+
 * Разбор расстояний от сайтов рестрикции.
 Очень шустрый код, рекомендую юзать.
 
@@ -354,8 +383,12 @@ plt.savefig("/dev/datasets/FairWind/_results/bowtie/coverage/distance_coverage_5
 
 Зависимость покрытия букв от расстояния от сайтов рестрикции показана на графиках.
 
+### HiC
+
 Как видно из результатов, покрытие даёт большой пик на расстоянии от 0 до 100 букв, затем мы наблюдаем значительную гористость на расстоянии 1500-2500 букв.
 После 5000 букв график уверенно выходит на ноль.
 
 ![Зависимость покрытия от расстояния (500 букв)](./scripts_results/distance_coverage_500.svg)
 ![Зависимость покрытия от расстояния (5000 букв)](./scripts_results/distance_coverage_5000.svg)
+
+### ExoC

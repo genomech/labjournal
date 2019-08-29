@@ -3374,3 +3374,24 @@ Sample 1-5 (83.5%):
 | 0,1021  | -genome--gatc--[10]--                                  |
 | 0,1014  | -genome--bridge--gatc--egdirb--[1]--                   |
 | 0,1009  | -genome--gatc--[8]--                                   |
+
+**TODO:**
+
+* Подсчитать варианты bridge-gatc-genome и egdirb--genome (без генома слева) для сэмплов 1, 3, 5 и образцов Ma et al.
+* Подсчитать количество палиндрома в образце 3, trimmed-only.
+
+## Подсчёт последовательностей
+
+Подсчёт производился с помощью утилиты *grep*:
+
+```
+$ grep '^[^o\[]*\-bridge\-\-gatc\-\-genome-.*' ./sample-1-1_R1_Illuminaless_STATISTICS.txt > 1bgg.txt
+$ grep '^[^o\[]*\-egdirb\-\-genome\-.*' ./sample-1-1_R1_Illuminaless_STATISTICS.txt > 1bg.txt
+```
+
+Результаты:
+
+| %                    | sample-1-1 | sample-1-3 | sample-1-5 | SRR1248176 |
+|----------------------|------------|------------|------------|------------|
+| -bridge-gatc-genome- | 4,2024     | 4,5598     | 3,9363     | 2,0775     |
+| -egdirb-genome-      | 7,4667     | 1,5464     | 2,0197     | 7,5944     |

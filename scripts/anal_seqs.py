@@ -9,8 +9,8 @@ def Out(total_):
     print("Total: %d" % (total_), end='\r')
 
 
-filename = '/dev/datasets/FairWind/_results/35/sample-1-5_R1_Illuminaless.fastq'
-output_file = '/dev/datasets/FairWind/_results/35/sample-1-5_R1_Illuminaless_STATISTICS.txt'
+filename = '/dev/datasets/FairWind/_results/35/sample-1-1_R1_Illuminaless.fastq'
+output_file = '/dev/datasets/FairWind/_results/35/stat/sample-1-1_R1_Illuminaless_STATISTICS.txt'
 seqs = pd.DataFrame(np.array([['-bridge-', 'GCTGAGG'], ['-egdirb-', 'CCTCAGC'], ['-gatc-', 'GATC']]), columns=['name', 'seq'])
 genome = '-genome-'
 

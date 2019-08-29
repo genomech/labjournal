@@ -25,17 +25,17 @@ double_2_right="$egdirb""$bridge""$gatc""$egdirb"
 split_seq="$gatc""$gatc"
 #split_seq="$bridge""$gatc""$egdirb"
 
-for var in '1-3' '1-5'
+for var in '1-3'
 do
-(echo "---------------- THIS IS $var (SPARTAAAAA) !!!! ----------------";
+(echo "---------------- THIS IS $var (trimmed-only) !!!! ----------------";
 
 ## CUT ILLUMINA
 
-cutadapt -m 8 -j $THREADS -a $illumina1 -A $illumina2 \
-    -o $OUTPUT_FOLDER/sample-"$var"_R1_Illuminaless.fastq \
-    -p $OUTPUT_FOLDER/sample-"$var"_R2_Illuminaless.fastq \
+cutadapt -m 8 -j $THREADS --trimmed-only -a $illumina1 -A $illumina2 \
+    -o $OUTPUT_FOLDER/sample-"$var"_R1_Illuminaless_TO.fastq \
+    -p $OUTPUT_FOLDER/sample-"$var"_R2_Illuminaless_TO.fastq \
        $INPUT_FOLDER/sample-"$var"_R1_001.fastq.gz \
        $INPUT_FOLDER/sample-"$var"_R2_001.fastq.gz;
-) > $OUTPUT_FOLDER/cut_reports/sample-"$var"_report.txt;
+) > $OUTPUT_FOLDER/cut_reports/sample-"$var"_TO_report.txt;
 
 done
