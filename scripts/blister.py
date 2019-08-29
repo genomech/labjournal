@@ -1,7 +1,10 @@
 from PyQt5.QtCore import QFileInfo, QFile, QDir
 import glob
 import gzip
-import bzip2
+import bz2
+import sys
+import datetime
+import time
 
 # --------- BLISTER IO ---------
 
@@ -11,6 +14,12 @@ import bzip2
 # blister_gzip_check(filename): return True if file is gzipped, False otherwise
 # blister_bzip2_check(filename): return True if file is bzipped, False otherwise
 # blister_input_open(filename, mode): return input handle whether file is zipped or not
+
+# --------- BLISTER CLI ---------
+
+# blister_sec2time(sec): seconds to hh:mm:ss
+# blister_eraselines(n=1): erase lines from screen
+# blister_statusbar(percent, start_time): tiny console statusbar
 
 def blister_input(filenames):
 
@@ -97,3 +106,17 @@ def blister_bzip2_check(filename):
 
 def blister_input_open(filename, mode):
     return gzip.open(filename, mode) if blister_gzip_check(filename) else (bz2.open(filename, mode) if blister_bzip2_check(filename) else open(filename, mode))
+
+def blister_sec2time(sec):
+    return str(datetime.timedelta(seconds=int(sec)))
+
+def blister_eraselines(n=1):    
+    print("", end="\n")
+    for _ in range(n):
+        sys.stdout.write('\x1b[1A') # cursor up line
+        sys.stdout.write('\x1b[2K') # erase line
+
+def blister_statusbar(percent, start_time):
+    fill = "#" * int(percent * 50)
+    empty = "." * int(50 - len(fill))
+    print(f"\t[{fill}{empty}] %4.0f%% [%s]" % (percent * 100, blister_sec2time(time.time() - start_time)), end="\r")
