@@ -392,3 +392,9 @@ plt.savefig("/dev/datasets/FairWind/_results/bowtie/coverage/distance_coverage_5
 ![Зависимость покрытия от расстояния (5000 букв)](./scripts_results/distance_coverage_5000.svg)
 
 ### ExoC
+
+На данных ExoC мы не видим пика возле начала оси.
+Но зато присутсвует гористость на 500-4000, по амплитуде совпадающая с таковой на графике HiC.
+
+![Зависимость покрытия от расстояния (500 букв)](./scripts_results/distance_coverage_500_exoc.svg)
+![Зависимость покрытия от расстояния (5000 букв)](./scripts_results/distance_coverage_5000_exoc.svg)

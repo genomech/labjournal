@@ -24,7 +24,7 @@ exit()
 def chrom_handler(chrom):
     start_time = time.time()
     
-    coverage = pd.read_csv('/dev/datasets/FairWind/_results/bowtie/coverage/grep_coverage/' + chrom + '.txt', header=None, names=['coverage'])
+    coverage = pd.read_csv('/dev/datasets/FairWind/_results/bowtie/coverage/grep_coverage_exoc/' + chrom + '.txt', header=None, names=['coverage'])
     restrict = pd.read_csv('/dev/datasets/FairWind/_results/bowtie/coverage/restrict/' + chrom + '.txt', header=None, names=['restrict'])
     
     main_table = pd.concat([coverage, restrict], axis=1)
@@ -56,7 +56,7 @@ large_table = pd.concat(results, axis=1)
 del results
 print(f"Concat is done [%f sec]" % (time.time() - start_time), end="\n")
 
-# large_table = large_table[:1000000]
+large_table = large_table[:1000000]
 
 start_time = time.time()
 large_table = large_table.apply(np.nanmean, axis=1)
