@@ -1,9 +1,9 @@
 #!/bin/bash
 
-THREADS=1
+THREADS=6
 B2_INDEX="/dev/datasets/FairWind/_db/hg19/hg19_small/hg19"
 INPUT_PATH="/dev/datasets/FairWind/_results/cut_and_split/splitted"
-OUTPUT_PATH="/dev/datasets/FairWind/"
+OUTPUT_PATH="/dev/datasets/FairWind/_results/bowtie/sam"
 SORTED_PATH="/dev/datasets/FairWind/_results/bowtie/bam"
 
  bowtie2 -x $B2_INDEX \
