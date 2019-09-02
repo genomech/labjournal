@@ -415,3 +415,8 @@ plt.savefig("/dev/datasets/FairWind/_results/bowtie/coverage/distance_coverage_5
 
 ![Количество букв на расстояние (500 букв)](./scripts_results/distance_count_500.svg)
 ![Количество букв на расстояние (5000 букв)](./scripts_results/distance_count_5000.svg)
+
+То же самое в логарифмической шкале:
+
+![Количество букв на расстояние (500 букв)](./scripts_results/distance_count_500_log.svg)
+![Количество букв на расстояние (5000 букв)](./scripts_results/distance_count_5000_log.svg)

@@ -11,11 +11,12 @@ with open("/dev/datasets/FairWind/_results/bowtie/coverage/merged_table.pickle",
     large_table = pickle.load(f)
 print(f"Pickle load is done [%f sec]" % (time.time() - start_time), end="\n")
 
-plt.plot(list(large_table[:5000]))
+plt.plot(list(large_table[:500]))
+plt.yscale("log")
 plt.ylabel('Depth average')
 plt.xlabel('Distance from restriction site, b')
-plt.suptitle('Distance coverage')
-plt.savefig("/dev/datasets/FairWind/_results/bowtie/coverage/distance_coverage_5000.svg")
+plt.suptitle('Distance coverage (log)')
+plt.savefig("/dev/datasets/FairWind/_results/bowtie/coverage/distance_coverage_500_log.svg")
 
 exit()
 

@@ -114,9 +114,7 @@ cutadapt -m 8 -e 0.2 -O 7 --trimmed-only -y SPLIT_RIGHT -j $THREADS -g "$split_s
        
 cutadapt -m 8 -e 0.2 -O 7 --trimmed-only -y SPLIT_RIGHT -j $THREADS -g "$split_seq4" \
     -o $OUTPUT_FOLDER/splitted/sample-1-4_R2_SplitRight.fastq.gz \
-       $OUTPUT_FOLDER/bridgeless/sample-1-4_R2_Bridgeless.fastq.gz; ) > $OUTPUT_FOLDER/bridgeless/sample-1-4_cutadapt.txt;
-
-done
+       $OUTPUT_FOLDER/bridgeless/sample-1-4_R2_Bridgeless.fastq.gz; ) > $OUTPUT_FOLDER/splitted/sample-1-4_cutadapt.txt;
 
 md5sum $OUTPUT_FOLDER/splitted/*.fastq.gz > $OUTPUT_FOLDER/splitted/all.md5;
 
