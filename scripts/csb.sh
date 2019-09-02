@@ -1,9 +1,9 @@
 #!/bin/bash
 
-THREADS=12
+THREADS=6
 
-INPUT_FOLDER='/dev/datasets/ngs_data/ExoC_Belopuz/30-213832944'
-OUTPUT_FOLDER='/dev/datasets/FairWind/_results/cut'
+INPUT_FOLDER='/dev/datasets/FairWind/_results/60m/samples'
+OUTPUT_FOLDER='/dev/datasets/FairWind/_results/60m/cut'
 
 mkdir $OUTPUT_FOLDER;
 
@@ -24,8 +24,8 @@ do
 cutadapt -m 8 -j $THREADS -a $illumina1 -A $illumina2 \
     -o $OUTPUT_FOLDER/illuminaless/sample-"$var"_R1_Illuminaless.fastq.gz \
     -p $OUTPUT_FOLDER/illuminaless/sample-"$var"_R2_Illuminaless.fastq.gz \
-       $INPUT_FOLDER/sample-"$var"_R1_001.fastq.gz \
-       $INPUT_FOLDER/sample-"$var"_R2_001.fastq.gz; ) > $OUTPUT_FOLDER/illuminaless/sample-"$var"_cutadapt.txt;
+       $INPUT_FOLDER/sample-"$var"_R1_60M.fastq \
+       $INPUT_FOLDER/sample-"$var"_R2_60M.fastq; ) > $OUTPUT_FOLDER/illuminaless/sample-"$var"_cutadapt.txt;
 
 done
 

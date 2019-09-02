@@ -77,7 +77,8 @@ count = SeqIO.convert(input_filename, input_format, output_filename, output_form
 print(f"Converted {count} records from {input_format} to {output_format}", end='\n')
 ```
 
-3. CSV: [pandas](https://pandas.pydata.org/pandas-docs/stable/)
+3. CSV: [pandas](https://pandas.pydata.org/pandas-docs/stable/).
+Можно читать кусочками -- параметр *chunksize*.
 
 ```python
 import pandas as pd

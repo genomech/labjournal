@@ -1,6 +1,6 @@
 #!/bin/bash
 
-THREADS=12
+THREADS=6
 B2_INDEX="/dev/datasets/FairWind/_db/hg19/hg19_small/hg19"
 INPUT_PATH="/dev/datasets/FairWind/_results/cut/splitted"
 OUTPUT_PATH="/dev/datasets/FairWind/_results/bowtie/sam"
