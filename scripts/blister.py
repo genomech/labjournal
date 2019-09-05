@@ -24,7 +24,8 @@ with blister_read(input_filename, mode='rt') as input_file:
 
 blister_erase(n=1)
 blister_progressbar(percent, start_time)
-with blister_timestamp(title):
+blister_total(total, start_time)
+with blister_timestamp(title) as start_time:
 
 --------- CPU ---------
 
@@ -113,6 +114,7 @@ def blister_read(filename, mode='rt'):
 		print(f"Blister: Unknown OSError: {filename}", end="\n")
 	finally:
 		f_obj.close()
+		print(f"Blister: File is closed: {filename}", end="\n")
 
 def blister_sec2time(sec):
 	return str(datetime.timedelta(seconds=int(sec)))
@@ -128,21 +130,26 @@ def blister_progressbar(percent, start_time):
 	empty = "." * int(50 - len(fill))
 	print(f"\t[{fill}{empty}] %4.0f%% [%s]" % (percent * 100, blister_sec2time(time.time() - start_time)), end="\r")
 
+def blister_total(total, start_time):
+	print(f"\tTotal: {total} [%s]" % (blister_sec2time(time.time() - start_time)), end="\r")
+
 @contextmanager  
 def blister_timestamp(title):
+	print(f"Blister: Start process {title} ...", end="\n")
 	start_time = time.time()
-	yield
-	print(f"Blister: {title} is done [%s]" % (blister_sec2time(time.time() - start_time)), end="\n")
+	yield start_time
+	print(f"Blister: Process {title} is done [%s]" % (blister_sec2time(time.time() - start_time)), end="\n")
 
 @contextmanager
 def blister_threading(title, THREADS_NUM = cpu_count()):
-	print(f"Blister: starting {title} in {THREADS_NUM} cores ...", end="\n")
+	print(f"Blister: Start {title} in {THREADS_NUM} cores ...", end="\n")
+	start_time = time.time()
 	pool = Pool(THREADS_NUM)
 	yield pool
 	pool.close()
 	pool.join()
 	del pool
-	print(f"Blister: {title} threads are done.", end="\n")
+	print(f"Blister: {title} threads are done [%s]" % (blister_sec2time(time.time() - start_time)), end="\n")
 
 '''
 # TEMPLATES

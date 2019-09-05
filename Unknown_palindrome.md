@@ -3402,7 +3402,7 @@ $ grep '^[^o\[]*\-egdirb\-\-genome\-.*' ./sample-1-1_R1_Illuminaless_STATISTICS.
 
 Прогнать все остальные образцы.
 
-# Результаты
+## Результаты
 
 Комп снова завис.
 Эмиль рассердился и распараллелил скрипт.
@@ -3422,3 +3422,125 @@ $ grep '^[^o\[]*\-egdirb\-\-genome\-.*' ./sample-1-1_R1_Illuminaless_STATISTICS.
 ![График процентов последовательностей в библиотеках](./scripts_results/libs_mask_190902.png)
 
 Таблица ODS, [если понадобится](./scripts_results/libs_mask_190902.ods).
+
+## Результаты по dangling ends
+
+| Sample        | bgg, %  | eg, %   |
+|---------------|---------|---------|
+| s3_FR_RF_0_R1 | 7.7267  | 3.0258  |
+| s3_FR_RF_0_R2 | 8.2358  | 2.5066  |
+| s5_FR_RF_0_R1 | 6.7543  | 3.4842  |
+| s5_FR_RF_0_R2 | 7.2160  | 2.6680  |
+| s7_FR_RF_0_R1 | 3.42313 | 15.3723 |
+| s7_FR_RF_0_R2 | 3.8473  | 17.6244 |
+| s8_FR_RF_0_R1 | 4.1313  | 19.8681 |
+| s8_FR_RF_0_R2 | 5.1396  | 23.2775 |
+
+![График процентов последовательностей в библиотеках](./scripts_results/dangling_ends_190905.png)
+
+Таблица ODS, [если понадобится](./scripts_results/dangling_ends_190905.ods).
+
+Полные результаты:
+
+<details> 
+<summary>s3_FR_RF_0_R1</summary>
+count	mask
+35.4861	-genome-
+3.9546	-bridge--gatc--genome-
+2.5855	-genome--gatc--egdirb--[1]--gatc--genome-
+2.4103	-genome--egdirb--genome-
+2.3251	-genome--bridge--genome-
+1.7727	-genome--gatc--[3]--
+1.7401	-genome--gatc--[1]--
+1.7186	-genome--gatc--[4]--
+1.7105	-genome--gatc--[6]--
+1.693	-genome--gatc--[2]--
+1.6781	-genome--gatc--[5]--
+1.5134	-genome--gatc--[7]--
+1.4355	-genome--gatc--[8]--
+1.3908	-genome--gatc--[9]--
+1.3224	-genome--gatc--[10]--
+0.8905	-egdirb--genome-
+0.6503	-egdirb--bridge--gatc--egdirb--genome-
+0.6231	-genome--egdirb--[1]--gatc--genome-
+0.6195	-bridge--genome-
+0.5867	-genome--bridge--[6]--gatc--genome-
+0.5728	-egdirb--bridge--gatc--genome-
+0.5601	-genome--gatc--[6]--egdirb--genome-
+0.5155	--[6]--gatc--genome-
+0.4498	-genome--bridge--[1]--gatc--genome-
+0.3887	--[5]--gatc--genome-
+0.3838	-bridge--gatc--egdirb--genome-
+0.3593	-genome--gatc--egdirb--bridge--[1]--gatc--genome-
+0.3589	-genome--bridge--gatc--egdirb--[1]--gatc--genome-
+0.3318	-genome--gatc--[7]--gatc--genome-
+0.3289	-genome--bridge--gatc--egdirb--bridge--[1]--gatc--genome-
+0.3157	-genome--egdirb--bridge--[1]--gatc--genome-
+0.3066	--[3]--gatc--genome-
+0.2875	-genome--gatc--[6]--gatc--genome-
+0.2696	-genome--gatc--[4]--gatc--genome-
+0.2633	-genome--gatc--egdirb-
+0.2568	-genome--gatc--egdirb--[3]--
+0.2411	-genome--gatc--egdirb--[4]--
+0.2367	--[1]--gatc--genome-
+0.2309	--[4]--gatc--genome-
+0.2283	-genome--gatc--egdirb--[1]--gatc-
+0.2207	-genome--bridge--gatc--egdirb--genome-
+0.22	-genome--gatc--egdirb--[1]--gatc--[1]--
+0.2139	-bridge--gatc--genome--gatc--[1]--
+0.2128	-genome--gatc--egdirb--[1]--gatc--[2]--
+0.2085	-bridge--gatc--genome--gatc--[2]--
+0.208	--[7]--gatc--genome-
+0.2077	-genome--gatc--egdirb--[1]--gatc--[3]--
+0.207	-genome--gatc--egdirb--[1]--gatc--[4]--
+0.2033	-bridge--gatc--genome--bridge--genome-
+0.2008	-genome--gatc--[2]--gatc--genome-
+0.1987	-bridge--gatc--genome--gatc--[4]--
+0.1986	-bridge--gatc--genome--gatc--[5]--
+0.1982	-bridge--gatc--genome--gatc--[3]--
+0.1912	-genome--gatc--egdirb--[1]--gatc--[6]--
+0.1875	-genome--gatc--[5]--gatc--genome-
+0.1874	-genome--gatc--egdirb--[1]--gatc--[5]--
+0.1837	-genome--gatc--[8]--gatc--genome-
+0.1821	-bridge--gatc--genome--gatc--[6]--
+0.1807	--[2]--gatc--genome-
+0.1802	-genome--gatc--egdirb--[1]--gatc--[7]--
+0.1766	-genome--gatc--egdirb--[1]--gatc--[8]--
+0.1766	-bridge--gatc--genome--gatc--[7]--
+0.1707	-genome--gatc--egdirb--[1]--gatc--[9]--
+0.1682	-bridge--gatc--genome--gatc--[8]--
+0.1659	-genome--bridge--gatc--genome-
+0.1605	-genome--gatc--[3]--gatc--genome-
+0.1554	-bridge--gatc--genome--gatc--[9]--
+0.1545	-genome--gatc--egdirb--[1]--gatc--[10]--
+0.1541	-bridge--gatc--genome--gatc--[10]--
+0.1532	-bridge--gatc--genome--egdirb--genome-
+0.1435	-genome--gatc--[1]--gatc--genome-
+0.135	-genome--bridge--genome--gatc--[1]--
+0.1334	--[10]--gatc--genome-
+0.1331	-genome--egdirb--genome--gatc--[1]--
+0.1279	-genome--bridge--genome--gatc--[3]--
+0.1271	-genome--bridge--genome--gatc--[2]--
+0.1258	-genome--egdirb--genome--gatc--[4]--
+0.1258	--[8]--gatc--genome-
+0.1242	-genome--bridge--genome--gatc--[4]--
+0.1238	-genome--bridge--genome--gatc--[6]--
+0.1234	-genome--egdirb--genome--gatc--[6]--
+0.1226	-genome--egdirb--genome--gatc--[3]--
+0.1198	-genome--gatc--[9]--gatc--genome-
+0.1195	--[9]--gatc--genome-
+0.119	-genome--bridge--genome--gatc--[5]--
+0.1186	-genome--gatc--egdirb--[1]--
+0.1174	-genome--egdirb--genome--gatc--[2]--
+0.1159	-genome--gatc--egdirb--genome-
+0.1141	-genome--egdirb--genome--gatc--[5]--
+0.11	-genome--bridge--genome--gatc--[7]--
+0.1099	-genome--gatc--[10]--gatc--genome-
+0.1063	-egdirb--bridge--genome-
+0.1053	-genome--egdirb--genome--gatc--[7]--
+0.1053	-genome--egdirb--genome--gatc--egdirb--[1]--gatc--genome-
+0.1051	-genome--egdirb--genome--gatc--[8]--
+0.104	-genome--bridge--genome--gatc--[9]--
+0.1027	-genome--bridge--genome--gatc--[8]--
+0.1014	-genome--egdirb--genome--gatc--[9]--
+</details>

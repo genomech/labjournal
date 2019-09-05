@@ -18,7 +18,7 @@ illumina2='AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT'
 
 mkdir $OUTPUT_FOLDER/illuminaless;
 
-for var in '1-4' '1-5' '1-6' '1-7' '1-8' '1-9'
+for var in '1-1' '1-2' '1-3' '1-4' '1-5' '1-6' '1-7' '1-8' '1-9'
 do
 (
 cutadapt -m 8 -j $THREADS -a $illumina1 -A $illumina2 \
