@@ -3440,7 +3440,7 @@ $ grep '^[^o\[]*\-egdirb\-\-genome\-.*' ./sample-1-1_R1_Illuminaless_STATISTICS.
 
 Таблица ODS, [если понадобится](./scripts_results/dangling_ends_190905.ods).
 
-Полные результаты:
+Полные результаты ([.zip](./scripts_results/dangling_1m.zip)):
 
 <details> 
 <summary>s3_FR_RF_0_R1</summary>
