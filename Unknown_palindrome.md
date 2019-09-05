@@ -5502,3 +5502,250 @@ $ grep '^[^o\[]*\-egdirb\-\-genome\-.*' ./sample-1-1_R1_Illuminaless_STATISTICS.
 | 0.101 | -genome--gatc--[1]--gatc--[9]-- | -genome- |
 | 0.101 | -genome--bridge--gatc--egdirb--genome--bridge--[1]--gatc--genome--gatc--[1]--gatc--genome- | -egdirb--genome--bridge--gatc--egdirb--genome- |
 | 0.1 | -genome--bridge--genome- | -genome- |
+
+## Неудалённые адаптеры
+
+Была выдвинута гипотеза, что GATCAGATC в седьмом образце язвляются остатками адаптера Illumina.
+Было принято решение расширить поиск *anal_seqs.py*, введя ещё одну последовательность -- адаптер.
+
+Были подсчитаны результаты встречаемости начальной части адаптера и его реверс-комплемента:
+
+```
+$ zcat ./s7_FR_RF_0_R1.fastq.gz | grep GATCGGAAGAGC | wc -l # 8705225
+$ zcat ./s7_FR_RF_0_R2.fastq.gz | grep GATCGGAAGAGC | wc -l # 8693102
+$ zcat ./s7_FR_RF_0_R1.fastq.gz | grep GCTCTTCCGATC | wc -l # 29
+$ zcat ./s7_FR_RF_0_R2.fastq.gz | grep GCTCTTCCGATC | wc -l # 8
+```
+
+Как видно из результатов, реверс-комплемент почти не встречается, и искать его нет смысла.
+
+Результаты скрипта представлены ниже.
+В R1 очень часто встречается последовательность **adapt--genome--gatc--[1]--gatc**, расположенная на краю рида (справа от неё идут либо genome, либо короткие последовательности).
+В R2 в основном наблюдаются комбинации **adapt--genome** и **genome--adapt**, примыкание adapt к bridge-конкатомерам встречается в форме **bridge--[1]--adapt** и **egdirb--[1]--adapt** (~7 и 4% соответственно).
+
+<details> 
+<summary>s7_FR_RF_0_R1</summary>
+<pre>
+17.3402		-genome--adapt--genome--gatc--[1]--gatc--genome-
+5.28		-genome--bridge--gatc--egdirb--bridge--[1]--adapt--genome--gatc--[1]--gatc--genome-
+4.3434		-egdirb--bridge--gatc--egdirb--genome--adapt--genome--gatc--[1]--gatc--genome-
+4.3384		-genome--adapt--genome-
+2.3024		-genome--bridge--gatc--egdirb--[1]--adapt--genome--gatc--[1]--gatc--genome-
+1.9425		-bridge--gatc--egdirb--genome--adapt--genome--gatc--[1]--gatc--genome-
+1.3351		-genome--bridge--gatc--egdirb--bridge--[1]--adapt--genome-
+1.1811		-egdirb--bridge--gatc--egdirb--genome--adapt--genome-
+0.9198		-genome--gatc--egdirb--[1]--adapt--genome--gatc--[1]--gatc--genome-
+0.915		-genome-
+0.8784		-bridge--gatc--genome--adapt--genome--gatc--[1]--gatc--genome-
+0.8026		-genome--egdirb--genome--adapt--genome--gatc--[1]--gatc--genome-
+0.794		-genome--bridge--genome--adapt--genome--gatc--[1]--gatc--genome-
+0.6039		-genome--bridge--gatc--egdirb--[7]--adapt--genome--gatc--[1]--gatc--genome-
+0.5905		-genome--bridge--gatc--egdirb--genome--adapt--genome--gatc--[1]--gatc--genome-
+0.5309		-genome--bridge--gatc--egdirb--[1]--adapt--genome-
+0.5097		-genome--gatc--egdirb--bridge--[1]--adapt--genome--gatc--[1]--gatc--genome-
+0.5093		--[6]--bridge--gatc--egdirb--genome--adapt--genome--gatc--[1]--gatc--genome-
+0.4839		-bridge--gatc--egdirb--genome--adapt--genome-
+0.3843		-genome--egdirb--genome--adapt--genome-
+0.3761		-genome--bridge--genome--adapt--genome-
+0.3705		-bridge--gatc--genome--adapt--genome-
+0.3607		-genome--gatc--egdirb--[1]--adapt--genome-
+0.3447		-genome--adapt--genome--gatc--[1]--gatc--[9]--
+0.3435		-genome--adapt--genome--gatc--[1]--gatc--[10]--
+0.3371		-genome--adapt--genome--gatc--[1]--gatc--[8]--
+0.3321		-genome--adapt--genome--gatc--[1]--gatc--[5]--
+0.3294		-genome--adapt--genome--gatc--[1]--gatc--[6]--
+0.328		-genome--adapt--genome--gatc--[1]--gatc--[7]--
+0.327		-genome--adapt--genome--gatc--[1]--gatc--[3]--
+0.3261		-genome--adapt--genome--gatc--[1]--gatc--[4]--
+0.3153		-genome--adapt--genome--gatc--[4]--
+0.3144		-genome--adapt--genome--gatc--[1]--gatc--[2]--
+0.309		-genome--adapt--genome--gatc--[1]--
+0.3061		-genome--adapt--genome--gatc--[1]--gatc--[1]--
+0.3041		-egdirb--bridge--gatc--genome--adapt--genome--gatc--[1]--gatc--genome-
+0.3024		-genome--adapt--genome--gatc--[2]--
+0.301		-genome--adapt--genome--gatc--[1]--gatc-
+0.2984		-genome--adapt--genome--gatc--[3]--
+0.2579		-genome--gatc--[1]--gatc--genome-
+0.2403		-egdirb--bridge--gatc--egdirb--genome-
+0.2271		-genome--adapt--[9]--
+0.2251		-genome--adapt--[8]--
+0.2241		-genome--adapt--[10]--
+0.2222		-genome--adapt--[7]--
+0.2181		-genome--adapt--[6]--
+0.2155		-genome--egdirb--[1]--adapt--genome--gatc--[1]--gatc--genome-
+0.2116		-genome--adapt--[5]--
+0.2051		-genome--adapt--[4]--
+0.2029		-genome--gatc--[5]--
+0.2028		-genome--adapt--[1]--
+0.2015		-genome--gatc--[6]--
+0.1984		-genome--adapt--[2]--
+0.1977		-genome--adapt--[3]--
+0.1949		-genome--gatc--[7]--
+0.1946		-genome--gatc--[4]--
+0.1922		-genome--adapt-
+0.1851		-genome--bridge--gatc--[7]--adapt--genome--gatc--[1]--gatc--genome-
+0.1851		-genome--gatc--[3]--
+0.1843		-genome--gatc--[1]--
+0.1821		-genome--gatc--[6]--egdirb--genome--adapt--genome--gatc--[1]--gatc--genome-
+0.1812		-genome--gatc--[2]--
+0.177		-genome--gatc--egdirb--bridge--[1]--adapt--genome-
+0.1676		-genome--bridge--[6]--gatc--genome--adapt--genome--gatc--[1]--gatc--genome-
+0.1633		-bridge--genome--adapt--genome--gatc--[1]--gatc--genome-
+0.1608		-genome--egdirb--bridge--[1]--adapt--genome--gatc--[1]--gatc--genome-
+0.159		-genome--bridge--gatc--egdirb--genome--adapt--genome-
+0.1569		--[6]--gatc--genome--adapt--genome--gatc--[1]--gatc--genome-
+0.1554		-genome--gatc--[7]--adapt--genome--gatc--[1]--gatc--genome-
+0.1496		-genome--bridge--[1]--adapt--genome--gatc--[1]--gatc--genome-
+0.1481		--[6]--gatc--egdirb--genome--adapt--genome--gatc--[1]--gatc--genome-
+0.1453		-genome--bridge--gatc--egdirb--[7]--adapt--genome-
+0.1305		--[3]--gatc--genome--adapt--genome--gatc--[1]--gatc--genome-
+0.128		-genome--gatc--[4]--adapt--genome--gatc--[1]--gatc--genome-
+0.1254		-genome--bridge--gatc--egdirb--[8]--adapt--genome--gatc--[1]--gatc--genome-
+0.1247		-genome--bridge--gatc--egdirb--bridge--[1]--adapt--genome--gatc--[1]--gatc--[9]--
+0.1245		--[6]--bridge--gatc--egdirb--genome--adapt--genome-
+0.1218		-genome--bridge--gatc--egdirb--bridge--[1]--adapt--genome--gatc--[1]--gatc--[8]--
+0.1195		-egdirb--genome--adapt--genome--gatc--[1]--gatc--genome-
+0.1189		-genome--bridge--gatc--egdirb--bridge--[1]--adapt--genome--gatc--[1]--gatc--[7]--
+0.1165		--[7]--bridge--gatc--egdirb--genome--adapt--genome--gatc--[1]--gatc--genome-
+0.1158		-egdirb--bridge--gatc--egdirb--bridge--gatc--egdirb--genome--adapt--genome--gatc--[1]--gatc--genome-
+0.1158		-genome--bridge--gatc--egdirb--bridge--gatc--egdirb--bridge--[1]--adapt--genome--gatc--[1]--gatc--genome-
+0.1156		-genome--bridge--gatc--egdirb--bridge--[1]--adapt--genome--gatc--[1]--gatc--[5]--
+0.115		-genome--bridge--gatc--egdirb--bridge--[1]--adapt--genome--gatc--[1]--gatc--[2]--
+0.1143		-genome--bridge--gatc--egdirb--bridge--[1]--adapt--genome--gatc--[1]--gatc--[6]--
+0.1141		-genome--bridge--gatc--egdirb--bridge--[1]--adapt--genome--gatc--[1]--gatc--[10]--
+0.1124		-genome--bridge--[3]--adapt--genome--gatc--[1]--gatc--genome-
+0.112		-egdirb--bridge--gatc--genome--adapt--genome-
+0.1109		-genome--bridge--gatc--egdirb--bridge--[1]--adapt--genome--gatc--[1]--gatc--[3]--
+0.1101		-genome--bridge--gatc--egdirb--bridge--[1]--adapt--genome--gatc--[4]--
+0.1096		-genome--gatc--[6]--adapt--genome--gatc--[1]--gatc--genome-
+0.1093		-genome--bridge--gatc--egdirb--bridge--[1]--adapt--genome--gatc--[1]--gatc--[4]--
+0.1078		-genome--bridge--gatc--egdirb--bridge--[1]--adapt--genome--gatc--[1]--gatc-
+0.1078		--[2]--egdirb--genome--adapt--genome--gatc--[1]--gatc--genome-
+0.107		-genome--bridge--gatc--egdirb--bridge--[1]--adapt--genome--gatc--[3]--
+0.1067		--[5]--gatc--genome--adapt--genome--gatc--[1]--gatc--genome-
+0.1059		-egdirb--bridge--gatc--egdirb--genome--adapt--genome--gatc--[1]--gatc--[10]--
+0.1053		-egdirb--bridge--gatc--egdirb--genome--adapt--genome--gatc--[1]--gatc--[9]--
+0.105		-genome--gatc--[2]--adapt--genome--gatc--[1]--gatc--genome-
+0.105		-genome--bridge--gatc--egdirb--bridge--[1]--adapt--genome--gatc--[2]--
+0.1048		-genome--bridge--gatc--egdirb--bridge--[1]--adapt--genome--gatc--[1]--gatc--[1]--
+0.1039		-bridge--gatc--genome-
+0.1032		--[1]--gatc--genome--adapt--genome--gatc--[1]--gatc--genome-
+0.1023		-genome--bridge--gatc--egdirb--bridge--[1]--adapt--genome--gatc--[1]--
+0.1019		-egdirb--bridge--gatc--egdirb--genome--adapt--genome--gatc--[1]--gatc--[8]--
+0.1012		-genome--egdirb--[7]--adapt--genome--gatc--[1]--gatc--genome-
+0.1004		-egdirb--bridge--gatc--egdirb--genome--adapt--genome--gatc--[1]--gatc--[7]--
+</pre>
+</details>
+
+<details> 
+<summary>s7_FR_RF_0_R2</summary>
+<pre>
+23.1611	-genome--adapt--genome-
+7.1985	-egdirb--bridge--gatc--egdirb--genome--adapt--genome-
+5.9548	-genome--bridge--gatc--egdirb--bridge--[1]--adapt--genome-
+3.0228	-bridge--gatc--egdirb--genome--adapt--genome-
+2.616	-genome--bridge--gatc--egdirb--[1]--adapt--genome-
+1.3739	-bridge--gatc--genome--adapt--genome-
+1.3707	-genome--gatc--egdirb--[1]--adapt--genome-
+1.3007	-genome--bridge--genome--adapt--genome-
+1.2908	-genome--egdirb--genome--adapt--genome-
+1.2775	-genome-
+0.8264	-genome--bridge--gatc--egdirb--genome--adapt--genome-
+0.8181	--[6]--bridge--gatc--egdirb--genome--adapt--genome-
+0.7181	-egdirb--bridge--gatc--genome--adapt--genome-
+0.6801	-genome--bridge--gatc--egdirb--[7]--adapt--genome-
+0.478	-genome--gatc--egdirb--bridge--[1]--adapt--genome-
+0.3764	-genome--adapt--genome--gatc--[10]--
+0.3758	-genome--adapt--genome--gatc--[8]--
+0.3734	-genome--adapt--genome--gatc--[9]--
+0.3707	-genome--adapt--genome--gatc--[1]--
+0.3694	-genome--adapt--genome--gatc--[4]--
+0.3631	-genome--adapt--genome--gatc--[7]--
+0.3606	-genome--adapt--genome--gatc--[2]--
+0.3602	-genome--adapt--genome--gatc--[6]--
+0.3594	-genome--adapt--genome--gatc--[5]--
+0.3556	-genome--adapt--genome--gatc--[3]--
+0.329	-egdirb--bridge--gatc--egdirb--genome-
+0.3273	-bridge--genome--adapt--genome-
+0.2828	-genome--bridge--[6]--gatc--genome--adapt--genome-
+0.2617	-genome--gatc--[6]--egdirb--genome--adapt--genome-
+0.2583	-genome--egdirb--[1]--adapt--genome-
+0.247	--[6]--gatc--egdirb--genome--adapt--genome-
+0.2358	-egdirb--bridge--genome--adapt--genome-
+0.2302	-egdirb--bridge--gatc--egdirb--bridge--gatc--egdirb--genome--adapt--genome-
+0.2263	-genome--gatc--[7]--adapt--genome-
+0.2247	-genome--adapt--[8]--
+0.223	-genome--adapt--[9]--
+0.2223	-genome--adapt--[10]--
+0.2196	-genome--bridge--gatc--egdirb--bridge--gatc--egdirb--bridge--[1]--adapt--genome-
+0.2194	-genome--adapt--[6]--
+0.2185	-genome--adapt--[7]--
+0.216	--[6]--gatc--genome--adapt--genome-
+0.2148	-genome--gatc--[5]--
+0.2114	-genome--adapt--[5]--
+0.2087	-genome--bridge--gatc--[7]--adapt--genome-
+0.2082	-genome--gatc--[6]--
+0.2063	-genome--adapt--[4]--
+0.2036	-genome--gatc--[7]--
+0.2031	-genome--adapt--[1]--
+0.1993	-genome--adapt--[2]--
+0.199	-genome--gatc--[4]--
+0.1967	-genome--adapt--[3]--
+0.1911	-egdirb--genome--adapt--genome-
+0.1901	-genome--adapt-
+0.1881	-genome--gatc--[3]--
+0.1875	-genome--gatc--[1]--
+0.1858	-genome--gatc--[2]--
+0.179	--[7]--bridge--gatc--egdirb--genome--adapt--genome-
+0.1742	-genome--gatc--[4]--adapt--genome-
+0.1717	--[3]--gatc--genome--adapt--genome-
+0.1608	-genome--bridge--[1]--adapt--genome-
+0.154	--[5]--gatc--genome--adapt--genome-
+0.1536	-genome--gatc--[6]--adapt--genome-
+0.1528	-egdirb--bridge--gatc--egdirb--genome--bridge--genome--adapt--genome-
+0.1508	-egdirb--bridge--gatc--egdirb--genome--egdirb--genome--adapt--genome-
+0.1456	-genome--gatc--egdirb--genome--adapt--genome-
+0.1449	-egdirb--bridge--gatc--egdirb--genome--bridge--[1]--adapt--genome-
+0.1417	--[2]--egdirb--genome--adapt--genome-
+0.1416	-genome--bridge--[3]--adapt--genome-
+0.1415	-genome--gatc--[2]--adapt--genome-
+0.1405	-bridge--gatc--egdirb--genome-
+0.137	--[1]--gatc--genome--adapt--genome-
+0.1361	-genome--bridge--gatc--egdirb--[8]--adapt--genome-
+0.1304	-egdirb--bridge--gatc--egdirb--genome--adapt--genome--gatc--[7]--
+0.128	-egdirb--bridge--gatc--egdirb--genome--adapt--genome--gatc--[10]--
+0.1257	-egdirb--genome--bridge--gatc--egdirb--bridge--[1]--adapt--genome-
+0.1243	-egdirb--bridge--gatc--egdirb--genome--adapt--genome--gatc--[3]--
+0.1239	--[6]--bridge--genome--adapt--genome-
+0.1237	-egdirb--bridge--gatc--egdirb--genome--adapt--genome--gatc--[5]--
+0.1234	-genome--egdirb--genome--bridge--gatc--egdirb--bridge--[1]--adapt--genome-
+0.1232	-egdirb--bridge--gatc--egdirb--genome--adapt--genome--gatc--[4]--
+0.123	-egdirb--bridge--gatc--egdirb--genome--adapt--genome--gatc--[6]--
+0.1228	-bridge--gatc--genome-
+0.1227	-egdirb--bridge--gatc--egdirb--genome--adapt--genome--gatc--[8]--
+0.1225	-egdirb--bridge--gatc--egdirb--genome--adapt--genome--gatc--[9]--
+0.1219	-genome--bridge--genome--bridge--gatc--egdirb--bridge--[1]--adapt--genome-
+0.1205	-egdirb--bridge--gatc--egdirb--genome--adapt--genome--gatc--[2]--
+0.1198	-egdirb--bridge--gatc--egdirb--genome--adapt--genome--gatc--[1]--
+0.1145	-genome--gatc--[5]--adapt--genome-
+0.1089	--[2]--egdirb--bridge--gatc--egdirb--genome--adapt--genome-
+0.1088	-genome--egdirb--genome-
+0.1084	--[7]--gatc--genome--adapt--genome-
+0.1084	-genome--bridge--gatc--egdirb--bridge--[1]--adapt--genome--gatc--[7]--
+0.1078	--[4]--gatc--genome--adapt--genome-
+0.1073	-genome--bridge--gatc--egdirb--bridge--[1]--adapt--genome--gatc--[4]--
+0.1071	-genome--bridge--gatc--egdirb--bridge--[1]--adapt--genome--gatc--[6]--
+0.1051	-genome--bridge--genome-
+0.104	-genome--bridge--gatc--egdirb--bridge--[1]--adapt--genome--gatc--[8]--
+0.104	-genome--egdirb--[7]--adapt--genome-
+0.1039	--[1]--bridge--gatc--egdirb--genome--adapt--genome-
+0.1036	-genome--egdirb--bridge--[1]--adapt--genome-
+0.1033	-genome--bridge--gatc--egdirb--bridge--[1]--adapt--genome--gatc--[2]--
+0.1026	-genome--bridge--gatc--egdirb--bridge--[1]--adapt--genome--gatc--[10]--
+0.1024	-genome--bridge--gatc--egdirb--bridge--[1]--adapt--genome--gatc--[9]--
+0.102	-genome--bridge--gatc--egdirb--bridge--[1]--adapt--genome--gatc--[5]--
+0.1012	-genome--bridge--gatc--egdirb--bridge--[1]--adapt--genome--gatc--[3]--
+0.1012	-genome--gatc--[1]--adapt--genome-
+0.1005	-genome--bridge--gatc--egdirb--bridge--[1]--adapt--genome--gatc--[1]--
+</pre>
+</details>
