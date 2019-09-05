@@ -12,7 +12,7 @@ def thread0(filename):
 	seqs = pd.DataFrame(np.array([['-bridge-', 'GCTGAGG'], ['-egdirb-', 'CCTCAGC'], ['-gatc-', 'GATC']]), columns=['name', 'seq'])
 	genome = '-genome-'
 
-	output_dir = blister_dir("/dev/datasets/FairWind/_results/t78", create=True)
+	output_dir = blister_dir("/dev/datasets/FairWind/_results/dangling_char/", create=True)
 	output_file0 = blister_output(filename, output_dir, "stat", "csv", rewrite=True)
 
 	main_list = []
@@ -27,8 +27,12 @@ def thread0(filename):
 			for index, row in seqs.iterrows():
 				line = line.replace(row['seq'], row['name'])
 			for it in range(10):
-				its = str(it + 1)
-				line = re.sub("(^|-)[ATGCN]{" + its + "}($|-)", "--[" + its + "]--", line)
+				if it == 0:
+					for ch in list("ATGCN"):
+						line = re.sub("(^|-)[" + ch + "]{1}($|-)", "--[" + ch.lower() + "]--", line)
+				else:
+					its = str(it + 1)
+					line = re.sub("(^|-)[ATGCN]{" + its + "}($|-)", "--[" + its + "]--", line)
 	
 			line = re.sub(r"[ATGCN]{11,}", genome, line)
 			# optimization
@@ -55,9 +59,9 @@ def thread0(filename):
 	
 	return table_result
 
-input_filenames = blister_input(["/dev/datasets/ngs_data/ExoC_Belopuz/30-213832944/sample-1-7_R*_001.fastq.gz", "/dev/datasets/ngs_data/ExoC_Belopuz/30-213832944/sample-1-8_R*_001.fastq.gz"])
+input_filenames = blister_input(["/dev/datasets/FairWind/_results/dangl/*.fastq.gz"])
 if not input_filenames: exit()
-output_dir = blister_dir("/dev/datasets/FairWind/_results/t78", create=True)
+output_dir = blister_dir("/dev/datasets/FairWind/_results/dangling_char/", create=True)
 if not output_dir: exit()
 output_file = blister_output("./all", output_dir, "", "csv", rewrite=True)
 
