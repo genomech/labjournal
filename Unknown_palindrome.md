@@ -5406,7 +5406,7 @@ $ grep '^[^o\[]*\-egdirb\-\-genome\-.*' ./sample-1-1_R1_Illuminaless_STATISTICS.
 
 ## Анализ спаренных ридов в dangling ends #7
 
-| count, % | mask_r1 | mark_r2 |
+| count, % | mask_r1 | mask_r2 |
 |---|---|---|
 | 10.457 | -genome--bridge--gatc--egdirb--genome- | -genome--bridge--gatc--egdirb--genome- |
 | 5.676 | -genome--bridge--gatc--egdirb--genome--gatc--[1]--gatc--genome- | -genome--bridge--gatc--egdirb--genome- |
