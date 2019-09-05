@@ -3444,6 +3444,7 @@ $ grep '^[^o\[]*\-egdirb\-\-genome\-.*' ./sample-1-1_R1_Illuminaless_STATISTICS.
 
 <details> 
 <summary>s3_FR_RF_0_R1</summary>
+<pre>
 count	mask
 35.4861	-genome-
 3.9546	-bridge--gatc--genome-
@@ -3543,4 +3544,5 @@ count	mask
 0.104	-genome--bridge--genome--gatc--[9]--
 0.1027	-genome--bridge--genome--gatc--[8]--
 0.1014	-genome--egdirb--genome--gatc--[9]--
+</pre>
 </details>
