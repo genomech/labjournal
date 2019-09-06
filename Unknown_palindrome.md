@@ -5749,3 +5749,10 @@ $ zcat ./s7_FR_RF_0_R2.fastq.gz | grep GCTCTTCCGATC | wc -l # 8
 0.1005		-genome--bridge--gatc--egdirb--bridge--[1]--adapt--genome--gatc--[1]--
 </pre>
 </details>
+
+## Данные с обрезанными адаптерами
+
+Полные данные доступны в виде [.zip](./scripts_results/AS[1M]_dang-libs-iless.zip).
+Таблица [ODS](./scripts_results/bgg-eg_190906.ods) по статистике.
+
+![График по библиотекам и dangling ends](./scripts_results/bgg-eg_190906.png)

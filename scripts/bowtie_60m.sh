@@ -9,7 +9,7 @@ SORTED_PATH="/dev/datasets/FairWind/_results/60m/bowtie/bam"
 mkdir $SORTED_PATH
 mkdir $OUTPUT_PATH
 
-for var in '1-1' '1-2' '1-3' '1-4' '1-5' '1-6' '1-7' '1-8' '1-9'
+for var in '1-4' '1-5' '1-6' '1-7' '1-8' '1-9'
 do
 
 bowtie2 -x $B2_INDEX \
