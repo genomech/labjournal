@@ -1,4 +1,4 @@
-# Blister v0.29
+# Blister v0.3
 
 from contextlib import contextmanager
 from multiprocessing import cpu_count, Pool
@@ -11,16 +11,33 @@ import gzip
 import sys
 import time
 
+# --------- ETC ---------
+
+# tabulate
+# pandas: read_csv, to_csv
+# Bio, vcf
+# subprocess
+# pickle
+# matplotlib.pyplot
+
+# def blister_seal(mask):
+
 # --------- I/O ---------
 
 # input_filenames = blister_input([filenames])
 # if not input_filenames: exit()
 
 def blister_input(filenames):
+	if type(filenames) != type(list()):
+		print(f"Blister: Invalid input type {type(filenames)}. List of strings only.", end='\n')
+		return False
 	file_list = []
 	fileinfo_list = []
 	fileinfo_unreadable = []
 	for filename in filenames:
+		if type(filename) != type(str()):
+			print(f"Blister: Invalid input type {type(filename)} in list. Strings only.", end='\n')
+			return False
 		file_list += glob.glob(QFileInfo(filename).absoluteFilePath())
 	file_list = list(set(file_list))
 	file_list.sort()
@@ -44,8 +61,11 @@ def blister_input(filenames):
 # output_dir = blister_dir(dir_path, create=True)
 # if not output_dir: exit()
 
-def blister_dir(_dir, create=True):
-	dir_info = QFileInfo(_dir)
+def blister_dir(dir_path, create=True):
+	if type(dir_path) != type(str()):
+		print(f"Blister: Invalid input type {type(dir_path)}. String only.", end='\n')
+		return False
+	dir_info = QFileInfo(dir_path)
 	if (dir_info.exists() and (not dir_info.permission(QFile.WriteUser))):
 		print(f"Blister: Writing in this dir is not permitted:\n\t{dir_info.absoluteFilePath()}", end='\n')
 		return False
@@ -110,7 +130,6 @@ def blister_read(filename, mode='rt', index=-1):
 		f_obj = gzip.open(filename, mode) if is_gz else (bz2.open(filename, mode) if is_bz2 else open(filename, mode))
 		yield f_obj
 		f_obj.close()
-		#print(f"{thread_id}Blister: File is closed:\n{thread_id}\t{filename}", end='\n')
 	except OSError:
 		print(f"{thread_id}Blister: Unknown OSError:\n{thread_id}\t{filename}", end='\n')
 		exit()
@@ -127,7 +146,6 @@ def blister_logo(script_name):
 @contextmanager  
 def blister_timestamp(title, index=-1):
 	thread_id = blister_thread_id(index)
-	#print(f"{thread_id}Blister: Start process {title} ...", end='\n')
 	start_time = time.time()
 	yield start_time
 	print(f"{thread_id}Blister: Process {title} is done [%s]" % (blister_sec2time(time.time() - start_time)), end='\n')
@@ -160,7 +178,10 @@ def blister_total(total, start_time):
 # --------- CPU ---------
 
 # with blister_threading(title) as pool:
-	# results = pool.map(functools.partial(the_thread), enumerate(input_filenames))
+	# results = pool.map(functools.partial(the_thread), enumerate(iterable))
+# def the_thread(block):
+	# index = block[0]
+	# item = block[1]
 
 @contextmanager
 def blister_threading(title, THREADS_NUM = cpu_count()):
@@ -177,64 +198,3 @@ def blister_threading(title, THREADS_NUM = cpu_count()):
 
 def blister_thread_id(index):
 	return (f"[{index}]\t" if (index != -1) else f"")
-
-'''
-# TEMPLATES
-
-## Pickle
-
-import pickle
-
-### dump
-with open(dump_filename, 'wb') as f:
-	pickle.dump(data, f)
-
-### load
-with open(dump_filename, 'rb') as f:
-	data_new = pickle.load(f)
-
-## Simple plot
-
-import matplotlib.pyplot as plt
-
-plt.plot(list)
-plt.yscale("log"|"linear")
-plt.ylabel('Y label')
-plt.xlabel('X label')
-plt.suptitle('Title')
-plt.savefig("filename")
-
-## PyVCF
-
-import vcf
-
-vcf_reader = vcf.Reader(open(vcf_filename, 'r'))
-
-for record in vcf_reader:
-	### do stuff
-
-## BioPython
-
-from Bio import SeqIO
-
-### input
-with open(input_filename, "rU") as input_handle:
-	for record in SeqIO.parse(input_handle, input_format):
-		# do stuff
-
-### output
-with open(output_filename, "w") as output_handle:
-	SeqIO.write(sequences, output_handle, output_format)
-	
-### convert
-count = SeqIO.convert(input_filename, input_format, output_filename, output_format)
-print(f"Converted {count} records from {input_format} to {output_format}", end='\n')
-
-## CSV
-
-import pandas as pd
-
-data = pd.read_csv(input_filename, sep=',', nrows=None)
-data.to_csv(output_filename, sep='\t', index=False, mode='w')
-
-'''
