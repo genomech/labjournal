@@ -425,16 +425,16 @@ plt.savefig("/dev/datasets/FairWind/_results/bowtie/coverage/distance_coverage_5
 
 Результаты представлены в таблице:
 
-| Sample                           |   Non-coverage, % |   Middle |   Median |   Coverage 75% |   Coverage 90% |   Coverage 95% |
-|----------------------------------|-------------------|----------|----------|----------------|----------------|----------------|
-| sample-1-1_ExomeCoverage_Shorten |           7.17945 |  28.3712 |       15 |              5 |              2 |              0 |
-| sample-1-2_ExomeCoverage_Shorten |           4.86821 |  27.4454 |       16 |              6 |              2 |              1 |
-| sample-1-3_ExomeCoverage_Shorten |           0.09345 |  48.895  |       38 |             24 |             15 |             10 |
-| sample-1-4_ExomeCoverage_Shorten |           5.90608 |  51.3707 |       17 |              5 |              1 |              0 |
-| sample-1-5_ExomeCoverage_Shorten |           0.87883 |  51.8552 |       33 |             15 |              7 |              4 |
-| sample-1-6_ExomeCoverage_Shorten |           1.60058 |  41.0072 |       26 |             12 |              5 |              3 |
-| sample-1-7_ExomeCoverage_Shorten |           6.04041 |  25.3044 |       15 |              6 |              2 |              0 |
-| sample-1-8_ExomeCoverage_Shorten |           5.53867 |  25.9506 |       15 |              6 |              2 |              0 |
-| sample-1-9_ExomeCoverage_Shorten |           3.46649 |  30.8405 |       18 |              8 |              3 |              1 |
+| Sample     |   Non-coverage, % |   Middle |   Median |   Coverage 75% |   Coverage 90% |   Coverage 95% |
+|------------|-------------------|----------|----------|----------------|----------------|----------------|
+| sample-1-1 |           7.17945 |  28.3712 |       15 |              5 |              2 |              0 |
+| sample-1-2 |           4.86821 |  27.4454 |       16 |              6 |              2 |              1 |
+| sample-1-3 |           0.09345 |  48.895  |       38 |             24 |             15 |             10 |
+| sample-1-4 |           5.90608 |  51.3707 |       17 |              5 |              1 |              0 |
+| sample-1-5 |           0.87883 |  51.8552 |       33 |             15 |              7 |              4 |
+| sample-1-6 |           1.60058 |  41.0072 |       26 |             12 |              5 |              3 |
+| sample-1-7 |           6.04041 |  25.3044 |       15 |              6 |              2 |              0 |
+| sample-1-8 |           5.53867 |  25.9506 |       15 |              6 |              2 |              0 |
+| sample-1-9 |           3.46649 |  30.8405 |       18 |              8 |              3 |              1 |
 
 ![График покрытия 60М](./scripts_results/allplot_60m_fq_190909.svg)
