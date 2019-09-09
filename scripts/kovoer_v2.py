@@ -1,4 +1,4 @@
-from blister import *
+from lib.blister import *
 import pandas as pd
 from tabulate import tabulate
 import matplotlib.pyplot as plt
@@ -38,9 +38,9 @@ def the_thread(block):
 	
 	return result
 
-blister_logo("Coverage Shorten 60M")
+blister_logo("Coverage Shorten 20-120M")
 
-input_filenames = blister_input(["/dev/datasets/FairWind/_results/60m/shorten_tables/*.csv"])
+input_filenames = blister_input(["/dev/datasets/FairWind/_results/20-120M/shorten_tables/*.csv"])
 if not input_filenames: exit()
 
 main_table = pd.DataFrame(columns=table_index)
@@ -56,9 +56,10 @@ with blister_timestamp("PLOTTING") as start_time:
 		plt.plot(it[1]["cumulate_list"][:100], label=it[1]["Sample"])
 	plt.ylabel('% of A with more depth')
 	plt.xlabel('Depth')
-	plt.suptitle('Cumulative coverage (all)')
+	plt.suptitle('Cumulative coverage (20-120M)')
 	plt.legend()
-	plt.savefig("/dev/datasets/FairWind/_results/60m/allplot_60m_fq.svg")
+	plt.savefig("/dev/datasets/FairWind/_results/20-120M/allplot_20-120m.svg")
 
 main_table.drop(columns=['cumulate_list'], axis=0, inplace=True)
+main_table.to_csv("/dev/datasets/FairWind/_results/20-120M/table_20-120m.csv")
 print(tabulate(main_table, headers=main_table.columns, tablefmt="github", showindex=False))

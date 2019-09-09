@@ -3,18 +3,18 @@
 
 FAI="/dev/datasets/FairWind/_db/hg19/hg19.fa.fai"
 EXOME="/dev/datasets/FairWind/_db/MedExome_hg19_capture_targets.sorted.bed"
-INPUT_PATH="/dev/datasets/FairWind/_results/60m/bowtie/bam"
-OUTPUT_PATH="/dev/datasets/FairWind/_results/60m/coverage"
+INPUT_PATH="/dev/datasets/FairWind/_results/20-120M/sorted"
+OUTPUT_PATH="/dev/datasets/FairWind/_results/20-120M/coverage"
 
 mkdir $OUTPUT_PATH
 
-for var in '1-1' '1-2' '1-3' '1-4' '1-5' '1-6' '1-7' '1-8' '1-9'
+for var in '20' '40' '60' '80' '100' '120'
 do
 
 bedtools coverage -hist -sorted \
 	-g $FAI \
 	-a $EXOME \
-	-b $INPUT_PATH/sample-"$var"_sorted.bam > $OUTPUT_PATH/sample-"$var"_ExomeCoverage.txt
+	-b $INPUT_PATH/sample-1-2_"$var"_sorted.bam > $OUTPUT_PATH/sample-1-2_"$var".txt
 
 echo $var is ready.
 

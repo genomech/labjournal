@@ -1,4 +1,4 @@
-from blister import *
+from lib.blister import *
 
 import pandas as pd
 
@@ -20,10 +20,10 @@ def the_thread(block, output_dir):
 
 blister_logo("Coverage Shorten 60M")
 
-input_filenames = blister_input(["/dev/datasets/FairWind/_results/60m/coverage/*.txt"])
+input_filenames = blister_input(["/dev/datasets/FairWind/_results/20-120M/coverage/*.txt"])
 if not input_filenames: exit()
 
-output_dir = blister_dir("/dev/datasets/FairWind/_results/60m/shorten_tables", create=True)
+output_dir = blister_dir("/dev/datasets/FairWind/_results/20-120M/shorten_tables", create=True)
 if not output_dir: exit()
 
 with blister_threading("COVERAGE") as pool:
