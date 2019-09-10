@@ -451,3 +451,10 @@ plt.savefig("/dev/datasets/FairWind/_results/bowtie/coverage/distance_coverage_5
 | 120                    |           3.71846 | 22.9875  |       13 |              5 |              2 |              1 |
 
 ![График покрытия 20-120М](./scripts_results/allplot_20-120m.svg)
+
+**TODO:** Прогнать таким же образом 90М ридов из ExoC Динары.
+
+## ExoC 90M
+
+Была выбрана библиотека 38_S4, т.к. в ней нашлось 90М ридов (89,4М, если честно).
+У них были обрезаны адаптеры Illumina.
