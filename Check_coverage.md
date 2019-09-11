@@ -458,3 +458,10 @@ plt.savefig("/dev/datasets/FairWind/_results/bowtie/coverage/distance_coverage_5
 
 Была выбрана библиотека 38_S4, т.к. в ней нашлось 90М ридов (89,4М, если честно).
 У них были обрезаны адаптеры Illumina.
+
+| Sample |   Non-coverage, % |   Middle |   Median |   Coverage 75% |   Coverage 90% |   Coverage 95% |
+|--------|-------------------|----------|----------|----------------|----------------|----------------|
+| 38_S4  |           0.07963 |  167.552 |      129 |             83 |             54 |             40 |
+
+![График покрытия ExoC 90M](./scripts_results/allplot_90m_190911.svg)
+

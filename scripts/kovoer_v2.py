@@ -1,6 +1,5 @@
 from lib.blister import *
 import pandas as pd
-from tabulate import tabulate
 import matplotlib.pyplot as plt
  
 table_index = ['Sample',  'Non-coverage, %', 'Middle', 'Median', 'Coverage 75%', 'Coverage 90%', 'Coverage 95%', 'cumulate_list']
@@ -10,7 +9,7 @@ def the_thread(block):
 	index = block[0]
 	input_filename = block[1]
 	
-	with blister_timestamp("READ CSV", index) as start_time:
+	with Blister.Timestamp("READ CSV", index) as start_time:
 		table = pd.read_csv(input_filename, sep='\t')
 		table = table.apply(pd.to_numeric, errors='ignore')
 		percents_capture = table['percent'].tolist()
@@ -26,7 +25,7 @@ def the_thread(block):
 	result['Coverage 90%'] = 0
 	result['Coverage 95%'] = 0
 	
-	with blister_timestamp("PROCESSING", index) as start_time:
+	with Blister.Timestamp("PROCESSING", index) as start_time:
 		for it in range(len(percents_capture)):
 			summa = sum(percents_capture[it:])
 			result['cumulate_list'] += [summa]
@@ -38,28 +37,28 @@ def the_thread(block):
 	
 	return result
 
-blister_logo("Coverage Shorten 20-120M")
+Blister.Logo("Coverage Shorten")
 
-input_filenames = blister_input(["/dev/datasets/FairWind/_results/20-120M/shorten_tables/*.csv"])
+input_filenames = Blister.Input(["/dev/datasets/FairWind/_results/38_S4--CoverageExome--Shorten.csv"])
 if not input_filenames: exit()
 
 main_table = pd.DataFrame(columns=table_index)
 
-with blister_threading("KOVOER") as pool:
+with Blister.Threading("KOVOER") as pool:
 	results = pool.map(functools.partial(the_thread), enumerate(input_filenames))
 	main_table = main_table.append(results, ignore_index=True)
 	del results
 
-with blister_timestamp("PLOTTING") as start_time:
+with Blister.Timestamp("PLOTTING") as start_time:
 	plt.clf()
 	for it in main_table.iterrows():
 		plt.plot(it[1]["cumulate_list"][:100], label=it[1]["Sample"])
 	plt.ylabel('% of A with more depth')
 	plt.xlabel('Depth')
-	plt.suptitle('Cumulative coverage (20-120M)')
+	plt.suptitle('Cumulative coverage (90M, Exo-C)')
 	plt.legend()
-	plt.savefig("/dev/datasets/FairWind/_results/20-120M/allplot_20-120m.svg")
+	plt.savefig("/dev/datasets/FairWind/_results/allplot_90m_190911.svg")
 
 main_table.drop(columns=['cumulate_list'], axis=0, inplace=True)
-main_table.to_csv("/dev/datasets/FairWind/_results/20-120M/table_20-120m.csv")
-print(tabulate(main_table, headers=main_table.columns, tablefmt="github", showindex=False))
+main_table.to_csv("/dev/datasets/FairWind/_results/table_90m_190911.csv")
+print(Blister.GitHubTable(main_table))
