@@ -1,4 +1,4 @@
-from blister import *
+from lib.blister import *
 
 filenames = ["/dev/datasets/FairWind/_results/bowtie/bam/*.bam"]
 dir_path = "/dev/datasets/FairWind/_results/bowtie/vcf/"
@@ -7,7 +7,7 @@ depth = 10
 quality = 30
 THREADS_NUM = cpu_count()
 
-Blister.Logo(f"Monster BamFilter")
+Blister.Logo(f"BamFilter")
 		
 input_filenames = Blister.Input(filenames)
 if not input_filenames: exit() 
@@ -26,5 +26,5 @@ for input_filename in input_filenames:
 		sp = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 		out, err = sp.communicate()
 		if err != b'':
-			print(f"{METHOD_NAME}: Shell error: {str(err)}", end='\n')
+			print(f"BamFilter: Shell error: {str(err)}", end='\n')
 			continue
