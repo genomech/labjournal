@@ -99,7 +99,7 @@ if not output_filename: continue
 """
 		METHOD_NAME = f"Blister.Output"
 		thread_id = Blister.ThreadID(index)
-		if mod != "": mod = "__" + mod
+		if mod != "": mod = "_" + mod
 		if (suffix != ""): suffix = "." + suffix
 		fileinfo_old = QFileInfo(filename)
 		fileinfo = QFileInfo(QDir(output_dir), fileinfo_old.baseName() + mod + suffix)
@@ -115,14 +115,14 @@ if not output_filename: continue
 		return fileinfo.absoluteFilePath()
 
 	@staticmethod
-	def FileMods(filename):
+	def FileMods(filename, sep='_'):
 		"""
 Split filename by default mod separator. item[0] -- basename.
 
 mods = Blister.FileMods(filename)
 """
 		basename = QFileInfo(filename).baseName()
-		return str.split(basename, "__")
+		return str.split(basename, sep)
 	
 	def GzipCheck(filename):
 		GZIP_MAGIC_NUMBER = "1f8b"
