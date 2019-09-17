@@ -8,13 +8,14 @@ import functools
 import glob
 import gzip
 import pandas as pd
+import psutil
 import subprocess
 import sys
 import time
 
 class Blister(object):
 	"""
-Blister v0.4.
+Blister v0.42.
 
 Library for bioinformatic scripts.
 Based on KnV/GnP programming philosophy (Kostyl' & Velosiped, Govno & Palki).
@@ -123,19 +124,29 @@ mods = Blister.FileMods(filename)
 """
 		basename = QFileInfo(filename).baseName()
 		return str.split(basename, sep)
-	
+
+	@staticmethod
 	def GzipCheck(filename):
+		"""
+Check if file is gzipped.
+
+is_gz = Blister.GzipCheck(filename)
+"""
 		GZIP_MAGIC_NUMBER = "1f8b"
 		with open(filename, 'rb') as file_check:
 			return file_check.read(2).hex() == GZIP_MAGIC_NUMBER
-	
+
+	@staticmethod
 	def Bzip2Check(filename):
+		"""
+Check if file is bzipped.
+
+is_bz2 = Blister.Bzip2Check(filename)
+"""
 		BZIP2_MAGIC_NUMBER = "425a68"
 		with open(filename, 'rb') as file_check:
 			return file_check.read(3).hex() == BZIP2_MAGIC_NUMBER
-	
-# with Blister.Read(input_filename, 'rt', index) as input_file:
-	
+
 	@staticmethod
 	@contextmanager
 	def Read(filename, mode='rt', index=-1):
@@ -198,23 +209,24 @@ lines = Blister.CountLines(filename)
 		METHOD_NAME = f"Blister.CountLines"
 		is_gz = Blister.GzipCheck(filename)
 		is_bz2 = Blister.Bzip2Check(filename)
-		command = f"zcat {filename} | wc -l" if is_gz else (f"bzip2 -dc {filename} | wc -l" if is_bz2 else f"wc -l {filename}")
+		command = f"zcat {filename} | wc -l" if is_gz else (f"bzip2 -dc {filename} | wc -l" if is_bz2 else f"cat {filename} | wc -l")
 		sp = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 		out, err = sp.communicate()
 		if err != b'':
 			print(f"{METHOD_NAME}: Shell error: {str(err)}", end='\n')
 			return False
-		if is_bz2 or is_gz: return int(out)
-		return int(str.split(str(out)[2:-1], " ")[0])
+		return int(out)
 
 	@staticmethod
 	def Logo(script_name):
 		"""
 Just a beautiful minimalistic logo with timestamp.
+Call Blister.Killer.
 
 Blister.Logo(script_name)
 """
 		print(f"\n*** {script_name} ***\n\n{datetime.datetime.today().strftime('Now: %Y-%m-%d, %H:%M')}", end="\n\n")
+		Blister.Killer()
 
 	@staticmethod
 	@contextmanager  
@@ -234,7 +246,13 @@ with Blister.Timestamp(title, index=index) as start_time:
 		yield start_time
 		print(f"{thread_id}{METHOD_NAME}: Process {title} is done [%s]{filename_1}{filename_2}" % (Blister.SecToTime(time.time() - start_time)), end='\n')
 	
+	@staticmethod
 	def SecToTime(sec):
+		"""
+Return seconds in hh:mm:ss format.
+
+time = Blister.SecToTime(sec)
+"""
 		return str(datetime.timedelta(seconds=int(sec)))
 
 	@staticmethod
@@ -318,6 +336,45 @@ results = Blister.EachFile(title, [filenames], dir_path, THREADS_NUM = cpu_count
 	
 	def ThreadID(index):
 		return (f"[{index}]\t" if (index != -1) else f"")
+
+	@staticmethod
+	def Killer():
+		"""
+Kill all stopped processes and clean the memory.
+
+Blister.Killer()
+"""
+		METHOD_NAME = f"Blister.Killer"
+		killed = pd.DataFrame(columns=['pid', 'name'])
+		for proc in psutil.process_iter():
+			try:
+				pinfo = proc.as_dict(attrs=['pid', 'name', 'status'])
+				if pinfo['status'] == 'stopped':
+					proc.kill()
+					killed = killed.append(pd.Series([pinfo['pid'], pinfo['name']], index=killed.columns), ignore_index=True)
+			except psutil.NoSuchProcess:
+				pass
+		if killed.empty: return
+		lst = set(killed['name'].to_list())
+		print(f"{METHOD_NAME}: Stopped processes are killed:", end='\n')
+		for victim in lst:
+			print(f"\t{victim} - {killed[killed['name'] == victim]['pid'].to_list()}", end='\n')
+
+	@staticmethod
+	def Sleep(max_level=70.0, interval=1, index=-1):
+		"""
+Wait until memory percent is less than [max_level].
+Can be useful if your script needs a lot of memory.
+Can be used with Threading.
+
+Blister.Sleep(max_level=70.0, interval=1, index=-1)
+"""
+		METHOD_NAME = f"Blister.Sleep"
+		thread_id = Blister.ThreadID(index)
+		if psutil.virtual_memory().percent <= max_level: return
+		print(f"{thread_id}{METHOD_NAME}: Process is sleeping (memory = {psutil.virtual_memory().percent}%)", end='\n')
+		while psutil.virtual_memory().percent > max_level:
+			time.sleep(interval)
 
 	@staticmethod
 	def GitHubTable(dataframe, index=False):
