@@ -10,7 +10,7 @@ def the_thread(block, output_dir):
 	
 	with Blister.Timestamp("READ CSV", filename_1=input_filename, index=index) as start_time:
 		data = pd.read_csv(input_filename, sep='\t', low_memory=False)
-		data['gnomAD_AF'] = pd.to_numeric(data['gnomAD_AF'], errors='coerce')
+		#data['gnomAD_AF'] = pd.to_numeric(data['gnomAD_AF'], errors='coerce')
 	
 	with Blister.Timestamp("FILTER TABLE", index=index) as start_time:
 		data = data[((data['IMPACT'] == "HIGH") | (data['IMPACT'] == "MODERATE")) & ((data['gnomAD_AF'] < 0.01) | (data['gnomAD_AF'].isna()))]
@@ -38,10 +38,10 @@ def the_thread(block, output_dir):
 Blister.Logo("Finder D")
 
 #input_filenames = Blister.Input(["/dev/datasets/FairWind/_results/dinara/exome_polina/*.txt"])
-input_filenames = Blister.Input(["/dev/datasets/FairWind/_results/dinara/nepokocannoe_me/*.csv"])
+input_filenames = Blister.Input(["/dev/datasets/FairWind/_results/bowtie/tables/*.csv"])
 if not input_filenames: exit()
 
-output_dir = Blister.Dir("/dev/datasets/FairWind/_results/dinara/find_stuff_my_001/", create=True)
+output_dir = Blister.Dir("/dev/datasets/FairWind/_results/bowtie/tables_severe_filtered/", create=True)
 #output_dir = Blister.Dir("/dev/datasets/FairWind/_results/dinara/find_stuff_polina_001/", create=True)
 if not output_dir: exit()
 
