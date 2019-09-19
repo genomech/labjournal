@@ -25,8 +25,8 @@ BiocManager::install("cummeRbund")
 С этим индексом *hisat2* крашнулся с segfault, поэтому я взял с него подписку о невыезде до выяснения обстоятельств дела.
 Решил скачать нативный геном *R. norvegicus* с UCSC ([ссылка](https://hgdownload.soe.ucsc.edu/goldenPath/rn6/bigZips/)) и скомпилить его ручками.
 
-```
-$ hisat2-build ./rn6.fa ./rn6/rn6
+```bash
+hisat2-build ./rn6.fa ./rn6/rn6
 ```
 
 Новый индекс вроде работает.
@@ -71,6 +71,69 @@ echo Dirs are sealed.
 Средний процент выравнивания - 97%.
 
 2. *Cufflinks* привереда и требует сортированные библиотеки.
-Досортировываем.
+Досортировываем и запускаем cufflinks.
 
-3. cufflinks.
+```bash
+#!/bin/bash
+
+THREADS=12
+BAM_PATH="/dev/datasets/FairWind/_results/Fatima/bam"
+SORTED_PATH="/dev/datasets/FairWind/_results/Fatima/sorted"
+CUFFLINKS_PATH="/dev/datasets/FairWind/_results/Fatima/cufflinks"
+
+# Досортировка
+
+mkdir -p $SORTED_PATH
+
+for var in '001_S13' '002_S14' '003_S15' '004_S16' '005_S17' '006_S18' '007_S19' '008_S20' '009_S21' '010_S22'
+do
+samtools sort -@ $THREADS -O BAM $BAM_PATH/MB_FQ_"$var".bam > $SORTED_PATH/MB_FQ_"$var"_sorted.bam;
+echo $var is sorted.
+done
+
+md5sum $SORTED_PATH/*.bam > $SORTED_PATH/all.md5;
+chmod 555 -R $SORTED_PATH;
+
+echo Sorted are sealed.
+
+# Cufflinks
+
+mkdir -p $CUFFLINKS_PATH
+
+for var in '001_S13' '002_S14' '003_S15' '004_S16' '005_S17' '006_S18' '007_S19' '008_S20' '009_S21' '010_S22'
+do
+mkdir -p $CUFFLINKS_PATH/$var;
+cufflinks -p $THREADS --library-type fr-firststrand \
+	-o $CUFFLINKS_PATH/$var \
+	$SORTED_PATH/MB_FQ_"$var"_sorted.bam;
+echo $var is cuffled.
+done
+
+md5deep -lr $CUFFLINKS_PATH/* > $CUFFLINKS_PATH/all.md5;
+chmod 555 -R $CUFFLINKS_PATH;
+
+echo Cufflinks are sealed.
+```
+
+3. Мёржим транскрипты.
+
+```bash
+ls -1 /dev/datasets/FairWind/_results/Fatima/cufflinks/**/transcripts.gtf > /dev/datasets/FairWind/_results/Fatima/cuffmerge/transcripts_list.txt
+cuffmerge -p 12 \
+	-s /dev/datasets/FairWind/_db/rn6.fa \
+	-o /dev/datasets/FairWind/_results/Fatima/cuffmerge/ \
+	/dev/datasets/FairWind/_results/Fatima/cuffmerge/transcripts_list.txt
+```
+
+4. Запускаем *cuffdiff*:
+
+```bash
+mkdir -p /dev/datasets/FairWind/_results/Fatima/cuffdiff
+cd /dev/datasets/FairWind/_results/Fatima/sorted
+cuffdiff -p 12 --library-type fr-firststrand \
+	--dispersion-method pooled --library-norm-method geometric \
+	-o /dev/datasets/FairWind/_results/Fatima/cuffdiff \
+	/dev/datasets/FairWind/_results/Fatima/cuffmerge/merged.gtf \
+	MB_FQ_006_S18_sorted.bam,MB_FQ_007_S19_sorted.bam,MB_FQ_009_S21_sorted.bam,MB_FQ_010_S22_sorted.bam \
+	MB_FQ_001_S13_sorted.bam,MB_FQ_002_S14_sorted.bam,MB_FQ_003_S15_sorted.bam,MB_FQ_004_S16_sorted.bam,MB_FQ_005_S17_sorted.bam,MB_FQ_008_S20_sorted.bam
+```
