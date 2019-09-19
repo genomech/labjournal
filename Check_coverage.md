@@ -479,3 +479,10 @@ plt.savefig("/dev/datasets/FairWind/_results/bowtie/coverage/distance_coverage_5
 ![График покрытия по дальности (5000)](./scripts_results/distance_coverage_45_5000.svg)
 
 Чтобы понять, что не так, мы решили проверить coverage у 60М выборок библиотек 1-4 и 1-5.
+Результаты:
+
+![График покрытия по дальности (500, log)](./scripts_results/distance_coverage_60m_45_500_log.svg)
+![График покрытия по дальности (5000, log)](./scripts_results/distance_coverage_60m_45_5000_log.svg)
+![График покрытия по дальности (500)](./scripts_results/distance_coverage_60m_45_500.svg)
+![График покрытия по дальности (5000)](./scripts_results/distance_coverage_60m_45_5000.svg)
+

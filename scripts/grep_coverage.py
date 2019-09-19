@@ -2,10 +2,10 @@ import time
 
 chrom = 'huita'
 print(f"{chrom} is started ... ", end="")
-f = open("/dev/datasets/FairWind/_results/bowtie/coverage/grep_coverage_exoc_1-5/.txt", 'wt')
+f = open("/dev/datasets/FairWind/_results/bowtie/coverage/1-5_60m_coverage_each/.txt", 'wt')
 start_time = time.time()
 
-for line in open('/dev/datasets/FairWind/_results/bowtie/coverage/1-5_coverage_hg19_each.txt', 'rt'):
+for line in open('/dev/datasets/FairWind/_results/bowtie/coverage/1-5_60m_coverage_each.txt', 'rt'):
     
     lst = line.split('\t')
     
@@ -13,7 +13,7 @@ for line in open('/dev/datasets/FairWind/_results/bowtie/coverage/1-5_coverage_h
         chrom = lst[0]
         f.close()
         print(f"Done [%.2f sec]" % (time.time() - start_time), end="\n")
-        f = open("/dev/datasets/FairWind/_results/bowtie/coverage/grep_coverage_exoc_1-5/" + chrom + ".txt", 'wt')
+        f = open("/dev/datasets/FairWind/_results/bowtie/coverage/1-5_60m_coverage_each/" + chrom + ".txt", 'wt')
         print(f"{chrom} is started ... ", end="")
         start_time = time.time()
     
