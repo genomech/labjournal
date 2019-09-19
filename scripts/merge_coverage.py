@@ -7,26 +7,56 @@ import pickle
 import matplotlib.pyplot as plt
 
 start_time = time.time()
-with open("/dev/datasets/FairWind/_results/bowtie/coverage/merged_table.pickle", 'rb') as f:
-    large_table = pickle.load(f)
-print(f"Pickle load is done [%f sec]" % (time.time() - start_time), end="\n")
+with open("/dev/datasets/FairWind/_results/bowtie/coverage/merged_table_exoc.pickle", 'rb') as f:
+    exoc = pickle.load(f)
+print(f"ExoC load is done [%f sec]" % (time.time() - start_time), end="\n")
 
-plt.plot(list(large_table[:500]))
-plt.yscale("log")
+start_time = time.time()
+with open("/dev/datasets/FairWind/_results/bowtie/coverage/merged_table_hic.pickle", 'rb') as f:
+    hic = pickle.load(f)
+print(f"HiC load is done [%f sec]" % (time.time() - start_time), end="\n")
+
+plt.plot(list(hic[:500]), label="HiC (sample-1-4)")
+plt.plot(list(exoc[:500]), label="ExoC (sample-1-2)")
 plt.ylabel('Depth average')
 plt.xlabel('Distance from restriction site, b')
-plt.suptitle('Distance coverage (log)')
-plt.savefig("/dev/datasets/FairWind/_results/bowtie/coverage/distance_coverage_500_log.svg")
+plt.suptitle('Distance coverage')
+plt.legend()
+plt.savefig("/dev/datasets/FairWind/_results/bowtie/coverage/distance_coverage_comparison_500.svg")
+
+plt.clf()
+
+plt.plot(list(hic[:5000]), label="HiC (sample-1-4)")
+plt.plot(list(exoc[:5000]), label="ExoC (sample-1-2)")
+plt.ylabel('Depth average')
+plt.xlabel('Distance from restriction site, b')
+plt.suptitle('Distance coverage')
+plt.legend()
+plt.savefig("/dev/datasets/FairWind/_results/bowtie/coverage/distance_coverage_comparison_5000.svg")
 
 exit()
+
+#start_time = time.time()
+#with open("/dev/datasets/FairWind/_results/bowtie/coverage/merged_table.pickle", 'rb') as f:
+    #large_table = pickle.load(f)
+#print(f"Pickle load is done [%f sec]" % (time.time() - start_time), end="\n")
+
+#plt.plot(list(large_table[:500]))
+#plt.yscale("log")
+#plt.ylabel('Depth average')
+#plt.xlabel('Distance from restriction site, b')
+#plt.suptitle('Distance coverage (log)')
+#plt.savefig("/dev/datasets/FairWind/_results/bowtie/coverage/distance_coverage_500_log.svg")
+
+#exit()
 
 # --------------------------
 
 def chrom_handler(chrom):
     start_time = time.time()
     
-    coverage = pd.read_csv('/dev/datasets/FairWind/_results/bowtie/coverage/grep_coverage_exoc/' + chrom + '.txt', header=None, names=['coverage'])
-    restrict = pd.read_csv('/dev/datasets/FairWind/_results/bowtie/coverage/restrict/' + chrom + '.txt', header=None, names=['restrict'])
+    coverage = pd.read_csv('/dev/datasets/FairWind/_results/bowtie/coverage/grep_coverage_hic_1-4/' + chrom + '.txt', header=None, names=['coverage'])
+    restrict = pd.read_csv('/dev/datasets/FairWind/_results/bowtie/coverage/restrict_gatc_hg19/' + chrom + '.txt', header=None, names=['restrict'])
     
     main_table = pd.concat([coverage, restrict], axis=1)
     del coverage
@@ -38,7 +68,7 @@ def chrom_handler(chrom):
     
     return main_table
 
-THREADS_NUM = cpu_count()
+THREADS_NUM = 8
 
 chr_list = []
 for line in open('/dev/datasets/FairWind/_results/bowtie/coverage/chr_list', 'rt'):
@@ -64,16 +94,16 @@ large_table = large_table.apply(np.nanmean, axis=1)
 print(f"Merging is done [%.2f sec]" % (time.time() - start_time), end="\n")
 
 start_time = time.time()
-with open("/dev/datasets/FairWind/_results/bowtie/coverage/merged_table.pickle", 'wb') as f:
+with open("/dev/datasets/FairWind/_results/bowtie/coverage/merged_table_hic.pickle", 'wb') as f:
     pickle.dump(large_table, f)
 print(f"Pickling merged is done [%f sec]" % (time.time() - start_time), end="\n")
 
 start_time = time.time()
-large_table.to_csv("/dev/datasets/FairWind/_results/bowtie/coverage/merged_table.csv", sep='\t')
-print(f"Pickling merged is done [%f sec]" % (time.time() - start_time), end="\n")
+large_table.to_csv("/dev/datasets/FairWind/_results/bowtie/coverage/merged_table_hic.csv", sep='\t')
+print(f"Save table is done [%f sec]" % (time.time() - start_time), end="\n")
 
-plt.plot(list(large_table[:500]))
-plt.ylabel('Depth average')
-plt.xlabel('Distance from restriction site, b')
-plt.suptitle('Distance coverage')
-plt.savefig("/dev/datasets/FairWind/_results/bowtie/coverage/distance_coverage_500.svg")
+#plt.plot(list(large_table[:500]))
+#plt.ylabel('Depth average')
+#plt.xlabel('Distance from restriction site, b')
+#plt.suptitle('Distance coverage')
+#plt.savefig("/dev/datasets/FairWind/_results/bowtie/coverage/distance_coverage_500.svg")

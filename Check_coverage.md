@@ -465,3 +465,7 @@ plt.savefig("/dev/datasets/FairWind/_results/bowtie/coverage/distance_coverage_5
 
 ![График покрытия ExoC 90M](./scripts_results/allplot_90m_190911.svg)
 
+## Сравнение покрытия по дальности от сайтов рестрикции (один график)
+
+![График покрытия по дальности (500)](./scripts_results/distance_coverage_comparison_500.svg)
+![График покрытия по дальности (5000)](./scripts_results/distance_coverage_comparison_5000.svg)
