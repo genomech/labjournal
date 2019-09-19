@@ -14,7 +14,7 @@ class Test(object):
 		
 		for input_filename in input_filenames:
 			mods = Blister.FileMods(input_filename)
-			table += [mods]
+			table += [[input_filename] + mods]
 			length += [len(mods)]
 		
 		length = set(length)
@@ -25,8 +25,11 @@ class Test(object):
 		
 		cols = list(range(list(length)[0]))
 		
-		table = pd.DataFrame(table, columns=cols)
+		table = pd.DataFrame(table, columns=['filename'] + cols)
 		print(table)
+		
+		
+		print(pd.crosstab(table[0], table[2]))
 		
 		sets = []
 		reference = 0

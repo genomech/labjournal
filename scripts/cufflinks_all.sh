@@ -24,7 +24,7 @@ CUFFLINKS_PATH="/dev/datasets/FairWind/_results/Fatima/cufflinks"
 
 mkdir -p $CUFFLINKS_PATH
 
-for var in '007_S19' '008_S20' '009_S21' '010_S22' '006_S18'
+for var in '010_S22' '006_S18'
 do
 mkdir -p $CUFFLINKS_PATH/$var;
 cufflinks -p $THREADS --library-type fr-firststrand \
