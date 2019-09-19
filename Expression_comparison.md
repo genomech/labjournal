@@ -125,7 +125,10 @@ cuffmerge -p 12 \
 	/dev/datasets/FairWind/_results/Fatima/cuffmerge/transcripts_list.txt
 ```
 
-4. Запускаем *cuffdiff*:
+4. Запускаем *cuffdiff*.
+
+	*  **Library Type** подбирался специально для наших библиотек.
+	*  **Dispersion Method** и **Library Normalization Method** идут дефолтные, но я на всякий случай вынес их в команду, если потребуется настройка.
 
 ```bash
 mkdir -p /dev/datasets/FairWind/_results/Fatima/cuffdiff
