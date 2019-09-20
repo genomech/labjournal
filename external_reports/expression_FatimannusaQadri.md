@@ -48,7 +48,7 @@
 
 CSV tables: [decreased](../scripts_results/genes_minus_diff.csv) and [increased](../scripts_results/genes_plus_diff.csv) expression.
 
-## Significant genes (p < 0.05) with expression level >1000
+## Significant genes (q < 0.05) with WT and/or Mut expression level >1000
 
 | Gene ID     | WT          | Mutant     | Fold change | q value |
 |:------------|:-----------:|:-----------:|:---------:|:--------:|
