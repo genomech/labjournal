@@ -11,7 +11,7 @@
 Установка:
 
 1. hisat2 и cufflinks устанавливаются из стандартных репозиториев убунты.
-2. cummeRbund устанавливатся с помощью R:
+2. cummeRbund устанавливатся с помощью R (под sudo!):
 
 ```R
 install.packages("BiocManager")
@@ -140,3 +140,25 @@ cuffdiff -p 12 --library-type fr-firststrand \
 	MB_FQ_006_S18_sorted.bam,MB_FQ_007_S19_sorted.bam,MB_FQ_009_S21_sorted.bam,MB_FQ_010_S22_sorted.bam \
 	MB_FQ_001_S13_sorted.bam,MB_FQ_002_S14_sorted.bam,MB_FQ_003_S15_sorted.bam,MB_FQ_004_S16_sorted.bam,MB_FQ_005_S17_sorted.bam,MB_FQ_008_S20_sorted.bam
 ```
+
+## cummeRbund
+
+Первое.
+Не запечатывать папки до первого запуска *cummeRbund*, т.к. он создаёт SQLite DB в папке.
+
+После долгих мучений был получен следующий код.
+Он создаёт CSV из db.
+
+```R
+library(cummeRbund)
+cuff <- readCufflinks("/dev/datasets/FairWind/_results/Fatima/cuffdiff")
+gene_diff_data <- diffData(genes(cuff))
+write.table(as.data.frame(gene_diff_data),file="/dev/datasets/FairWind/genes3.csv", quote=F,sep="\t",row.names=F)
+```
+
+## Результаты
+
+![График полной экспрессии](./scripts_results/Expression_all.svg)
+![График полной экспрессии, log](./scripts_results/Expression_all_log.svg)
+![График экспрессии q < 0.05](./scripts_results/Expression_all_q005.svg)
+![График экспрессии q < 0.05, log](./scripts_results/Expression_all_q005_log.svg)
