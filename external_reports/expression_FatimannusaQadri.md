@@ -71,3 +71,13 @@ CSV tables: [decreased](../scripts_results/genes_minus_diff.csv) and [increased]
 | XLOC_005382 | NM_013105    | 1243.369995 | 578.583008  | -1.103660 | 0.002437 | RN cytochrome P450, family 3, subfamily a, polypeptide 23/polypeptide 1 (Cyp3a23/3a1) |
 | XLOC_008791 | -            | 1077.089966 | 493.636993  | -1.125620 | 0.000914 | - |
 | XLOC_014542 | NM_012556    | 2533.929932 | 878.020996  | -1.529050 | 0.000914 | RN fatty acid binding protein 1 (Fabp1) |
+
+# Preliminary findings
+
+* Histidine decarboxylase (Hdc) expression increased from 10 to 1020 (2^6 times).
+* Membrane associated guanylate kinase (Magi2) expression increased from zero to 317.
+* Fibroblast growth factor 23 (Fgf23) expression increased from 0.1 to 25 (2^7 times)
+* Troponin I1, slow skeletal type (Tnni1) expression increased from 0.6 to 36 (2^6 times).
+Also, increase of muscular actin and similar proteins was been noticed;
+looks like dysplastic processes.
+* Activating transcription factor 3 (Atf3) expression increased from 0.8 to 34 (2^5 times).
