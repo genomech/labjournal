@@ -1,5 +1,27 @@
 from lib.blister import *
 import matplotlib.pyplot as plt
+import numpy as np
+
+labels = ['006_S18[wt]', '007_S19[wt]', '009_S21[wt]', '010_S22[wt]', '001_S13[mut]', '002_S14[mut]', '003_S15[mut]', '004_S16[mut]', '005_S17[mut]', '008_S20[mut]']
+# values = [3.80141, 18.945, 9.62214, 7.51061, 652.36, 573.313, 286.91, 215.396, 466.817, 3927.61] # hdc
+#values = [0, 0, 0, 0, 1907.49, 0, 0, 0, 0, 0] # magi2
+#values = [0.151139, 0.185005, 0.0620009, 0.0906103, 16.4181, 24.9628, 23.1145, 29.6679, 53.4047, 4.7837] # fgf23
+#values = [0.379374, 0.544733, 0.899505, 0.590493, 12.7651, 15.2278, 17.4665, 18.6676, 20.7459, 132.254] # tnni1
+values = [0.871171, 0.702152, 1.14676, 0.776064, 13.848, 24.3044, 6.70644, 11.1848, 57.7782, 94.6212] # atf3
+x = np.arange(len(labels))  # the label locations
+
+plt.rcdefaults()
+fig, ax = plt.subplots()
+
+ax.barh(x, values, align='center')
+ax.set_yticks(x)
+ax.set_yticklabels(labels)
+ax.invert_yaxis()  # labels read top-to-bottom
+ax.set_xlabel('FPKM')
+ax.set_title('Expression in Atf3 gene')
+plt.savefig("/dev/datasets/FairWind/.cloud/core/labjournal/scripts_results/sayeeda_atf3.svg")
+
+exit()
 
 def Graph(G_LOG, G_P):
 	genes_diff = pd.read_csv("/dev/datasets/FairWind/_results/Fatima/genes_diff.csv", sep='\t')

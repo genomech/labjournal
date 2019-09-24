@@ -75,9 +75,23 @@ CSV tables: [decreased](../scripts_results/genes_minus_diff.csv) and [increased]
 # Preliminary findings
 
 * Histidine decarboxylase (Hdc) expression increased from 10 to 1020 (2^6 times).
+
+![Expression Hdc](../scripts_results/sayeeda_hdc.svg)
+
 * Membrane associated guanylate kinase (Magi2) expression increased from zero to 317.
+
+![Expression Magi2](../scripts_results/sayeeda_magi2.svg)
+
 * Fibroblast growth factor 23 (Fgf23) expression increased from 0.1 to 25 (2^7 times)
+
+![Expression Fgf23](../scripts_results/sayeeda_fgf23.svg)
+
 * Troponin I1, slow skeletal type (Tnni1) expression increased from 0.6 to 36 (2^6 times).
 Also, increase of muscular actin and similar proteins was been noticed;
 looks like dysplastic processes.
+
+![Expression Tnni1](../scripts_results/sayeeda_tnni1.svg)
+
 * Activating transcription factor 3 (Atf3) expression increased from 0.8 to 34 (2^5 times).
+
+![Expression Atf3](../scripts_results/sayeeda_atf3.svg)
