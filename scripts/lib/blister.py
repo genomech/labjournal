@@ -389,3 +389,80 @@ print(Blister.GitHubTable(dataframe))
 			print(f"{METHOD_NAME}: Invalid input type {type(dataframe)}. pandas.DataFrame only.", end='\n')
 			return False
 		return tabulate(dataframe, headers=dataframe.columns, tablefmt="github", showindex=index)
+
+	@staticmethod
+	class BST(object):
+		"""
+Primitive, but configurable binary search tree.
+Useful if your class doesn't have search methods you need.
+
+def sort_func(a, b): return a > b
+def match_func(a, b): return a == b
+
+tree = Blister.BST(sort_func, match_func)
+tree.Insert(value)
+found = tree.Search(value)
+sorted_list = tree.InOrder()
+"""
+		def __init__(self, sort_function, match_function):
+			self.Sort_Function = sort_function
+			self.Match_Function = match_function
+			self.Root = None
+	
+		class Node: 
+			def __init__(self, key): 
+				self.left = None
+				self.right = None
+				self.val = key
+	
+		def Insert(self, value, root = -1):
+			if root == -1: 
+				node = self.Node(value)
+				if self.Root is None: self.Root = node
+				else:
+					if self.Sort_Function(self.Root.val, node.val): 
+						if self.Root.right is None: self.Root.right = node 
+						else: self.Insert(value, self.Root.right) 
+					else: 
+						if self.Root.left is None: self.Root.left = node 
+						else: self.Insert(value, self.Root.left)
+			else:
+				node = self.Node(value)
+				if root is None: root = node
+				else:
+					if self.Sort_Function(root.val, node.val): 
+						if root.right is None: root.right = node 
+						else: self.Insert(value, root.right) 
+					else: 
+						if root.left is None: root.left = node 
+						else: self.Insert(value, root.left)
+	
+		def Search(self, value, root = -1, lst = list()):
+			if root == -1:
+				if self.Root is not None:
+					if self.Sort_Function(self.Root.val, value): lst = self.Search(value, self.Root.right, lst) 
+					else: lst = self.Search(value, self.Root.left, lst)
+					if self.Match_Function(self.Root.val, value): return lst + [self.Root.val]
+				return lst
+			else:
+				if root is not None:
+					if self.Sort_Function(root.val, value): lst = self.Search(value, root.right, lst) 
+					else: lst = self.Search(value, root.left, lst)
+					if self.Match_Function(root.val, value): return lst + [root.val]
+				return lst
+	
+		def InOrder(self, root = -1):
+			if root == -1:
+				if self.Root:
+					lst = self.InOrder(self.Root.left) 
+					lst += [self.Root.val]
+					lst += self.InOrder(self.Root.right)
+					return lst
+				else: return list()
+			else:
+				if root:
+					lst = self.InOrder(root.left) 
+					lst += [root.val]
+					lst += self.InOrder(root.right)
+					return lst
+				else: return list()
