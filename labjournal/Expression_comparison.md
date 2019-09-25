@@ -434,10 +434,10 @@ with Blister.Timestamp("PROCESS TABLE & SAVE") as start_time:
 
 ![Mmp14 expression](./scripts_results/andre_Mmp14.svg)
 
-3. Sult1a1 (XLOC_001784, NM_031834):
+3. Sult1a1 (XLOC_001784, NM_031834) -- наименее вероятный кандидат, но тем не менее тоже может быть задействован:
 
 ![Sult1a1 expression](./scripts_results/andre_Sult1a1.svg)
 
 **Примечание.**
-Восьмой зверь выбивается по всем трём генам.
+Восьмой зверь выбивается по двум первым генам.
 Я думаю, это какой-то неправильный зверь.
