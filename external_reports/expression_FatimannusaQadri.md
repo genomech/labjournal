@@ -1,6 +1,7 @@
 # Draft results (Fatimannusa Qadri)
 
 **23.09:** NCBI codes added.
+
 **25.09:** Additional task #1 added.
 
 ![Full expression](../labjournal/scripts_results/Expression_all.svg)
