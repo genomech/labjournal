@@ -15,7 +15,7 @@ import time
 
 class Blister(object):
 	"""
-Blister v0.42.
+Blister v0.43.
 
 Library for bioinformatic scripts.
 Based on KnV/GnP programming philosophy (Kostyl' & Velosiped, Govno & Palki).

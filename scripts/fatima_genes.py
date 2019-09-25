@@ -34,7 +34,7 @@ def inorder(root):
 Blister.Logo("Sayeeda's Gene Finder")
 
 with Blister.Timestamp("LOAD TRANSCRIPTOME") as start_time:
-	transcriptome = pd.read_csv("/dev/datasets/FairWind/_results/Fatima/cuffmerge/merged.gtf", sep='\t', header=None, names=['chrom', 'hz1', 'hz2', 'begin', 'end', 'hz3', 'hz4', 'transcript_id', 'gene_id'])
+	transcriptome = pd.read_csv("/dev/datasets/FairWind/_results/Andre/cuffmerge/merged.gtf", sep='\t', header=None, names=['chrom', 'hz1', 'hz2', 'begin', 'end', 'hz3', 'hz4', 'transcript_id', 'gene_id'])
 	transcriptome.drop(columns=['hz1', 'hz2', 'hz3', 'hz4'], inplace=True, axis=0)
 	transcriptome['transcript_id'] = transcriptome['gene_id'].apply(lambda x: x.split(" ")[3][1:-2])
 	transcriptome['gene_id'] = transcriptome['gene_id'].apply(lambda x: x.split(" ")[1][1:-2])
@@ -93,4 +93,4 @@ with Blister.Timestamp("FIND GENES") as start_time:
 with Blister.Timestamp("PROCESS TABLE & SAVE") as start_time:
 	transcriptome = transcriptome['ncbi_id'].groupby(transcriptome['gene_id'])
 	transcriptome = transcriptome.apply(set).apply(list).apply(lambda x: [i for i in x if i]).apply(lambda x: x[0] if x else None)
-	transcriptome.to_csv("/dev/datasets/FairWind/_results/Fatima/gene_id.csv", sep='\t', index=True)
+	transcriptome.to_csv("/dev/datasets/FairWind/_results/Andre/gene_id.csv", sep='\t', index=True)
