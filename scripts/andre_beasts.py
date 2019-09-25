@@ -29,4 +29,4 @@ table['file'] = table['file'].apply(lambda x: x[7:10])
 table = table.transpose()
 table.columns = ['01 [D]', '02 [D]', '03 [D]', '07 [D]', '09 [D]', '04 [N]', '05 [N]', '06 [N]', '08 [N]', '10 [N]', '11 [N]', '12 [N]']
 table.drop(labels='file', axis=0, inplace=True)
-print(Blister.GitHubTable(table, index=True))
+table.to_csv("/dev/datasets/FairWind/.cloud/core/labjournal/labjournal/scripts_results/andre_s_beasts.csv", sep=',', index=True)
