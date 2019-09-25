@@ -440,7 +440,7 @@ with Blister.Timestamp("PROCESS TABLE & SAVE") as start_time:
 
 ## Сравнение по зверям
 
-Полные данные [здесь](./scripts_results/andre_s_beasts.csv).
+Полные данные [здесь](./scripts_results/andre_s_animals.csv).
 
 Выбраны следующие кандидаты:
 

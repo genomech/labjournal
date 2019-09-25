@@ -68,7 +68,7 @@
 
 ## Expression per rat
 
-Full data are available [here](./scripts_results/andre_s_beasts.csv).
+Full data are available [here](./scripts_results/andre_s_animals.csv).
 
 The candidates we chose are following:
 
