@@ -1,6 +1,7 @@
-# Draft results (FatimannusaQadri)
+# Draft results (Fatimannusa Qadri)
 
 **23.09:** NCBI codes added.
+**25.09:** Additional task #1 added.
 
 ![Full expression](../labjournal/scripts_results/Expression_all.svg)
 ![Full expression, log](../labjournal/scripts_results/Expression_all_log.svg)
@@ -72,7 +73,7 @@ CSV tables: [decreased](../labjournal/scripts_results/genes_minus_diff.csv) and 
 | XLOC_008791 | -            | 1077.089966 | 493.636993  | -1.125620 | 0.000914 | - |
 | XLOC_014542 | NM_012556    | 2533.929932 | 878.020996  | -1.529050 | 0.000914 | RN fatty acid binding protein 1 (Fabp1) |
 
-# Preliminary findings
+## Preliminary findings
 
 * Histidine decarboxylase (Hdc) expression increased from 10 to 1020 (2^6 times).
 
@@ -95,3 +96,33 @@ looks like dysplastic processes.
 * Activating transcription factor 3 (Atf3) expression increased from 0.8 to 34 (2^5 times).
 
 ![Expression Atf3](../labjournal/scripts_results/sayeeda_atf3.svg)
+
+## Additional task #1: Check 3 genes
+
+Genes to analyze: 
+
+* Ass1: argininosuccinate synthase 1
+* Cps1: carbamoyl-phosphate synthase 1
+* Hpd: 4-hydroxyphenylpyruvate dioxygenase
+
+### Results
+
+Data from the main table:
+
+| Cuff ID     | NCBI ID      | WT          | Mutant     | Fold change | q       | Gene description |
+|:------------|:-------------|:-----------:|:-----------:|:---------:|:--------:|:---|
+| XLOC_020821 | NM_017072    | 424.191010  | 1410.849976 | 1.733780  | 0.006804 | RN carbamoyl-phosphate synthase 1 (Cps1) |
+| XLOC_013547 | NM_013157    | 258.191986  | 1477.660034 | 2.516800  | 0.000914 | RN argininosuccinate synthase 1 (Ass1) |
+| XLOC_005197 | NM_017233    | 493.239990  | 1131.560059 | 1.197950  | 0.006213 | RN 4-hydroxyphenylpyruvate dioxygenase (Hpd) |
+
+Expression by sample:
+
+|             |   06 [WT] |   07 [WT] |   09 [WT] |   10 [WT] |   01 [Mut] |   02 [Mut] |   03 [Mut] |   04 [Mut] |   05 [Mut] |   08 [Mut] |
+|:------------|:---------:|:---------:|:---------:|:---------:|:----------:|:----------:|:----------:|:----------:|:----------:|:----------:|
+| XLOC_020821 |   415.49  |   586.337 |   274.289 |   420.647 |   1578.35  |   1256.19  |    1749.49 |    1240.31 |    1187.27 |    1453.47 |
+| XLOC_013547 |   237.933 |   266.112 |   253.619 |   275.102 |   1282.35  |   1007.28  |    1849.16 |    1395.27 |    1348.92 |    1982.95 |
+| XLOC_005197 |   440.646 |   302.332 |   710.436 |   519.548 |    824.243 |    934.666 |    1190.5  |    1230.86 |    1031.07 |    1578.01 |
+
+![Ass1 expression](../labjournal/scripts_results/sayeeda_Ass1.svg)
+![Cps1 expression](../labjournal/scripts_results/sayeeda_Cps1.svg)
+![Hpd expression](../labjournal/scripts_results/sayeeda_Hpd.svg)
