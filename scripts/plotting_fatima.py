@@ -2,8 +2,8 @@ from lib.blister import *
 import matplotlib.pyplot as plt
 import numpy as np
 
-labels = ['01 [D]', '02 [D]', '03 [D]', '07 [D]', '09 [D]', '04 [N]', '05 [N]', '06 [N]', '08 [N]', '10 [N]', '11 [N]', '12 [N]']
-values = [38.4802, 35.9902, 38.8506, 35.509, 28.7952, 61.6405, 69.974, 60.9918, 119.655, 76.9695, 74.1545, 71.7968 ]
+labels = ['06 [WT]', '07 [WT]', '09 [WT]', '10 [WT]', '01 [Mut]', '02 [Mut]', '03 [Mut]', '04 [Mut]', '05 [Mut]', '08 [Mut]']
+values = [440.646, 302.332, 710.436, 519.548, 824.243, 934.666, 1190.5, 1230.86, 1031.07, 1578.01]
 x = np.arange(len(labels))  # the label locations
 
 plt.rcdefaults()
@@ -14,8 +14,8 @@ ax.set_yticks(x)
 ax.set_yticklabels(labels)
 ax.invert_yaxis()  # labels read top-to-bottom
 ax.set_xlabel('FPKM')
-ax.set_title('Expression in Sgk1 gene')
-plt.savefig("/dev/datasets/FairWind/.cloud/core/labjournal/labjournal/scripts_results/andre_Sgk1.svg")
+ax.set_title('Expression in Hpd gene')
+plt.savefig("/dev/datasets/FairWind/.cloud/core/labjournal/labjournal/scripts_results/sayeeda_Hpd.svg")
 
 exit()
 
