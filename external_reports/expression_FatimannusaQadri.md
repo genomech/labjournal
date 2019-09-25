@@ -2,10 +2,10 @@
 
 **23.09:** NCBI codes added.
 
-![Full expression](../scripts_results/Expression_all.svg)
-![Full expression, log](../scripts_results/Expression_all_log.svg)
-![Expression, q < 0.05](../scripts_results/Expression_all_q005.svg)
-![Expression, q < 0.05, log](../scripts_results/Expression_all_q005_log.svg)
+![Full expression](../labjournal/scripts_results/Expression_all.svg)
+![Full expression, log](../labjournal/scripts_results/Expression_all_log.svg)
+![Expression, q < 0.05](../labjournal/scripts_results/Expression_all_q005.svg)
+![Expression, q < 0.05, log](../labjournal/scripts_results/Expression_all_q005_log.svg)
 
 ## Infinity fold change
 
@@ -48,7 +48,7 @@
 
 ## Fold change 2^(1..8)
 
-CSV tables: [decreased](../scripts_results/genes_minus_diff.csv) and [increased](../scripts_results/genes_plus_diff.csv) expression.
+CSV tables: [decreased](../labjournal/scripts_results/genes_minus_diff.csv) and [increased](../labjournal/scripts_results/genes_plus_diff.csv) expression.
 
 ## Significant genes (q < 0.05) with WT and/or Mut expression level >1000
 
@@ -76,22 +76,22 @@ CSV tables: [decreased](../scripts_results/genes_minus_diff.csv) and [increased]
 
 * Histidine decarboxylase (Hdc) expression increased from 10 to 1020 (2^6 times).
 
-![Expression Hdc](../scripts_results/sayeeda_hdc.svg)
+![Expression Hdc](../labjournal/scripts_results/sayeeda_hdc.svg)
 
 * Membrane associated guanylate kinase (Magi2) expression increased from zero to 317.
 
-![Expression Magi2](../scripts_results/sayeeda_magi2.svg)
+![Expression Magi2](../labjournal/scripts_results/sayeeda_magi2.svg)
 
 * Fibroblast growth factor 23 (Fgf23) expression increased from 0.1 to 25 (2^7 times)
 
-![Expression Fgf23](../scripts_results/sayeeda_fgf23.svg)
+![Expression Fgf23](../labjournal/scripts_results/sayeeda_fgf23.svg)
 
 * Troponin I1, slow skeletal type (Tnni1) expression increased from 0.6 to 36 (2^6 times).
 Also, increase of muscular actin and similar proteins was been noticed;
 looks like dysplastic processes.
 
-![Expression Tnni1](../scripts_results/sayeeda_tnni1.svg)
+![Expression Tnni1](../labjournal/scripts_results/sayeeda_tnni1.svg)
 
 * Activating transcription factor 3 (Atf3) expression increased from 0.8 to 34 (2^5 times).
 
-![Expression Atf3](../scripts_results/sayeeda_atf3.svg)
+![Expression Atf3](../labjournal/scripts_results/sayeeda_atf3.svg)
