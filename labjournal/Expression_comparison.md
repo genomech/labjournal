@@ -395,7 +395,7 @@ with Blister.Timestamp("PROCESS TABLE & SAVE") as start_time:
 | XLOC_015909 | NM_012794    |     0 |  2.79158 |                 inf | 0.0232269 | RN glycosylation dependent cell adhesion molecule 1 (Glycam1) |
 | XLOC_016036 | NM_001108137 |     0 |  2.75054 |                 inf | 0.0232269 | RN membrane frizzled-related protein (Mfrp) |
 
-Примечание.
+**Примечание.**
 Транскрипты NM_001025728 находятся в обеих таблицах (изменение сплайсинга?).
 
 Гены со значительным (2^(1..8)) изменением экспрессии:
@@ -438,3 +438,6 @@ with Blister.Timestamp("PROCESS TABLE & SAVE") as start_time:
 
 ![Sult1a1 expression](./scripts_results/andre_Sult1a1.svg)
 
+**Примечание.**
+Восьмой зверь выбивается по всем трём генам.
+Я думаю, это какой-то неправильный зверь.
