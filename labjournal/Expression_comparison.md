@@ -365,6 +365,15 @@ with Blister.Timestamp("PROCESS TABLE & SAVE") as start_time:
 ![Cps1 expression](./scripts_results/sayeeda_Cps1.svg)
 ![Hpd expression](./scripts_results/sayeeda_Hpd.svg)
 
+## Анализ снипов
+
+По IGV посмотрели файл.
+Очень мало генов имеют покрытие меньше 20, поэтому был запущен bcftools со следующими параметрами:
+
+```bash
+bcftools mpileup -f {genome} {input_filename} | bcftools call -cv -Ou | bcftools filter -i "DP>20 & %QUAL>30" > {output_filename}
+```
+
 # Andre Felipe Rodrigues
 
 Аналогичная методика.
