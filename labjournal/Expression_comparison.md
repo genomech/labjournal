@@ -374,6 +374,17 @@ with Blister.Timestamp("PROCESS TABLE & SAVE") as start_time:
 bcftools mpileup -f {genome} {input_filename} | bcftools call -cv -Ou | bcftools filter -i "DP>20 & %QUAL>30" > {output_filename}
 ```
 
+Схема поиска:
+
+```
+1 = Homo Mut (merge: AND) - гомозиготные снипы, которые есть у каждого мутанта
+2 = Hetero WT (merge: OR) - все гетерозиготные снипы, которые есть в группе здоровых
+3 = All WT (merge: OR) - все снипы, которые есть в группе здоровых
+
+(1 AND 2) (1 AND 3)
+
+```
+
 # Andre Felipe Rodrigues
 
 Аналогичная методика.

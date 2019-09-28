@@ -23,3 +23,5 @@ vcftools --vcf {input_filename} --bed {region} --out {output_filename} --recode
 Результаты поиска [здесь](./scripts_results/1-9_NF1_search.csv).
 Они были пропущены через VEP со всеми возможными параметрами.
 Результаты [здесь](./scripts_results/1-9_NF1_vep.csv).
+
+Ничего значимого не найдено.
