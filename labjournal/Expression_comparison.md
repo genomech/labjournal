@@ -414,6 +414,12 @@ bcftools mpileup -f {genome} {input_filename} | bcftools call -cv -Ou | bcftools
 | NM_001015015 | RN ubiquitin specific peptidase 1 (Usp1) |
 | NM_031052    | RN mitochondrial intermediate peptidase (Mipep) |
 
+Кандидаты (гомозиготные у мутантов, гетерозиготные или отсутствующие у здоровых):
+
+1. Ero1a - замена аминокислоты (K на Q).
+2. Mrps27 - замена аминокислоты (M на T).
+3. Uxt - замена в промоторе, замена аминокислоты (P на L).
+4. F9 - замена аминокислоты (Q на H), 3 замены в терминаторе.
 
 # Andre Felipe Rodrigues
 
