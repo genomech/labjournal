@@ -1,0 +1,16 @@
+CHROM,POS,REF,ncbi_id,type
+chr15,18451435,C,NM_145770,exon_non-coding
+chr15,18451520,T,NM_145770,synonim
+chr15,18459764,T,NM_145770,synonim
+chr15,18464400,G,NM_145770,synonim
+chr15,19721602,G,NM_001134757,exon_non-coding
+chr15,19721772,G,NM_001134757,exon_non-coding
+chr15,41065107,G,,not_gene
+chr15,41065578,C,,not_gene
+chr15,41065705,C,,not_gene
+chr15,41065845,G,,not_gene
+chr15,41065967,T,,not_gene
+chr15,41066164,A,,not_gene
+chr15,41139326,G,NM_031052,synonim
+chr15,41668764,G,NM_001108381,synonim
+chr15,41691466,C,NM_001108381,synonim

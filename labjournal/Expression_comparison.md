@@ -421,6 +421,20 @@ bcftools mpileup -f {genome} {input_filename} | bcftools call -cv -Ou | bcftools
 3. Uxt - замена в промоторе, замена аминокислоты (P на L).
 4. F9 - замена аминокислоты (Q на H), 3 замены в терминаторе.
 
+Была исправлена ошибка в логике.
+В результате остались следующие гены:
+
+| NCBI ID      | Description |
+|:-------------|:---|
+| NM_145770    | RN acyl-CoA oxidase 2 (Acox2) |
+| NM_001134757 | RN glucosamine-phosphate N-acetyltransferase 1 (Gnpnat1) |
+| NM_001108381 | RN EBP like (Ebpl) |
+| NM_031052    | RN mitochondrial intermediate peptidase (Mipep) |
+
+Список мутаций [здесь](./scripts_results/sayeeda_alleles_inter_new.csv)
+
+
+
 # Andre Felipe Rodrigues
 
 Аналогичная методика.

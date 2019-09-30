@@ -3,7 +3,7 @@ import vcf
 
 
 
-exit()
+#exit()
 
 # STAGE 2
 
@@ -36,15 +36,15 @@ def the_thread(block, output_dir):
 	with Blister.Read(input_filename, 'r', index) as input_file:
 		vcf_reader = vcf.Reader(input_file)
 		for record in vcf_reader:
-			#if record.heterozygosity != 0.0:
-			lst += [f"{record.CHROM} {record.POS} {record.REF}"]
+			if record.samples[0].is_het:
+				lst += [f"{record.CHROM} {record.POS} {record.REF}"]
 		table = pd.DataFrame(lst, columns=['CHROM_POS_REF'])
 		table.to_csv(output_filename, sep='\t', index=False)
 
 #mut = ['01', '02', '03', '04', '05', '08']
 #mut = [f"/dev/datasets/FairWind/_results/Fatima/vcf_D20Q30/MB_FQ_0{x}_S*_sorted_FilterCalls-D20-Q30.vcf" for x in mut]
-#Blister.EachFile("PARSING WT", mut, "/dev/datasets/FairWind/_results/Fatima/comp/mut", THREADS_NUM = cpu_count())(the_thread)()
+#Blister.EachFile("PARSING Mut", mut, "/dev/datasets/FairWind/_results/Fatima/comp/mut", THREADS_NUM = cpu_count())(the_thread)()
 
 wth = ['06', '07', '09', '10']
 wth = [f"/dev/datasets/FairWind/_results/Fatima/vcf_D20Q30/MB_FQ_0{x}_S*_sorted_FilterCalls-D20-Q30.vcf" for x in wth]
-Blister.EachFile("PARSING WT", wth, "/dev/datasets/FairWind/_results/Fatima/comp/wt_all", THREADS_NUM = cpu_count())(the_thread)()
+Blister.EachFile("PARSING WT", wth, "/dev/datasets/FairWind/_results/Fatima/comp/wt_hetero", THREADS_NUM = cpu_count())(the_thread)()
