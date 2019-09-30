@@ -391,27 +391,30 @@ bcftools mpileup -f {genome} {input_filename} | bcftools call -cv -Ou | bcftools
 Брались гомозиготные снипы, которые есть у всех мутантов, и гетерозиготные снипы, которые есть хотя бы у одной здоровой крысы.
 Далее делалось пересечение множеств.
 
-Результаты [здесь](./scripts_results/sayeeda_allele_inter.csv).
+Результаты [здесь](./scripts_results/sayeeda_alleles_inter.csv).
 Гены, попавшие в группу:
 
 | NCBI ID      | Description |
 |:-------------|:---|
-| NM_001106974 | Rattus norvegicus RNA binding fox-1 homolog 1 (Rbfox1) |
-| NM_001004418 | Rattus norvegicus transforming, acidic coiled-coil containing protein 2 (Tacc2) |
-| NM_053375    | Rattus norvegicus hyperpolarization-activated cyclic nucleotide-gated potassium channel 1 (Hcn1) |
-| NM_001108058 | Rattus norvegicus sperm acrosome associated 5 (Spaca5) |
-| NM_001014771 | Rat SYNA Lentiviral Vector |
-| NM_001106401 | Rattus norvegicus family with sequence similarity 172, member A (Fam172a) |
-| NM_133551    | Rattus norvegicus phospholipase A2 group IVA (Pla2g4a) |
-| NM_001107917 | Rattus norvegicus copine 3 (Cpne3) |
-| NM_001077677 | Rat Pacrg shRNA-Silencing Adenovirus, Park2 |
-| NM_021774    | Rattus norvegicus fragile histidine triad (Fhit) |
-| NM_001100502 | glucan (1,4-alpha-), branching enzyme 1 (glycogen branching enzyme, Andersen disease, glycogen storage disease type IV, Gbe1) |
-| NM_001271079 | Rat Ppm1h Over-Expression Adenovirus, protein phosphatase H1 |
-| NM_001017381 | Rattus norvegicus Fli-1 proto-oncogene, ETS transcription factor (Fli1) |
-| NM_001191730 | Rattus norvegicus shroom family member 4 (Shroom4) |
-| NM_001191582 | Rattus norvegicus cullin 9 (Cul9) |
-| NM_001110797 | Rattus norvegicus piccolo (presynaptic cytomatrix protein) |
+| NM_019331    | Rattus norvegicus furin (paired basic amino acid cleaving enzyme) (Furin) |
+| NM_001006982 | Rattus norvegicus ubiquitously-expressed, prefoldin-like chaperone (Uxt) |
+| NM_145770    | Rattus norvegicus acyl-CoA oxidase 2 (Acox2) |
+| NM_001106757 | Rattus norvegicus complement factor properdin (Cfp) |
+| NM_012695    | Rattus norvegicus sulfotransferase family 2A, dehydroepiandrosterone (DHEA)-preferring, member 6 (Sult2a6) |
+| NM_024484    | Rattus norvegicus 5'-aminolevulinate synthase 1 (Alas1) |
+| NM_031540    | Rattus norvegicus coagulation factor IX (F9) |
+| NM_001006976 | Rattus norvegicus threonyl-tRNA synthetase 1 (Tars1) |
+| NM_001199192 | Rattus norvegicus mitochondrial ribosomal protein S27 (Mrps27) |
+| NM_001102408 | Rattus norvegicus uridine-cytidine kinase 2 (Uck2) |
+| NM_001134757 | Rattus norvegicus glucosamine-phosphate N-acetyltransferase 1 (Gnpnat1) |
+| NM_138528    | Rattus norvegicus endoplasmic reticulum oxidoreductase 1 alpha (Ero1a) |
+| NM_017344    | Rattus norvegicus glycogen synthase kinase 3 alpha (Gsk3a) |
+| NM_001108381 | Rattus norvegicus EBP like (Ebpl) |
+| NM_001107889 | Rattus norvegicus myeloid leukemia factor 2 (Mlf2) |
+| NM_001015015 | Rattus norvegicus ubiquitin specific peptidase 1 (Usp1) |
+| NM_031052    | Rattus norvegicus mitochondrial intermediate peptidase (Mipep) |
+
+
 
 Ген-кандидат -- Gbe1 (NM_001100502).
 Вызывает цирроз печени.
