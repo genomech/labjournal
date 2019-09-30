@@ -374,19 +374,6 @@ with Blister.Timestamp("PROCESS TABLE & SAVE") as start_time:
 bcftools mpileup -f {genome} {input_filename} | bcftools call -cv -Ou | bcftools filter -i "DP>20 & %QUAL>30" > {output_filename}
 ```
 
-Схема поиска:
-
-```
-1 = Homo Mut (merge: AND) - гомозиготные снипы, которые есть у каждого мутанта
-2 = Hetero WT (merge: OR) - все гетерозиготные снипы, которые есть в группе здоровых
-3 = All WT (merge: OR) - все снипы, которые есть в группе здоровых
-
-(1 AND 2) (1 AND 3)
-
-```
-
-## Поиск по аллелям
-
 Был произведён поиск по генам.
 Брались гомозиготные снипы, которые есть у всех мутантов, и гетерозиготные снипы, которые есть хотя бы у одной здоровой крысы.
 Далее делалось пересечение множеств.
@@ -432,8 +419,6 @@ bcftools mpileup -f {genome} {input_filename} | bcftools call -cv -Ou | bcftools
 | NM_031052    | RN mitochondrial intermediate peptidase (Mipep) |
 
 Список мутаций [здесь](./scripts_results/sayeeda_alleles_inter_new.csv)
-
-
 
 # Andre Felipe Rodrigues
 
