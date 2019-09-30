@@ -385,6 +385,35 @@ bcftools mpileup -f {genome} {input_filename} | bcftools call -cv -Ou | bcftools
 
 ```
 
+## Поиск по аллелям
+
+Был произведён поиск по генам.
+Брались гомозиготные снипы, которые есть у всех мутантов, и гетерозиготные снипы, которые есть хотя бы у одной здоровой крысы.
+Далее делалось пересечение множеств.
+
+Результаты [здесь](./scripts_results/sayeeda_allele_inter.csv).
+Гены, попавшие в группу:
+
+| NM_001106974 | Rattus norvegicus RNA binding fox-1 homolog 1 (Rbfox1) |
+| NM_001004418 | Rattus norvegicus transforming, acidic coiled-coil containing protein 2 (Tacc2) |
+| NM_053375    | Rattus norvegicus hyperpolarization-activated cyclic nucleotide-gated potassium channel 1 (Hcn1) |
+| NM_001108058 | Rattus norvegicus sperm acrosome associated 5 (Spaca5) |
+| NM_001014771 | Rat SYNA Lentiviral Vector |
+| NM_001106401 | Rattus norvegicus family with sequence similarity 172, member A (Fam172a) |
+| NM_133551    | Rattus norvegicus phospholipase A2 group IVA (Pla2g4a) |
+| NM_001107917 | Rattus norvegicus copine 3 (Cpne3) |
+| NM_001077677 | Rat Pacrg shRNA-Silencing Adenovirus, Park2 |
+| NM_021774    | Rattus norvegicus fragile histidine triad (Fhit) |
+| NM_001100502 | glucan (1,4-alpha-), branching enzyme 1 (glycogen branching enzyme, Andersen disease, glycogen storage disease type IV, Gbe1) |
+| NM_001271079 | Rat Ppm1h Over-Expression Adenovirus, protein phosphatase H1 |
+| NM_001017381 | Rattus norvegicus Fli-1 proto-oncogene, ETS transcription factor (Fli1) |
+| NM_001191730 | Rattus norvegicus shroom family member 4 (Shroom4) |
+| NM_001191582 | Rattus norvegicus cullin 9 (Cul9) |
+| NM_001110797 | Rattus norvegicus piccolo (presynaptic cytomatrix protein) |
+
+Ген-кандидат -- Gbe1 (NM_001100502).
+Вызывает цирроз печени.
+
 # Andre Felipe Rodrigues
 
 Аналогичная методика.

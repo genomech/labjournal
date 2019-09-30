@@ -1,42 +1,50 @@
 from lib.blister import *
 import vcf
 
-Blister.Logo("Find Beasts")
 
-all_wt = pd.read_csv('/dev/datasets/FairWind/_results/Fatima/comp/all_wt.csv', sep='\t')
-homo_mut = pd.read_csv('/dev/datasets/FairWind/_results/Fatima/comp/homo_mut.csv', sep='\t')
-
-great_table = pd.DataFrame(columns=['CHROM', 'POS', 'REF', 'ALT'])
-
-count = 0
-with Blister.Timestamp("DO") as start_time:
-	homo_mut = homo_mut[~all_wt.isin(homo_mut)]['POS'].dropna().to_list()
-
-print(homo_mut)
 
 exit()
 
-i = ['/dev/datasets/FairWind/_results/Fatima/comp/1.csv', '/dev/datasets/FairWind/_results/Fatima/comp/2.csv']
+# STAGE 2
 
-input_filenames = Blister.Input(i)
-if not input_filenames: exit()
+def the_thread(block, output_dir):
+	index, input_filename = block
+	return pd.read_csv(input_filename, sep='\t')
+results = Blister.EachFile("read_csv", ["/dev/datasets/FairWind/_results/Fatima/comp/*.csv"], "~/", THREADS_NUM = cpu_count())(the_thread)()
 
-output_dir = Blister.Dir('/dev/datasets/FairWind/_results/Fatima/comp/')
-if not output_dir: exit()
+table = None
 
-output_filename = Blister.Output("/3", output_dir, "", "csv", rewrite=True)
+output_filename = Blister.Output("/inter", "/dev/datasets/FairWind/_results/Fatima/comp", "", "csv", rewrite=True)
 if not output_filename: exit()
 
-lst = []
+for it in range(len(results)):
+	if it == 0:
+		table = results[it]
+	else:
+		table = pd.merge(table, results[it], how='inner', on='CHROM_POS_REF')
 
-for input_filename in input_filenames:
-	lst += [pd.read_csv(input_filename, sep='\t')]
+table.to_csv(output_filename, sep='\t', index=False)
+exit()
 
-great_table = None
+# STAGE 1
 
-for it in range(len(lst)):
-	if it == 0: great_table = lst[it]
-	else: great_table = pd.merge(great_table, lst[it], how='inner', on=['CHROM', 'POS', 'REF', 'ALT'])
+def the_thread(block, output_dir):
+	index, input_filename = block
+	lst = []
+	output_filename = Blister.Output(input_filename, output_dir, "", "csv", rewrite=True, index=index)
+	if not output_filename: return
+	with Blister.Read(input_filename, 'r', index) as input_file:
+		vcf_reader = vcf.Reader(input_file)
+		for record in vcf_reader:
+			#if record.heterozygosity != 0.0:
+			lst += [f"{record.CHROM} {record.POS} {record.REF}"]
+		table = pd.DataFrame(lst, columns=['CHROM_POS_REF'])
+		table.to_csv(output_filename, sep='\t', index=False)
 
-great_table.sort_values(by=['CHROM', 'POS'], inplace=True)
-great_table.to_csv(output_filename, sep='\t', index=False)
+#mut = ['01', '02', '03', '04', '05', '08']
+#mut = [f"/dev/datasets/FairWind/_results/Fatima/vcf_D20Q30/MB_FQ_0{x}_S*_sorted_FilterCalls-D20-Q30.vcf" for x in mut]
+#Blister.EachFile("PARSING WT", mut, "/dev/datasets/FairWind/_results/Fatima/comp/mut", THREADS_NUM = cpu_count())(the_thread)()
+
+wth = ['06', '07', '09', '10']
+wth = [f"/dev/datasets/FairWind/_results/Fatima/vcf_D20Q30/MB_FQ_0{x}_S*_sorted_FilterCalls-D20-Q30.vcf" for x in wth]
+Blister.EachFile("PARSING WT", wth, "/dev/datasets/FairWind/_results/Fatima/comp/wt_all", THREADS_NUM = cpu_count())(the_thread)()
