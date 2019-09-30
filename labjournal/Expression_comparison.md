@@ -396,28 +396,24 @@ bcftools mpileup -f {genome} {input_filename} | bcftools call -cv -Ou | bcftools
 
 | NCBI ID      | Description |
 |:-------------|:---|
-| NM_019331    | Rattus norvegicus furin (paired basic amino acid cleaving enzyme) (Furin) |
-| NM_001006982 | Rattus norvegicus ubiquitously-expressed, prefoldin-like chaperone (Uxt) |
-| NM_145770    | Rattus norvegicus acyl-CoA oxidase 2 (Acox2) |
-| NM_001106757 | Rattus norvegicus complement factor properdin (Cfp) |
-| NM_012695    | Rattus norvegicus sulfotransferase family 2A, dehydroepiandrosterone (DHEA)-preferring, member 6 (Sult2a6) |
-| NM_024484    | Rattus norvegicus 5'-aminolevulinate synthase 1 (Alas1) |
-| NM_031540    | Rattus norvegicus coagulation factor IX (F9) |
-| NM_001006976 | Rattus norvegicus threonyl-tRNA synthetase 1 (Tars1) |
-| NM_001199192 | Rattus norvegicus mitochondrial ribosomal protein S27 (Mrps27) |
-| NM_001102408 | Rattus norvegicus uridine-cytidine kinase 2 (Uck2) |
-| NM_001134757 | Rattus norvegicus glucosamine-phosphate N-acetyltransferase 1 (Gnpnat1) |
-| NM_138528    | Rattus norvegicus endoplasmic reticulum oxidoreductase 1 alpha (Ero1a) |
-| NM_017344    | Rattus norvegicus glycogen synthase kinase 3 alpha (Gsk3a) |
-| NM_001108381 | Rattus norvegicus EBP like (Ebpl) |
-| NM_001107889 | Rattus norvegicus myeloid leukemia factor 2 (Mlf2) |
-| NM_001015015 | Rattus norvegicus ubiquitin specific peptidase 1 (Usp1) |
-| NM_031052    | Rattus norvegicus mitochondrial intermediate peptidase (Mipep) |
+| NM_019331    | RN furin (paired basic amino acid cleaving enzyme) (Furin) |
+| NM_001006982 | RN ubiquitously-expressed, prefoldin-like chaperone (Uxt) |
+| NM_145770    | RN acyl-CoA oxidase 2 (Acox2) |
+| NM_001106757 | RN complement factor properdin (Cfp) |
+| NM_012695    | RN sulfotransferase family 2A, dehydroepiandrosterone (DHEA)-preferring, member 6 (Sult2a6) |
+| NM_024484    | RN 5'-aminolevulinate synthase 1 (Alas1) |
+| NM_031540    | RN coagulation factor IX (F9) |
+| NM_001006976 | RN threonyl-tRNA synthetase 1 (Tars1) |
+| NM_001199192 | RN mitochondrial ribosomal protein S27 (Mrps27) |
+| NM_001102408 | RN uridine-cytidine kinase 2 (Uck2) |
+| NM_001134757 | RN glucosamine-phosphate N-acetyltransferase 1 (Gnpnat1) |
+| NM_138528    | RN endoplasmic reticulum oxidoreductase 1 alpha (Ero1a) |
+| NM_017344    | RN glycogen synthase kinase 3 alpha (Gsk3a) |
+| NM_001108381 | RN EBP like (Ebpl) |
+| NM_001107889 | RN myeloid leukemia factor 2 (Mlf2) |
+| NM_001015015 | RN ubiquitin specific peptidase 1 (Usp1) |
+| NM_031052    | RN mitochondrial intermediate peptidase (Mipep) |
 
-
-
-Ген-кандидат -- Gbe1 (NM_001100502).
-Вызывает цирроз печени.
 
 # Andre Felipe Rodrigues
 
