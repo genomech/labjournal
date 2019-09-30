@@ -394,6 +394,8 @@ bcftools mpileup -f {genome} {input_filename} | bcftools call -cv -Ou | bcftools
 Результаты [здесь](./scripts_results/sayeeda_allele_inter.csv).
 Гены, попавшие в группу:
 
+| NCBI ID      | Description |
+|:-------------|:---|
 | NM_001106974 | Rattus norvegicus RNA binding fox-1 homolog 1 (Rbfox1) |
 | NM_001004418 | Rattus norvegicus transforming, acidic coiled-coil containing protein 2 (Tacc2) |
 | NM_053375    | Rattus norvegicus hyperpolarization-activated cyclic nucleotide-gated potassium channel 1 (Hcn1) |
