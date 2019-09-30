@@ -20,7 +20,7 @@ def insert(root, node):
 def search(root, value): 
 	if root is None: return None
 	else:
-		if root.val['interval'] <= value: return root.val['ncbi_id']
+		if root.val['interval'].lower < value < root.val['interval'].upper: return root.val['ncbi_id']
 		else:
 			if root.val['interval'].lower < value: return search(root.right, value) 
 			else: return search(root.left, value)
@@ -94,5 +94,5 @@ with Blister.Timestamp("FIND GENES") as start_time:
 with Blister.Timestamp("PROCESS TABLE & SAVE") as start_time:
 	#transcriptome = transcriptome['ncbi_id'].groupby(transcriptome['gene_id'])
 	#transcriptome = transcriptome.apply(set).apply(list).apply(lambda x: [i for i in x if i]).apply(lambda x: x[0] if x else None)
-	transcriptome.to_csv("/dev/datasets/FairWind/_results/Fatima/comp/gene_id.csv", sep=',', index=True)
+	transcriptome.to_csv("/dev/datasets/FairWind/_results/Fatima/comp/gene_id_new.csv", sep=',', index=True)
 	print(set(transcriptome['ncbi_id'].to_list()))
