@@ -5756,3 +5756,7 @@ $ zcat ./s7_FR_RF_0_R2.fastq.gz | grep GCTCTTCCGATC | wc -l # 8
 Таблица [ODS](./scripts_results/bgg-eg_190906.ods) по статистике.
 
 ![График по библиотекам и dangling ends](./scripts_results/bgg-eg_190906.png)
+
+## Данные из статьи китайцев
+
+Результаты FastQC: [раз](http://htmlpreview.github.io/?https://github.com/regnveig/labjournal/blob/master/FastQC_results/chinese/bat-Hi-C_mES_alu1_1_10M_fastqc.html), [два](http://htmlpreview.github.io/?https://github.com/regnveig/labjournal/blob/master/FastQC_results/chinese/bat-Hi-C_mES_alu1_2_10M_fastqc.html).
