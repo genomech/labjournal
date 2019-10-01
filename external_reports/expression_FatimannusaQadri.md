@@ -127,3 +127,41 @@ Expression by sample:
 ![Ass1 expression](../labjournal/scripts_results/sayeeda_Ass1.svg)
 ![Cps1 expression](../labjournal/scripts_results/sayeeda_Cps1.svg)
 ![Hpd expression](../labjournal/scripts_results/sayeeda_Hpd.svg)
+
+## Additional task #2: Filter SNPs
+
+BAM-files were filtered by *bcftools* with the following parameters:
+
+* Coverage depth > 20
+* Quality > 30
+
+Then we found all SNPs which are homozygous in mutant animals and heterozygous (or absent) in wild type rats.
+
+Mutations list:
+
+| Chrom | Position | Ref | Alt | NCBI ID      | Type             |
+|:------|:--------:|:---:|:---:|:-------------|:-----------------|
+| chr15 | 18451435 | C   | T   | NM_145770    | Exon, non-coding |
+| chr15 | 18451520 | T   | C   | NM_145770    | Synonim          |
+| chr15 | 18459764 | T   | C   | NM_145770    | Synonim          |
+| chr15 | 18464400 | G   | A   | NM_145770    | Synonim          |
+| chr15 | 19721602 | G   | T   | NM_001134757 | Exon, non-coding |
+| chr15 | 19721772 | G   | T   | NM_001134757 | Exon, non-coding |
+| chr15 | 41065107 | G   | A   | -            | Not a gene       |
+| chr15 | 41065578 | C   | T   | -            | Not a gene       |
+| chr15 | 41065705 | C   | T   | -            | Not a gene       |
+| chr15 | 41065845 | G   | A   | -            | Not a gene       |
+| chr15 | 41065967 | T   | C   | -            | Not a gene       |
+| chr15 | 41066164 | A   | G   | -            | Not a gene       |
+| chr15 | 41139326 | G   | A   | NM_031052    | Synonim          |
+| chr15 | 41668764 | G   | A   | NM_001108381 | Synonim          |
+| chr15 | 41691466 | C   | T   | NM_001108381 | Synonim          |
+
+Genes list:
+
+| NCBI ID      | Description |
+|:-------------|:---|
+| NM_145770    | RN acyl-CoA oxidase 2 (Acox2) |
+| NM_001134757 | RN glucosamine-phosphate N-acetyltransferase 1 (Gnpnat1) |
+| NM_001108381 | RN EBP like (Ebpl) |
+| NM_031052    | RN mitochondrial intermediate peptidase (Mipep) |
