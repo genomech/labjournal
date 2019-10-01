@@ -130,12 +130,12 @@ Expression by sample:
 
 ## Additional task #2: Filter SNPs
 
-BAM-files were filtered by *bcftools* with the following parameters:
+BAM-files were filtered with *bcftools* using the following parameters:
 
 * Coverage depth > 20
 * Quality > 30
 
-Then we found all SNPs which are homozygous in mutant animals and heterozygous (or absent) in wild type rats.
+Then we found all SNPs which are both homozygous in mutant animals and heterozygous (or absent) in wild type rats.
 
 Mutations list:
 
