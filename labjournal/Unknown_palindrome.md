@@ -5760,3 +5760,11 @@ $ zcat ./s7_FR_RF_0_R2.fastq.gz | grep GCTCTTCCGATC | wc -l # 8
 ## Данные из статьи китайцев
 
 Результаты FastQC: [раз](http://htmlpreview.github.io/?https://github.com/regnveig/labjournal/blob/master/FastQC_results/chinese/bat-Hi-C_mES_alu1_1_10M_fastqc.html), [два](http://htmlpreview.github.io/?https://github.com/regnveig/labjournal/blob/master/FastQC_results/chinese/bat-Hi-C_mES_alu1_2_10M_fastqc.html).
+
+Общие впечатления:
+
+1. Мусор есть, но его:
+	1. немного (~0.1-1%);
+	2. он разнородный, в отличие от наших данных (не все К-меры можно составить в одну последовательность);
+	3. только в начале (первые 8-10 букв).
+2. Есть адаптеры (Nextera Transposase Sequence).
