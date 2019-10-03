@@ -6,6 +6,8 @@
 
 **01.10:** Additional task #2 complete.
 
+**03.10:** Full list of named genes with expression significantly changed ([link](../labjournal/scripts_results/sayeeda_AllGenesDiff_named.csv)).
+
 ![Full expression](../labjournal/scripts_results/Expression_all.svg)
 ![Full expression, log](../labjournal/scripts_results/Expression_all_log.svg)
 ![Expression, q < 0.05](../labjournal/scripts_results/Expression_all_q005.svg)
