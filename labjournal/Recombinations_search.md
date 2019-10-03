@@ -58,8 +58,6 @@ CFTR: chr7:117,120,148- 117,307,162
 Были смержены таблицы, а затем вручную отобраны гены, связанные с умственной отсталостью и агрессией.
 Все они были вручную проверены в IGV.
 
-T(ACC)x13
-
 | Chrom | Position  | Ref | Alt | Genotype | Type | Symbol | Phenotypes_x | Total AF |
 |:------|:----------|:---:|:---:|:---------|:-----|:-------|:-------------|:--------:|
 | chr10 | 283578    | G   | T   | 0/1 | missense | ZMYND11 | Mental retardation, AD | 0.00016 |
@@ -67,6 +65,6 @@ T(ACC)x13
 | chr16 | 3819294   | C   | T   | 0/1 | missense | CREBBP | Menke-Hennekam syndrome 1, 618332 (3); Rubinstein-Taybi syndrome 1, AD | 0.00823 |
 | chr17 | 7750177   | T(ACC)x13 | T(ACC)x15 | 0/1 | inframe insertion | KDM6B | Neurodevelopmental disorder with coarse facies and mild distal skeletal abnormalities, AD | - |
 | chr17 | 17697093  | CCA(GCA)x13 | CCA(GCA)x12 | 0/1 | inframe deletion | RAI1 | Smith-Magenis syndrome, AD, Isolated cases | - |
-| chr2 | 165984281  | T   | C   | 0/1 | missense | SCN3A | Epilepsy, familial focal, with variable foci,  AD; Epileptic encephalopathy, early infantile, AD | 0.00023 |
+| chr2 | 165984281  | T   | C   | 0/1 | missense | SCN3A | Epilepsy, familial focal, with variable foci, AD; Epileptic encephalopathy, early infantile, AD | 0.00023 |
 | chr20 | 57428804  | A   | G   | 0/1 | missense | GNAS | McCune-Albright syndrome, somatic, mosaic; Osseous heteroplasia, progressive, AD; Pituitary adenoma, multiple types, somatic; Pseudohypoparathyroidism, AD; | 0.00699 |
 | chr22 | 51135989  | GTT | G, GCCCCTT, GCCCCGCGCCCGGCCCCTT | 1/1 | splice acceptor, frameshift | SHANK3 | Phelan-McDermid syndrome, AD; Schizophrenia, AD  | - |
