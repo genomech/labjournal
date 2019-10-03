@@ -69,4 +69,4 @@ T(ACC)x13
 | chr17 | 17697093  | CCA(GCA)x13 | CCA(GCA)x12 | 0/1 | inframe deletion | RAI1 | Smith-Magenis syndrome, Autosomal dominant, Isolated cases | - |
 | chr2 | 165984281  | T   | C   | 0/1 | missense | SCN3A | Epilepsy, familial focal, with variable foci,  Autosomal dominant; Epileptic encephalopathy, early infantile, Autosomal dominant | 0.00023 |
 | chr20 | 57428804  | A   | G   | 0/1 | missense | GNAS | McCune-Albright syndrome, somatic, mosaic; Osseous heteroplasia, progressive, Autosomal dominant; Pituitary adenoma, multiple types, somatic; Pseudohypoparathyroidism, Autosomal dominant; | 0.00699 |
-| chr22 | 51135989  | GTT | G,GCCCCTT,GCCCCGCGCCCGGCCCCTT | 1/1 | splice acceptor, frameshift | SHANK3 | Phelan-McDermid syndrome, Autosomal dominant; Schizophrenia, Autosomal dominant  | - |
+| chr22 | 51135989  | GTT | G, GCCCCTT, GCCCCGCGCCCGGCCCCTT | 1/1 | splice acceptor, frameshift | SHANK3 | Phelan-McDermid syndrome, Autosomal dominant; Schizophrenia, Autosomal dominant  | - |
