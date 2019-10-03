@@ -68,3 +68,17 @@ CFTR: chr7:117,120,148- 117,307,162
 | chr2 | 165984281  | T   | C   | 0/1 | missense | SCN3A | Epilepsy, familial focal, with variable foci, AD; Epileptic encephalopathy, early infantile, AD | 0.00023 |
 | chr20 | 57428804  | A   | G   | 0/1 | missense | GNAS | McCune-Albright syndrome, somatic, mosaic; Osseous heteroplasia, progressive, AD; Pituitary adenoma, multiple types, somatic; Pseudohypoparathyroidism, AD; | 0.00699 |
 | chr22 | 51135989  | GTT | G, GCCCCTT, GCCCCGCGCCCGGCCCCTT | 1/1 | splice acceptor, frameshift | SHANK3 | Phelan-McDermid syndrome, AD; Schizophrenia, AD  | - |
+
+## Мутации из отчёта
+
+1. Sample 1-1:
+	* Chr4:62129501-62308035 -- не найдено.
+	* Chr14:22598026-22964922 -- не найдено.
+
+2. Sample 1-2:
+	* Chr14:20253739-20376267 -- не найдено.
+
+3. Samples 1-34 & 1-5:
+	* Chr2:242886386-243007359 -- не найдено.
+	* Chr6:32485173-32604038 -- не найдено.
+	* Chr14:22536979-22964922 -- chr14:22934907, missense, TRDC. Вряд ли связан с заболеванием.
