@@ -1,14 +1,16 @@
 # Results (Fatimannusa Qadri)
 
+## Updates
+
 **23.09:** NCBI codes added.
 
 **25.09:** Additional task #1 complete.
 
 **01.10:** Additional task #2 complete.
 
-**03.10:** Full list of named genes with expression significantly changed ([link](../labjournal/scripts_results/sayeeda_AllGenesDiff_named.csv)).
+**03.10:** Full list of **named** genes with expression significantly changed ([link](../labjournal/scripts_results/sayeeda_AllGenesDiff_named.csv)).
 
-----------------
+## Infographics
 
 ![Full expression](../labjournal/scripts_results/Expression_all.svg)
 ![Full expression, log](../labjournal/scripts_results/Expression_all_log.svg)
