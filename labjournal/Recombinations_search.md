@@ -52,3 +52,19 @@ CFTR: chr7:117,120,148- 117,307,162
 
 Все прочие мутации имеют низкий импакт и/или высокую частоту встречаемости в популяции.
 [Полные результаты](./scripts_results/1-1_CFTR_vep.csv).
+
+## Братья с умственной отсталостью
+
+Были смержены таблицы, а затем вручную отобраны гены, связанные с умственной отсталостью и агрессией.
+Все они были вручную проверены в IGV.
+
+| Chrom | Position  | Ref | Alt | Genotype | Type | Symbol | Gene Name_x | Phenotypes_x | Total AF |
+|:------|:----------|:---:|:---:|:---------|:-----|:-------|:------------|:-------------|:--------:|
+| chr10 | 283578    | G   | T   | 0/1 | missense | ZMYND11 | Zinc finger MYND domain-containing protein 11 | Mental retardation, autosomal dominant | 0.00016 |
+| chr10 | 131639111 | C   | T   | 0/1 | missense | EBF3 | Early B-cell factor 3, Microtubule-associated protein, RP/EB family, member 3 | Hypotonia, ataxia, and delayed development syndrome, Autosomal dominant | 0.00012 |
+| chr16 | 3819294   | C   | T   | 0/1 | missense | CREBBP | CREB binding protein | Menke-Hennekam syndrome 1, 618332 (3); Rubinstein-Taybi syndrome 1, Autosomal dominant | 0.00823 |
+| chr17 | 7750177   | TACCACCACCACCACCACCACCACCACCACCACCACCACC | TACCACCACCACCACCACCACCACCACCACCACCACCACCACCACC | 0/1 [hetero] | inframe insertion | KDM6B | Lysine-specific demethylase 6B | Neurodevelopmental disorder with coarse facies and mild distal skeletal abnormalities, Autosomal dominant | - |
+| chr17 | 17697093  | CCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCA | CCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCA | 0/1 [hetero] | inframe deletion | RAI1 | Retinoic acid-induced gene 1 | Smith-Magenis syndrome, Autosomal dominant, Isolated cases | - |
+| chr2 | 165984281  | T   | C   | 0/1 | missense | SCN3A | Sodium channel, voltage-gated, type III, alpha polypeptide | Epilepsy, familial focal, with variable foci,  Autosomal dominant; Epileptic encephalopathy, early infantile, Autosomal dominant | 0.00023 |
+| chr20 | 57428804  | A   | G   | 0/1 | missense | GNAS | GNAS complex locus (guanine nucleotide binding protein (G protein), alpha stimulating activity polypeptide 1) | McCune-Albright syndrome, somatic, mosaic; Osseous heteroplasia, progressive, Autosomal dominant; Pituitary adenoma, multiple types, somatic; Pseudohypoparathyroidism, Autosomal dominant; | 0.00699 |
+| chr22 | 51135989  | GTT | G,GCCCCTT,GCCCCGCGCCCGGCCCCTT | 1/1 | splice acceptor, frameshift | SHANK3 | SH3 and multiple ankyrin repeat domains 3 | Phelan-McDermid syndrome, Autosomal dominant; Schizophrenia, Autosomal dominant  | - |
