@@ -180,7 +180,7 @@ Genes list:
 
 New SNPs have been found.
 All of them empirically both heterozygous (absent) in WT animals and homozygous in mutant rats.
-Almost all of them lie in gene introns.
+Almost all SNPs lie in gene introns.
 
 | Chrom | Pos      | Ref | Alt | Type            | Comment                                       |
 |:------|:---------|:---:|:---:|:----------------|:----------------------------------------------|
