@@ -10,6 +10,8 @@
 
 **03.10:** Full list of **named** genes with expression significantly changed ([link](../labjournal/scripts_results/sayeeda_AllGenesDiff_named.csv)).
 
+**04.10:** Acox2 SNPs full list added.
+
 ## Infographics
 
 ![Full expression](../labjournal/scripts_results/Expression_all.svg)
@@ -173,3 +175,31 @@ Genes list:
 | NM_001134757 | RN glucosamine-phosphate N-acetyltransferase 1 (Gnpnat1) |
 | NM_001108381 | RN EBP like (Ebpl) |
 | NM_031052    | RN mitochondrial intermediate peptidase (Mipep) |
+
+## Additional task #3: Looking for SNPs in Acox2
+
+New SNPs have been found.
+All of them empirically both heterozygous (absent) in WT animals and homozygous in mutant rats.
+Almost all of them lie in gene introns.
+
+| Chrom | Pos      | Ref | Alt | Type            | Comment                                       |
+|:------|:---------|:---:|:---:|:----------------|:----------------------------------------------|
+| chr15 | 18450518 | A   | G   | intron          | Low coverage                                  |
+| chr15 | 18451376 | T   | C   | intron          | Low coverage                                  |
+| chr15 | 18451383 | C   | T   | intron          | Low coverage                                  |
+| chr15 | 18454081 | A   | G   | intron          | Low coverage, no data on 1 WT sample          |
+| chr15 | 18456280 | G   | A   | intron          | Extremely low coverage, no data on 2 samples  |
+| chr15 | 18460154 | T   | C   | intron          | Low coverage                                  |
+| chr15 | 18460378 | C   | T   | intron          | Low coverage, no data on 1 WT sample          |
+| chr15 | 18460728 | T   | C   | intron          | Low coverage                                  |
+| chr15 | 18465805 | C   | A   | intron          | Low coverage                                  |
+| chr15 | 18466035 | T   | C   | intron          | Low coverage                                  |
+| chr15 | 18475215 | C   | A   | intron          | Low coverage                                  |
+| chr15 | 18475248 | C   | T   | intron          | Low coverage                                  |
+| chr15 | 18475522 | G   | A   | intron          | Low coverage                                  |
+| chr15 | 18475581 | T   | C   | intron          | Low coverage                                  |
+| chr15 | 18475884 | T   | A   | intron          | Low coverage, no data on 1 WT sample          |
+| chr15 | 18478600 | A   | G   | intron          | Low coverage                                  |
+| chr15 | 18480809 | A   | T   | intron          | Low coverage                                  |
+| chr15 | 18480882 | G   | A   | intron          | Low coverage                                  |
+| chr15 | 18481372 | G   | A   | exon_non-coding | Low coverage                                  |
