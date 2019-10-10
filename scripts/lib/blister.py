@@ -1,3 +1,9 @@
+#!/bin/python3
+
+__author__ = "Anna Valeria [regnveig@yandex.ru]"
+__date__ = "2019 Oct 7"
+__version__ = "0.45"
+
 from contextlib import contextmanager
 from multiprocessing import cpu_count, Pool
 from PyQt5.QtCore import QFileInfo, QFile, QDir
@@ -15,8 +21,6 @@ import time
 
 class Blister(object):
 	"""
-Blister v0.43.
-
 Library for bioinformatic scripts.
 Based on KnV/GnP programming philosophy (Kostyl' & Velosiped, Govno & Palki).
 Save my time for coffee, games, fap, and sleep.
@@ -25,9 +29,6 @@ Save my time for coffee, games, fap, and sleep.
 	def Input(filenames):
 		"""
 Take list of masks or filenames, return list of absolute filepaths, or False if error.
-
-input_filenames = Blister.Input([filenames])
-if not input_filenames: exit()
 """
 		METHOD_NAME = f"Blister.Input"
 		if type(filenames) != type(list()):
@@ -65,9 +66,6 @@ if not input_filenames: exit()
 		"""
 Take dir path, return absolute path, or False if error.
 Create new folder by default.
-
-output_dir = Blister.Dir(dir_path, create=True)
-if not output_dir: exit()
 """
 		METHOD_NAME = f"Blister.Dir"
 		if type(dir_path) != type(str()):
@@ -93,10 +91,7 @@ if not output_dir: exit()
 	def Output(filename, output_dir, mod, suffix, rewrite=True, index=-1):
 		"""
 Take input filename, output dir path, and make a new filename using mod and suffix.
-Rewrite a file by default. Can be used with Threading.
-
-output_filename = Blister.Output(filename, output_dir, mod, suffix, rewrite=True, index=index)
-if not output_filename: continue
+Rewrite a file by default. Can be used with Blister.Threading().
 """
 		METHOD_NAME = f"Blister.Output"
 		thread_id = Blister.ThreadID(index)
@@ -116,21 +111,9 @@ if not output_filename: continue
 		return fileinfo.absoluteFilePath()
 
 	@staticmethod
-	def FileMods(filename, sep='_'):
-		"""
-Split filename by default mod separator. item[0] -- basename.
-
-mods = Blister.FileMods(filename)
-"""
-		basename = QFileInfo(filename).baseName()
-		return str.split(basename, sep)
-
-	@staticmethod
 	def GzipCheck(filename):
 		"""
 Check if file is gzipped.
-
-is_gz = Blister.GzipCheck(filename)
 """
 		GZIP_MAGIC_NUMBER = "1f8b"
 		with open(filename, 'rb') as file_check:
@@ -140,8 +123,6 @@ is_gz = Blister.GzipCheck(filename)
 	def Bzip2Check(filename):
 		"""
 Check if file is bzipped.
-
-is_bz2 = Blister.Bzip2Check(filename)
 """
 		BZIP2_MAGIC_NUMBER = "425a68"
 		with open(filename, 'rb') as file_check:
@@ -152,10 +133,7 @@ is_bz2 = Blister.Bzip2Check(filename)
 	def Read(filename, mode='rt', index=-1):
 		"""
 Context manager for opening files. Can handle gzipped and bzipped too.
-Can be used with Threading.
-
-with Blister.Read(input_filename, 'rt', index) as input_file:
-	# do stuff
+Yield opened file. Can be used with Blister.Threading().
 """
 		METHOD_NAME = f"Blister.Read"
 		try:
@@ -174,8 +152,6 @@ with Blister.Read(input_filename, 'rt', index) as input_file:
 		"""
 Seal a folder: count recursively MD5 checksum, write it to all.md5, then make the folder read-only.
 Shell function, need package md5deep.
-
-Blister.Seal(dir_path)
 """
 		METHOD_NAME = f"Blister.Seal"
 		qdir = QDir(dir_path)
@@ -203,8 +179,6 @@ Blister.Seal(dir_path)
 		"""
 Count lines if file. Can handle gzipped and bzipped too.
 Shell function, need packages gzip and bzip2.
-
-lines = Blister.CountLines(filename)
 """
 		METHOD_NAME = f"Blister.CountLines"
 		is_gz = Blister.GzipCheck(filename)
@@ -221,9 +195,7 @@ lines = Blister.CountLines(filename)
 	def Logo(script_name):
 		"""
 Just a beautiful minimalistic logo with timestamp.
-Call Blister.Killer.
-
-Blister.Logo(script_name)
+Call Blister.Killer().
 """
 		print(f"\n*** {script_name} ***\n\n{datetime.datetime.today().strftime('Now: %Y-%m-%d, %H:%M')}", end="\n\n")
 		Blister.Killer()
@@ -233,10 +205,7 @@ Blister.Logo(script_name)
 	def Timestamp(title, filename_1="", filename_2="", index=-1):
 		"""
 Context manager for timestamps. Can show input and output files if desired.
-Can be used with Threading.
-
-with Blister.Timestamp(title, index=index) as start_time:
-	# do stuff
+Yield start time. Can be used with Blister.Threading().
 """
 		METHOD_NAME = f"Blister.Timestamp"
 		thread_id = Blister.ThreadID(index)
@@ -250,8 +219,6 @@ with Blister.Timestamp(title, index=index) as start_time:
 	def SecToTime(sec):
 		"""
 Return seconds in hh:mm:ss format.
-
-time = Blister.SecToTime(sec)
 """
 		return str(datetime.timedelta(seconds=int(sec)))
 
@@ -259,8 +226,6 @@ time = Blister.SecToTime(sec)
 	def Erase(n=1):
 		"""
 Erase n last strings in console.
-
-Blister.Erase(n=1)
 """
 		print("", end='\n')
 		for _ in range(n):
@@ -271,9 +236,7 @@ Blister.Erase(n=1)
 	def ProgressBar(percent, start_time):
 		"""
 Draw a cute minimalistic progressbar.
-Can take start time from Timestamp.
-
-Blister.ProgressBar(percent, start_time)
+Can take start time from Blister.Timestamp().
 """
 		fill = "#" * int(percent * 50)
 		empty = "." * int(50 - len(fill))
@@ -283,9 +246,7 @@ Blister.ProgressBar(percent, start_time)
 	def Total(total, start_time):
 		"""
 Just a total number of something. Useless but cool.
-Can take start time from Timestamp.
-
-Blister.Total(total, start_time)
+Can take start time from Blister.Timestamp().
 """
 		print(f"\tTotal: {total} [%s]" % (Blister.SecToTime(time.time() - start_time)), end="\r")
 
@@ -295,10 +256,12 @@ Blister.Total(total, start_time)
 		"""
 Context manager for multiprocessing.
 
+Usage:
+
 def the_thread(block):
 	index, item = block
 	# do stuff
-with Blister.Threading(title) as pool:
+with Blister.Threading(title, THREADS_NUM = cpu_count()) as pool:
 	results = pool.map(functools.partial(the_thread), enumerate(iterable))
 """
 		METHOD_NAME = f"Blister.Threading"
@@ -315,6 +278,8 @@ with Blister.Threading(title) as pool:
 	def EachFile(title, filenames, dir_path, THREADS_NUM = cpu_count()):
 		"""
 Decorator for threading by each file. Really cool stuff.
+
+Usage:
 
 def the_thread(block, output_dir):
 	index, input_filename = block
@@ -341,8 +306,6 @@ results = Blister.EachFile(title, [filenames], dir_path, THREADS_NUM = cpu_count
 	def Killer():
 		"""
 Kill all stopped processes and clean the memory.
-
-Blister.Killer()
 """
 		METHOD_NAME = f"Blister.Killer"
 		killed = pd.DataFrame(columns=['pid', 'name'])
@@ -363,11 +326,9 @@ Blister.Killer()
 	@staticmethod
 	def Sleep(max_level=70.0, interval=1, index=-1):
 		"""
-Wait until memory percent is less than [max_level].
+Wait until memory percent is less than max level.
 Can be useful if your script needs a lot of memory.
-Can be used with Threading.
-
-Blister.Sleep(max_level=70.0, interval=1, index=-1)
+Can be used with Blister.Threading().
 """
 		METHOD_NAME = f"Blister.Sleep"
 		thread_id = Blister.ThreadID(index)
@@ -381,8 +342,6 @@ Blister.Sleep(max_level=70.0, interval=1, index=-1)
 		"""
 My personal saviour. Turn pandas table into GitHub MD table.
 Save lots of my time.
-
-print(Blister.GitHubTable(dataframe))
 """
 		METHOD_NAME = f"Blister.GitHubTable"
 		if type(dataframe) != type(pd.DataFrame()):
@@ -396,13 +355,11 @@ print(Blister.GitHubTable(dataframe))
 Primitive, but configurable binary search tree.
 Useful if your class doesn't have search methods you need.
 
+Usage:
+
 def sort_func(a, b): return a > b
 def match_func(a, b): return a == b
-
 tree = Blister.BST(sort_func, match_func)
-tree.Insert(value)
-found = tree.Search(value)
-sorted_list = tree.InOrder()
 """
 		def __init__(self, sort_function, match_function):
 			self.Sort_Function = sort_function
@@ -416,6 +373,11 @@ sorted_list = tree.InOrder()
 				self.val = key
 	
 		def Insert(self, value, root = -1):
+			"""
+Insert item to BST.
+
+Usage: tree.Insert(value)
+"""
 			if root == -1: 
 				node = self.Node(value)
 				if self.Root is None: self.Root = node
@@ -438,6 +400,11 @@ sorted_list = tree.InOrder()
 						else: self.Insert(value, root.left)
 	
 		def Search(self, value, root = -1, lst = list()):
+			"""
+Return list of found items.
+
+Usage: found = tree.Search(value)
+"""
 			if root == -1:
 				if self.Root is not None:
 					if self.Sort_Function(self.Root.val, value): lst = self.Search(value, self.Root.right, lst) 
@@ -452,6 +419,11 @@ sorted_list = tree.InOrder()
 				return lst
 	
 		def InOrder(self, root = -1):
+			"""
+Return sorted list of items.
+
+Usage: sorted_list = tree.InOrder()
+"""
 			if root == -1:
 				if self.Root:
 					lst = self.InOrder(self.Root.left) 
@@ -466,3 +438,7 @@ sorted_list = tree.InOrder()
 					lst += self.InOrder(root.right)
 					return lst
 				else: return list()
+
+if __name__ == "__main__":
+	sp = subprocess.Popen(f"pydoc3 -w ./blister.py; firefox ./blister.html", shell=True, stdout=subprocess.PIPE)
+	out, err = sp.communicate()

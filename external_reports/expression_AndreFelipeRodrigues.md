@@ -1,5 +1,11 @@
 # Draft results (Andre Felipe Rodrigues)
 
+## Updates
+
+**10.10:** 4 groups comparison added ([here](../labjournal/scripts_results/merged_data_4gr.csv)).
+
+## Infographics
+
 ![Expression full](../labjournal/scripts_results/Andre_Expression_all.svg)
 ![Expression full, log](../labjournal/scripts_results/Andre_Expression_all_log.svg)
 ![Expression, significant (q < 0.05)](../labjournal/scripts_results/Andre_Expression_all_q005.svg)

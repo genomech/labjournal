@@ -82,3 +82,25 @@ CFTR: chr7:117,120,148- 117,307,162
 	* Chr2:242886386-243007359 -- не найдено.
 	* Chr6:32485173-32604038 -- не найдено.
 	* Chr14:22536979-22964922 -- chr14:22934907, missense, TRDC. Вряд ли связан с заболеванием.
+
+# Протокол подготовки таблиц
+
+1. Что делать с ПЦР-дубликатами?
+
+Было решено всё-таки применить PicardTools и посмотреть результаты.
+
+```bash
+PicardCommandLine MarkDuplicates REMOVE_DUPLICATES=true \
+	M=/dev/datasets/FairWind/_results/bowtie/duplicates_experiment/sample-1-5_metrics.txt \
+	I=/dev/datasets/FairWind/_results/bowtie/bam/sample-1-5_sorted.bam \
+	O=/dev/datasets/FairWind/_results/bowtie/duplicates_experiment/sample-1-5_dupless.bam
+```
+
+Ради эксперимента был почищен сэмпл 1-5, в результате получилось 26% дубликатов, что совпадает с данными полученными при очистке PicardTools других библиотек.
+
+2. Обе библиотеки -- с дубликатами и без -- были подвергнуты Filter Call и отфильтрованы на экзом.
+Для обеих минимальная глубина была взята 10.
+
+```bash
+bcftools mpileup --threads 12 -f /dev/datasets/FairWind/_db/hg19/hg19.fa /dev/datasets/FairWind/_results/bowtie/duplicates_experiment/sample-1-5_dupless.bam | bcftools call --threads 12 -cv -Ou | bcftools filter --threads 12 -i "DP>10 & QUAL>30" | vcftools --vcf - --recode --recode-INFO-all --bed /dev/datasets/FairWind/_db/MedExome_hg19_capture_targets.sorted.bed --out /dev/datasets/FairWind/_results/bowtie/duplicates_experiment/sample-1-5_dupless_exome.vcf
+```

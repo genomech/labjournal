@@ -514,3 +514,17 @@ bcftools mpileup -f {genome} {input_filename} | bcftools call -cv -Ou | bcftools
 **Примечание.**
 Восьмой зверь выбивается по двум первым генам.
 Я думаю, это какой-то неправильный зверь.
+
+## Разбитие на 4 группы
+
+```bash
+cuffdiff -p 12 --library-type fr-firststrand \
+	--dispersion-method pooled --library-norm-method geometric \
+	-o /dev/datasets/FairWind/_results/Andre/cuffdiff_4gr \
+	/dev/datasets/FairWind/_results/Andre/cuffmerge/merged.gtf \
+	-L SD-DAY,SD-NIGHT,L27-DAY,L27-NIGHT \
+	MB_AFR_001_S1_sorted.bam,MB_AFR_002_S2_sorted.bam,MB_AFR_003_S3_sorted.bam \
+	MB_AFR_004_S4_sorted.bam,MB_AFR_005_S5_sorted.bam,MB_AFR_006_S6_sorted.bam \
+	MB_AFR_007_S7_sorted.bam,MB_AFR_009_S9_sorted.bam \
+	MB_AFR_008_S8_sorted.bam,MB_AFR_010_S10_sorted.bam,MB_AFR_011_S11_sorted.bam,MB_AFR_012_S12_sorted.bam
+```
