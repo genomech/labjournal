@@ -104,3 +104,8 @@ PicardCommandLine MarkDuplicates REMOVE_DUPLICATES=true \
 ```bash
 bcftools mpileup --threads 12 -f /dev/datasets/FairWind/_db/hg19/hg19.fa /dev/datasets/FairWind/_results/bowtie/duplicates_experiment/sample-1-5_dupless.bam | bcftools call --threads 12 -cv -Ou | bcftools filter --threads 12 -i "DP>10 & QUAL>30" | vcftools --vcf - --recode --recode-INFO-all --bed /dev/datasets/FairWind/_db/MedExome_hg19_capture_targets.sorted.bed --out /dev/datasets/FairWind/_results/bowtie/duplicates_experiment/sample-1-5_dupless_exome.vcf
 ```
+
+Результаты проверки гетерозиготных снипов:
+
+![Depth 10..50](./scripts_results/sample-1-5_exome_10-50.svg)
+![Depth 50+](./scripts_results/sample-1-5_exome_50-inf.svg)
