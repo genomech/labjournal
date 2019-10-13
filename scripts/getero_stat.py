@@ -3,8 +3,8 @@ import vcf
 import numpy as np
 import matplotlib.pyplot as plt
 
-filenames = ['/dev/datasets/FairWind/_results/bowtie/duplicates_experiment/sample-1-5_*_exome.vcf.recode.vcf']
-dir_path = '/dev/datasets/FairWind/_results/bowtie/duplicates_experiment/'
+filenames = ['/dev/datasets/FairWind/_results/bowtie/dupless_vcf/sample-1-5_dupless_FilterCalls_DP30-QUAL30-ALT02.vcf.recode.vcf']
+dir_path = '/dev/datasets/FairWind/_results/bowtie/dupless_vcf/graph/'
 
 def lister(table, less):
 	if less:
@@ -55,7 +55,6 @@ with Blister.Timestamp("Plotting") as start_time:
 		name = results[0][0].split('/')[-1].split('.')[0]
 		plt.clf()
 		plt.plot(results[0][2], label=results[0][0].split('/')[-1].split('.')[0])
-		plt.plot(results[1][2], label=results[1][0].split('/')[-1].split('.')[0])
 		plt.ylabel('Number of calls')
 		plt.xlabel('% alt allele')
 		plt.suptitle(f'Heterozygote stat (10..50)')
@@ -65,7 +64,6 @@ with Blister.Timestamp("Plotting") as start_time:
 		name = results[0][1].split('/')[-1].split('.')[0]
 		plt.clf()
 		plt.plot(results[0][3], label=results[0][1].split('/')[-1].split('.')[0])
-		plt.plot(results[1][3], label=results[1][1].split('/')[-1].split('.')[0])
 		plt.ylabel('Number of calls')
 		plt.xlabel('% alt allele')
 		plt.suptitle(f'Heterozygote stat (50+)')

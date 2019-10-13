@@ -48,14 +48,14 @@ def parse_line(line, vcf_header, csq_header):
 
 Blister.Logo("Blistered VAPE")
 
-input_filenames = Blister.Input(["/dev/datasets/FairWind/_results/bowtie/vep/*.vcf"])
+input_filenames = Blister.Input(["/dev/datasets/FairWind/_results/bowtie/dupless_vep/*.vcf"])
 if not input_filenames: exit()
 
 hgmd_filename = Blister.Input(["/dev/datasets/FairWind/_db/hgmd.db"])[0]
 
-pickles_output_dir = Blister.Dir("/dev/datasets/FairWind/_results/bowtie/pickles", create=True)
+pickles_output_dir = Blister.Dir("/dev/datasets/FairWind/_results/bowtie/dupless_tables/pickles", create=True)
 if not pickles_output_dir: exit()
-tables_output_dir = Blister.Dir("/dev/datasets/FairWind/_results/bowtie/tables", create=True)
+tables_output_dir = Blister.Dir("/dev/datasets/FairWind/_results/bowtie/dupless_tables/tables", create=True)
 if not tables_output_dir: exit()
 
 with Blister.Timestamp("HGMD table") as start_time:
