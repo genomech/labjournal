@@ -60,4 +60,4 @@ def the_thread(block, output_dir):
 		new_table.to_csv(output_filename, sep='\t', index=False)
 		del new_table
 
-results = Blister.EachFile("Tomsk Filter Tables", ["/dev/datasets/FairWind/_results/bowtie/tables/*.csv"], "/dev/datasets/FairWind/_results/bowtie/NEW_FILTERED_NAMED")(the_thread)()
+results = Blister.EachFile("Tomsk Filter Tables", ["/dev/datasets/FairWind/_results/bowtie/dupless_tables/tables/*.csv"], "/dev/datasets/FairWind/_results/bowtie/dupless_tables/squeezed_named/")(the_thread)()
