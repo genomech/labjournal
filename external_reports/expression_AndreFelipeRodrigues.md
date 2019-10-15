@@ -4,6 +4,8 @@
 
 **10.10:** 4 groups comparison added ([here](../labjournal/scripts_results/merged_data_4gr.csv)).
 
+**15.10:** Corrected results (sample 8 in the right group) - [here](../labjournal/scripts_results/4gr_data_v2.csv).
+
 ## Infographics
 
 ![Expression full](../labjournal/scripts_results/Andre_Expression_all.svg)

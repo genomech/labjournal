@@ -1,14 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html><head><title>Python: module blister</title>
+<html><head><title>Python: module Liebe</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head><body bgcolor="#f0f0f8">
 
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
 <tr bgcolor="#7799ee">
 <td valign=bottom>&nbsp;<br>
-<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>blister</strong></big></big> (version 0.45, 2019 Oct 7)</font></td
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>Liebe</strong></big></big> (version 0.48, 2019 Oct 7)</font></td
 ><td align=right valign=bottom
-><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/dev/datasets/FairWind/.cloud/core/labjournal/scripts/lib/blister.py">/dev/datasets/FairWind/.cloud/core/labjournal/scripts/lib/blister.py</a></font></td></tr></table>
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/dev/datasets/FairWind/.cloud/core/labjournal/scripts/lib/Liebe.py">/dev/datasets/FairWind/.cloud/core/labjournal/scripts/lib/Liebe.py</a></font></td></tr></table>
     <p></p>
 <p>
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
@@ -17,16 +17,17 @@
 <font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
     
 <tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
-<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="bz2.html">bz2</a><br>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="intervals.html">intervals</a><br>
+<a href="bz2.html">bz2</a><br>
 <a href="datetime.html">datetime</a><br>
-<a href="functools.html">functools</a><br>
-</td><td width="25%" valign=top><a href="glob.html">glob</a><br>
+</td><td width="25%" valign=top><a href="functools.html">functools</a><br>
+<a href="glob.html">glob</a><br>
 <a href="gzip.html">gzip</a><br>
-<a href="pandas.html">pandas</a><br>
-</td><td width="25%" valign=top><a href="psutil.html">psutil</a><br>
+</td><td width="25%" valign=top><a href="pandas.html">pandas</a><br>
+<a href="psutil.html">psutil</a><br>
 <a href="subprocess.html">subprocess</a><br>
-<a href="sys.html">sys</a><br>
-</td><td width="25%" valign=top><a href="time.html">time</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+<a href="time.html">time</a><br>
 </td></tr></table></td></tr></table><p>
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
 <tr bgcolor="#ee77aa">
@@ -38,7 +39,9 @@
 <dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
 </font></dt><dd>
 <dl>
-<dt><font face="helvetica, arial"><a href="blister.html#Blister">Blister</a>
+<dt><font face="helvetica, arial"><a href="Liebe.html#BST">BST</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Liebe.html#Blister">Blister</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Liebe.html#Cuffcake">Cuffcake</a>
 </font></dt></dl>
 </dd>
 </dl>
@@ -46,26 +49,10 @@
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
 <tr bgcolor="#ffc8d8">
 <td colspan=3 valign=bottom>&nbsp;<br>
-<font color="#000000" face="helvetica, arial"><a name="Blister">class <strong>Blister</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
-    
-<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
-<td colspan=2><tt>Library&nbsp;for&nbsp;bioinformatic&nbsp;scripts.<br>
-Based&nbsp;on&nbsp;KnV/GnP&nbsp;programming&nbsp;philosophy&nbsp;(Kostyl'&nbsp;&amp;&nbsp;Velosiped,&nbsp;Govno&nbsp;&amp;&nbsp;Palki).<br>
-Save&nbsp;my&nbsp;time&nbsp;for&nbsp;coffee,&nbsp;games,&nbsp;fap,&nbsp;and&nbsp;sleep.<br>&nbsp;</tt></td></tr>
-<tr><td>&nbsp;</td>
-<td width="100%">Methods defined here:<br>
-<dl><dt><a name="Blister-ThreadID"><strong>ThreadID</strong></a>(index)</dt></dl>
-
-<hr>
-Static methods defined here:<br>
-<p>
-<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
-<tr bgcolor="#ffc8d8">
-<td colspan=3 valign=bottom>&nbsp;<br>
 <font color="#000000" face="helvetica, arial"><a name="BST">class <strong>BST</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
     
 <tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
-<td colspan=2><tt>BST(sort_function,&nbsp;match_function)<br>
+<td colspan=2><tt><a href="#BST">BST</a>(sort_function,&nbsp;match_function)<br>
 &nbsp;<br>
 Primitive,&nbsp;but&nbsp;configurable&nbsp;binary&nbsp;search&nbsp;tree.<br>
 Useful&nbsp;if&nbsp;your&nbsp;class&nbsp;doesn't&nbsp;have&nbsp;search&nbsp;methods&nbsp;you&nbsp;need.<br>
@@ -74,14 +61,14 @@ Usage:<br>
 &nbsp;<br>
 def&nbsp;sort_func(a,&nbsp;b):&nbsp;return&nbsp;a&nbsp;&gt;&nbsp;b<br>
 def&nbsp;match_func(a,&nbsp;b):&nbsp;return&nbsp;a&nbsp;==&nbsp;b<br>
-tree&nbsp;=&nbsp;<a href="#Blister">Blister</a>.BST(sort_func,&nbsp;match_func)<br>&nbsp;</tt></td></tr>
+tree&nbsp;=&nbsp;<a href="#Blister">Blister</a>.<a href="#BST">BST</a>(sort_func,&nbsp;match_func)<br>&nbsp;</tt></td></tr>
 <tr><td>&nbsp;</td>
 <td width="100%">Methods defined here:<br>
 <dl><dt><a name="BST-InOrder"><strong>InOrder</strong></a>(self, root=-1)</dt><dd><tt>Return&nbsp;sorted&nbsp;list&nbsp;of&nbsp;items.<br>
 &nbsp;<br>
 Usage:&nbsp;sorted_list&nbsp;=&nbsp;tree.<a href="#BST-InOrder">InOrder</a>()</tt></dd></dl>
 
-<dl><dt><a name="BST-Insert"><strong>Insert</strong></a>(self, value, root=-1)</dt><dd><tt>Insert&nbsp;item&nbsp;to&nbsp;BST.<br>
+<dl><dt><a name="BST-Insert"><strong>Insert</strong></a>(self, value, root=-1)</dt><dd><tt>Insert&nbsp;item&nbsp;to&nbsp;<a href="#BST">BST</a>.<br>
 &nbsp;<br>
 Usage:&nbsp;tree.<a href="#BST-Insert">Insert</a>(value)</tt></dd></dl>
 
@@ -101,9 +88,24 @@ Data descriptors defined here:<br>
 </dl>
 <hr>
 Data and other attributes defined here:<br>
-<dl><dt><strong>Node</strong> = &lt;class 'blister.Blister.BST.Node'&gt;</dl>
+<dl><dt><strong>Node</strong> = &lt;class 'Liebe.BST.Node'&gt;</dl>
 
-</td></tr></table>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Blister">class <strong>Blister</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Library&nbsp;for&nbsp;routine&nbsp;files&nbsp;and&nbsp;console&nbsp;procedures.<br>
+Based&nbsp;on&nbsp;KnV/GnP&nbsp;programming&nbsp;philosophy&nbsp;(Kostyl'&nbsp;&amp;&nbsp;Velosiped,&nbsp;Govno&nbsp;&amp;&nbsp;Palki).<br>
+Save&nbsp;my&nbsp;time&nbsp;for&nbsp;coffee,&nbsp;games,&nbsp;fap,&nbsp;and&nbsp;sleep.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Blister-ThreadID"><strong>ThreadID</strong></a>(index)</dt></dl>
+
+<hr>
+Static methods defined here:<br>
 <dl><dt><a name="Blister-Bzip2Check"><strong>Bzip2Check</strong></a>(filename)</dt><dd><tt>Check&nbsp;if&nbsp;file&nbsp;is&nbsp;bzipped.</tt></dd></dl>
 
 <dl><dt><a name="Blister-CountLines"><strong>CountLines</strong></a>(filename)</dt><dd><tt>Count&nbsp;lines&nbsp;if&nbsp;file.&nbsp;Can&nbsp;handle&nbsp;gzipped&nbsp;and&nbsp;bzipped&nbsp;too.<br>
@@ -168,6 +170,36 @@ Yield&nbsp;start&nbsp;time.&nbsp;Can&nbsp;be&nbsp;used&nbsp;with&nbsp;<a href="#
 
 <dl><dt><a name="Blister-Total"><strong>Total</strong></a>(total, start_time)</dt><dd><tt>Just&nbsp;a&nbsp;total&nbsp;number&nbsp;of&nbsp;something.&nbsp;Useless&nbsp;but&nbsp;cool.<br>
 Can&nbsp;take&nbsp;start&nbsp;time&nbsp;from&nbsp;<a href="#Blister">Blister</a>.<a href="#Blister-Timestamp">Timestamp</a>().</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Cuffcake">class <strong>Cuffcake</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>My&nbsp;own&nbsp;library&nbsp;for&nbsp;Cufflinks&nbsp;results.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Static methods defined here:<br>
+<dl><dt><a name="Cuffcake-ExpressionPerSample"><strong>ExpressionPerSample</strong></a>(cuff_dir, genes_id=None)</dt><dd><tt>Return&nbsp;a&nbsp;table&nbsp;with&nbsp;genes&nbsp;expression&nbsp;per&nbsp;sample&nbsp;(Cuffdiff).<br>
+Can&nbsp;filter&nbsp;genes&nbsp;by&nbsp;list.</tt></dd></dl>
+
+<dl><dt><a name="Cuffcake-LociIntersection"><strong>LociIntersection</strong></a>(table, reference, table_format='one', reference_format='one', THREADS_NUM=12)</dt><dd><tt>Returns&nbsp;a&nbsp;table&nbsp;of&nbsp;loci&nbsp;intersection.<br>
+&nbsp;<br>
+_format:<br>
+1)&nbsp;one&nbsp;=&nbsp;{'LOCUS'&nbsp;:&nbsp;'locus',&nbsp;'CHROM'&nbsp;:&nbsp;None,&nbsp;'POS'&nbsp;:&nbsp;None,&nbsp;'BEGIN'&nbsp;:&nbsp;None,&nbsp;'END'&nbsp;:&nbsp;None&nbsp;}<br>
+2)&nbsp;two&nbsp;=&nbsp;{'LOCUS'&nbsp;:&nbsp;None,&nbsp;'CHROM'&nbsp;:&nbsp;'chrom',&nbsp;'POS'&nbsp;:&nbsp;'pos',&nbsp;'BEGIN'&nbsp;:&nbsp;None,&nbsp;'END'&nbsp;:&nbsp;None&nbsp;}<br>
+3)&nbsp;three&nbsp;=&nbsp;{'LOCUS'&nbsp;:&nbsp;None,&nbsp;'CHROM'&nbsp;:&nbsp;'chrom',&nbsp;'POS'&nbsp;:&nbsp;None,&nbsp;'BEGIN'&nbsp;:&nbsp;'begin',&nbsp;'END'&nbsp;:&nbsp;'end'&nbsp;}</tt></dd></dl>
+
+<dl><dt><a name="Cuffcake-ReadMerged"><strong>ReadMerged</strong></a>(filename)</dt><dd><tt>Read&nbsp;merged.gtf&nbsp;(CuffMerge).</tt></dd></dl>
 
 <hr>
 Data descriptors defined here:<br>
