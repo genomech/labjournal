@@ -132,3 +132,65 @@ bcftools mpileup --threads 12 -f /dev/datasets/FairWind/_db/hg19/hg19.fa /dev/da
 | sample-1-6   | 26,8407 | 817575           | 20357                                                | 0,02489 |
 | sample-1-7-8 | 25,4693 | 671131           | 17653                                                | 0,02630 |
 | sample-1-9   | 26,8077 | 786237           | 19742                                                | 0,02510 |
+
+## Данные из Томска
+
+В процессе выяснилось, что есть специальные инструменты для лучшего анализа bam-файлов.
+Например, Qualimap.
+
+Qualimap требует какие-то библиотеки R.
+Я их установил и забыл, поэтому подробно писать не буду.
+
+Qualimap отказался кушать наш target capture, поэтому пришлось произвести сервировку блюда:
+
+```bash
+awk 'BEGIN{OFS="\t"}{print $1,$2,$3,$4,0,"."}' MedExome_hg19_capture_targets.sorted.bed > MedExome_hg19_capture_targets_sorted_FOR_HIS_MAGESTY_QUALIMAP.bed
+```
+
+Настройка:
+
+```bash
+#!/bin/bash
+
+QUALIMAP_FOLDER="/dev/datasets/FairWind/_tools/qualimap_v2.2.1"
+INPUT_FOLDER="/dev/datasets/FairWind/_results/60m/PRIMARY_ANALYSIS_13D/bam_sorted"
+REPORT_FOLDER="/dev/datasets/FairWind/_results/60m/PRIMARY_ANALYSIS_13D/qualimap_reports"
+EXOME="/dev/datasets/FairWind/_db/MedExome_hg19_capture_targets_sorted_FOR_HIS_MAGESTY_QUALIMAP.bed"
+
+mkdir -l $REPORT_FOLDER
+
+for name in 'dinara_38_S4_60M_sorted' 'dinara_38_S4_60M_sorted_dupless' 'sample-1-1_60M_sorted' 'sample-1-1_60M_sorted_dupless' 'sample-1-3_60M_sorted' 'sample-1-3_60M_sorted_dupless'
+do
+
+# SKIP DUPLICATES
+$QUALIMAP_FOLDER/qualimap bamqc -bam $INPUT_FOLDER/"$name".bam --java-mem-size=20G \
+	-c --feature-file $EXOME --outside-stats \
+	-outdir $REPORT_FOLDER -outfile "$name"_report_skipdup.pdf -outformat PDF \
+	--skip-duplicated --skip-dup-mode 2 ;
+
+# NOT SKIP
+$QUALIMAP_FOLDER/qualimap bamqc -bam $INPUT_FOLDER/"$name".bam --java-mem-size=20G \
+	-c --feature-file $EXOME --outside-stats \
+	-outdir $REPORT_FOLDER -outfile "$name"_report_notskip.pdf -outformat PDF ;
+
+echo "$name" is ready.
+
+done 
+```
+
+## 1-9
+
+Из библиотек с удалёнными дубликатами были получены 4 мутации с низкой или неизвестной встречаемостью по БД.
+Их импакт оценивается как LOW или MODIFIER.
+
+Две мутации подтверждены эмпирически (цифры со слэшем -- глубина в необработанных bam-файлах и с удалёнными дубликатами соответственно):
+
+| CHROM | POS      | REF | ALT | DP    | REF_DP | ALT_DP |
+|:------|:---------|:---:|:---:|:-----:|:------:|:------:|
+| chr17 | 29615616 | A   | G   | 71/46 | 37/21  | 34/25  |
+| chr22 | 30067246 | G   | A   | 30/23 | 14/11  | 16/12  |
+
+Ещё две -- сомнительно:
+
+* chr22:30024129, CTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGT>CTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGT
+* chr22:30060360, CCACACACACACACACACACACACACACACACACACA>CCACACACACACACACACACACACACACACACACA

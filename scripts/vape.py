@@ -1,4 +1,4 @@
-from lib.blister import *
+from lib.Liebe import *
 import pandas as pd
 import re
 import pickle
@@ -48,14 +48,14 @@ def parse_line(line, vcf_header, csq_header):
 
 Blister.Logo("Blistered VAPE")
 
-input_filenames = Blister.Input(["/dev/datasets/FairWind/_results/bowtie/dupless_vep/*.vcf"])
+input_filenames = Blister.Input(["/dev/datasets/FairWind/_results/bowtie/sample-1-9_NF1-2_vep.vcf"])
 if not input_filenames: exit()
 
 hgmd_filename = Blister.Input(["/dev/datasets/FairWind/_db/hgmd.db"])[0]
 
-pickles_output_dir = Blister.Dir("/dev/datasets/FairWind/_results/bowtie/dupless_tables/pickles", create=True)
+pickles_output_dir = Blister.Dir("/dev/datasets/FairWind/_results/bowtie/", create=True)
 if not pickles_output_dir: exit()
-tables_output_dir = Blister.Dir("/dev/datasets/FairWind/_results/bowtie/dupless_tables/tables", create=True)
+tables_output_dir = Blister.Dir("/dev/datasets/FairWind/_results/bowtie/", create=True)
 if not tables_output_dir: exit()
 
 with Blister.Timestamp("HGMD table") as start_time:

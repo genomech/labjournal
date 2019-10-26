@@ -1,4 +1,4 @@
-from lib.blister import *
+from lib.Liebe import *
 import numpy as np
 
 def splitDataFrameList(df,target_column,separator):
@@ -43,7 +43,7 @@ def the_thread(block, output_dir):
 		for col in columns_list:
 			table[col] = pd.to_numeric(table[col], errors='coerce', downcast='float')
 		table['TOTAL_AF'] = table[columns_list].apply(np.nanmax, axis=1)
-		table = table[((table['IMPACT'] == 'HIGH') | (table['IMPACT'] == 'MODERATE')) & ((table['TOTAL_AF'] < 0.01) | table['TOTAL_AF'].isna())]
+		table = table[((table['TOTAL_AF'] < 0.05) | table['TOTAL_AF'].isna())] # ((table['IMPACT'] == 'HIGH') | (table['IMPACT'] == 'MODERATE')) & 
 		
 		table = pd.merge(genemap, table, how='right', on=['SYMBOL'])
 		
@@ -60,4 +60,4 @@ def the_thread(block, output_dir):
 		new_table.to_csv(output_filename, sep='\t', index=False)
 		del new_table
 
-results = Blister.EachFile("Tomsk Filter Tables", ["/dev/datasets/FairWind/_results/bowtie/dupless_tables/tables/*.csv"], "/dev/datasets/FairWind/_results/bowtie/dupless_tables/squeezed_named/")(the_thread)()
+results = Blister.EachFile("Tomsk Filter Tables", ["/dev/datasets/FairWind/_results/bowtie/sample-1-9_NF1-2_vep.csv"], "/dev/datasets/FairWind/_results/bowtie/")(the_thread)()
