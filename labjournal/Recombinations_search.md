@@ -196,3 +196,15 @@ done
 
 * chr22:30024129, CTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGT>CTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGT
 * chr22:30060360, CCACACACACACACACACACACACACACACACACACA>CCACACACACACACACACACACACACACACACACA
+
+## Дубликаты
+
+Выяснилось, что оценка количества дубликатов сильно разнится.
+
+Было решено найти способ, который находил бы максимальное количество.
+
+1. Смена стратегии PicardTools
+
+Picard был запущен с параметром `DUPLICATE_SCORING_STRATEGY=TOTAL_MAPPED_REFERENCE_LENGTH`.
+Но смена стратегии ничего не дала.
+Более того, смена стратегии нахождения дубликатов даже уменьшила их количество -- 17% против 26%.
