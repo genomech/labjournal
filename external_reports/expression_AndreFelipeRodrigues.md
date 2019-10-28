@@ -6,6 +6,8 @@
 
 **15.10:** Corrected results (sample 8 in the right group) - [here](../labjournal/scripts_results/4gr_data_v2.csv).
 
+**28.10:** Fixed bug, XLSX format - [here](../labjournal/scripts_results/4gr_data_v3.xlsx).
+
 ## Infographics
 
 ![Expression full](../labjournal/scripts_results/Andre_Expression_all.svg)

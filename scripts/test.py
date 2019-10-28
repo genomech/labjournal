@@ -1,4 +1,5 @@
-from lib.Liebe import *
+from lib.blister import *
+from _Liebe_banished import *
 
 Blister.Logo("Test bleat!")
 
@@ -27,5 +28,5 @@ new_table = pd.merge(exp, new_table, how='right', right_on='gene_id', left_index
 new_table = new_table[['gene_id', 'name_ref', 'name2_ref', 'sample_1', 'sample_2', 'status', 'value_1', 'value_2', 'log2(fold_change)', 'q_value', 'chrom', 'start', 'end', 'start_ref', 'end_ref', 'intersection_ref', 'MB_AFR_001_S1_sorted.bam, SD-DAY, 0', 'MB_AFR_002_S2_sorted.bam, SD-DAY, 1', 'MB_AFR_003_S3_sorted.bam, SD-DAY, 2', 'MB_AFR_004_S4_sorted.bam, SD-NIGHT, 0', 'MB_AFR_005_S5_sorted.bam, SD-NIGHT, 1', 'MB_AFR_006_S6_sorted.bam, SD-NIGHT, 2', 'MB_AFR_007_S7_sorted.bam, L27-DAY, 0', 'MB_AFR_008_S8_sorted.bam, L27-DAY, 1', 'MB_AFR_009_S9_sorted.bam, L27-DAY, 2', 'MB_AFR_010_S10_sorted.bam, L27-NIGHT, 0', 'MB_AFR_011_S11_sorted.bam, L27-NIGHT, 1', 'MB_AFR_012_S12_sorted.bam, L27-NIGHT, 2']]
 new_table.fillna('-', inplace=True)
 new_table.sort_values(by=['sample_1', 'sample_2', 'log2(fold_change)', 'value_1', 'value_2'], ascending=False, inplace=True)
-new_table.to_csv("/dev/datasets/FairWind/_results/Andre/4gr_data_v2.csv", sep='\t', index=False, float_format="%.5f")
+new_table.to_csv("/dev/datasets/FairWind/_results/Andre/4gr_data_v3.csv", sep='\t', index=False, float_format="%.5f")
 

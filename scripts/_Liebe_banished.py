@@ -1,3 +1,5 @@
+import intervals as I
+from lib.blister import *
 
 class Cuffcake(object):
 	"""
@@ -32,7 +34,8 @@ Can filter genes by list.
 		samples.drop(columns=['total_mass', 'norm_mass', 'internal_scale', 'external_scale'], inplace=True, axis=1)
 		tracking = pd.merge(samples, tracking, on=['replicate', 'condition'], how='right')
 		tracking.drop(columns=['raw_frags', 'internal_scaled_frags', 'external_scaled_frags', 'effective_length', 'status'], inplace=True, axis=1)
-		tracking.sort_values(by=['tracking_id', 'condition', 'replicate'], ascending=True, inplace=True)
+		tracking.sort_values(by=['tracking_id', 'file'], ascending=True, inplace=True)
+		print(tracking)
 		cols = tracking.columns
 		tracking = tracking.groupby('tracking_id').apply(pd.Series.to_list).apply(pd.DataFrame, columns=cols).apply(pd.DataFrame.drop, columns=['condition', 'replicate', 'tracking_id'], axis=1).to_dict()
 		table = 0
