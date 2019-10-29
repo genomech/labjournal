@@ -17,6 +17,18 @@ Ubuntu, разумеется.
 | texlive | Набор пакетов TeX |
 | vim | Консольный текстовый редактор |
 
+Биоинформатика:
+
+| Package | Description |
+|:--------|:-----|
+| bcftools ||
+| bowtie2 ||
+| cutadapt ||
+| fastqc ||
+| hisat2 ||
+| samtools ||
+| vcftools ||
+
 ## Сторонние приложения
 
 | Package | Description | Link |
