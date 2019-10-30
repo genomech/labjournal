@@ -1,8 +1,12 @@
-# Конфигурация машины
+# Общая конфигурация машины
 
-Ubuntu, разумеется.
+## Установка
 
-## Репозиторий Ubuntu
+### Репозиторий Ubuntu
+
+```bash
+sudo apt install ffmpeg gimp inkscape kile libreoffice mc python3 qbittorrent texlive vim
+```
 
 | Package | Description |
 |:--------|:-----|
@@ -17,48 +21,33 @@ Ubuntu, разумеется.
 | texlive | Набор пакетов TeX |
 | vim | Консольный текстовый редактор |
 
-Биоинформатика:
+### Сторонние репозитории
 
-| Package | Description |
-|:--------|:-----|
-| bcftools ||
-| bowtie2 ||
-| cutadapt ||
-| fastqc ||
-| hisat2 ||
-| samtools ||
-| vcftools ||
+#### OnionShare
 
-## Сторонние приложения
+```bash
+sudo add-apt-repository ppa:micahflee/ppa
+sudo apt update
+sudo apt install -y onionshare
+```
 
-| Package | Description | Link |
-|:--------|:-----|:-----|
-| Arduino IDE | Программирование микроконтроллеров | [здесь](https://www.arduino.cc/en/Main/Software) |
-| Qt | Фреймворк C++ | [здесь](https://www.qt.io/download-qt-installer)|
-| SQLite Studio | GUI для редактирования СУБД | [здесь](https://sqlitestudio.pl/index.rvt?act=download) |
-| Telegram | Мессенджер ||
-
-## R
+#### R
 
 Установка:
 
 ```bash
 ver=$(lsb_release -cs); echo "deb https://cloud.r-project.org/bin/linux/ubuntu "$ver"-cran35/" | sudo tee -a /etc/apt/sources.list
-
 gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
-
 gpg -a --export E298A3A825C0D65DFD57CBB651716619E084DAB9 | sudo apt-key add -
-
 sudo apt update
-
 sudo apt-get install r-base r-base-dev
 ```
 
 Установку пакетов *R* лучше всего производить через **sudo**.
 
-## Прокси и Tor
+## privoxy + tor
 
-**privoxy + tor**: локальный прокси-сервер с выходом в луковую сеть.
+Локальный прокси-сервер с выходом в луковую сеть.
 
 Установка:
 
@@ -72,13 +61,9 @@ sudo apt install tor tor-geoipdb privoxy
 
 ```bash
 ver=$(lsb_release -cs); echo "deb https://deb.torproject.org/torproject.org "$ver" main" | sudo tee -a /etc/apt/sources.list
-
 curl https://deb.torproject.org/torproject.org/A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89.asc | gpg --import
-
 gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | sudo apt-key add -
-
 sudo apt update
-
 sudo apt install tor tor-geoipdb
 ```
 
@@ -86,11 +71,8 @@ sudo apt install tor tor-geoipdb
 
 ```bash
 sudo mv /etc/privoxy/config /etc/privoxy/config.backup
-
 echo -e "forward-socks5 / 127.0.0.1:9050 .\nconfdir /etc/privoxy\nlogdir /var/log/privoxy\nactionsfile default.action\nactionsfile user.action\nfilterfile default.filter\nlogfile logfile\ndebug 4096\ndebug 8192\nuser-manual /usr/share/doc/privoxy/user-manual\nlisten-address 127.0.0.1:8118\ntoggle 1\nenable-remote-toggle 0\nenable-edit-actions 0\nenable-remote-http-toggle 0\nbuffer-limit 4096" | sudo tee /etc/privoxy/config
-
 sudo service privoxy restart
-
 sudo service tor restart
 ```
 
@@ -103,7 +85,18 @@ sudo service tor restart
 sudo apt install torbrowser-launcher
 ```
 
-## ffmpeg
+### Установка вручную
+
+| Package | Description | Link |
+|:--------|:-----|:-----|
+| Arduino IDE | Программирование микроконтроллеров | [здесь](https://www.arduino.cc/en/Main/Software) |
+| Qt | Фреймворк C++ | [здесь](https://www.qt.io/download-qt-installer)|
+| SQLite Studio | GUI для редактирования СУБД | [здесь](https://sqlitestudio.pl/index.rvt?act=download) |
+| Telegram | Мессенджер ||
+
+### Дополнительная настройка
+
+#### ffmpeg
 
 Скрипт для упрощения нарезки видео:
 
@@ -119,3 +112,27 @@ A_TRACK=2
 
 ffmpeg -i "$IN_FILE" -qscale 0 -map 0:v:$V_TRACK -map 0:a:$A_TRACK -ss $TIME_START -to $TIME_END "$OUT_FILE"
 ```
+
+# Биоинформатика
+
+## Установка
+
+### Репозиторий Ubuntu
+ 
+```bash
+sudo apt install bcftools bowtie2 cutadapt fastqc hisat2 picard-tools samtools vcftools
+```
+
+| Package | Description |
+|:--------|:-----|
+| bcftools ||
+| bowtie2 ||
+| cutadapt ||
+| fastqc ||
+| hisat2 ||
+| picard-tools ||
+| samtools ||
+| vcftools ||
+
+### Установка вручную
+
