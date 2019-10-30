@@ -5,11 +5,12 @@
 ### Репозиторий Ubuntu
 
 ```bash
-sudo apt install ffmpeg gimp inkscape kile libreoffice mc python3 qbittorrent texlive vim
+sudo apt install curl ffmpeg gimp inkscape kile libreoffice mc python3 qbittorrent texlive vim
 ```
 
 | Package | Description |
 |:--------|:-----|
+| curl ||
 | ffmpeg | Нарезка видео (см. ниже) |
 | gimp | Редактор растровых изображений |
 | inkscape | Редактор векторных изображений |
@@ -116,22 +117,40 @@ ffmpeg -i "$IN_FILE" -qscale 0 -map 0:v:$V_TRACK -map 0:a:$A_TRACK -ss $TIME_STA
 ### Репозиторий Ubuntu
  
 ```bash
-sudo apt install bcftools bowtie2 cutadapt fastqc hisat2 picard-tools samtools vcftools
+sudo apt install bcftools bowtie2 bwa cutadapt fastqc hisat2 picard-tools samtools vcftools
 ```
 
 | Package | Description |
 |:--------|:-----|
-| bcftools ||
-| bowtie2 ||
-| cutadapt ||
-| fastqc ||
-| hisat2 ||
-| picard-tools ||
-| samtools ||
-| vcftools ||
+| bcftools | Работа с форматом BCF/VCF |
+| bowtie2 | Выравнивание на геном |
+| bwa | Выравнивание на геном |
+| cutadapt | Обрезка адаптеров |
+| fastqc | Оценка качества FASTQ |
+| hisat2 | Выравнивание на геном |
+| picard-tools | Набор биоинформационных инструментов |
+| samtools | Работа с форматами SAM, BAM, CRAM |
+| vcftools | Работа с VCF |
+
+### Сторонние репозитории
+
+#### SRAtools
+
+```bash
+sudo apt install libxml-libxml-perl
+curl https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/current/sratoolkit.current-centos_linux64.tar.gz | sudo tar -xz -C /usr/lib/
+```
+
+Создание символьной ссылки на нужный тул:
+
+```bash
+TOOL_NAME="fastq-dump"; sudo cp -i --symbolic-link $(ls -1 /usr/lib/sratoolkit*/bin/$TOOL_NAME) /bin/$TOOL_NAME
+```
 
 ### Установка вручную
 
 | Package | Description | Link |
 |:--------|:-----|:-----|
 | IGV | Integrative Genomics Viewer | [здесь](http://software.broadinstitute.org/software/igv/download) |
+| JuicerTools |||
+| QualiMap | Оценка качества BAM-файла | [здесь](http://qualimap.bioinfo.cipf.es/) |
