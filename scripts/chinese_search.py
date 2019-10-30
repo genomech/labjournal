@@ -7,7 +7,7 @@ def Out(found_, total_):
     print("Found: %d | Total: %d (%4f%%)" % (found_, total_, found_ * 100 / total_), end='\r')
 
 filename = '/dev/datasets/ngs_data/Chinese/bat-Hi-C_mES_alu1_1_10M.fastq'
-seq = 'CGCGATATCTTATCTGAC'
+seq = 'CGGTGGC'
 comment = "Linker"
 
 print(f"\nHi there.\nWe're looking for: {seq} ({comment})\n")

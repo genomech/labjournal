@@ -5775,3 +5775,7 @@ $ zcat ./s7_FR_RF_0_R2.fastq.gz | grep GCTCTTCCGATC | wc -l # 8
 ![График по распределению линкера](./scripts_results/linker.png)
 
 Результаты проверки скриптом anal_seqs: [раз](./scripts_results/chinese_anal_1_191030.csv), [два](./scripts_results/chinese_anal_2_191030.csv).
+
+Проверка моим скриптом:
+
+![График по распределению линкера](./scripts_results/linker_2.png)
