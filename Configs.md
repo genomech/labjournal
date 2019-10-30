@@ -33,8 +33,6 @@ sudo apt install -y onionshare
 
 #### R
 
-Установка:
-
 ```bash
 ver=$(lsb_release -cs); echo "deb https://cloud.r-project.org/bin/linux/ubuntu "$ver"-cran35/" | sudo tee -a /etc/apt/sources.list
 gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
@@ -45,11 +43,9 @@ sudo apt-get install r-base r-base-dev
 
 Установку пакетов *R* лучше всего производить через **sudo**.
 
-## privoxy + tor
+#### privoxy + tor
 
 Локальный прокси-сервер с выходом в луковую сеть.
-
-Установка:
 
 ```bash
 sudo apt install tor tor-geoipdb privoxy
