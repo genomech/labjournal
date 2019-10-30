@@ -5768,3 +5768,10 @@ $ zcat ./s7_FR_RF_0_R2.fastq.gz | grep GCTCTTCCGATC | wc -l # 8
 	2. он разнородный, в отличие от наших данных (не все К-меры можно составить в одну последовательность);
 	3. только в начале (первые 8-10 букв).
 2. Есть адаптеры (Nextera Transposase Sequence).
+
+Были проверены на короткие адаптеры - `CGGTGGC` и `GCCACCG`.
+Результат cutadapt:
+
+![График по распределению линкера](./scripts_results/linker.png)
+
+Результаты проверки скриптом anal_seqs: [раз](./scripts_results/chinese_anal_1_191030.csv), [два](./scripts_results/chinese_anal_2_191030.csv).

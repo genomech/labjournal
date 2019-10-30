@@ -132,3 +132,6 @@ sudo apt install bcftools bowtie2 cutadapt fastqc hisat2 picard-tools samtools v
 
 ### Установка вручную
 
+| Package | Description | Link |
+|:--------|:-----|:-----|
+| IGV | Integrative Genomics Viewer | [здесь](http://software.broadinstitute.org/software/igv/download) |
