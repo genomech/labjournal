@@ -5779,3 +5779,10 @@ $ zcat ./s7_FR_RF_0_R2.fastq.gz | grep GCTCTTCCGATC | wc -l # 8
 Проверка моим скриптом:
 
 ![График по распределению линкера](./scripts_results/linker_2.png)
+
+### Анализ контекста букв
+
+![Контекст букв вокруг линкера, позиция 3](./scripts_results/chinese_position_3_191030.png)
+![Контекст букв вокруг линкера, позиция 24](./scripts_results/chinese_position_24_191030.png)
+![Контекст букв вокруг линкера, позиция 40](./scripts_results/chinese_position_40_191030.png)
+![Контекст букв вокруг линкера, позиция 120](./scripts_results/chinese_position_120_191030.png)
