@@ -9,7 +9,7 @@ def Out(total_):
 filename = '/dev/datasets/ngs_data/Chinese/bat-Hi-C_mES_alu1_1_10M.fastq'
 seq = "CGGTGGC"
 length = len(seq)
-poses = list([-12, -11, -10, -9, -8, -7, -6, -5, -4, -3, -2, -1, length + 1, length + 2, length + 3, length + 4, length + 5, length + 6, length + 7, length + 8, length + 9, length + 10, length + 11, length + 12])
+poses = list([-12, -11, -10, -9, -8, -7, -6, -5, -4, -3, -2, -1, length, length + 1, length + 2, length + 3, length + 4, length + 5, length + 6, length + 7, length + 8, length + 9, length + 10, length + 11])
 nuc = list('ATGCN0')
 a = np.zeros(shape=(150,24,6))
 

@@ -5786,3 +5786,12 @@ $ zcat ./s7_FR_RF_0_R2.fastq.gz | grep GCTCTTCCGATC | wc -l # 8
 ![Контекст букв вокруг линкера, позиция 24](./scripts_results/chinese_position_24_191030.png)
 ![Контекст букв вокруг линкера, позиция 40](./scripts_results/chinese_position_40_191030.png)
 ![Контекст букв вокруг линкера, позиция 120](./scripts_results/chinese_position_120_191030.png)
+
+Проверка частоты последовательностей:
+
+| Seq       | Rate |
+|:----------|:----:|
+| ACGGTGGC  | 32,3 |
+| CGGTGGC   | 32,9 |
+| CGGTGGCT  | 29,7 |
+| ACGGTGGCT | 29.2 |
