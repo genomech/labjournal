@@ -5832,3 +5832,22 @@ SEQ1="CGCGATATCTTATCTGAC"; SEQ2="GCTGAGG"; LENGTH=$(echo "print(len(\""$SEQ1"\")
 |:-----------|:-----------|:-----------------------|:---------------------------|:------:|:------:|:-------|
 | SRR5063167 | GSM2410309 | Naïve DNase-HiC rep1   | Homo sapiens               | 0.0386 | 5.2030 | [ссылка](./scripts_results/SRR5063167_1M_stat.csv) |
 | SRR2033054 | GSM1689794 | DNaseHiC-WG-brain-rep1 | Mus musculus x Mus spretus | 2.7464 | 6.9858 | [ссылка](./scripts_results/SRR2033054_1M_stat.csv) |
+
+## Данные по 20bp линкеру из статьи Xiong
+
+Команда:
+
+```bash
+SEQ1="CGCGATATCTTATCTGAC"; LENGTH=$(echo "print(len(\""$SEQ1"\") - 2)" | python3); OUTPUT_FOLDER="/dev/datasets/FairWind/_results/check2"; mkdir -p $OUTPUT_FOLDER; for fn in rep1_R1 rep1_R2 rep2_R1 rep2_R2; do cutadapt -j 10 -b $SEQ1 -O $LENGTH -e 0.2 -o /dev/null /dev/datasets/ngs_data/xiong_data_20bp/sample_2nd_bat-Hi-C_mES_untreated_"$fn".fq.gz > $OUTPUT_FOLDER/sample_2nd_bat-Hi-C_mES_untreated_"$fn"_cutadapt.txt; done;
+```
+
+| Sample                                    | Rate, % |
+|:------------------------------------------|:-------:|
+| sample_2nd_bat-Hi-C_mES_untreated_rep1_R1 | 26.0    |
+| sample_2nd_bat-Hi-C_mES_untreated_rep1_R2 | 28.2    |
+| sample_2nd_bat-Hi-C_mES_untreated_rep2_R1 | 26.5    |
+| sample_2nd_bat-Hi-C_mES_untreated_rep2_R2 | 28.4    |
+
+![Линкеры в библиотеках Циньхуа](./scripts_results/xiong_data_20bp_191105.png)
+
+Таблица ODS, [если понадобится](./scripts_results/xiong_data_20bp_191105.ods).
