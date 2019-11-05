@@ -5795,3 +5795,40 @@ $ zcat ./s7_FR_RF_0_R2.fastq.gz | grep GCTCTTCCGATC | wc -l # 8
 | CGGTGGC   | 32,9 |
 | CGGTGGCT  | 29,7 |
 | ACGGTGGCT | 29.2 |
+
+## Данные Циньхуа
+
+Просмотр производился с помощью cutadapt, `-e 0.2 --overlap [length - 1]`.
+
+| Access Code | GEO Code   | Sample | Adapter            | Rate, % |
+|:-----------|:------------|:-------|:-------------------|:-------:|
+| SRR5195151 | GSM2465022  | BL01   | CGCGATATCTTATCTGAC | 15.5    |
+| SRR5195154 | GSM2465023  | BL02   | CGCGATATCTTATCTGAC | 12.4    |
+| SRR5195155 | GSM2465024  | BL03   | CGCGATATCTTATCTGAC | 20.3    |
+| SRR5195156 | GSM2465025  | BL04   | CGCGATATCTTATCTGAC | 21.0    |
+| SRR5195157 | GSM2465026  | BL05   | CGCGATATCTTATCTGAC | 20.0    |
+| SRR5878212 | GSM2721788  | BL06   | CGCGATATCTTATCTGAC | 21.2    |
+| SRR5878213 | GSM2721789  | BL07   | -                  | -       |
+| SRR5878214 | GSM2721790  | BL08   | -                  | -       |
+| SRR5878215 | GSM2721791  | BL09   | -                  | -       |
+| SRR5878216 | GSM2721792  | BL10   | GCTGAGG            | 75.0    |
+| SRR5878217 | GSM2721793  | BL11   | -                  | -       |
+| SRR5878218 | GSM2721794  | BL12   | -                  | -       |
+| SRR5878219 | GSM2721795  | BL13   | -                  | -       |
+
+Команда:
+
+```bash
+SEQ1="CGCGATATCTTATCTGAC"; SEQ2="GCTGAGG"; LENGTH=$(echo "print(len(\""$SEQ1"\") - 2)" | python3); OUTPUT_FOLDER="/dev/datasets/FairWind/_results/check"; for fn in SRR5195151; do cutadapt -j 10 -b $SEQ1 -O $LENGTH -e 0.2 -o /dev/null /dev/datasets/ngs_data/Maria_ligata/"$fn"_1M.fastq.gz > $OUTPUT_FOLDER/"$fn"_1M_cutadapt.txt; done;
+```
+
+![Линкеры в библиотеках Циньхуа](./scripts_results/qinghua_data_191105.png)
+
+Таблица ODS, [если понадобится](./scripts_results/qinghua_data_191105.ods).
+
+## Дополнительные данные по протоколу Ma et al.
+
+| Access Code | GEO Code  | Data Type              | Species                    | BGG    | EG     | ASv3   |
+|:-----------|:-----------|:-----------------------|:---------------------------|:------:|:------:|:-------|
+| SRR5063167 | GSM2410309 | Naïve DNase-HiC rep1   | Homo sapiens               | 0.0386 | 5.2030 | [ссылка](./scripts_results/SRR5063167_1M_stat.csv) |
+| SRR2033054 | GSM1689794 | DNaseHiC-WG-brain-rep1 | Mus musculus x Mus spretus | 2.7464 | 6.9858 | [ссылка](./scripts_results/SRR2033054_1M_stat.csv) |
