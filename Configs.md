@@ -154,3 +154,14 @@ TOOL_NAME="fastq-dump"; sudo cp -i --symbolic-link $(ls -1 /usr/lib/sratoolkit*/
 | IGV | Integrative Genomics Viewer | [здесь](http://software.broadinstitute.org/software/igv/download) |
 | JuicerTools |||
 | QualiMap | Оценка качества BAM-файла | [здесь](http://qualimap.bioinfo.cipf.es/) |
+
+# Прочее
+
+## Adblock
+
+```
+vk.com##div[class*="ads"]
+vk.com##div[id*="ads"]
+vk.com##div[class*="page_block feed_friends_recomm"]
+vk.com##div[class*="stories_feed_wrap"]
+```
