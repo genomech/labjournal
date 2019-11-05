@@ -1,6 +1,10 @@
 from lib.blister import *
 import pandas as pd
 import matplotlib.pyplot as plt
+from matplotlib.font_manager import FontProperties
+
+fontP = FontProperties()
+fontP.set_size('small')
  
 table_index = ['Sample',  'Non-coverage, %', 'Middle', 'Median', 'Coverage 75%', 'Coverage 90%', 'Coverage 95%', 'cumulate_list']
 
@@ -10,7 +14,7 @@ def the_thread(block):
 	input_filename = block[1]
 	
 	with Blister.Timestamp("READ CSV", index) as start_time:
-		table = pd.read_csv(input_filename, sep='\t')
+		table = pd.read_csv(input_filename, sep='\t', header=None, names=["chrom", "depth", "a", "b", "percent"])
 		table = table.apply(pd.to_numeric, errors='ignore')
 		percents_capture = table['percent'].tolist()
 		del table
@@ -39,7 +43,7 @@ def the_thread(block):
 
 Blister.Logo("Coverage Shorten")
 
-input_filenames = Blister.Input(["/dev/datasets/FairWind/_results/38_S4--CoverageExome--Shorten.csv"])
+input_filenames = Blister.Input(["/dev/datasets/FairWind/_results/60m/PRIMARY_ANALYSIS_13D/coverage/full/*.txt.all"])
 if not input_filenames: exit()
 
 main_table = pd.DataFrame(columns=table_index)
@@ -52,13 +56,13 @@ with Blister.Threading("KOVOER") as pool:
 with Blister.Timestamp("PLOTTING") as start_time:
 	plt.clf()
 	for it in main_table.iterrows():
-		plt.plot(it[1]["cumulate_list"][:100], label=it[1]["Sample"])
+		plt.plot(it[1]["cumulate_list"][:20], label=it[1]["Sample"])
 	plt.ylabel('% of A with more depth')
 	plt.xlabel('Depth')
-	plt.suptitle('Cumulative coverage (90M, Exo-C)')
-	plt.legend()
-	plt.savefig("/dev/datasets/FairWind/_results/allplot_90m_190911.svg")
+	plt.suptitle('Cumulative coverage (60M)')
+	plt.legend(prop=fontP)
+	plt.savefig("/dev/datasets/FairWind/_results/60m/PRIMARY_ANALYSIS_13D/coverage/full/graph.svg")
 
 main_table.drop(columns=['cumulate_list'], axis=0, inplace=True)
-main_table.to_csv("/dev/datasets/FairWind/_results/table_90m_190911.csv")
+main_table.to_csv("/dev/datasets/FairWind/_results/60m/PRIMARY_ANALYSIS_13D/coverage/full/table.csv")
 print(Blister.GitHubTable(main_table))
