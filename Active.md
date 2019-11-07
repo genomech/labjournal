@@ -13,8 +13,6 @@
 Обрезать до пробела.
 Удалить дубликаты с +- strand.
 
-* BL 7,8,9, 20bp
-
 * [Протокол обработки данных](https://drive.google.com/file/d/1tXHJrE95CEFZHqG-wKG0XrzKbmpavgnf/view).
 
 # Задачи в режиме ожидания

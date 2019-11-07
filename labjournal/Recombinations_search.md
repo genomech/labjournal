@@ -214,7 +214,7 @@ Picard был запущен с параметром `DUPLICATE_SCORING_STRATEGY
 Подготовка:
 
 ```bash
-for file in /dev/datasets/FairWind/_results/60m/PRIMARY_ANALYSIS_13D/coverage/full/*.txt; do grep all $file > "$file".all; done
+for file in /dev/datasets/FairWind/_results/60m/PRIMARY_ANALYSIS_13D/coverage/full/*.txt; do grep "^all" $file > "$file".all; done
 ```
 
 Результаты:
@@ -230,7 +230,6 @@ for file in /dev/datasets/FairWind/_results/60m/PRIMARY_ANALYSIS_13D/coverage/fu
 | sample-1-3_60M                                   |           30.5193 |  4.47836 |        2 |              0 |              0 |              0 |
 | sample-1-3_60M_dupless                           |           30.5225 |  3.60706 |        2 |              0 |              0 |              0 |
 
-
 2. Не экзом:
 
 | Sample                                           |   Non-coverage, % |   Middle |   Median |   Coverage 75% |   Coverage 90% |   Coverage 95% |
@@ -242,4 +241,26 @@ for file in /dev/datasets/FairWind/_results/60m/PRIMARY_ANALYSIS_13D/coverage/fu
 | sample-1-3_60M                                   |           30.7146 |  3.80275 |        2 |              0 |              0 |              0 |
 | sample-1-3_60M_dupless                           |           30.7179 |  3.20984 |        2 |              0 |              0 |              0 |
 
+3. Экзом:
+
+| Sample                                           |   Non-coverage, % |    Middle |   Median |   Coverage 75% |   Coverage 90% |   Coverage 95% |
+|--------------------------------------------------|-------------------|-----------|----------|----------------|----------------|----------------|
+| dinara_38_S4_60M                                 |           0.10141 | 111.993   |       86 |             55 |             35 |             26 |
+| dinara_38_S4_60M_dupless                         |           0.10143 |  56.5586  |       52 |             36 |             25 |             19 |
+| sample-1-1_60M                                   |           7.17837 |  28.3723  |       15 |              5 |              2 |              0 |
+| sample-1-1_60M_dupless                           |           7.18048 |  17.8307  |       12 |              5 |              2 |              0 |
+| sample-1-3_60M                                   |           0.09335 |  48.8947  |       38 |             24 |             15 |             10 |
+| sample-1-3_60M_dupless                           |           0.09346 |  30.0374  |       27 |             18 |             12 |              9 |
+
+
 ![Coverage 60M](./scripts_results/graph_60M_191105.svg)
+
+![Coverage 60M](./scripts_results/graph_60M_exome_191107.svg)
+
+## Удаление пробелов из имен
+
+Команда:
+
+```bash
+INPUT_FOLDER="/dev/datasets/FairWind/_results/cut/illuminaless"; OUTPUT_FOLDER="/dev/datasets/FairWind/_results/cut/illuminaless_SL"; mkdir -p $OUTPUT_FOLDER; cd $INPUT_FOLDER; for file in *.fastq.gz; do (zcat $INPUT_FOLDER/$file | grep -oh "^[^ ]*" | gzip -c - > $OUTPUT_FOLDER/$file; echo $file is done.); done;
+```

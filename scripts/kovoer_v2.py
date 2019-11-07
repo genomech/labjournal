@@ -43,7 +43,7 @@ def the_thread(block):
 
 Blister.Logo("Coverage Shorten")
 
-input_filenames = Blister.Input(["/dev/datasets/FairWind/_results/60m/PRIMARY_ANALYSIS_13D/coverage/full/*.txt.all"])
+input_filenames = Blister.Input(["/dev/datasets/FairWind/_results/60m/PRIMARY_ANALYSIS_13D/coverage/full/*_ExomeCoverage.txt.all"])
 if not input_filenames: exit()
 
 main_table = pd.DataFrame(columns=table_index)
@@ -56,7 +56,7 @@ with Blister.Threading("KOVOER") as pool:
 with Blister.Timestamp("PLOTTING") as start_time:
 	plt.clf()
 	for it in main_table.iterrows():
-		plt.plot(it[1]["cumulate_list"][:20], label=it[1]["Sample"])
+		plt.plot(it[1]["cumulate_list"][:100], label=it[1]["Sample"])
 	plt.ylabel('% of A with more depth')
 	plt.xlabel('Depth')
 	plt.suptitle('Cumulative coverage (60M)')
