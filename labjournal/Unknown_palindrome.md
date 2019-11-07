@@ -5798,6 +5798,12 @@ $ zcat ./s7_FR_RF_0_R2.fastq.gz | grep GCTCTTCCGATC | wc -l # 8
 
 ## Данные Циньхуа
 
+Скачивание. Команда:
+
+```bash
+OUTPUT_FOLDER="/dev/datasets/ngs_data/Maria_ligata"; for SRR in SRR5878213 SRR5878214 SRR5878215; do (fastq-dump -Z --split-3 $SRR | head -n 4000000 | gzip -c - > $OUTPUT_FOLDER/"$SRR"_1M.fastq.gz; echo $SRR downloaded.) done;
+```
+
 Просмотр производился с помощью cutadapt, `-e 0.2 --overlap [length - 1]`.
 
 | Access Code | GEO Code   | Sample | Adapter            | Rate, % |
@@ -5808,9 +5814,9 @@ $ zcat ./s7_FR_RF_0_R2.fastq.gz | grep GCTCTTCCGATC | wc -l # 8
 | SRR5195156 | GSM2465025  | BL04   | CGCGATATCTTATCTGAC | 21.0    |
 | SRR5195157 | GSM2465026  | BL05   | CGCGATATCTTATCTGAC | 20.0    |
 | SRR5878212 | GSM2721788  | BL06   | CGCGATATCTTATCTGAC | 21.2    |
-| SRR5878213 | GSM2721789  | BL07   | -                  | -       |
-| SRR5878214 | GSM2721790  | BL08   | -                  | -       |
-| SRR5878215 | GSM2721791  | BL09   | -                  | -       |
+| SRR5878213 | GSM2721789  | BL07   | CGCGATATCTTATCTGAC | 27.9    |
+| SRR5878214 | GSM2721790  | BL08   | CGCGATATCTTATCTGAC | 16.6    |
+| SRR5878215 | GSM2721791  | BL09   | CGCGATATCTTATCTGAC |  9.1    |
 | SRR5878216 | GSM2721792  | BL10   | GCTGAGG            | 75.0    |
 | SRR5878217 | GSM2721793  | BL11   | -                  | -       |
 | SRR5878218 | GSM2721794  | BL12   | -                  | -       |
@@ -5822,7 +5828,15 @@ $ zcat ./s7_FR_RF_0_R2.fastq.gz | grep GCTCTTCCGATC | wc -l # 8
 SEQ1="CGCGATATCTTATCTGAC"; SEQ2="GCTGAGG"; LENGTH=$(echo "print(len(\""$SEQ1"\") - 2)" | python3); OUTPUT_FOLDER="/dev/datasets/FairWind/_results/check"; for fn in SRR5195151; do cutadapt -j 10 -b $SEQ1 -O $LENGTH -e 0.2 -o /dev/null /dev/datasets/ngs_data/Maria_ligata/"$fn"_1M.fastq.gz > $OUTPUT_FOLDER/"$fn"_1M_cutadapt.txt; done;
 ```
 
+**Примечание.** cutadapt показывает длину ридов, оставшуюся после обрезки адаптера.
+Т.е. для получения позиции в риде нужно отнять исходную длину рида минус длину адаптера.
+
 ![Линкеры в библиотеках Циньхуа](./scripts_results/qinghua_data_191105.png)
+
+Ещё 3 дополнительные библиотеки.
+SRR5878216 оставлена как эталон для сравнения:
+
+![Линкеры в библиотеках Циньхуа 2](./scripts_results/qinghua_data_191107.png)
 
 Таблица ODS, [если понадобится](./scripts_results/qinghua_data_191105.ods).
 
