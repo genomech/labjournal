@@ -262,5 +262,5 @@ for file in /dev/datasets/FairWind/_results/60m/PRIMARY_ANALYSIS_13D/coverage/fu
 Команда:
 
 ```bash
-INPUT_FOLDER="/dev/datasets/FairWind/_results/cut/illuminaless"; OUTPUT_FOLDER="/dev/datasets/FairWind/_results/cut/illuminaless_SL"; mkdir -p $OUTPUT_FOLDER; cd $INPUT_FOLDER; for file in *.fastq.gz; do (zcat $INPUT_FOLDER/$file | grep -oh "^[^ ]*" | gzip -c - > $OUTPUT_FOLDER/$file; echo $file is done.); done;
+INPUT_FOLDER="/dev/datasets/FairWind/_results/cut/bridgeless"; OUTPUT_FOLDER="/dev/datasets/FairWind/_results/cut/bridgeless_SL"; mkdir -p $OUTPUT_FOLDER; cd $INPUT_FOLDER; for file in *.fastq.gz; do ( zcat $INPUT_FOLDER/$file | grep -oh "^[^ ]*" | gzip -c - > $OUTPUT_FOLDER/$file; echo $file is done. ) & done
 ```
