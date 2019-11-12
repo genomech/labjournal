@@ -257,6 +257,17 @@ for file in /dev/datasets/FairWind/_results/60m/PRIMARY_ANALYSIS_13D/coverage/fu
 
 ![Coverage 60M](./scripts_results/graph_60M_exome_191107.svg)
 
+Обогащение:
+
+| Sample                                           | Exome    | NOT Exome | Enrichment |
+|--------------------------------------------------|----------|-----------|------------|
+| dinara_38_S4_60M                                 | 111.993  | 1.62982   | 68.71495   |
+| dinara_38_S4_60M_dupless                         | 56.5586  | 1.15082   | 49.14634   |
+| sample-1-1_60M                                   | 28.3723  | 2.25654   | 12.57336   |
+| sample-1-1_60M_dupless                           | 17.8307  | 1.94458   | 9.16943    |
+| sample-1-3_60M                                   | 48.8947  | 3.80275   | 12.85772   |
+| sample-1-3_60M_dupless                           | 30.0374  | 3.20984   | 9.35791    |
+
 ## Удаление пробелов из имен
 
 Команда:
