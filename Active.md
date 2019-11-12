@@ -12,8 +12,6 @@
 
 * Удалить дубликаты с +- strand.
 
-* [Протокол обработки данных](https://drive.google.com/file/d/1tXHJrE95CEFZHqG-wKG0XrzKbmpavgnf/view).
-
 # Задачи в режиме ожидания
 
 * Отправить 1-1 Алексею -- готовые fastq.
