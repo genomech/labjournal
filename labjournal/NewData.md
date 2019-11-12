@@ -4,6 +4,12 @@
 
 Скачать можно [здесь](http://genedev.bionet.nsc.ru/site/hic_out/2019-11-09-BGI-ExoC/data/results/).
 
+Команда:
+
+```bash
+wget -r ftp://genedev.bionet.nsc.ru/site/hic_out/2019-11-09-BGI-ExoC/data/results
+```
+
 | #   | Sample                    |
 |:---:|:--------------------------|
 | 2   | #8 (Нарышкина), DNase     |
@@ -35,6 +41,7 @@
 **TODO:**
 
 * Количество ридов в каждом файле
+* % адаптеров и расположение
 * MNAse-Hi-C и DNAse-Hi-C прогнать через FastQC
 * Обрезать адаптеры
 * anal_seqs
