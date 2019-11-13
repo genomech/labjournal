@@ -116,3 +116,27 @@ fastqc -o /dev/datasets/FairWind/_results/November/fastqc -t 10 /dev/datasets/ng
 | 7  | [R1](http://htmlpreview.github.io/?https://github.com/regnveig/labjournal/blob/master/labjournal/FastQC_results/fastqc_November/191107_X603_FCH5KNCCCX2_L5_7_1_fastqc.html), [R2](http://htmlpreview.github.io/?https://github.com/regnveig/labjournal/blob/master/labjournal/FastQC_results/fastqc_November/191107_X603_FCH5KNCCCX2_L5_7_2_fastqc.html) |
 | 15 | [R1](http://htmlpreview.github.io/?https://github.com/regnveig/labjournal/blob/master/labjournal/FastQC_results/fastqc_November/191107_X603_FCH5KNCCCX2_L5_15_1_fastqc.html), [R2](http://htmlpreview.github.io/?https://github.com/regnveig/labjournal/blob/master/labjournal/FastQC_results/fastqc_November/191107_X603_FCH5KNCCCX2_L5_15_2_fastqc.html) |
 | 19 | [R1](http://htmlpreview.github.io/?https://github.com/regnveig/labjournal/blob/master/labjournal/FastQC_results/fastqc_November/191107_X603_FCH5KNCCCX2_L5_19_1_fastqc.html), [R2](http://htmlpreview.github.io/?https://github.com/regnveig/labjournal/blob/master/labjournal/FastQC_results/fastqc_November/191107_X603_FCH5KNCCCX2_L5_19_2_fastqc.html) |
+
+### Обрезка адаптеров
+
+```bash
+boomer;
+Logo "Illuminaless (cutadapt)";
+THREADS=10;
+OUTPUT_FOLDER='/dev/datasets/FairWind/_results/November/Illuminaless';
+mkdir -p $OUTPUT_FOLDER; illumina1='AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC';
+illumina2='AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT';
+r1=(/dev/datasets/ngs_data/November_BGI_HiC/*/*1.fq.gz);
+r2=(/dev/datasets/ngs_data/November_BGI_HiC/*/*2.fq.gz);
+for var in ${!r1[*]};
+do {
+start_time=$(StartTime);
+r1_output=$OUTPUT_FOLDER/$(FileBase ${r1[var]})_Illuminaless.fq.gz;
+r2_output=$OUTPUT_FOLDER/$(FileBase ${r2[var]})_Illuminaless.fq.gz;
+fb=$(FileBase ${r1[var]});
+report=$OUTPUT_FOLDER/${fb::-2}_report.txt;
+cutadapt -m 8 -j $THREADS -a $illumina1 -A $illumina2 -o $r1_output -p $r2_output ${r1[var]} ${r2[var]} > $report;
+echo "File "${r1[var]}" is done "$(Timestamp $start_time)"";
+} done;
+Seal $OUTPUT_FOLDER
+```
