@@ -55,7 +55,7 @@ def thread0(filename, output_dir):
 	
 	return table_result
 
-Blister.Logo("Analysis of Sequences v3.0 [blister, adapt]")
+Blister.Logo("Analysis of Sequences v3.0 [blister]")
 
 input_filenames = Blister.Input(["/dev/datasets/ngs_data/ma_add/*.fastq.gz"])
 if not input_filenames: exit()

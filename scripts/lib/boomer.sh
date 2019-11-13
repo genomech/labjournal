@@ -16,6 +16,8 @@
 
 LIB_NAME="Boomer"
 
+function CompileDoc() ( cat boomer.sh | grep -oP "(?<=^#).*" > boomer.md; echo ""$LIB_NAME": Doc is ready." )
+
 ### Timestamp
 #Make timestamp in format [hh:mm:ss].
 # 
@@ -144,5 +146,3 @@ function CreateFIFO() {
 function FileDir() { local full=$(realpath $1); dirname $full >&1; }
 function FileExt() { local full=$(realpath $1); local basename=$(basename $full); echo ${basename#*.} >&1; }
 function FileBase() { local full=$(realpath $1); basename $full .$(FileExt $1) >&1; }
-
-function CompileDoc() ( cat boomer.sh | grep -oP "(?<=^#).*" > boomer.md; echo ""$LIB_NAME": Doc is ready." )
