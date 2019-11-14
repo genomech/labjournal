@@ -156,6 +156,19 @@ Seal $OUTPUT_FOLDER
 
 ### Анализ паттернов
 
+Последовательности:
+
+| Name           | Seq         |
+|:---------------|:------------|
+| -bridge--gatc- | GCTGAGGGATC |
+| -bridge-       | GCTGAGG     |
+| -gatc--egdirb- | GATCCCTCAGC |
+| -egdirb-       | CCTCAGC     |
+| -blunt--gac-   | CAGTGGCGAC  |
+| -blunt-        | CAGTGGC     |
+| -gtc--tnulb-   | GTCGCCACTG  |
+| -tnulb-        | GCCACTG     |
+
 [2](./scripts_results/November_PatternAnalysis/191107_X603_FCH5KNCCCX2_L5_2_1_Illuminaless_PatternAnalysis.csv),
 [4](./scripts_results/November_PatternAnalysis/191107_X603_FCH5KNCCCX2_L5_4_1_Illuminaless_PatternAnalysis.csv),
 [5](./scripts_results/November_PatternAnalysis/191107_X603_FCH5KNCCCX2_L5_5_1_Illuminaless_PatternAnalysis.csv),
