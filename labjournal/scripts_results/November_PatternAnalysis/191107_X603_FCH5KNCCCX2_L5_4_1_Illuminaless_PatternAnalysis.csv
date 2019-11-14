@@ -1,0 +1,14 @@
+count,mask
+98.9909,-genome-
+0.4656,-genome--tnulb--genome-
+0.0731,-bridge--gatc--genome-
+0.0533,-bridge--genome-
+0.0443,-genome--egdirb--genome-
+0.0438,-genome--blunt--genome-
+0.0436,-genome--bridge--genome-
+0.0336,-genome--gatc--egdirb-
+0.0302,-genome--bridge--gatc--genome-
+0.0291,-genome--egdirb-
+0.0218,--[7]--bridge--genome-
+0.0216,-genome--bridge--gatc--egdirb--genome-
+0.0182,-genome--gatc--egdirb--genome-

@@ -137,7 +137,29 @@ r2_output=$OUTPUT_FOLDER/$(FileBase ${r2[var]})_Illuminaless.fq.gz;
 fb=$(FileBase ${r1[var]});
 report=$OUTPUT_FOLDER/${fb::-2}_report.txt;
 cutadapt -m 8 -j $THREADS -a $illumina1 -A $illumina2 -o $r1_output -p $r2_output ${r1[var]} ${r2[var]} > $report;
-echo "File "${r1[var]}" is done "$(Timestamp $start_time)"";
+echo "File "${fb::-2}" is done "$(Timestamp $start_time)"";
 } done;
 Seal $OUTPUT_FOLDER
 ```
+
+### Анализ паттернов
+
+[2](./scripts_results/November_PatternAnalysis/191107_X603_FCH5KNCCCX2_L5_2_1_Illuminaless_PatternAnalysis.csv),
+[4](./scripts_results/November_PatternAnalysis/191107_X603_FCH5KNCCCX2_L5_4_1_Illuminaless_PatternAnalysis.csv),
+[5](./scripts_results/November_PatternAnalysis/191107_X603_FCH5KNCCCX2_L5_5_1_Illuminaless_PatternAnalysis.csv),
+[6](./scripts_results/November_PatternAnalysis/191107_X603_FCH5KNCCCX2_L5_6_1_Illuminaless_PatternAnalysis.csv),
+[7](./scripts_results/November_PatternAnalysis/191107_X603_FCH5KNCCCX2_L5_7_1_Illuminaless_PatternAnalysis.csv),
+[15](./scripts_results/November_PatternAnalysis/191107_X603_FCH5KNCCCX2_L5_15_1_Illuminaless_PatternAnalysis.csv),
+[19](./scripts_results/November_PatternAnalysis/191107_X603_FCH5KNCCCX2_L5_19_1_Illuminaless_PatternAnalysis.csv).
+
+Дополнительно. Анализ на bgg/eg:
+
+| Filename                                     | BGG     | EG     |
+|:---------------------------------------------|:-------:|:------:|
+| 191107_X603_FCH5KNCCCX2_L5_2_1_Illuminaless  | 13.6813 | 0.6994 |
+| 191107_X603_FCH5KNCCCX2_L5_4_1_Illuminaless  | 0.0846  | 0.0056 |
+| 191107_X603_FCH5KNCCCX2_L5_5_1_Illuminaless  | 13.6073 | 0.4824 |
+| 191107_X603_FCH5KNCCCX2_L5_6_1_Illuminaless  | 0.9521  | 0.2045 |
+| 191107_X603_FCH5KNCCCX2_L5_7_1_Illuminaless  | 9.3949  | 0.6838 |
+| 191107_X603_FCH5KNCCCX2_L5_15_1_Illuminaless | 5.2202  | 2.4024 |
+| 191107_X603_FCH5KNCCCX2_L5_19_1_Illuminaless | 10.4418 | 0.9529 |
