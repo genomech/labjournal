@@ -142,6 +142,18 @@ echo "File "${fb::-2}" is done "$(Timestamp $start_time)"";
 Seal $OUTPUT_FOLDER
 ```
 
+Содержание адаптеров Illumina:
+
+| #  | Adapter %, 3' | Adapter %, 5' |
+|:---|:-------------:|:-------------:|
+| 2  | 20.2          | 20.2          |
+| 4  | 1.6           | 1.6           |
+| 5  | 42.8          | 42.7          |
+| 6  | 14.5          | 14.6          |
+| 7  | 37.4          | 37.3          |
+| 15 | 28.1          | 28.1          |
+| 19 | 40.0          | 39.9          |
+
 ### Анализ паттернов
 
 [2](./scripts_results/November_PatternAnalysis/191107_X603_FCH5KNCCCX2_L5_2_1_Illuminaless_PatternAnalysis.csv),
