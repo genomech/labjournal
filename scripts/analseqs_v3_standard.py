@@ -6,10 +6,11 @@ import re
 from Bio import SeqIO
 from lib.blister import *
 
-C_INPUT_FILES = ["/dev/datasets/FairWind/_results/November/Illuminaless/*1_Illuminaless.fq.gz"]
-C_DIR_NAME = "/dev/datasets/FairWind/_results/November/PatternAnalysis"
+C_INPUT_FILES = ["/dev/datasets/ngs_data/November_BGI_HiC/*/*1.fq.gz"]
+C_DIR_NAME = "/dev/datasets/FairWind/_results/November/PatternAnalysis_NotCut"
 C_GENOME = '-genome-'
 C_SEQUENCES = np.array([
+	['-illumina-', 'AGATCGGAAG'],
 	['-bridge--gatc-', 'GCTGAGGGATC'],
 	['-bridge-', 'GCTGAGG'],
 	['-gatc--egdirb-', 'GATCCCTCAGC'],

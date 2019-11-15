@@ -189,6 +189,10 @@ Seal $OUTPUT_FOLDER
 | 191107_X603_FCH5KNCCCX2_L5_15_1_Illuminaless | 5.2202  | 2.4024 |
 | 191107_X603_FCH5KNCCCX2_L5_19_1_Illuminaless | 10.4418 | 0.9529 |
 
+### Анализ паттернов с необрезанным Illumina
+
+
+
 ## Данные Сальникова
 
 1. Создание bed-файла
@@ -211,8 +215,66 @@ bowtie2 --local --very-sensitive-local -p $threads -x $bt_index \
 	-@ $threads - | samtools sort -@ $threads -O BAM - > /dev/datasets/FairWind/Pavel/seq.bam;
 ```
 
-Выровненных ридов: 95.39%.
+Отчёт:
+
+```
+25522262 reads; of these:
+  25522262 (100.00%) were paired; of these:
+    1304780 (5.11%) aligned concordantly 0 times
+    23954718 (93.86%) aligned concordantly exactly 1 time
+    262764 (1.03%) aligned concordantly >1 times
+    ----
+    1304780 pairs aligned concordantly 0 times; of these:
+      99765 (7.65%) aligned discordantly 1 time
+    ----
+    1205015 pairs aligned 0 times concordantly or discordantly; of these:
+      2410030 mates make up the pairs; of these:
+        2350786 (97.54%) aligned 0 times
+        58692 (2.44%) aligned exactly 1 time
+        552 (0.02%) aligned >1 times
+95.39% overall alignment rate
+```
 
 Разброс по позициям выравнивания в референсе:
 
 ![Позиции в референсе](./scripts_results/Pavel_positions.png)
+
+### Данные
+
+Баркоды:
+
+| F\R     | ATGC | CATG | GCAT | TGCA |
+|:--------|:----:|:----:|:----:|:----:|
+| ATGC    | -    | 1    | 2    | 3    |
+| CATG    | 4    | 5    | 6    | 7    |
+| GCAT    | 8    | 9    | 10   | 11   |
+| TGCA    | 12   | 13   | 14   | 15   |
+| CGTA(F) | 16   | 17   | 18   | 19   |
+
+Праймеры:
+
+| Name | Sequence                 | Start | End  | Dir    |
+|:-----|:-------------------------|:-----:|:----:|:------:|
+| L2F  | AGCACGTGGGGTGAGAG        | 75    | 91   | F      | 
+| L2R  | TGCTCAAGTAGACCTAATGTGG   | 279   | 300  | R      |
+| R2F  | ACCTCATGATCCAAGGGTACCTCC | 4207  | 4230 | F      |
+| R2R  | TCGCCTGGAATCCTCCAGCT     | 4416  | 4435 | R      |
+| M2F  | AGAGTGTGGCTGGGTACCTG     | 3123  | 3142 | F      | 
+| M2R  | CTTGGCCACACAGGTGTAGTT    | 3329  | 3349 | R      |
+
+Сайты CTCF:
+
+| Name   | Sequence             | Start | End  |
+|:-------|:---------------------|:-----:|:----:|
+| L2CTCF | CCACCAGCAGGGGCTGCAGT | 176   | 195  |
+| M2CTCF | CTCCCACCAGAGGGCACCCG | 3221  | 3240 |
+| R2CTCF | GTGGCCACTAGGGGGCAGGG | 4325  | 4344 |
+
+**TODO:**
+
+1. Рассортировать парные риды:
+	* По позициям начала (посадки праймера);
+	* По совпадению с этими позициями (оверлап 8 букв);
+	* По strand.
+2. Дополнительно: понять, из-за чего 0.35% ридов выровнялись дискордантно.
+3. Дополнительно: узнать, почему позиции выравнивания представляют отрезки, а не точки (кол-во ридов на позицию).
