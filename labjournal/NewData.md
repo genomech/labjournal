@@ -191,7 +191,37 @@ Seal $OUTPUT_FOLDER
 
 ### Анализ паттернов с необрезанным Illumina
 
+| Name           | Seq         |
+|:---------------|:------------|
+| -illumina-     | AGATCGGAAG  |
+| -bridge--gatc- | GCTGAGGGATC |
+| -bridge-       | GCTGAGG     |
+| -gatc--egdirb- | GATCCCTCAGC |
+| -egdirb-       | CCTCAGC     |
+| -blunt--gac-   | CAGTGGCGAC  |
+| -blunt-        | CAGTGGC     |
+| -gtc--tnulb-   | GTCGCCACTG  |
+| -tnulb-        | GCCACTG     |
 
+Данные: [2](./scripts_results/November_PatternAnalysis_NotCut/191107_X603_FCH5KNCCCX2_L5_2_1_PatternAnalysis.csv),
+[4](./scripts_results/November_PatternAnalysis_NotCut/191107_X603_FCH5KNCCCX2_L5_4_1_PatternAnalysis.csv),
+[5](./scripts_results/November_PatternAnalysis_NotCut/191107_X603_FCH5KNCCCX2_L5_5_1_PatternAnalysis.csv),
+[6](./scripts_results/November_PatternAnalysis_NotCut/191107_X603_FCH5KNCCCX2_L5_6_1_PatternAnalysis.csv),
+[7](./scripts_results/November_PatternAnalysis_NotCut/191107_X603_FCH5KNCCCX2_L5_7_1_PatternAnalysis.csv),
+[15](./scripts_results/November_PatternAnalysis_NotCut/191107_X603_FCH5KNCCCX2_L5_15_1_PatternAnalysis.csv),
+[19](./scripts_results/November_PatternAnalysis_NotCut/191107_X603_FCH5KNCCCX2_L5_19_1_PatternAnalysis.csv).
+
+BGG/EG:
+
+| Filename                      | BGG     | EG     |
+|:------------------------------|:-------:|:------:|
+| 191107_X603_FCH5KNCCCX2_L5_15 | 5.2202  | 2.4021 |
+| 191107_X603_FCH5KNCCCX2_L5_19 | 10.4409 | 0.9525 |
+| 191107_X603_FCH5KNCCCX2_L5_2  | 13.6808 | 0.6995 |
+| 191107_X603_FCH5KNCCCX2_L5_4  | 0.0844  | 0.0056 |
+| 191107_X603_FCH5KNCCCX2_L5_5  | 13.6072 | 0.4824 |
+| 191107_X603_FCH5KNCCCX2_L5_6  | 0.9521  | 0.2043 |
+| 191107_X603_FCH5KNCCCX2_L5_7  | 9.3947  | 0.6837 |
 
 ## Данные Сальникова
 
@@ -243,7 +273,6 @@ bowtie2 --local --very-sensitive-local -p $threads -x $bt_index \
 
 Баркоды:
 
-
 | F\R     | ATGC | CATG | GCAT | TGCA |
 |---------|------|------|------|------|
 | ATGC    | -    | 1    | 2    | 3    |
@@ -251,7 +280,6 @@ bowtie2 --local --very-sensitive-local -p $threads -x $bt_index \
 | GCAT    | 8    | 9    | 10   | 11   |
 | TGCA    | 12   | 13   | 14   | 15   |
 | CGTAf   | 16   | 17   | 18   | 19   |
-
 
 Праймеры:
 
