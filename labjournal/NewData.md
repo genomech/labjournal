@@ -243,7 +243,7 @@ bowtie2 --local --very-sensitive-local -p $threads -x $bt_index \
 
 Баркоды:
 
-| F       | ATGC | CATG | GCAT | TGCA |
+| *       | ATGC | CATG | GCAT | TGCA |
 |:--------|:----:|:----:|:----:|:----:|
 | ATGC    | -    | 1    | 2    | 3    |
 | CATG    | 4    | 5    | 6    | 7    |
