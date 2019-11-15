@@ -188,3 +188,31 @@ Seal $OUTPUT_FOLDER
 | 191107_X603_FCH5KNCCCX2_L5_7_1_Illuminaless  | 9.3949  | 0.6838 |
 | 191107_X603_FCH5KNCCCX2_L5_15_1_Illuminaless | 5.2202  | 2.4024 |
 | 191107_X603_FCH5KNCCCX2_L5_19_1_Illuminaless | 10.4418 | 0.9529 |
+
+## Данные Сальникова
+
+1. Создание bed-файла
+2. Компиляция индекса
+
+```bash
+bowtie2-build --threads 12 /dev/datasets/FairWind/Pavel/seq.fa /dev/datasets/FairWind/Pavel/bt_index/bt_index
+```
+
+3. Выравнивание
+
+```bash
+bt_index="/dev/datasets/FairWind/Pavel/bt_index/bt_index";
+r1="/dev/datasets/ngs_data/November_BGI_HiC/4/191107_X603_FCH5KNCCCX2_L5_4_1.fq.gz";
+r2="/dev/datasets/ngs_data/November_BGI_HiC/4/191107_X603_FCH5KNCCCX2_L5_4_2.fq.gz";
+threads=10;
+
+bowtie2 --local --very-sensitive-local -p $threads -x $bt_index \
+	-1 $r1 -2 $r2 | tee /dev/datasets/FairWind/Pavel/seq.sam | samtools view -bS \
+	-@ $threads - | samtools sort -@ $threads -O BAM - > /dev/datasets/FairWind/Pavel/seq.bam;
+```
+
+Выровненных ридов: 95.39%.
+
+Разброс по позициям выравнивания в референсе:
+
+![Позиции в референсе](./scripts_results/Pavel_positions.png)
