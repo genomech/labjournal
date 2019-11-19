@@ -6,8 +6,8 @@ import re
 from Bio import SeqIO
 from lib.blister import *
 
-C_INPUT_FILES = ["/dev/datasets/ngs_data/November_BGI_HiC/*/*1.fq.gz"]
-C_DIR_NAME = "/dev/datasets/FairWind/_results/November/PatternAnalysis_NotCut"
+C_INPUT_FILES = ["/dev/datasets/FairWind/_results/November/Illuminaless/*1_Illuminaless.fq.gz"]
+C_DIR_NAME = "/dev/datasets/FairWind/_results/November/November_PatternAnalysis_CutOnly"
 C_GENOME = '-genome-'
 C_SEQUENCES = np.array([
 	['-illumina-', 'AGATCGGAAG'],
@@ -21,7 +21,7 @@ C_SEQUENCES = np.array([
 	['-tnulb-', 'GCCACTG']
 	])
 C_KMER_SIZE = 12
-C_MAX = 1000000
+C_MAX = 100000
 
 def thread0(filename, output_dir):
 
@@ -36,6 +36,7 @@ def thread0(filename, output_dir):
 		with Blister.Timestamp(f"PARSING", index=filename[0]) as start_time:
 			for record in SeqIO.parse(input_file, "fastq"):
 				line = record.seq.__str__()
+				if len(line) < 149: continue
 				for index, row in seqs.iterrows(): line = line.replace(row['seq'], row['name'])
 				for it in range(1, C_KMER_SIZE): line = re.sub("(^|-)[ATGCN]{%s}($|-)" % (it), "--[%s]--" % it, line)
 				line = re.sub(r"[ATGCN]+", genome, line)
@@ -47,7 +48,7 @@ def thread0(filename, output_dir):
 		shorted_list = list(set(main_list))
 		for note in shorted_list: main_table = main_table.append(pd.Series([main_list.count(note), note], index=['count', 'mask']), ignore_index=True)
 		main_table['count'] = main_table['count'].apply(lambda x: x / (total / 100))
-		main_table.sort_values(by=['count'], ascending=False).to_csv(output_file0, sep=',', index=False)
+		main_table[main_table['count'] >= 0.01].sort_values(by=['count'], ascending=False).to_csv(output_file0, sep=',', index=False)
 
 	with Blister.Timestamp(f"COUNT BGG/EG", filename[0]) as start_time:
 		table_bgg = main_table[main_table['mask'].str.contains("^[^o\[]*\-bridge\-\-gatc\-\-genome-.*$")]
