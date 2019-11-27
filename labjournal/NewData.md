@@ -245,6 +245,51 @@ BGG/EG:
 | 191107_X603_FCH5KNCCCX2_L5_6_1_Illuminaless  | 0.8140  | 0.153  |
 | 191107_X603_FCH5KNCCCX2_L5_7_1_Illuminaless  | 8.254   | 0.5500 |
 
+### Дополнительный анализ А-тейлинга
+
+[2](./scripts_results/November_PatternAnalysis_Cut_A-tail/191107_X603_FCH5KNCCCX2_L5_2_1_Illuminaless_PatternAnalysis.csv),
+[5](./scripts_results/November_PatternAnalysis_Cut_A-tail/191107_X603_FCH5KNCCCX2_L5_5_1_Illuminaless_PatternAnalysis.csv),
+[6](./scripts_results/November_PatternAnalysis_Cut_A-tail/191107_X603_FCH5KNCCCX2_L5_6_1_Illuminaless_PatternAnalysis.csv),
+[7](./scripts_results/November_PatternAnalysis_Cut_A-tail/191107_X603_FCH5KNCCCX2_L5_7_1_Illuminaless_PatternAnalysis.csv),
+[15](./scripts_results/November_PatternAnalysis_Cut_A-tail/191107_X603_FCH5KNCCCX2_L5_15_1_Illuminaless_PatternAnalysis.csv),
+[19](./scripts_results/November_PatternAnalysis_Cut_A-tail/191107_X603_FCH5KNCCCX2_L5_19_1_Illuminaless_PatternAnalysis.csv).
+
+### Анализ контекста возле BG
+
+```bash
+boomer;
+Logo "Cut BG";
+THREADS=10;
+INPUT_FOLDER='/dev/datasets/FairWind/_results/November/November_BGG_100k';
+OUTPUT_FOLDER='/dev/datasets/FairWind/_results/November/November_BGG_100k_bgless';
+mkdir -p $OUTPUT_FOLDER;
+for var in 2 5 6 7 15 19;
+do {
+start_time=$(StartTime);
+cutadapt -m 11 -e 0 -j $THREADS -g GCTGAGGGATC -o $OUTPUT_FOLDER/191107_X603_FCH5KNCCCX2_L5_"$var"_1_Illuminaless_BGG-100k.fastq.gz $INPUT_FOLDER/191107_X603_FCH5KNCCCX2_L5_"$var"_1_Illuminaless_BGG-100k.fastq;
+echo "Lib "$var" is done "$(Timestamp $start_time)"";
+} done;
+Seal $OUTPUT_FOLDER
+```
+
+Выравнивание:
+```bash
+boomer;
+Logo "Align BG";
+THREADS=10;
+GENOME="/dev/datasets/FairWind/_db/hg19/hg19.fa"
+INPUT_DIR="/dev/datasets/FairWind/_results/November/November_BGG_100k_bgless";
+BAM_DIR="/dev/datasets/FairWind/_results/November/November_BGG_bam";
+mkdir -p $BAM_DIR;
+for var in 2 5 6 7 15 19;
+do {
+start_time=$(StartTime);
+bwa mem -t $THREADS -v 1 $GENOME $INPUT_DIR/191107_X603_FCH5KNCCCX2_L5_"$var"_1_Illuminaless_BGG-100k.fastq.gz | samtools view -bS -@ $THREADS - | samtools sort -@ $THREADS -O BAM - > $BAM_DIR/191107_X603_FCH5KNCCCX2_L5_"$var"_BGG-100k_sorted.bam;
+echo "Sample "$var" is ready "$(Timestamp $start_time)"";
+} done;
+BamIndex $BAM_DIR/*.bam
+```
+
 ## Данные Сальникова
 
 1. Создание bed-файла
@@ -330,3 +375,23 @@ bowtie2 --local --very-sensitive-local -p $threads -x $bt_index \
 	* По strand.
 2. Дополнительно: понять, из-за чего 0.35% ридов выровнялись дискордантно.
 3. Дополнительно: узнать, почему позиции выравнивания представляют отрезки, а не точки (кол-во ридов на позицию).
+
+### Сортировка
+
+Команда:
+
+```bash
+boomer;
+threads=10;
+output_dir="/dev/datasets/FairWind/Pavel/bam";
+Logo "Sorting Pavel";
+mkdir -p $output_dir;
+for file in /dev/datasets/FairWind/Pavel/sorted/*.sam;
+do {
+start_time=$(StartTime);
+samtools view -bS -@ $threads $file | samtools sort -@ $threads -O BAM - > $output_dir/$(FileBase $file)_sorted.bam;
+echo "File "$(FileBase $file)" is ready "$(Timestamp $start_time)"";
+} done;
+BamIndex $output_dir/*.bam;
+Seal "$output_dir";
+```

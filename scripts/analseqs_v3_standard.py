@@ -7,13 +7,17 @@ from Bio import SeqIO
 from lib.blister import *
 
 C_INPUT_FILES = ["/dev/datasets/FairWind/_results/November/Illuminaless/*1_Illuminaless.fq.gz"]
-C_DIR_NAME = "/dev/datasets/FairWind/_results/November/November_PatternAnalysis_CutOnly"
+C_DIR_NAME = "/dev/datasets/FairWind/_results/November/November_PatternAnalysis_Cut_A-tail"
 C_GENOME = '-genome-'
 C_SEQUENCES = np.array([
 	['-illumina-', 'AGATCGGAAG'],
+	['-[t]bridge--gatc-', 'TGCTGAGGGATC'],
 	['-bridge--gatc-', 'GCTGAGGGATC'],
+	['-[t]bridge-', 'TGCTGAGG'],
 	['-bridge-', 'GCTGAGG'],
+	['-gatc--egdirb[a]-', 'GATCCCTCAGCA'],
 	['-gatc--egdirb-', 'GATCCCTCAGC'],
+	['-egdirb[a]-', 'CCTCAGCA'],
 	['-egdirb-', 'CCTCAGC'],
 	['-blunt--gac-', 'CAGTGGCGAC'],
 	['-blunt-', 'CAGTGGC'],
@@ -21,7 +25,7 @@ C_SEQUENCES = np.array([
 	['-tnulb-', 'GCCACTG']
 	])
 C_KMER_SIZE = 12
-C_MAX = 100000
+C_MAX = 1000000
 
 def thread0(filename, output_dir):
 
@@ -36,7 +40,6 @@ def thread0(filename, output_dir):
 		with Blister.Timestamp(f"PARSING", index=filename[0]) as start_time:
 			for record in SeqIO.parse(input_file, "fastq"):
 				line = record.seq.__str__()
-				if len(line) < 149: continue
 				for index, row in seqs.iterrows(): line = line.replace(row['seq'], row['name'])
 				for it in range(1, C_KMER_SIZE): line = re.sub("(^|-)[ATGCN]{%s}($|-)" % (it), "--[%s]--" % it, line)
 				line = re.sub(r"[ATGCN]+", genome, line)

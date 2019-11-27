@@ -275,3 +275,32 @@ for file in /dev/datasets/FairWind/_results/60m/PRIMARY_ANALYSIS_13D/coverage/fu
 ```bash
 INPUT_FOLDER="/dev/datasets/FairWind/_results/cut/bridgeless"; OUTPUT_FOLDER="/dev/datasets/FairWind/_results/cut/bridgeless_SL"; mkdir -p $OUTPUT_FOLDER; cd $INPUT_FOLDER; for file in *.fastq.gz; do ( zcat $INPUT_FOLDER/$file | grep -oh "^[^ ]*" | gzip -c - > $OUTPUT_FOLDER/$file; echo $file is done. ) & done
 ```
+
+## Выравнивание неразрезанных ридов
+
+Команда:
+
+```bash
+boomer;
+Logo "Uncut Align";
+THREADS=10;
+GENOME="/dev/datasets/FairWind/_db/hg19/hg19.fa"
+INPUT_DIR="/dev/datasets/FairWind/_results/cut/bridgeless";
+SAM_DIR="/dev/datasets/FairWind/_results/cut/uncut_sam";
+BAM_DIR="/dev/datasets/FairWind/_results/cut/uncut_bam";
+mkdir -p $SAM_DIR;
+mkdir -p $BAM_DIR;
+for var in '1-1' '1-2' '1-3' '1-4' '1-5' '1-6' '1-7' '1-8' '1-9';
+do {
+start_time=$(StartTime);
+bwa mem -t $THREADS -v 1 $GENOME $INPUT_DIR/sample-"$var"_R1_Bridgeless.fastq.gz $INPUT_DIR/sample-"$var"_R2_Bridgeless.fastq.gz | tee $SAM_DIR/sample-"$var".sam | samtools view -bS -@ $THREADS - | samtools sort -@ $THREADS -O BAM - > $BAM_DIR/sample-"$var"_sorted.bam;
+echo "Sample "$var" is ready "$(Timestamp $start_time)"";
+} done
+```
+
+### Как выравнивает BWA
+
+BWA выравнивает химерный рид в несколько мест.
+Затем он выделяет главное выравнивание и пишет его в **soft-clipped** режиме, а другой выровненный кусок он пишет с тем же именем, но с флагом **supplementary** и в **hard-clipped** режиме.
+
+Выравнивание идёт значительно эффективнее и в случае химерных ридов сравнимо с таковым при разрезании и скармливании ридов bowtie, но и гораздо медленнее (в ~2 раз).

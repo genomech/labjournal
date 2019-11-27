@@ -59,44 +59,36 @@ def processing(block):
 		r2 = AllData['result'][1] if AllData['result'][1]['pos'] > AllData['result'][2]['pos'] else AllData['result'][2]
 		if (r1['barcode'] in barcodes.index) and (r2['barcode'] in barcodes.columns) and (r1['primer_name'] == r2['primer_name']) and (abs(r1['dpos']) < C_POS_MISMATCH) and (abs(r2['dpos']) < C_POS_MISMATCH) and r1['right_orient'] and r2['right_orient']:
 			AllData['animal'] = barcodes[r2['barcode']][r1['barcode']]
-	if AllData['animal'] != 0:
-		for key in block.keys(): block[key].qname = block[key].qname + "__" + AllData['result'][key]['primer_name'] + AllData['result'][key]['orient'] + ":" + (AllData['result'][key]['barcode'] if AllData['result'][key]['orient'] == 'F' else reverse_barcodes[AllData['result'][key]['barcode']])
-		return (AllData['animal'], block)
+			for key in block.keys(): block[key].qname = block[key].qname + "__" + AllData['result'][key]['primer_name'] + AllData['result'][key]['orient'] + ":" + AllData['result'][key]['barcode']
+			return (AllData['animal'], block)
+	return (0, block)
 
 results = {}
-for i in range(1,20): results[i] = []
+for i in range(0,20): results[i] = []
 
 total = 0
-wrote = 0
 first = True
 _buffer = {1 : None, 2 : None }
 
 samfile = pysam.AlignmentFile("/dev/datasets/FairWind/Pavel/seq.sam", "r")
 
 with Blister.Timestamp("SORT") as start_time:
+	for key in results.keys(): results[key] = pysam.AlignmentFile(f"/dev/datasets/FairWind/Pavel/sorted/animal_{key}.sam", "w", template=samfile)
 	for read in samfile:
 		if first: _buffer[1] = read
 		else:
 			_buffer[2] = read
 			assert _buffer[1].query_name == _buffer[2].query_name
 			result = processing(_buffer)
-			if type(result) == type(tuple()): 
-				results[result[0]] += [ result[1][1], result[1][2] ]
-				wrote += 1
-				Blister.ProgressBar(total / 51044527, start_time)
+			results[result[0]].write(result[1][1])
+			results[result[0]].write(result[1][2])
+			Blister.ProgressBar(total / 51044527, start_time)
 			total += 1
 		first = not first
 		if C_MAX != 0:
 			if total == C_MAX: break
 	Blister.Erase()
-
-with Blister.Timestamp("SAVE") as start_time:
-	for key in results.keys():
-		new_file = pysam.AlignmentFile(f"/dev/datasets/FairWind/Pavel/sorted/animal_{key}.sam", "w", template=samfile)
-		for read in results[key]: new_file.write(read)
-		new_file.close()
-	del results
-
+	for key in results.keys(): result[key].close()
 	samfile.close()
 
-print(f"Total pairs: {total}\nWritten: {wrote}")
+print(f"Total pairs: {total}")
