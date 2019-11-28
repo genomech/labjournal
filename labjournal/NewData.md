@@ -290,6 +290,44 @@ echo "Sample "$var" is ready "$(Timestamp $start_time)"";
 BamIndex $BAM_DIR/*.bam
 ```
 
+### Буква перед бриджом
+
+Команда:
+
+```bash
+boomer;
+echo "| Sample | A | T | G | C |";
+for file in /dev/datasets/FairWind/_results/November/Illuminaless/*1_Illuminaless.fq.gz;
+do {
+At=$(zcat $file | head -1000000 | grep AGCTGAGG | wc -l);
+Tt=$(zcat $file | head -1000000 | grep TGCTGAGG | wc -l);
+Gt=$(zcat $file | head -1000000 | grep GGCTGAGG | wc -l);
+Ct=$(zcat $file | head -1000000 | grep CGCTGAGG | wc -l);
+AllBridge=$(zcat $file | head -1000000 | grep GCTGAGG | wc -l);
+StartBridge=$(zcat $file | head -1000000 | grep ^GCTGAGG | wc -l);
+Nb=$(( AllBridge - StartBridge ));
+Ap=$(( At * 100 / Nb ));
+Tp=$(( Tt * 100 / Nb ));
+Gp=$(( Gt * 100 / Nb ));
+Cp=$(( Ct * 100 / Nb ));
+echo "| "$(FileBase $file)" | "$Ap" | "$Tp" | "$Gp" | "$Cp" |";
+} done
+```
+
+Результаты.
+В сумме получается >100% из-за особенностей округления.
+
+| Sample                                       | A   | T   | G   | C   |
+|:---------------------------------------------|:---:|:---:|:---:|:---:|
+| 191107_X603_FCH5KNCCCX2_L5_15_1_Illuminaless | 33  | 5   | 65  | 2   |
+| 191107_X603_FCH5KNCCCX2_L5_19_1_Illuminaless | 25  | 11  | 66  | 4   |
+| 191107_X603_FCH5KNCCCX2_L5_2_1_Illuminaless  | 24  | 16  | 66  | 4   |
+| 191107_X603_FCH5KNCCCX2_L5_4_1_Illuminaless  | 40  | 14  | 48  | 4   |
+| 191107_X603_FCH5KNCCCX2_L5_5_1_Illuminaless  | 25  | 16  | 60  | 5   |
+| 191107_X603_FCH5KNCCCX2_L5_6_1_Illuminaless  | 26  | 10  | 64  | 2   |
+| 191107_X603_FCH5KNCCCX2_L5_7_1_Illuminaless  | 22  | 11  | 68  | 4   |
+
+
 ## Данные Сальникова
 
 1. Создание bed-файла
