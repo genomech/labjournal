@@ -254,7 +254,7 @@ BGG/EG:
 [15](./scripts_results/November_PatternAnalysis_Cut_A-tail/191107_X603_FCH5KNCCCX2_L5_15_1_Illuminaless_PatternAnalysis.csv),
 [19](./scripts_results/November_PatternAnalysis_Cut_A-tail/191107_X603_FCH5KNCCCX2_L5_19_1_Illuminaless_PatternAnalysis.csv).
 
-### Анализ контекста возле BG
+### Анализ контекста в геноме после бриджа
 
 ```bash
 boomer;
@@ -308,7 +308,8 @@ BamIndex $BAM_DIR/*.bam
 6. 191107_X603_FCH5KNCCCX2_L5_19_BGG-100k. GATC: F = 10.8%, R = 10.6%
 ![image](./scripts_results/November_context/19.png)
 
-
+**Вывод:** в геноме практически всегда есть GATC. 
+Скорее всего, бридж залипает именно на него.
 
 
 ### Буква перед бриджом
