@@ -290,6 +290,27 @@ echo "Sample "$var" is ready "$(Timestamp $start_time)"";
 BamIndex $BAM_DIR/*.bam
 ```
 
+Дальнейший анализ производился питоновским скриптом.
+
+Результаты.
+На графике показано распределение букв в контексте, отличном от GATC, в Forward- и Reverse-ридах соответственно.
+
+1. 191107_X603_FCH5KNCCCX2_L5_2_BGG-100k. GATC: F = 28.8%, R = 28.6%
+![image](./scripts_results/November_context/2.png)
+2. 191107_X603_FCH5KNCCCX2_L5_5_BGG-100k. GATC: F = 33.8%, R = 33.6%
+![image](./scripts_results/November_context/5.png)
+3. 191107_X603_FCH5KNCCCX2_L5_6_BGG-100k. GATC: F = 13.1%, R = 12.7%
+![image](./scripts_results/November_context/6.png)
+4. 191107_X603_FCH5KNCCCX2_L5_7_BGG-100k. GATC: F = 12.8%, R = 12.8%
+![image](./scripts_results/November_context/7.png)
+5. 191107_X603_FCH5KNCCCX2_L5_15_BGG-100k. GATC: F = 8.8%, R = 8.5%
+![image](./scripts_results/November_context/15.png)
+6. 191107_X603_FCH5KNCCCX2_L5_19_BGG-100k. GATC: F = 10.8%, R = 10.6%
+![image](./scripts_results/November_context/19.png)
+
+
+
+
 ### Буква перед бриджом
 
 Команда:
@@ -305,7 +326,8 @@ Gt=$(zcat $file | head -1000000 | grep GGCTGAGG | wc -l);
 Ct=$(zcat $file | head -1000000 | grep CGCTGAGG | wc -l);
 AllBridge=$(zcat $file | head -1000000 | grep GCTGAGG | wc -l);
 StartBridge=$(zcat $file | head -1000000 | grep ^GCTGAGG | wc -l);
-Nb=$(( AllBridge - StartBridge ));
+NBridge=$(zcat $file | head -1000000 | grep NGCTGAGG | wc -l);
+Nb=$(( AllBridge - StartBridge - NBridge ));
 Ap=$(( At * 100 / Nb ));
 Tp=$(( Tt * 100 / Nb ));
 Gp=$(( Gt * 100 / Nb ));
