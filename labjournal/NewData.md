@@ -311,7 +311,6 @@ BamIndex $BAM_DIR/*.bam
 **Вывод:** в геноме практически всегда есть GATC. 
 Скорее всего, бридж залипает именно на него.
 
-
 ### Буква перед бриджом
 
 Команда:
@@ -350,6 +349,18 @@ echo "| "$(FileBase $file)" | "$Ap" | "$Tp" | "$Gp" | "$Cp" |";
 | 191107_X603_FCH5KNCCCX2_L5_6_1_Illuminaless  | 26  | 10  | 64  | 2   |
 | 191107_X603_FCH5KNCCCX2_L5_7_1_Illuminaless  | 22  | 11  | 68  | 4   |
 
+### Анализ контекста вокруг бриджа в ридах
+
+Суммарная статистика:
+
+![image](./scripts_results/November_Bridge_context/S2sum.png)
+
+Выборочные позиции:
+
+![image](./scripts_results/November_Bridge_context/S2P0.png)
+![image](./scripts_results/November_Bridge_context/S2P8.png)
+![image](./scripts_results/November_Bridge_context/S2P19.png)
+![image](./scripts_results/November_Bridge_context/S2P60.png)
 
 ## Данные Сальникова
 

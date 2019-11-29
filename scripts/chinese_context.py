@@ -2,49 +2,34 @@ import gzip
 import sys
 import numpy as np
 import string
+from lib.blister import *
+from Bio import SeqIO
 
-def Out(total_):
-    print("Total: %d" % (total_), end='\r')
+Blister.Logo("Context Analyzator")
 
-filename = '/dev/datasets/ngs_data/Chinese/bat-Hi-C_mES_alu1_1_10M.fastq'
-seq = "CGGTGGC"
-length = len(seq)
-poses = list([-12, -11, -10, -9, -8, -7, -6, -5, -4, -3, -2, -1, length, length + 1, length + 2, length + 3, length + 4, length + 5, length + 6, length + 7, length + 8, length + 9, length + 10, length + 11])
+C_POSITIONS = 12
+C_READ_LENGTH = 150
+C_SEQ = "GCTGAGG"
+
+filename = '/dev/datasets/FairWind/_results/November/Illuminaless/191107_X603_FCH5KNCCCX2_L5_2_1_Illuminaless.fq.gz'
+length = len(C_SEQ)
+poses = list(range(- C_POSITIONS, 0)) + list(range(length, length + C_POSITIONS))
 nuc = list('ATGCN0')
-a = np.zeros(shape=(150,24,6))
+a = np.zeros(shape=(C_READ_LENGTH, C_POSITIONS * 2, 6))
 
-print(f"\nPalindrome deep analysis.\nMaking a dump...\n")
-
-input0 = open(filename, 'r')
-
-counter = 0
 total = 0
-tyk = 0
 
-for line in input0:
-
-    Out(total)
-
-    counter += 1
-    if counter == 5:
-        counter = 1
-
-    if (counter == 2):
-        line_d = line
-        tyk = line_d.find(seq)
-        if not (tyk == -1):
-            for i in range(len(poses)):
-                pos_abs = tyk + poses[i]
-                if (pos_abs < 0) or (pos_abs > 149):
-                    a[tyk, i, nuc.index('0')] += 1
-                else:
-                    a[tyk, i, nuc.index(line_d[pos_abs])] += 1
-
-        total += 1
+with Blister.Read(filename, 'rt') as input_file, Blister.Timestamp(f"PARSING") as start_time:
+	for record in SeqIO.parse(input_file, "fastq"):
+		line = record.seq.__str__()
+		tyk = line.find(C_SEQ)
+		if tyk != -1:
+			for i in range(len(poses)):
+				pos_abs = tyk + poses[i]
+				if (pos_abs < 0) or (pos_abs > 149) or (len(line) <= pos_abs): a[tyk, i, nuc.index('0')] += 1
+				else: a[tyk, i, nuc.index(line[pos_abs])] += 1
+		total += 1
+		if total > 1000000: break
 
 print(np.sum(a, axis = (1, 2)))
-np.save('/dev/datasets/FairWind/_results/chinese.dump', a)
-
-print('\n')
-
-input0.close()
+np.save('/dev/datasets/FairWind/_results/test.dump', a)
