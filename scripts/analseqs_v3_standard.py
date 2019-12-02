@@ -6,8 +6,8 @@ import re
 from Bio import SeqIO
 from lib.blister import *
 
-C_INPUT_FILES = ["/dev/datasets/FairWind/_results/November/Illuminaless/*1_Illuminaless.fq.gz"]
-C_DIR_NAME = "/dev/datasets/FairWind/_results/November/November_PatternAnalysis_Cut_A-tail"
+C_INPUT_FILES = ["/dev/datasets/FairWind/_results/cut/bridgeless/sample-1-1_R1_Bridgeless.fastq.gz"]
+C_DIR_NAME = "/dev/datasets/FairWind/_results/"
 C_GENOME = '-genome-'
 C_SEQUENCES = np.array([
 	['-illumina-', 'AGATCGGAAG'],
@@ -25,7 +25,7 @@ C_SEQUENCES = np.array([
 	['-tnulb-', 'GCCACTG']
 	])
 C_KMER_SIZE = 12
-C_MAX = 1000000
+C_MAX = 1000
 
 def thread0(filename, output_dir):
 

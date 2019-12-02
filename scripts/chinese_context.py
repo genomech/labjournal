@@ -11,7 +11,7 @@ C_POSITIONS = 12
 C_READ_LENGTH = 150
 C_SEQ = "GCTGAGG"
 
-filename = '/dev/datasets/FairWind/_results/November/Illuminaless/191107_X603_FCH5KNCCCX2_L5_2_1_Illuminaless.fq.gz'
+filename = '/dev/datasets/FairWind/_results/sample-1-1_R1_Bridgeless_BG.fastq'
 length = len(C_SEQ)
 poses = list(range(- C_POSITIONS, 0)) + list(range(length, length + C_POSITIONS))
 nuc = list('ATGCN0')
@@ -32,4 +32,9 @@ with Blister.Read(filename, 'rt') as input_file, Blister.Timestamp(f"PARSING") a
 		if total > 1000000: break
 
 print(np.sum(a, axis = (1, 2)))
-np.save('/dev/datasets/FairWind/_results/test.dump', a)
+np.save('/dev/datasets/FairWind/_results/test2.dump', a)
+
+# import numpy as np
+# import pandas as pd
+# np.sum(obj, axis=(1,2))
+# pd.DataFrame(obj[0], index=list(range(-12, 0)) + list(range(1, 13)), columns=list("ATGCN0"))

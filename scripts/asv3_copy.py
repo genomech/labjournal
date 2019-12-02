@@ -6,8 +6,8 @@ import re
 from Bio import SeqIO
 from lib.blister import *
 
-C_INPUT_FILES = ["/dev/datasets/FairWind/_results/November/Illuminaless/*1_Illuminaless.fq.gz"]
-C_DIR_NAME = "/dev/datasets/FairWind/_results/November/November_BGG_100k"
+C_INPUT_FILES = ["/dev/datasets/FairWind/_results/cut/bridgeless/sample-1-1_R1_Bridgeless.fastq.gz"]
+C_DIR_NAME = "/dev/datasets/FairWind/_results/"
 C_GENOME = '-genome-'
 C_SEQUENCES = np.array([
 	['-illumina-', 'AGATCGGAAG'],
@@ -21,13 +21,13 @@ C_SEQUENCES = np.array([
 	['-tnulb-', 'GCCACTG']
 	])
 C_KMER_SIZE = 12
-C_MAX = 100000
+C_MAX = 234330
 
 def thread0(filename, output_dir):
 
 	seqs = pd.DataFrame(C_SEQUENCES, columns=['name', 'seq'])
 	genome = C_GENOME
-	output_file0 = Blister.Output(filename[1], output_dir, "BGG-100k", "fastq", rewrite=True, index=filename[0])
+	output_file0 = Blister.Output(filename[1], output_dir, "BG", "fastq", rewrite=True, index=filename[0])
 	main_list = []
 	main_table = pd.DataFrame(columns=['count', 'mask'])
 	total = 0
@@ -39,7 +39,7 @@ def thread0(filename, output_dir):
 				for index, row in seqs.iterrows(): line = line.replace(row['seq'], row['name'])
 				for it in range(1, C_KMER_SIZE): line = re.sub("(^|-)[ATGCN]{%s}($|-)" % (it), "--[%s]--" % it, line)
 				line = re.sub(r"[ATGCN]+", genome, line)
-				if line == "-bridge--gatc--genome-":
+				if line == "-genome--bridge--gatc--genome-":
 					SeqIO.write(record, output_handle, "fastq")
 					total += 1
 				if total == C_MAX: break

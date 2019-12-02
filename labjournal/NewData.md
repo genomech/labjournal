@@ -362,6 +362,18 @@ echo "| "$(FileBase $file)" | "$Ap" | "$Tp" | "$Gp" | "$Cp" |";
 ![image](./scripts_results/November_Bridge_context/S2P19.png)
 ![image](./scripts_results/November_Bridge_context/S2P60.png)
 
+### Такая же статистика для старого образца 1-2, на ридах вида `-genome--bridge--gatc--genome-`
+
+Суммарная статистика:
+
+![image](./scripts_results/Old_Bridge_context/S1-2sum.png)
+
+Выборочные позиции:
+
+![image](./scripts_results/Old_Bridge_context/S1-2P13.png)
+![image](./scripts_results/Old_Bridge_context/S1-2P20.png)
+![image](./scripts_results/Old_Bridge_context/S1-2P60.png)
+
 ## Данные Сальникова
 
 1. Создание bed-файла
