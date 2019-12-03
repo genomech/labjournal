@@ -374,6 +374,16 @@ echo "| "$(FileBase $file)" | "$Ap" | "$Tp" | "$Gp" | "$Cp" |";
 ![image](./scripts_results/Old_Bridge_context/S1-2P20.png)
 ![image](./scripts_results/Old_Bridge_context/S1-2P60.png)
 
+### Расширенный контекст
+
+![image](./scripts_results/November_Bridge_context/50_P50-100.png)
+
+Предполагаемая последовательность:
+
+```
+AAATTAGC(C|T)(A|G)GG(T|C)(A|G)TGGTGGC??AT(A|G)CCTGTAATCCCAGCTACTTGGGAG[GCTGAGG]GATC(C|A)(G|C)(A|T)AT(G|C)?CTTGAACCC(A|G)GGAGGT?GAG(A|G)TT?CAGTGAGC?AAGAT?
+```
+
 ## Данные Сальникова
 
 1. Создание bed-файла
