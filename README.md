@@ -17,3 +17,4 @@
 - [x] Гарри Поттер и [Сравнение экспрессии (Берлин)](./labjournal/Expression_comparison.md)
 - [ ] Гарри Поттер и [Поиск мутаций (Томск)](./labjournal/Recombinations_search.md)
 - [ ] Гарри Поттер и [Ноябрьские данные BGI HiC](./labjournal/NewData.md)
+- [ ] Гарри Поттер и [Декабрьские данные Динары](./labjournal/December_Dinara.md)

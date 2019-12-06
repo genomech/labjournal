@@ -320,3 +320,27 @@ PicardCommandLine MarkDuplicates REMOVE_DUPLICATES=true M=$OUTPUT_FOLDER/$(FileB
 echo "Sample "$(FileBase $file)" is ready "$(Timestamp $start_time)"";
 } done
 ```
+
+Обновлённая команда.
+Удаление дубликатов идёт через стадию пересортировки по queryname.
+
+```bash
+boomer;
+output_folder="/dev/datasets/FairWind/_results/cut/uncut_picard";
+mkdir -p $output_folder;
+mkdir -p $output_folder/queryname_sorted;
+for file in /dev/datasets/FairWind/_results/cut/uncut_sam/*.sam;
+do PicardCommandLine SortSam SO=queryname I=$file O=$output_folder/queryname_sorted/$(FileBase $file).bam;
+done;
+Seal $output_folder/queryname_sorted;
+mkdir -p $output_folder/queryname_dupless;
+for file in $output_folder/queryname_sorted/*.bam;
+do PicardCommandLine MarkDuplicates REMOVE_DUPLICATES=true M=$output_folder/queryname_dupless/$(FileBase $file)_metrics.txt I=$file O=$output_folder/queryname_dupless/$(FileBase $file).bam;
+done;
+Seal $output_folder/queryname_dupless;
+mkdir -p $output_folder/coordinate_dupless;
+for file in $output_folder/queryname_dupless/*.bam;
+do PicardCommandLine SortSam SO=coordinate I=$file O=$output_folder/coordinate_dupless/$(FileBase $file)_sorted.bam;
+done;
+Seal $output_folder/coordinate_dupless;
+```
