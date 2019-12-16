@@ -344,3 +344,90 @@ do PicardCommandLine SortSam SO=coordinate I=$file O=$output_folder/coordinate_d
 done;
 Seal $output_folder/coordinate_dupless;
 ```
+
+## Freebayes
+
+```bash
+boomer;
+Logo "Filter Calls";
+out_dir="/dev/datasets/FairWind/_results/cut/filtercalls";
+exome="/dev/datasets/FairWind/_db/MedExome_hg19_capture_targets.sorted.bed";
+ref="/dev/datasets/FairWind/_db/hg19/hg19.fa";
+mkdir -p $out_dir;
+for file in /dev/datasets/FairWind/_results/cut/uncut_picard/strandless_sorted/*.bam;
+do {
+out=$(echo ""$out_dir"/"$(FileBase $file)"_0minc10maxc200.vcf");
+freebayes -0 --min-coverage 10 --max-coverage 200 -f $ref -t $exome -b $file -v $out;
+} done
+```
+
+Далее файлы были профильтрованы по **QUAL** > 20.
+
+## vcfallelicprimitives
+
+```bash
+boomer;
+Logo "Primitive Calls";
+out_dir="/dev/datasets/FairWind/_results/cut/filtercalls_primitive";
+mkdir -p $out_dir;
+for file in /dev/datasets/FairWind/_results/cut/filtercalls_qual20/*.vcf;
+do {
+out=$(echo ""$out_dir"/"$(FileBase $file)"_primitive.vcf");
+vcflib vcfallelicprimitives $file > $out;
+} done
+```
+
+## 20-120 dupless
+
+```bash
+boomer;
+Logo "SORT!";
+output_folder="/dev/datasets/FairWind/_results/cut/uncut_picard/20-120strandless_sorted";
+mkdir -p $output_folder;
+for file in /dev/datasets/FairWind/_results/cut/uncut_picard/20-120strandless/*.bam;
+do PicardCommandLine SortSam SO=coordinate I=$file O=$output_folder/$(FileBase $file).bam;
+done;
+Seal $output_folder;
+```
+
+```bash
+boomer;
+Logo "20-120 strandless coverage";
+FAI="/dev/datasets/FairWind/_db/hg19/hg19.fa.fai";
+NOT_EXOME="/dev/datasets/FairWind/_db/NOT_MedExome_hg19.bed";
+EXOME="/dev/datasets/FairWind/_db/MedExome_hg19_capture_targets.sorted.bed";
+OUTPUT_PATH="/dev/datasets/FairWind/_results/cut/uncut_picard/20-120strandless_coverage";
+mkdir -p $OUTPUT_PATH;
+for var in /dev/datasets/FairWind/_results/cut/uncut_picard/20-120strandless_sorted/*.bam;
+do {
+bedtools coverage -hist -sorted -g $FAI -a $NOT_EXOME -b $var > $OUTPUT_PATH/$(FileBase $var)_NotExomeCoverage.txt;
+bedtools coverage -hist -sorted -g $FAI -a $EXOME -b $var > $OUTPUT_PATH/$(FileBase $var)_ExomeCoverage.txt;
+} done
+```
+Результаты (**Sample 1-5**):
+
+Not Exome:
+
+| Sample    |   Non-coverage, % |   Middle |   Median |   Coverage 75% |   Coverage 90% |   Coverage 95% |
+|-----------|-------------------|----------|----------|----------------|----------------|----------------|
+| 20000000  |           76.6676 | 0.470739 |        0 |              0 |              0 |              0 |
+| 40000000  |           63.3146 | 0.93929  |        0 |              0 |              0 |              0 |
+| 60000000  |           54.1483 | 1.40686  |        0 |              0 |              0 |              0 |
+| 80000000  |           47.3194 | 1.87457  |        1 |              0 |              0 |              0 |
+| 100000000 |           41.9619 | 2.34179  |        1 |              0 |              0 |              0 |
+| 120000000 |           37.6379 | 2.80842  |        1 |              0 |              0 |              0 |
+
+![image](./scripts_results/20-120strandless_NotExome_graph.svg)
+
+Exome:
+
+| Sample    |   Non-coverage, % |   Middle |   Median |   Coverage 75% |   Coverage 90% |   Coverage 95% |
+|-----------|-------------------|----------|----------|----------------|----------------|----------------|
+| 20000000  |          14.907   |  5.70202 |        4 |              2 |              0 |              0 |
+| 40000000  |           5.93654 | 11.4352  |        8 |              4 |              1 |              0 |
+| 60000000  |           3.05398 | 17.2108  |       12 |              6 |              2 |              1 |
+| 80000000  |           1.79655 | 22.9267  |       16 |              8 |              3 |              2 |
+| 100000000 |           1.15451 | 28.6234  |       20 |             10 |              5 |              3 |
+| 120000000 |           0.76931 | 34.3574  |       24 |             12 |              6 |              3 |
+
+![image](./scripts_results/20-120strandless_Exome_graph.svg)

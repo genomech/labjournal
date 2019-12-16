@@ -127,7 +127,9 @@ sudo apt install bcftools bowtie2 bwa cutadapt fastqc hisat2 picard-tools samtoo
 | bwa | Выравнивание на геном |
 | cutadapt | Обрезка адаптеров |
 | fastqc | Оценка качества FASTQ |
+| freebayes | Variant Calling |
 | hisat2 | Выравнивание на геном |
+| libvcflib-tools | - |
 | picard-tools | Набор биоинформационных инструментов |
 | samtools | Работа с форматами SAM, BAM, CRAM |
 | vcftools | Работа с VCF |

@@ -43,7 +43,7 @@ def the_thread(block):
 
 Blister.Logo("Coverage Shorten")
 
-input_filenames = Blister.Input(["/dev/datasets/FairWind/_results/60m/PRIMARY_ANALYSIS_13D/coverage/full/*_ExomeCoverage.txt.all"])
+input_filenames = Blister.Input(["/dev/datasets/FairWind/_results/cut/uncut_picard/20-120strandless_coverage/*_ExomeCoverage.txt.all"])
 if not input_filenames: exit()
 
 main_table = pd.DataFrame(columns=table_index)
@@ -59,10 +59,10 @@ with Blister.Timestamp("PLOTTING") as start_time:
 		plt.plot(it[1]["cumulate_list"][:100], label=it[1]["Sample"])
 	plt.ylabel('% of A with more depth')
 	plt.xlabel('Depth')
-	plt.suptitle('Cumulative coverage (60M)')
+	plt.suptitle('Cumulative coverage')
 	plt.legend(prop=fontP)
-	plt.savefig("/dev/datasets/FairWind/_results/60m/PRIMARY_ANALYSIS_13D/coverage/full/graph.svg")
+	plt.savefig("/dev/datasets/FairWind/_results/cut/uncut_picard/20-120strandless_coverage/20-120strandless_Exome_graph.svg")
 
 main_table.drop(columns=['cumulate_list'], axis=0, inplace=True)
-main_table.to_csv("/dev/datasets/FairWind/_results/60m/PRIMARY_ANALYSIS_13D/coverage/full/table.csv")
+#main_table.to_csv("/dev/datasets/FairWind/_results/60m/PRIMARY_ANALYSIS_13D/coverage/full/table.csv")
 print(Blister.GitHubTable(main_table))

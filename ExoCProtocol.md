@@ -60,6 +60,10 @@ awk 'BEGIN{OFS="\t"}{print $1,$2,$3,$4,0,"."}' $capture.bed > "$capture"_QualiMa
 
 ### 7. Разбиение многобуквенных замен на однобуквенные (*vcfallelicprimitives*)
 
+```bash
+vcflib vcfallelicprimitives
+```
+
 **TODO:** Узнать, что происходит с параметрами vcf при разбиении.
 
 ### 8. Аннотация вариантов (*Annovar*, *Ensembl VEP*)
