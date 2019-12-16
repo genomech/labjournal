@@ -509,3 +509,16 @@ echo "File "$(FileBase $file)" is ready "$(Timestamp $start_time)"";
 BamIndex $output_dir/*.bam;
 Seal "$output_dir";
 ```
+
+### Покрытие
+
+Покрытие по зверям:
+
+![image](./scripts_results/Pavel_coverage/Pavel_coverage_data.png)
+
+Получилось очень футуристично, но мутно.
+Вот упрощённый вариант:
+
+![image](./scripts_results/Pavel_coverage/Pavel_coverage_data_simplified.png)
+
+Таблица ODS, [если понадобится](./scripts_results/Pavel_coverage/animals_coverage.ods).
