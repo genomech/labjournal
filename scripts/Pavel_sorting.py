@@ -64,12 +64,13 @@ def processing(block):
 		r2 = AllData['result'][1] if AllData['result'][1]['pos'] > AllData['result'][2]['pos'] else AllData['result'][2]
 		
 		if r1['primer_name'] != r2['primer_name']: stat["Different primers"] += 1
-		if (abs(r1['dpos']) >= C_POS_MISMATCH) or (abs(r2['dpos']) >= C_POS_MISMATCH):
-			stat["Primer position mismatch"] += 1
-			if not abs(r1['dpos']) in stat["Primer position mismatch stat"]: stat["Primer position mismatch stat"][abs(r1['dpos'])] = 1
-			else: stat["Primer position mismatch stat"][abs(r1['dpos'])] += 1
-			if not abs(r2['dpos']) in stat["Primer position mismatch stat"]: stat["Primer position mismatch stat"][abs(r2['dpos'])] = 1
-			else: stat["Primer position mismatch stat"][abs(r2['dpos'])] += 1
+		if (abs(r1['dpos']) >= C_POS_MISMATCH) or (abs(r2['dpos']) >= C_POS_MISMATCH): stat["Primer position mismatch"] += 1
+		if (abs(r1['dpos']) >= C_POS_MISMATCH):
+			if not (abs(r1['dpos']) - C_POS_MISMATCH) in stat["Primer position mismatch stat"]: stat["Primer position mismatch stat"][abs(r1['dpos']) - C_POS_MISMATCH] = 1
+			else: stat["Primer position mismatch stat"][abs(r1['dpos']) - C_POS_MISMATCH] += 1
+		if (abs(r2['dpos']) >= C_POS_MISMATCH):
+			if not (abs(r2['dpos']) - C_POS_MISMATCH) in stat["Primer position mismatch stat"]: stat["Primer position mismatch stat"][abs(r2['dpos']) - C_POS_MISMATCH] = 1
+			else: stat["Primer position mismatch stat"][abs(r2['dpos']) - C_POS_MISMATCH] += 1
 		if (r1['barcode'] in barcodes.index) != (r2['barcode'] in barcodes.columns): stat["No barcode"] += 1
 		if (not (r1['barcode'] in barcodes.index)) and (not (r2['barcode'] in barcodes.columns)): stat["No both barcodes"] += 1
 		if r1['right_orient'] != r2['right_orient']: stat["Same orientation"] += 1
