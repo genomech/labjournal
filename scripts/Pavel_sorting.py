@@ -3,7 +3,7 @@ import pandas as pd
 from lib.blister import *
 
 C_SHORT = 8
-C_MAX = 0
+C_MAX = 1000000
 C_POS_MISMATCH = 4
 
 primers = pd.DataFrame([
@@ -33,6 +33,8 @@ barcodes = pd.DataFrame([
 
 Blister.Logo("Pavel Animal Sorting")
 
+stat = {"Total": 0, "No primer": 0, "No both primers": 0, "Different primers": 0, "Primer position mismatch": 0, "Primer position mismatch stat": {}, "No barcode": 0, "No both barcodes": 0, "Same orientation": 0, "Orientation out": 0}
+
 def processing(block):
 	AllData = {}
 	AllData['result'] = {}
@@ -53,14 +55,31 @@ def processing(block):
 				break
 			data = None
 		AllData['result'][key] = data
+		
+	if type(AllData['result'][1]) == type(dict()) != type(AllData['result'][2]) == type(dict()): stat["No primer"] += 1
+	if (type(AllData['result'][1]) != type(dict())) and (type(AllData['result'][2]) != type(dict())): stat["No both primers"] += 1
 	
 	if type(AllData['result'][1]) == type(dict()) and type(AllData['result'][2]) == type(dict()):
 		r1 = AllData['result'][1] if AllData['result'][1]['pos'] < AllData['result'][2]['pos'] else AllData['result'][2]
 		r2 = AllData['result'][1] if AllData['result'][1]['pos'] > AllData['result'][2]['pos'] else AllData['result'][2]
+		
+		if r1['primer_name'] != r2['primer_name']: stat["Different primers"] += 1
+		if (abs(r1['dpos']) >= C_POS_MISMATCH) or (abs(r2['dpos']) >= C_POS_MISMATCH):
+			stat["Primer position mismatch"] += 1
+			if not abs(r1['dpos']) in stat["Primer position mismatch stat"]: stat["Primer position mismatch stat"][abs(r1['dpos'])] = 1
+			else: stat["Primer position mismatch stat"][abs(r1['dpos'])] += 1
+			if not abs(r2['dpos']) in stat["Primer position mismatch stat"]: stat["Primer position mismatch stat"][abs(r2['dpos'])] = 1
+			else: stat["Primer position mismatch stat"][abs(r2['dpos'])] += 1
+		if (r1['barcode'] in barcodes.index) != (r2['barcode'] in barcodes.columns): stat["No barcode"] += 1
+		if (not (r1['barcode'] in barcodes.index)) and (not (r2['barcode'] in barcodes.columns)): stat["No both barcodes"] += 1
+		if r1['right_orient'] != r2['right_orient']: stat["Same orientation"] += 1
+		if (not r1['right_orient']) and (not r2['right_orient']): stat["Orientation out"] += 1
+		
 		if (r1['barcode'] in barcodes.index) and (r2['barcode'] in barcodes.columns) and (r1['primer_name'] == r2['primer_name']) and (abs(r1['dpos']) < C_POS_MISMATCH) and (abs(r2['dpos']) < C_POS_MISMATCH) and r1['right_orient'] and r2['right_orient']:
 			AllData['animal'] = barcodes[r2['barcode']][r1['barcode']]
 			for key in block.keys(): block[key].qname = block[key].qname + "__" + AllData['result'][key]['primer_name'] + AllData['result'][key]['orient'] + ":" + AllData['result'][key]['barcode']
 			return (AllData['animal'], block)
+	stat["Total"] += 1
 	return (0, block)
 
 results = {}
@@ -70,25 +89,32 @@ total = 0
 first = True
 _buffer = {1 : None, 2 : None }
 
-samfile = pysam.AlignmentFile("/dev/datasets/FairWind/Pavel/seq.sam", "r")
+samfile = pysam.AlignmentFile("/dev/datasets/FairWind/Pavel/sorted_cut/_animal_0.bam", "r")
 
 with Blister.Timestamp("SORT") as start_time:
-	for key in results.keys(): results[key] = pysam.AlignmentFile(f"/dev/datasets/FairWind/Pavel/sorted/animal_{key}.sam", "w", template=samfile)
+	#for key in results.keys(): results[key] = pysam.AlignmentFile(f"/dev/datasets/FairWind/Pavel/sorted/animal_{key}.sam", "w", template=samfile)
 	for read in samfile:
 		if first: _buffer[1] = read
 		else:
 			_buffer[2] = read
-			assert _buffer[1].query_name == _buffer[2].query_name
+			if _buffer[1].query_name != _buffer[2].query_name:
+				print(_buffer[1])
+				print(_buffer[2])
 			result = processing(_buffer)
-			results[result[0]].write(result[1][1])
-			results[result[0]].write(result[1][2])
-			Blister.ProgressBar(total / 51044527, start_time)
+			#results[result[0]].write(result[1][1])
+			#results[result[0]].write(result[1][2])
+			#Blister.ProgressBar(total / 51044527, start_time)
 			total += 1
 		first = not first
 		if C_MAX != 0:
 			if total == C_MAX: break
-	Blister.Erase()
-	for key in results.keys(): result[key].close()
+	#Blister.Erase()
+	#for key in results.keys(): result[key].close()
 	samfile.close()
 
+new_order = {}
+for key in sorted(stat["Primer position mismatch stat"]):
+	new_order[key] = stat["Primer position mismatch stat"][key]
+stat["Primer position mismatch stat"] = new_order
+print(stat)
 print(f"Total pairs: {total}")

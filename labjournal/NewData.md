@@ -522,3 +522,27 @@ Seal "$output_dir";
 ![image](./scripts_results/Pavel_coverage/Pavel_coverage_data_simplified.png)
 
 Таблица ODS, [если понадобится](./scripts_results/Pavel_coverage/animals_coverage.ods).
+
+### Статистика по отброшенным ридам
+
+| Type                     | Absolute | %    |
+|:-------------------------|:-------|:-------|
+| Total                    | 999801 | 100,00 |
+| No primer                | 0      | 0,00   |
+| No both primers          | 85999  | 8,60   |
+| Different primers        | 8746   | 0,87   |
+| Primer position mismatch | 612000 | 61,21  |
+| No barcode               | 65636  | 6,56   |
+| No both barcodes         | 693    | 0,07   |
+| Same orientation         | 307    | 0,03   |
+| Orientation out          | 1      | 0,00   |
+
+**Примечание.**
+Здесь не учитывались различия между одним и двумя несовпадениями позиции праймера.
+Из-за высокого общего процента в сумме не получается 100%.
+
+Мисматчи по позициям:
+
+![image](./scripts_results/Pavel_trash_stats/trash_stats.png)
+
+Таблица ODS, [если понадобится](./scripts_results/Pavel_trash_stats/trash_stats.ods).
