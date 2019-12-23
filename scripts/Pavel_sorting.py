@@ -33,7 +33,7 @@ barcodes = pd.DataFrame([
 
 Blister.Logo("Pavel Animal Sorting")
 
-stat = {"Total": 0, "No primer": 0, "No both primers": 0, "Different primers": 0, "Primer position mismatch": 0, "Primer position mismatch stat": {}, "No barcode": 0, "No both barcodes": 0, "Same orientation": 0, "Orientation out": 0}
+stat = {"Total": 0, "Good o_O": 0, "No primer": 0, "No both primers": 0, "Different primers": 0, "Primer position mismatch": 0, "Primer position mismatch stat": {}, "No barcode": 0, "No both barcodes": 0, "Same orientation": 0, "Orientation out": 0}
 
 def processing(block):
 	AllData = {}
@@ -56,7 +56,7 @@ def processing(block):
 			data = None
 		AllData['result'][key] = data
 		
-	if type(AllData['result'][1]) == type(dict()) != type(AllData['result'][2]) == type(dict()): stat["No primer"] += 1
+	if (type(AllData['result'][1]) == type(dict())) != (type(AllData['result'][2]) == type(dict())): stat["No primer"] += 1
 	if (type(AllData['result'][1]) != type(dict())) and (type(AllData['result'][2]) != type(dict())): stat["No both primers"] += 1
 	
 	if type(AllData['result'][1]) == type(dict()) and type(AllData['result'][2]) == type(dict()):
