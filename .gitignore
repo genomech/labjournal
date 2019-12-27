@@ -1,7 +1,7 @@
 ## Articles, big files, etc.
 
 /res
-.pdf
+/Lab_Reports/**/*.pdf
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

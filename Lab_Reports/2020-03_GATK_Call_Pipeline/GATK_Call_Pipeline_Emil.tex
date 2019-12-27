@@ -1,0 +1,83 @@
+% Source: https://software.broadinstitute.org/gatk/best-practices/
+
+\documentclass{beamer}
+\usetheme{Warsaw}
+
+\title{GATK Variant Call Best Practices}
+\subtitle{BROAD Institute}
+\author{Emil V}
+\institute{Institute of Cytology \& Genetics, SB RAS}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents
+\end{frame}
+
+\section{Data pre-processing for variant discovery}
+
+\subsection{Map to Reference}
+
+\begin{frame}
+\frametitle{Map to Reference}
+
+\begin{enumerate}
+\item BWA --- mapping
+\begin{itemize}
+\item Good at mapping chimera reads
+\item Main alignment is soft-clipped, supplementary alignments are hard-clipped
+\item Multi-threading support 
+\end{itemize}
+\item MergeBamAlignments (Picard) --- merging files
+\end{enumerate}
+
+\end{frame}
+
+\subsection{Mark Duplicates \& Sort}
+
+\begin{frame}
+\frametitle{Mark Duplicates \& Sort}
+
+\begin{enumerate}
+\item MarkDuplicatesSpark (GATK)
+\begin{itemize}
+\item Perform both the duplicate marking step and the sort step
+\item Multi-threading support
+\item Can be run locally, without Spark cluster
+\item Machines with a high number of cores or fast disk drives
+\end{itemize}
+\item MarkDuplicates + SortSam (Picard)
+\begin{itemize}
+\item Duplicate marking and sorting by coordinate are divided
+\item Single-threaded
+\end{itemize}
+\end{enumerate}
+
+\begin{block}{Note}
+Both tools require query-sorted input. 
+\end{block}
+
+\end{frame}
+
+\subsection{Base (Quality Score) Recalibration}
+
+\begin{frame}
+\frametitle{Base (Quality Score) Recalibration}
+
+Optional GATK tools:
+
+\begin{enumerate}
+\item BaseRecalibrator
+\item Apply Recalibration
+\item AnalyzeCovariates
+\end{enumerate}
+
+\end{frame}
+
+\end{document}
