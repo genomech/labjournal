@@ -1,0 +1,15 @@
+{
+"Otherinfo1" : "trash_1",
+"Otherinfo2" : "VCF_QUAL",
+"Otherinfo3" : "trash_2",
+"Otherinfo4" : "VCF_Chr",
+"Otherinfo5" : "VCF_Start",
+"Otherinfo6" : "trash_3",
+"Otherinfo7" : "VCF_Ref",
+"Otherinfo8" : "VCF_Alt",
+"Otherinfo9" : "trash_4",
+"Otherinfo10" : "trash_5",
+"Otherinfo11" : "VCF_Info",
+"Otherinfo12" : "VCF_DataHeader",
+"Otherinfo13" : "VCF_DataValues"
+}

@@ -31,4 +31,4 @@ def the_thread(block, output_dir):
 		samfile.close()
 		filtered.close()
 	
-Blister.EachFile("Кусь за Русь!", ["/dev/datasets/FairWind/_results/cut/uncut_picard/queryname_dupless/*.bam"], "/dev/datasets/FairWind/_results/cut/uncut_picard/strandless", THREADS_NUM = cpu_count())(the_thread)()
+Blister.EachFile("Кусь за Русь!", ["/dev/datasets/FairWind/_results/case/128_S5_dupless.bam"], "/dev/datasets/FairWind/_results/case/", THREADS_NUM = cpu_count())(the_thread)()

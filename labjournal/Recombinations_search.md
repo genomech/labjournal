@@ -377,6 +377,29 @@ vcflib vcfallelicprimitives $file > $out;
 } done
 ```
 
+Результаты работы:
+
+```
+BEFORE:
+chr1	899932	.	AGGGGGGCGCGGGTC	AGGGGTCCGCAGGTC	509.966	.	AB=0;ABP=0;AC=2;AF=1;AN=2;AO=16;CIGAR=5M2X3M1X4M;DP=21;DPB=21.8;DPRA=0;EPP=3.55317;EPPR=0;GTI=0;LEN=15;MEANALT=4;MQM=59.125;MQMR=0;NS=1;NUMALT=1;ODDS=7.42288;PAIRED=0.875;PAIREDR=0;PAO=1;PQA=38.3333;PQR=38.3333;PRO=1;QA=594;QR=0;RO=0;RPL=10;RPP=5.18177;RPPR=0;RPR=6;RUN=1;SAF=7;SAP=3.55317;SAR=9;SRF=0;SRP=0;SRR=0;TYPE=complex	GT:DP:AD:RO:QR:AO:QA:GL	1/1:21:0,16:0:0:16:594:-53.4254,-4.81648,0
+
+AFTER:
+chr1	899937	.	G	T	509.966	.	AC=2;AF=1;LEN=1;TYPE=snp	GT	1|1
+chr1	899938	.	G	C	509.966	.	AC=2;AF=1;LEN=1;TYPE=snp	GT	1|1
+chr1	899942	.	G	A	509.966	.	AC=2;AF=1;LEN=1;TYPE=snp	GT	1|1
+```
+
+Делеции:
+
+```
+BEFORE:
+chr1	1420569	.	GCCCTCCCTG	GCCTG	295.639	.	AB=0.466667;ABP=3.29983;AC=1;AF=0.5;AN=2;AO=14;CIGAR=1M5D4M;DP=30;DPB=23;DPRA=0;EPP=5.49198;EPPR=3.0103;GTI=0;LEN=5;MEANALT=1;MQM=59.9286;MQMR=54.75;NS=1;NUMALT=1;ODDS=68.0734;PAIRED=1;PAIREDR=1;PAO=0;PQA=0;PQR=0;PRO=0;QA=494;QR=599;RO=16;RPL=11;RPP=12.937;RPPR=11.6962;RPR=3;RUN=1;SAF=8;SAP=3.63072;SAR=6;SRF=10;SRP=5.18177;SRR=6;TYPE=del	GT:DP:AD:RO:QR:AO:QA:GL	0/1:30:16,14:16:599:14:494:-35.7353,0,-45.0125
+
+AFTER:
+chr1	1420569	.	GCCCTC	G	295.639	.	AC=1;AF=0.5;LEN=5;TYPE=del	GT	0|1
+```
+
+
 ## 20-120 dupless
 
 ```bash
@@ -431,3 +454,17 @@ Exome:
 | 120000000 |           0.76931 | 34.3574  |       24 |             12 |              6 |              3 |
 
 ![image](./scripts_results/20-120strandless_Exome_graph.svg)
+
+## Annovar
+
+Загрузка списка доступных БД:
+
+```bash
+perl annotate_variation.pl -downdb -buildver hg19 -webfrom annovar avdblist humandb/
+```
+
+Таблица:
+
+```bash
+perl table_annovar.pl ./sample-1-1_strand-filtered_sorted_0minc10maxc200_QUAL20_primitive.vcf ./humandb -buildver hg19 -protocol knownGene,ensGene,refGene,abraom,AFR.sites.2015_08,ALL.sites.2015_08,AMR.sites.2015_08,ASN.sites.2012_04,avgwas_20150121,avsift,avsnp150,cadd13,cg69,clinvar_20190305,cosmic70,dann,dbnsfp35c,dbscsnv11,EAS.sites.2015_08,eigen,esp6500_all,EUR.sites.2015_08,exac03,fathmm,gene4denovo201907,gerp++,gme,gnomad211_genome,gwava,hrcr1,icgc21,intervar_20180118,kaviar_20150923,ljb26_all,mcap13,mitimpact24,MT_ensGene,nci60,popfreq_all_20150413,regsnpintron,revel,SAS.sites.2015_08,snp142 --operation g,g,g,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f --remove --vcfinput --thread 10
+```
