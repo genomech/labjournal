@@ -5,9 +5,11 @@ __author__ = "Zanthia"
 
 import collections
 import numpy as np
+import os
 import pandas as pd
 import sys
 
+current_dir = os.path.dirname(sys.argv[0])
 input_filename = sys.argv[1]
 output_filename = sys.argv[2]
 
@@ -29,9 +31,9 @@ numbered_cols = ["PopFreqMax", "AF_male", "AF_female", "non_neuro_AF_popmax", "n
 other_info = {"Otherinfo1": "trash_1", "Otherinfo2": "VCF_QUAL", "Otherinfo3": "trash_2", "Otherinfo4": "VCF_Chr", "Otherinfo5": "VCF_Start", "Otherinfo6": "trash_3", "Otherinfo7": "VCF_Ref", "Otherinfo8": "VCF_Alt", "Otherinfo9": "trash_4", "Otherinfo10": "trash_5", "Otherinfo11": "VCF_Info", "Otherinfo12": "VCF_DataHeader", "Otherinfo13": "VCF_DataValues"}
 
 # load data
-with open("annofit_data/order.list", 'r') as f: order = f.read().splitlines()
-hgmd_data = pd.read_csv("annofit_data/hgmd.csv", sep='\t')
-omim_data = pd.read_csv("annofit_data/omim_splinted.csv", sep='\t')
+with open(current_dir + "/annofit_data/order.list", 'r') as f: order = f.read().splitlines()
+hgmd_data = pd.read_csv(current_dir + "/annofit_data/hgmd.csv", sep='\t')
+omim_data = pd.read_csv(current_dir + "/annofit_data/omim_splinted.csv", sep='\t')
 data = pd.read_csv(input_filename, sep='\t')
 
 # hgmd + omim
@@ -44,7 +46,7 @@ data = pd.merge(omim_data, data, how='right', on=["Gene.refGene"])
 data.rename(columns=other_info, inplace=True)
 
 # vcf data
-gotcha = data["VCF_DataValues"].apply(lambda x: str.split(x, ':'))
+gotcha = data["VCF_DataValues"].apply(lambda x: str.split(str(x), ':'))
 gotcha = gotcha.apply(lambda x: pd.Series(x, index=vcf1_header) if len(x) == len(vcf1_header) else pd.Series(x + ([float('NaN')] * 7), index=vcf1_header))
 gotcha["VCF_GT"] = gotcha["VCF_GT"].apply(lambda x: x.replace('|', '/'))
 gotcha["VCF_DP"].fillna('.', inplace=True)
