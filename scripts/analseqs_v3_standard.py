@@ -11,10 +11,14 @@ C_DIR_NAME = "/dev/datasets/FairWind/_results/February_Krasikova"
 C_GENOME = '-genome-'
 C_SEQUENCES = np.array([
 	['-illumina-', 'AGATCGGAAG'],
-	['-[a]linker[t]-', 'ACGCGATATCTTATCTGACT'],
-	['-linker[t]-', 'CGCGATATCTTATCTGACT'],
-	['-[a]linker-', 'ACGCGATATCTTATCTGAC'],
-	['-linker-', 'CGCGATATCTTATCTGAC'],
+	['-[a]lin-', 'ACGCGATATC'],
+	['-lin-', 'CGCGATATC'],
+	['-ker[t]-', 'TTATCTGACT'],
+	['-ker-', 'TTATCTGAC'],
+	['-[a]rek-', 'AGTCAGATAA'],
+	['-rek-', 'GTCAGATAA'],
+	['-nil[t]-', 'GATATCGCGT'],
+	['-nil-', 'GATATCGCG']
 	])
 C_KMER_SIZE = 12
 C_MAX = 0
