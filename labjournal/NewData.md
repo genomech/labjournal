@@ -546,3 +546,15 @@ Seal "$output_dir";
 ## Оффтоп. Февральские данные Красиковой
 
 Контекстный анализ: [2](./scripts_results/February_Krasikova_context/Fishman2_S60_R1_001_PatternAnalysis.csv), [7](./scripts_results/February_Krasikova_context/Fishman7_S65_R1_001_PatternAnalysis.csv)
+
+| Pattern | Seq |
+|:----|:----|
+| -illumina- | AGATCGGAAG |
+| -[a]lin- | ACGCGATATC |
+| -lin- | CGCGATATC |
+| -ker[t]- | TTATCTGACT |
+| -ker- | TTATCTGAC |
+| -[a]rek- | AGTCAGATAA |
+| -rek- | GTCAGATAA |
+| -nil[t]- | GATATCGCGT |
+| -nil- | GATATCGCG |
