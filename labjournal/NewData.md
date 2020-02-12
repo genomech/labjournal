@@ -542,3 +542,7 @@ Seal "$output_dir";
 ![image](./scripts_results/Pavel_trash_stats/trash_stats.png)
 
 Таблица ODS, [если понадобится](./scripts_results/Pavel_trash_stats/trash_stats.ods).
+
+## Оффтоп. Февральские данные Красиковой
+
+Контекстный анализ: [2](./scripts_results/February_Krasikova_context/Fishman2_S60_R1_001_PatternAnalysis.csv), [7](./scripts_results/February_Krasikova_context/Fishman7_S65_R1_001_PatternAnalysis.csv)

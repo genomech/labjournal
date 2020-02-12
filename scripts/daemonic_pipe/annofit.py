@@ -38,7 +38,7 @@ data = pd.read_csv(input_filename, sep='\t')
 
 # hgmd + omim
 data = pd.merge(hgmd_data, data, how='right', on=["Chr", "Start"])
-data["Gene.refGene"] = data["Gene.refGene"].apply(lambda x: ';'.join(sorted(str.split(x, ';'))))
+data["Gene.refGene"] = data["Gene.refGene"].apply(lambda x: ';'.join(sorted(list(set(str.split(x, ';'))))))
 genez = [str.split(x, ';') for x in data["Gene.refGene"][data["Gene.refGene"].apply(lambda x: x.find(';') != -1)].unique()]
 for item in genez: omim_data = omim_data.append(df_squeeze(omim_data[omim_data["Gene.refGene"].apply(lambda x: x in item)]), ignore_index=True)
 omim_data.dropna(axis=0, how='all', inplace=True)
