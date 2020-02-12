@@ -558,3 +558,9 @@ Seal "$output_dir";
 | -rek- | GTCAGATAA |
 | -nil[t]- | GATATCGCGT |
 | -nil- | GATATCGCG |
+
+Анализ dangling ends с помощью оптимизированного скрипта: [2](./scripts_results/February_Krasikova_context/s18_R1_FR_less500bp.csv), [7](./scripts_results/February_Krasikova_context/s23_R1_FR_less500bp.csv)
+
+```bash
+python3 cofqan.py -i /dev/datasets/ngs_data/February_DangEnds/s18_R1_FR_less500bp.fastq.gz -o /dev/datasets/FairWind/_results/February_Krasikova/s18_R1_FR_less500bp.csv -p '{"illumina": "AGATCGGAAG", "[a]lin": "ACGCGATATC", "lin": "CGCGATATC", "ker[t]": "TTATCTGACT", "ker": "TTATCTGAC", "[a]rek": "AGTCAGATAA", "rek": "GTCAGATAA", "nil[t]": "GATATCGCGT", "nil": "GATATCGCG"}' -k 12
+```
