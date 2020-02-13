@@ -1,8 +1,8 @@
 __version__ = "0.33"
 __author__ = "regnveig"
 
-from contextlib import contextmanager
 from Bio import SeqIO
+from contextlib import contextmanager
 from multiprocessing import cpu_count, Pool
 import argparse
 import bz2
