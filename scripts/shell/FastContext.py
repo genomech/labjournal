@@ -1,8 +1,8 @@
-__version__ = "0.32"
+__version__ = "0.33"
 __author__ = "regnveig"
 
-from Bio import SeqIO
 from contextlib import contextmanager
+from Bio import SeqIO
 from multiprocessing import cpu_count, Pool
 import argparse
 import bz2
@@ -46,11 +46,11 @@ def Threading(threads):
 
 def createParser():
 	
-	Default_parser = argparse.ArgumentParser(formatter_class=argparse.RawDescriptionHelpFormatter, description=f"CoFQan: Context FastQ Analyzer", epilog=f"Author: {__author__}")
+	Default_parser = argparse.ArgumentParser(formatter_class=argparse.RawDescriptionHelpFormatter, description=f"FastContext: FastQ Context Analyzer", epilog=f"Author: {__author__}")
 	Default_parser.add_argument('-v', '--version', action='version', version=__version__)
 	Default_parser.add_argument ('-i', '--input', required=True, type=str, dest="input_filename", help='Fastq input file (may be gzipped or bzipped)')
 	Default_parser.add_argument ('-o', '--output', required=True, type=str, dest="output_filename", help='Output CSV file')
-	Default_parser.add_argument ('-p', '--patterns', required=True, type=str, dest="patterns", help='Patterns to look for, plain JSON format: \'\{"pattern_1": "seq_1", "pattern_2": "seq_2"}\'')
+	Default_parser.add_argument ('-p', '--patterns', required=True, type=str, dest="patterns", help='Patterns to look for, plain JSON format: \'{"pattern_1": "seq_1", "pattern_2": "seq_2"}\'')
 	Default_parser.add_argument ('-k', '--kmer-size', default=GLOBAL_KMER_SIZE, type=int, dest="kmer_size", help=f'Max unrecognized K-mer size. Default = {GLOBAL_KMER_SIZE}')
 	Default_parser.add_argument ('-u', '--unrecognized', default=GLOBAL_UNRECOGNIZED, type=str, dest="unrecognized", help=f'Long unrecognized sequences replacement. Default = {GLOBAL_UNRECOGNIZED}')
 	Default_parser.add_argument ('-m', '--max-reads', default=GLOBAL_MAX, type=int, dest="max_reads", help=f'Max reads number to analyze (0 - no limit). Default = {GLOBAL_MAX}')
