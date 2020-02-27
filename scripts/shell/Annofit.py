@@ -1,7 +1,7 @@
-#!/bin/python3
+# perl $annovar_dir/table_annovar.pl $input_vcf $annovar_dir/humandb -buildver $genome_assembly -protocol knownGene,ensGene,refGene,abraom,AFR.sites.2015_08,ALL.sites.2015_08,AMR.sites.2015_08,ASN.sites.2012_04,avgwas_20150121,avsift,avsnp150,cadd13,cg69,clinvar_20190305,cosmic70,dann,dbnsfp35c,dbscsnv11,EAS.sites.2015_08,eigen,esp6500_all,EUR.sites.2015_08,exac03,fathmm,gene4denovo201907,gerp++,gme,gnomad211_genome,gwava,hrcr1,icgc21,intervar_20180118,kaviar_20150923,ljb26_all,mcap13,mitimpact24,MT_ensGene,nci60,popfreq_all_20150413,regsnpintron,revel,SAS.sites.2015_08,snp142 --operation g,g,g,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f --remove --vcfinput --thread $threads;
 
 __version__ = "0.02"
-__author__ = "Zanthia"
+__author__ = "regnveig"
 
 import collections
 import numpy as np
@@ -25,6 +25,7 @@ merge_func = lambda x: ','.join(list(set(x.to_list())))
 prediction_merge = lambda x: ''.join(x.to_list())
 
 # const
+PC_header = ["pc_H", "pc_M", "pc_L", "pc_U"]
 vcf1_header = ["VCF_GT", "VCF_DP", "VCF_AD", "VCF_RO", "VCF_QR", "VCF_AO", "VCF_QA", "VCF_GL"]
 prediction_set = ["SIFT_pred", "LRT_pred", "MutationTaster_pred", "MutationAssessor_pred", "FATHMM_pred", "PROVEAN_pred", "MetaSVM_pred", "MetaLR_pred", "M-CAP_pred", "Polyphen2_HDIV_pred", "Polyphen2_HVAR_pred", "LR_pred", "regsnp_disease"]
 numbered_cols = ["PopFreqMax", "AF_male", "AF_female", "non_neuro_AF_popmax", "non_cancer_AF_popmax", "VCF_DP"]
@@ -48,19 +49,19 @@ data.rename(columns=other_info, inplace=True)
 # vcf data
 gotcha = data["VCF_DataValues"].apply(lambda x: str.split(str(x), ':'))
 gotcha = gotcha.apply(lambda x: pd.Series(x, index=vcf1_header) if len(x) == len(vcf1_header) else pd.Series(x + ([float('NaN')] * 7), index=vcf1_header))
-gotcha["VCF_GT"] = gotcha["VCF_GT"].apply(lambda x: x.replace('|', '/'))
+gotcha["VCF_GT"] = gotcha["VCF_GT"].apply(lambda x: x.replace('|', '/')).apply(lambda x: "-" if (x == "0/0") else ("HOMO" if (len(set(x.split('/'))) == 1) else x))
 gotcha["VCF_DP"].fillna('.', inplace=True)
 data = pd.concat([data, gotcha], axis=1)
-
-# sort
-data.sort_values(by=["Chr", "Start"], inplace=True)
 
 # other
 data["Func_comp"] = data[["Func.knownGene", "Func.refGene", "Func.ensGene"]].apply(merge_func, axis=1)
 data["ExonicFunc_comp"] = data[["ExonicFunc.knownGene", "ExonicFunc.refGene", "ExonicFunc.ensGene"]].apply(merge_func, axis=1)
 data["GeneName_comp"] = data[["Gene.knownGene", "Gene.refGene"]].apply(merge_func, axis=1)
-data["Prediction_comp"] = data[prediction_set].apply(prediction_merge, axis=1)
 data["Significance_comp"] = data[["CLNSIG", "InterVar_automated"]].apply(merge_func, axis=1)
+
+data["Prediction_comp"] = data[prediction_set].apply(prediction_merge, axis=1)
+predict = data["Prediction_comp"].apply(lambda x: pd.Series([x.count('D') + x.count('H') + x.count('A'), x.count('P') + x.count('M'), x.count('T') + x.count('B') + x.count('N') + x.count('L'), x.count('.') + x.count('U')], index=PC_header))
+data = pd.concat([data, predict], axis=1)
 
 for col in numbered_cols: data[col] = data[col].apply(lambda x: -1 if x == '.' else x)
 data.fillna(".", inplace=True)
@@ -70,5 +71,8 @@ data["Filter_2"] = np.nan
 data["Filter_3"] = np.nan
 data["Filter_4"] = np.nan
 data = data[order]
+
+# sort
+data.sort_values(by=["Chr", "Start"], inplace=True)
 
 data.to_csv(output_filename, sep='\t', index=False)
