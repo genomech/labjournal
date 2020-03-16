@@ -1,0 +1,114 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+
+\title{Web-3DPredictor: a Web Interface for High-resolution Prediction of Genome Architecture}
+
+\author{
+\IEEEauthorblockN{1\textsuperscript{st} Emil Valeev}
+\IEEEauthorblockA{\textit{ICG SB RAS, Novosibirsk, Russia}\\
+emil@bionet.nsc.ru}
+\and
+\IEEEauthorblockN{2\textsuperscript{nd} Polina Belokopytova}
+\IEEEauthorblockA{\textit{ICG SB RAS, Novosibirsk, Russia}\\
+belokopytova@bionet.nsc.ru}
+\and
+\IEEEauthorblockN{3\textsuperscript{rd} Veniamin Fishman}
+\IEEEauthorblockA{\textit{ICG SB RAS, Novosibirsk, Russia}\\
+\textit{NSU, Novosibirsk, Russia}\\
+minja@bionet.nsc.ru}
+}
+
+\maketitle
+
+\begin{abstract}
+Alterations of spatial contacts of chromatin may lead to developmental disorders and cancer.
+We have recently shown that 3-dimensional genomic contacts could be predicted in normal and rearranged genomes using epigenetic information.
+Here we describe an extension of this algorithm, characterized by more accurate and higher-resolution predictions, and its web implementation which allows researchers and clinical doctors to generate patient-specific predictions of genome architecture.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Hi-C, chromatin organization, CTCF, RNA-seq, epigenetic mechanisms
+\end{IEEEkeywords}
+
+\section{Motivation and Aim}
+
+\subsection{Motivation}
+
+It was recently shown that chromatin contacts could be predicted using widely-available epigenetic information and machine-learning methods\cite{b1}.
+These predictions could be used to dissect molecular mechanisms which connect chromosomal rearrangements with human diseases, and thus could provide useful resource for clinical genetics.
+However, the majority of the developed predictive algorithms are not available as a stand-alone or online software;
+therefore, their usage in clinics is limited.
+Moreover, the resolution of these algorithms is often low, thus estimation of the clinical significance of changes in 3D-genome architecture is challenging.
+
+\subsection{Aim}
+
+We aimed to extend our recently developed computational tool, 3DPredictor, to predict chromatin contacts at high resolution (1kb).
+Moreover, we aimed to develop a web application that allows to predict genome organization in normal and rearranged genomes, for researchers and clinical doctors who are not experienced in bioinformatics.
+
+\section{Methods}
+
+We used ML-based algorithm detailed in \cite{b1} to train models and predict chromatin 3D organization.
+Training datasets which high-resolution prediction required were taken from \cite{b2}.
+
+For web service development we used the following tools:
+
+\begin{itemize}
+
+\item Front-end: PureCSS framework, PHP
+\item Back-end:
+
+\begin{itemize}
+\item Pipeline: Bash script
+\item Preprocessing CTCF data: gimmemotifs\cite{b3}
+\item Preprocessing RNA-seq data: Python3 script
+\item Hi-C map: Juicer Tools\cite{b4}
+\end{itemize}
+
+\end{itemize}
+
+\section{Results}
+
+We showed that prediction can be significantly improved by training algorithm on higher resolution data.
+Also, we made a web service which performs prediction of chromatin 3D-structure for a region of interest.
+Trained models for \textit{H. sapiens} and \textit{M. musculus} at 1- and 5-kb resolutions are provided.
+Web-3DPredictor is hosted on the ICG server\footnote{Available at this link: https://genedev.bionet.nsc.ru/Web\_3DPredictor}.
+Both source code and trained models could be obtained on GitHub to deploy local server elsewhere.
+
+\section*{Aknowledgement}
+
+Supported by the RFBR (18-29-13021).
+
+\begin{thebibliography}{00}
+
+\bibitem{b1}
+Polina S. Belokopytova, Miroslav A. Nuriddinov, Evgeniy A. Mozheiko, Daniil Fishman and Veniamin Fishman,
+``Quantitative prediction of enhancer–promoter interactions'', Genome Research, 2019.\\
+doi: 10.1101/gr.249367.119
+
+\bibitem{b2}
+Nils Krietenstein, Sameer Abraham, Sergey V. Venev, Nezar Abdennur, Johan Gibcus, Tsung-Han S. Hsieh, Krishna Mohan Parsi, Liyan Yang, René Maehr, Leonid A. Mirny, Job Dekker, Oliver J. Rando,
+``Ultrastructural details of mammalian chromosome architecture'', 2019.\\
+doi: 10.1101/639922 
+
+\bibitem{b3}
+Niklas Bruse, Simon J. van Heeringen,
+``GimmeMotifs: an analysis framework for transcription factor motif analysis'', 2018.\\
+doi: 10.1101/474403 
+
+\bibitem{b4}
+Neva C. Durand, Muhammad S. Shamim, Ido Machol, Suhas S. P. Rao, Miriam H. Huntley, Eric S. Lander, and Erez Lieberman Aiden,
+``Juicer provides a one-click system for analyzing loop-resolution Hi-C experiments'', Cell Systems 3(1), 2016.\\
+doi: 10.1016/j.cels.2016.07.002
+
+\end{thebibliography}
+
+\end{document}

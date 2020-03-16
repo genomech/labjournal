@@ -2,26 +2,47 @@
 
 ## Протокол
 
-### 1. Оценка качества входных данных (*FastQC*)
+### Оценка качества входных данных (*FastQC*)
 
 ```bash
 fastqc -o $output_dir -t $core_number $input_dir/*.fastq.gz
 ```
-
 * Размер последовательностей: >=8 букв
 * Сверхрепрезентированные последовательности: отсутствуют
 
-### 1a. Обрезка адаптеров (*cutadapt*)
+### Обрезка адаптеров (*cutadapt*)
 
-### 2. Выравнивание и сортировка (*bowtie2*, *bwa*)
+### Выравнивание и сортировка (*bwa*)
 
 * Убрать неканонические хромосомы из bed-файла
-* `bwa mem` отлично выравнивает химерные риды.
 
-### 3-4. Анализ качества выравниваний и удаление дубликатов (*BamQC*, *PicardTools*)
+```bash
+bwa mem -t $core_number -v 1 $ref $input_r1 $input_r2 | samtools view -O BAM -@ $core_number - > $unsorted_bam;
+```
+
+### Удаление дубликатов (*PicardTools*, *Strandless*)
 
 1. *PicardTools*: маркирование дубликатов.
-2. *BamQC*: анализ с учётом предыдущего маркирования
+2. *Strandless*: удаление разнонаправленных копий.
+
+```bash
+PicardCommandLine SortSam SO=queryname I=$unsorted_bam O=$temp_bam;
+PicardCommandLine MarkDuplicates REMOVE_DUPLICATES=true M=$picard_metrics_txt I=$temp_bam O=$dupless_bam && rm -f $temp_bam;
+python3 $strandless_dir/Strandless.py -f BAM -i $dupless_bam -o $strandless_bam -m $strandless_metrics_txt;
+```
+
+### Рекалибровка qual'ов (*GATK*)
+
+Для обучения модели могут потребоваться вариации в VCF формате (для человеческого генома - [dbSNP >132](https://ftp.ncbi.nih.gov/snp/organisms/)).
+
+### Просмотр bam-файлов глазом (*IGV*)
+
+```bash
+PicardCommandLine SortSam SO=coordinate I=$strandless_bam O=$final_bam;
+samtools index $final_bam;
+```
+
+### Анализ bam-файлов (*BamQC*)
 
 Подготовка capture для QualiMap:
 
@@ -29,13 +50,8 @@ fastqc -o $output_dir -t $core_number $input_dir/*.fastq.gz
 awk 'BEGIN{OFS="\t"}{print $1,$2,$3,$4,0,"."}' $capture.bed > "$capture"_QualiMap.bed
 ```
 
-	* Доля выравненных последовательностей: >80%
-	* Доля дупликатов в экзонах: <30%
-3. Свой скрипт: выяснить, каким образом *PicardTools* маркирует дубликаты, и пометить дубликаты с разным strand. Рандомно оставлять + и - strand.
-4. *PicardTools*: удаление дубликатов (в случае химерных ридов, выровненных `bwa mem`, предварительно нужно отсортировать с помощью `PicardCommandLine `)
-
-### 5. Оценка качества после удаления дупликатов
-
+* Доля выравненных последовательностей: >80%
+* Доля дубликатов в экзонах: <30%
 * Обогащение (среднее покрытие capture / среднее покрытие вне capture): >10
 * Покрытие 95%: >=10
 * Среднее покрытие (арифметическое): >= 70
@@ -45,34 +61,33 @@ awk 'BEGIN{OFS="\t"}{print $1,$2,$3,$4,0,"."}' $capture.bed > "$capture"_QualiMa
 ### 6. Идентификация вариантов (*GATK*, *freebayes*).
 
 * Left realignment: *freebayes* делает это по умолчанию, но авторы протокола советуют делать это перед *freebayes*. 
+* По какой-то сраной причине *freebayes* бастует и не желает фильтровать варианты по QUAL'у.
+Делать это приходится с помощью bcftools.
+* *vcfallelicprimitives* разбивает многобуквенные замены.
+Транс-варианты он пишет как 1/0 и 0/1.
 
 **TODO:** Уточнить почему.
 
+```bash
+freebayes -0 --min-coverage $min_coverage --max-coverage $max_coverage -f $ref -t $exome_bed -b $final_bam | bcftools filter -i "QUAL > "$min_qual"" | vcflib vcfallelicprimitives > $vcf;
+```
+
 * Skip-limit (skip regions of extremely high coverage): стартовое значение 200 (уточнить по ходу работы).
-* Миниальная доля альтернативных аллелей для гетерозигот: 0.25
+* Минимальная доля альтернативных аллелей для гетерозигот: 0.25
 * QUAL: начать с 18, подстраивать под контрольные метрики из предыдущих пунктов (конкретно: глубину покрытия в экзоме).
 
-**TODO:** freebayes выдает значения QUAL, которые означают "надежность" найденного варианта. В файл пишутся все варианты, но их нужно фильтровать. Можно стартовать с QUAL >20, но надо уточню, какие значения используют другие.
+**TODO:** freebayes выдает значения QUAL, которые означают "надежность" найденного варианта. В файл пишутся все варианты, но их нужно фильтровать. Можно стартовать с QUAL >20, но надо уточнить, какие значения используют другие.
 
 * DP для идеальных данных (см. контроль качества выше): >12-15.
 * DP при среднем покрытим <70: >8-10.
 * DP при анализе конкретного гена: не учитывать.
 
-### 7. Разбиение многобуквенных замен на однобуквенные (*vcfallelicprimitives*)
-
-```bash
-vcflib vcfallelicprimitives
-```
-
-**TODO:** Узнать, что происходит с параметрами vcf при разбиении.
-
 ### 8. Аннотация вариантов (*Annovar*, *Ensembl VEP*)
 
-**TODO:** Стоит ли нам мигрировать на *Annovar*?
-
-1. Нужно отмечать главную (каноническую) изоформу. В *Ensembl VEP* есть опция, нужно поискать, в *Annovar* это по дефолту. 
-2. В *Ensembl VEP* полезно включать low complexity filter. Нужно найти его и проверить, включен ли он у нас.
-3. *Annovar* пишет в файл все варианты, уже потом их фильтрует по значимости.
+```bash
+perl $annovar_dir/table_annovar.pl $output_vcf $annovar_dir/humandb -buildver $genome_assembly -protocol knownGene,ensGene,refGene,abraom,AFR.sites.2015_08,ALL.sites.2015_08,AMR.sites.2015_08,ASN.sites.2012_04,avgwas_20150121,avsift,avsnp150,cadd13,cg69,clinvar_20190305,cosmic70,dann,dbnsfp35c,dbscsnv11,EAS.sites.2015_08,eigen,esp6500_all,EUR.sites.2015_08,exac03,fathmm,gene4denovo201907,gerp++,gme,gnomad211_genome,gwava,hrcr1,icgc21,intervar_20180118,kaviar_20150923,ljb26_all,mcap13,mitimpact24,MT_ensGene,nci60,popfreq_all_20150413,regsnpintron,revel,SAS.sites.2015_08,snp142 --operation g,g,g,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f --remove --vcfinput --thread $threads;
+```
+Все описанные БД надо доставлять отдельно в анноваре.
 
 ### 9. Поиск по таблице
 
