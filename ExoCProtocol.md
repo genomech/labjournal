@@ -33,7 +33,45 @@ python3 $strandless_dir/Strandless.py -f BAM -i $dupless_bam -o $strandless_bam 
 
 ### Рекалибровка qual'ов (*GATK*)
 
-Для обучения модели могут потребоваться вариации в VCF формате (для человеческого генома - [dbSNP >132](https://ftp.ncbi.nih.gov/snp/organisms/)).
+Для обучения модели потребуются вариации в VCF формате (для человеческого генома - [dbSNP >132](https://ftp.ncbi.nih.gov/snp/organisms/)).
+Контиги у dbSNP другие, поэтому потребуется лёгкий перепарсинг:
+
+```python
+# python3 script.py input.vcf.gz output.vcf.gz
+import pandas as pd
+import gzip
+chunksize = 10 ** 7
+input_filename, output_filename = argv[1], argv[2]
+with gzip.open(input_filename, 'wt') as output_file, gzip.open(output_filename, 'rt') as input_file:
+	x = True
+	while x: 
+		line = input_file.readline()
+		output_file.write(line)
+		x = line[0:2] == '##'
+	for chunk in pd.read_csv(input_file, chunksize=chunksize, sep='\t', header=None):
+		chunk[0] = chunk[0].apply(lambda x: "chr" + str(x))
+		chunk = chunk[chunk[0] != 'chrMT']
+		output_file.write(chunk.to_csv(index=False, sep='\t', header=None))
+```
+
+Затем файл нужно переиндексировать:
+
+```bash
+gatk IndexFeatureFile -F $dbsnp_vcf
+```
+
+Если в bam-файле нет `@RG', то их придётся создать:
+
+```bash
+PicardCommandLine AddOrReplaceReadGroups I=$strandless_bam O=$readgroups_bam RGID=4 RGLB=lib1 RGPL=illumina RGPU=unit1 RGSM=20
+```
+
+Рекалибровка (предварительно):
+
+```bash
+cd $gatk_dir;
+./gatk BaseRecalibrator -I $readgroups_bam --known-sites $dbsnp_vcf -O $recalibrate_table -R $ref
+```
 
 ### Просмотр bam-файлов глазом (*IGV*)
 
@@ -58,7 +96,7 @@ awk 'BEGIN{OFS="\t"}{print $1,$2,$3,$4,0,"."}' $capture.bed > "$capture"_QualiMa
 
 Это сильно завышенные показатели, но к ним надо стремиться.
 
-### 6. Идентификация вариантов (*GATK*, *freebayes*).
+### 6. Идентификация вариантов (*GATK*, *freebayes*, *vcfallelicprimitives*).
 
 * Left realignment: *freebayes* делает это по умолчанию, но авторы протокола советуют делать это перед *freebayes*. 
 * По какой-то сраной причине *freebayes* бастует и не желает фильтровать варианты по QUAL'у.
