@@ -54,10 +54,14 @@ with gzip.open(input_filename, 'wt') as output_file, gzip.open(output_filename, 
 		output_file.write(chunk.to_csv(index=False, sep='\t', header=None))
 ```
 
-Затем файл нужно переиндексировать:
+Затем файл нужно пережать bgzip'ом (это важно) и заиндексировать.
+Не юзать *gatk IndexFeatureFile*, он забагованный и баг они до сих пор не пофиксили.
+Монстр в строке - это грубая доработка, GATK не жрёт строки с N-ками в Ref и Alt.
+Лучше вынести это в скрипт выше.
 
 ```bash
-gatk IndexFeatureFile -F $dbsnp_vcf
+zcat $reparsed_vcf_gz | grep -P '^(#.*)|([^\t]*\t[^\t]*\t[^\t]*\t[^N\t]*\t[^N\t]\t.*)$' | bgzip -c > $bgzipped_vcf_gz;
+tabix -p vcf $bgzipped_vcf_gz
 ```
 
 Если в bam-файле нет `@RG', то их придётся создать:

@@ -17,7 +17,7 @@ output_filename = sys.argv[2]
 def df_squeeze(dataframe):
 	squeezed = pd.Series()
 	for col in dataframe.columns.to_list():
-		squeezed[col] = ';'.join(sorted([x for x in dataframe[col].to_list() if str(x) != 'nan']))
+		squeezed[col] = ';'.join(sorted([str(x) for x in dataframe[col].to_list() if str(x) != 'nan']))
 		if squeezed[col] == '': squeezed[col] = float('NaN')
 	return squeezed
 
@@ -34,7 +34,7 @@ other_info = {"Otherinfo1": "trash_1", "Otherinfo2": "VCF_QUAL", "Otherinfo3": "
 # load data
 with open(current_dir + "/annofit_data/order.list", 'r') as f: order = f.read().splitlines()
 hgmd_data = pd.read_csv(current_dir + "/annofit_data/hgmd.csv", sep='\t')
-omim_data = pd.read_csv(current_dir + "/annofit_data/omim_splinted.csv", sep='\t')
+omim_data = pd.read_csv(current_dir + "/annofit_data/omim_pli.csv", sep='\t')
 data = pd.read_csv(input_filename, sep='\t')
 
 # hgmd + omim

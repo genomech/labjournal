@@ -20,7 +20,10 @@ pc_L
 pc_U
 Significance_comp
 VCF_GT
+pLI
 OMIM_Phenotypes
+OMIM_linked
+OMIM_dominance
 regsnp_splicing_site
 CLNDN
 VCF_Info

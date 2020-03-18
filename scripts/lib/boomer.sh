@@ -146,3 +146,12 @@ function CreateFIFO() {
 function FileDir() { local full=$(realpath $1); dirname $full >&1; }
 function FileExt() { local full=$(realpath $1); local basename=$(basename $full); echo ${basename#*.} >&1; }
 function FileBase() { local full=$(realpath $1); basename $full .$(FileExt $1) >&1; }
+
+### Row from file
+#Return row by number.
+#
+#```bash
+#Row $number $file
+#```
+
+function Row() { awk "NR == "$1" { print } NR > "$1" { exit }" $2 >&1; }
