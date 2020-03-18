@@ -15,9 +15,11 @@ fastqc -o $output_dir -t $core_number $input_dir/*.fastq.gz
 ### Выравнивание и сортировка (*bwa*)
 
 * Убрать неканонические хромосомы из bed-файла
+* Присвоить RG инновационным (нет) способом 
 
 ```bash
-bwa mem -t $core_number -v 1 $ref $input_r1 $input_r2 | samtools view -O BAM -@ $core_number - > $unsorted_bam;
+function Casava18_header() { local header=$( ( zcat $1 || bzcat $1 || cat $1 ) 2> /dev/null | head -n 1 ); local id=$(echo $header | head -n 1 | cut -f 1-4 -d":" | sed 's/@//' | sed 's/:/_/g'); local sm=$(echo $header | head -n 1 | grep -Eo "[ATGCN]+$"); echo "@RG\tID:"$id"\tSM:"$id"_"$sm"\tLB:"$id"_"$sm"\tPL:ILLUMINA" >&1; };
+bwa mem -R "$(Casava18_header $input_r1)" -t $core_number -v 1 $ref $input_r1 $input_r2 | samtools view -O BAM -@ $core_number - > $unsorted_bam;
 ```
 
 ### Удаление дубликатов (*PicardTools*, *Strandless*)
@@ -56,15 +58,13 @@ with gzip.open(input_filename, 'wt') as output_file, gzip.open(output_filename, 
 
 Затем файл нужно пережать bgzip'ом (это важно) и заиндексировать.
 Не юзать *gatk IndexFeatureFile*, он забагованный и баг они до сих пор не пофиксили.
-Монстр в строке - это грубая доработка, GATK не жрёт строки с N-ками в Ref и Alt.
-Лучше вынести это в скрипт выше.
 
 ```bash
-zcat $reparsed_vcf_gz | grep -P '^(#.*)|([^\t]*\t[^\t]*\t[^\t]*\t[^N\t]*\t[^N\t]\t.*)$' | bgzip -c > $bgzipped_vcf_gz;
+zcat $reparsed_vcf_gz | bgzip -c > $bgzipped_vcf_gz;
 tabix -p vcf $bgzipped_vcf_gz
 ```
 
-Если в bam-файле нет `@RG', то их придётся создать:
+Если в bam-файле нет `@RG`, то их придётся создать (не нужно, если `@RG` присваивались при выравнивании):
 
 ```bash
 PicardCommandLine AddOrReplaceReadGroups I=$strandless_bam O=$readgroups_bam RGID=4 RGLB=lib1 RGPL=illumina RGPU=unit1 RGSM=20
