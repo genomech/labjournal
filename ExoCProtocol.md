@@ -15,7 +15,8 @@ fastqc -o $output_dir -t $core_number $input_dir/*.fastq.gz
 ### Выравнивание и сортировка (*bwa*)
 
 * Убрать неканонические хромосомы из bed-файла
-* Присвоить RG инновационным (нет) способом 
+* Присвоить RG инновационным (нет) способом.
+Это нужно для того, чтобы во время рекалибровки различать разные библиотеки (при слиянии библиотек от одного пациента, например)
 
 ```bash
 function Casava18_header() { local header=$( ( zcat $1 || bzcat $1 || cat $1 ) 2> /dev/null | head -n 1 ); local id=$(echo $header | head -n 1 | cut -f 1-4 -d":" | sed 's/@//' | sed 's/:/_/g'); local sm=$(echo $header | head -n 1 | grep -Eo "[ATGCN]+$"); echo "@RG\tID:"$id"\tSM:"$id"_"$sm"\tLB:"$id"_"$sm"\tPL:ILLUMINA" >&1; };
@@ -56,12 +57,13 @@ with gzip.open(input_filename, 'wt') as output_file, gzip.open(output_filename, 
 		output_file.write(chunk.to_csv(index=False, sep='\t', header=None))
 ```
 
-Затем файл нужно пережать bgzip'ом (это важно) и заиндексировать.
-Не юзать *gatk IndexFeatureFile*, он забагованный и баг они до сих пор не пофиксили.
+Затем файл нужно очистить от N и точек в Ref и Alt, пережать bgzip'ом (это важно) и заиндексировать.
+К сожалению, единственный **быстрый** способ проверить пригодность vcf-файла - *gatk IndexFeatureFile*.
+Если база заиндексируется, скорее всего, и BaseRecalibrator её тоже съест.
 
 ```bash
-zcat $reparsed_vcf_gz | bgzip -c > $bgzipped_vcf_gz;
-tabix -p vcf $bgzipped_vcf_gz
+zcat $reparsed_vcf_gz | grep -P '^((#.*)|([^\t]+\t[^\t]+\t[^\t]+\t[^\tN\.]+\t[^\tN\.]\t.*))$' | bgzip -c > $bgzipped_vcf_gz;
+gatk IndexFeatureFile -I $bgzipped_vcf_gz
 ```
 
 Если в bam-файле нет `@RG`, то их придётся создать (не нужно, если `@RG` присваивались при выравнивании):
@@ -74,7 +76,14 @@ PicardCommandLine AddOrReplaceReadGroups I=$strandless_bam O=$readgroups_bam RGI
 
 ```bash
 cd $gatk_dir;
-./gatk BaseRecalibrator -I $readgroups_bam --known-sites $dbsnp_vcf -O $recalibrate_table -R $ref
+./gatk BaseRecalibrator -I $readgroups_bam --known-sites $dbsnp_vcf -O $recalibrate_table -R $ref;
+./gatk ApplyBQSR -bqsr $recalibrate_table -I $readgroups_bam -O $recalibrated_bam
+```
+
+Отчёт (требует R-пакет gsalib):
+
+```bash
+./gatk AnalyzeCovariates -bqsr $recalibrate_table -plots $recalibration_plots_pdf
 ```
 
 ### Просмотр bam-файлов глазом (*IGV*)
@@ -103,6 +112,11 @@ awk 'BEGIN{OFS="\t"}{print $1,$2,$3,$4,0,"."}' $capture.bed > "$capture"_QualiMa
 ### 6. Идентификация вариантов (*GATK*, *freebayes*, *vcfallelicprimitives*).
 
 * Left realignment: *freebayes* делает это по умолчанию, но авторы протокола советуют делать это перед *freebayes*. 
+
+```bash
+samtools view -O $final_bam | bamleftalign -f $ref > $leftaligned_bam
+```
+
 * По какой-то сраной причине *freebayes* бастует и не желает фильтровать варианты по QUAL'у.
 Делать это приходится с помощью bcftools.
 * *vcfallelicprimitives* разбивает многобуквенные замены.
@@ -111,7 +125,7 @@ awk 'BEGIN{OFS="\t"}{print $1,$2,$3,$4,0,"."}' $capture.bed > "$capture"_QualiMa
 **TODO:** Уточнить почему.
 
 ```bash
-freebayes -0 --min-coverage $min_coverage --max-coverage $max_coverage -f $ref -t $exome_bed -b $final_bam | bcftools filter -i "QUAL > "$min_qual"" | vcflib vcfallelicprimitives > $vcf;
+freebayes -0 --min-coverage $min_coverage --max-coverage $max_coverage -f $ref -t $exome_bed -b $leftaligned_bam | bcftools filter -i "QUAL > "$min_qual"" | vcflib vcfallelicprimitives > $vcf;
 ```
 
 * Skip-limit (skip regions of extremely high coverage): стартовое значение 200 (уточнить по ходу работы).
