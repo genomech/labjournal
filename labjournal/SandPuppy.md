@@ -61,3 +61,21 @@ Cкачать всю эту область +/- 1 MB, потом выровнят
 | BF1                  | brain  | SRS899007  | SRR1959124 |
 | BM1                  | testis | SRS898987  | SRR1959204, SRR1959205 |
 | E-MTAB-4550:Sample1  | liver  | ERS1090459 | ERR1331665 |
+
+## Выравнивание
+
+Предварительно:
+
+```bash
+for h2_index in Ensembl_CCDS NCBI_PARP2 JH602120_1MB;
+do {
+dir="/dev/datasets/FairWind/_results/SandPuppy/"$h2_index"";
+mkdir -p "$dir";
+index_path="/dev/datasets/FairWind/_db/hetGla2/"$h2_index"/"$h2_index"";
+input_dir="/dev/datasets/ngs_data/HetGla_RNAseq";
+for reads in ERR1331665 SRR1959124 SRR1959204 SRR1959205;
+do {
+hisat2 -x "$index_path" -1 ""$input_dir"/"$reads"_1.fastq.gz" -2 ""$input_dir"/"$reads"_2.fastq.gz" -p 10 --rg-id $reads --rg SM:sample"$reads" --rg LB:lib"$reads" --rg PL:ILLUMINA --rg PU:unit"$reads" | samtools view -O BAM > $dir/"$reads".bam;
+} done;
+} done
+```
