@@ -79,3 +79,24 @@ hisat2 -x "$index_path" -1 ""$input_dir"/"$reads"_1.fastq.gz" -2 ""$input_dir"/"
 } done;
 } done
 ```
+Мердж двух ранов одного образца:
+
+```bash
+samtools merge -O BAM SRR1959204-5_merged.bam SRR1959204.bam SRR1959205.bam
+```
+
+Sort:
+
+```bash
+for h2_index in Ensembl_CCDS NCBI_PARP2 JH602120_1MB;
+do {
+dir="/dev/datasets/FairWind/_results/SandPuppy/_SortedPuppy/"$h2_index"";
+mkdir -p "$dir";
+input_dir="/dev/datasets/FairWind/_results/SandPuppy/"$h2_index"";
+for reads in ERR1331665 SRR1959124 SRR1959204-5_merged;
+do {
+PicardCommandLine SortSam SO=coordinate I="$input_dir"/"$reads".bam O="$dir"/"$reads".bam;
+samtools index "$dir"/"$reads".bam;
+} done;
+} done
+```
