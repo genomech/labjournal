@@ -100,3 +100,7 @@ samtools index "$dir"/"$reads".bam;
 } done;
 } done
 ```
+
+## Результат
+
+[Здесь](./scripts_results/LightenedPuppy.zip).
