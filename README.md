@@ -19,4 +19,5 @@
 - [x] Гарри Поттер и [Ноябрьские данные BGI HiC](./labjournal/NewData.md)
 - [x] Гарри Поттер и [Декабрьские данные Динары](./labjournal/December_Dinara.md)
 - [ ] Гарри Поттер и [узники контактина](./labjournal/Cntn6.md)
-- [ ] Гарри Поттер и [голый землекоп](./labjournal/SandPuppy.md)
+- [x] Гарри Поттер и [голый землекоп](./labjournal/SandPuppy.md)
+- [ ] Гарри Поттер и [коммерческое секвенирование](./labjournal/Flood.md)
