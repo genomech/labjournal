@@ -4,7 +4,7 @@
 
 | Name  | Basis |
 |:------|:------|
-| [ConSurf](http://consurftest.tau.ac.il/) | Эволюционная консервативность |
+| [ConSurf](https://consurf.tau.ac.il/) | Эволюционная консервативность |
 | [FATHMM](http://fathmm.biocompute.org.uk/) | Эволюционная консервативность |
 | [MutationAssessor](http://mutationassessor.org/) | Эволюционная консервативность |
 | [PANTHER](http://www.pantherdb.org/tools/snpScoreForm.jsp) | Эволюционная консервативность |
