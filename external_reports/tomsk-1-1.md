@@ -19,9 +19,11 @@
 
 ## Дополнительные варианты
 
+Данные Алексея Зарубина, г. Томск.
+
 | Ген    | OMIM фенотип | Положение (GRCh38.p12) | Аллель | Генотип | Экзон | Тип замены | Частота аллеля | Глубина прочтения |
 |:------:|:------------:|:-------------------------:|:--------------:|:-------:|:-----:|:----------:|:--------------:|:-----------------:| 
-| GJB2 | [601544](https://omim.org/entry/601544) | chr13:20189547-20189552 | delC | N/A | 2/2 | Frameshift Variant | [0.00795](https://www.ncbi.nlm.nih.gov/snp/rs80338939) | N/A |
-| FCN3 | [613860](https://omim.org/entry/613860) | chr1:27373180-27373182 | delG | N/A | 5/8 | Frameshift Variant | [0.018651](https://www.ncbi.nlm.nih.gov/snp/rs532781899) | N/A |
-| PRODH | [239500](https://omim.org/entry/239500) | chr22:18918451 | C>T | N/A | 12/15 | Missense Variant | [0.079402](https://www.ncbi.nlm.nih.gov/snp/rs2904552) | N/A |
-| PRSS1 | [167800](https://omim.org/entry/167800) | chr7:142750675 | A>G | N/A | 2/6 | Missense Variant | [0.3173](https://www.ncbi.nlm.nih.gov/snp/rs144422014) | N/A |
+| GJB2 | [601544](https://omim.org/entry/601544) | chr13:20189547-20189552 | delC | 0/1 | 2/2 | Frameshift Variant | [0.00795](https://www.ncbi.nlm.nih.gov/snp/rs80338939) | 62 |
+| FCN3 | [613860](https://omim.org/entry/613860) | chr1:27373180-27373182 | delG | 0/1 | 5/8 | Frameshift Variant | [0.018651](https://www.ncbi.nlm.nih.gov/snp/rs532781899) | 161 |
+| PRODH | [239500](https://omim.org/entry/239500) | chr22:18918451 | C>T | 0/1 | 12/15 | Missense Variant | [0.079402](https://www.ncbi.nlm.nih.gov/snp/rs2904552) | 85 |
+| PRSS1 | [167800](https://omim.org/entry/167800) | chr7:142750675 | A>G | 0/1 | 2/6 | Missense Variant | [0.3173](https://www.ncbi.nlm.nih.gov/snp/rs144422014) | 27 |
