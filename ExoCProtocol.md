@@ -138,6 +138,12 @@ freebayes -0 --min-coverage $min_coverage --max-coverage $max_coverage -f $ref -
 * DP при среднем покрытим <70: >8-10.
 * DP при анализе конкретного гена: не учитывать.
 
+GATK:
+
+```bash
+gatk HaplotypeCaller -I $FINAL_BAM -O $VCF -R $GENOME_FA --dont-use-soft-clipped-bases=true
+```
+
 ### 8. Аннотация вариантов (*Annovar*, *Ensembl VEP*)
 
 ```bash
