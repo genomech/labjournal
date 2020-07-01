@@ -19,3 +19,17 @@
 
 
 Approximately 90M *paired* reads for coverage 50, and 140M reads for coverage 80.
+
+## New pipeline
+
+### CNNScoreVariants
+
+Стандартные настройки из коробки, образец `DCSAN1-QUAR1`:
+
+| Type | Variants, % |
+|:-----|:------------|
+| PASS | 97.56 |
+| SNP, tranche 99.90-99.95 | 0.41 |
+| SNP, tranche 99.95-100.00 | 1.38 |
+| INDEL, tranche 99.00-99.40 | 0.2 |
+| INDEL, tranche 99.40-100.00 | 0.41 |
