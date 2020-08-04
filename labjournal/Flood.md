@@ -58,9 +58,9 @@ Approximately 90M *paired* reads for coverage 50, and 140M reads for coverage 80
 | DCROM22-JULTH22 | 39146278 | 38124375 | 97.39 | 22.39 |
 | DCMIH23-JULTH23 | 294037471 | 292820060 | 99.59 | 30.74 |
 
-Покрытие:
+Покрытие (E - экзом, NE - не-экзом):
 
-| DAEC | Exome, DP>=10, % | Exome, average | Not-exome, average | Exome, median | Not-exome, median | Median enrichment | Average enrichment | Exome, non-covered, % | Not-exome, non-covered, % |
+| DAEC | E, DP>=10, % | E, average | NE, average | E, median | NE, median | Median enrichment | Average enrichment | E, non-covered, % | NE, non-covered, % |
 |:-----|:---:|:----:|:---:|:---:|:----:|:-----:|:-----:|:-------:|:------:|
 | DCSAN1-QUAR1 | 65.87 | 0.01198 | 0.00050 | 11 | 6 | x1 | x23 | 1.39 | 10.45 |
 | DCVAS3-QUAR3 | 64.08 | 0.01369 | 0.00048 | 11 | 7 | x1 | x28 | 1.41 | 10.09 |
