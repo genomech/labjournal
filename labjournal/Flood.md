@@ -60,7 +60,7 @@ Approximately 90M *paired* reads for coverage 50, and 140M reads for coverage 80
 
 Покрытие (E - экзом, NE - не-экзом, A - среднее, M - медиана):
 
-| DAEC | E_DP>10, % | E_A | NE_A | E_M | NE_M | Enrichment A | Enrichment M | E_DP0, % | NE_DP0, % |
+| DAEC | E_DP>10(%) | E_A | NE_A | E_M | NE_M | Enrich_A | Enrich_M | E_DP0(%) | NE_DP0(%) |
 |:-----|:---:|:----:|:---:|:---:|:----:|:-----:|:-----:|:-------:|:------:|
 | DCSAN1-QUAR1 | 65.87 | 0.01198 | 0.00050 | 11 | 6 | x24 | x2 | 1.39 | 10.45 |
 | DCVAS3-QUAR3 | 64.08 | 0.01369 | 0.00048 | 11 | 7 | x28 | x2 | 1.41 | 10.09 |
