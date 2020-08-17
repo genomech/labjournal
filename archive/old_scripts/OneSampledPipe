@@ -1,0 +1,75 @@
+#!/bin/bash
+
+# --- FUNC ---
+
+function Casava18_header() {
+	local header=$( ( zcat $1 || bzcat $1 || cat $1 ) 2> /dev/null | head -n 1 )
+	local id=$(echo $header | head -n 1 | cut -f 1-4 -d":" | sed 's/@//' | sed 's/:/_/g')
+	local sm=$(echo $header | head -n 1 | grep -Eo "[ATGCN]+$"); echo "@RG\tID:"$id"\tSM:"$id"_"$sm"\tLB:"$id"_"$sm"\tPL:ILLUMINA" >&1;
+}
+
+# --- CUSTOM ---
+
+R1="/dev/datasets/ngs_data/biblexome/38_S4_R1_001.fastq.gz"
+R2="/dev/datasets/ngs_data/biblexome/38_S4_R2_001.fastq.gz"
+RG_HEADER="$(Casava18_header $R1)"
+
+BASENAME="38_S4"
+OUTPUT_DIR="/dev/datasets/FairWind/_results/Dinara_DaemonicCase_38"
+
+THREADS=10
+GENOME_FA="/dev/datasets/FairWind/_db/hg19/hg19.fa"
+GENOME_ASSEMBLY="hg19"
+EXOME_BED="/dev/datasets/FairWind/_db/MedExome_hg19_capture_targets.sorted.bed"
+GATK_DBSNP_VCF="/dev/datasets/FairWind/_db/dbsnp/dbsnp151_filtered.vcf.gz"
+
+# --- AUTO ---
+
+PRIMARY_BAM=""$OUTPUT_DIR"/"$BASENAME"_primary.bam"
+TEMP0_BAM=""$OUTPUT_DIR"/"$BASENAME"_temp0.bam"
+TEMP1_BAM=""$OUTPUT_DIR"/"$BASENAME"_temp1.bam"
+DUPLESS_BAM=""$OUTPUT_DIR"/"$BASENAME"_dupless.bam"
+PICARD_MD_METRICS_TXT=""$OUTPUT_DIR"/"$BASENAME"_picardmd_metrics.txt"
+STRANDLESS_BAM=""$OUTPUT_DIR"/"$BASENAME"_strandless.bam"
+STRANDLESS_METRICS_TXT=""$OUTPUT_DIR"/"$BASENAME"_strandless_metrics.txt"
+RECALIBRATE_TABLE_TSV=""$OUTPUT_DIR"/"$BASENAME"_recalibrate.tsv"
+RECALIBRATED_BAM=""$OUTPUT_DIR"/"$BASENAME"_recalibrated.bam"
+RECALIBRATION_PLOTS_PDF=""$OUTPUT_DIR"/"$BASENAME"_recalibration.pdf"
+FINAL_BAM=""$OUTPUT_DIR"/"$BASENAME"_final.bam"
+BAMQC_REPORT_PDF=""$BASENAME"_final_bamqc.pdf"
+VCF=""$OUTPUT_DIR"/"$BASENAME".vcf"
+OUTPUT_CSV=""$OUTPUT_DIR"/"$BASENAME"_daemonic_annotation.csv"
+OUTPUT_XLSX=""$OUTPUT_DIR"/"$BASENAME"_daemonic_searchable.xlsx"
+
+# --- PIPELINE ---
+
+## Align
+#bwa mem -R $RG_HEADER -t $THREADS -v 0 $GENOME_FA $R1 $R2 | samtools view -bS -@ $THREADS -O BAM - > $PRIMARY_BAM
+
+## Remove Dups
+#PicardCommandLine SortSam SO=queryname I=$PRIMARY_BAM O=$TEMP0_BAM
+#PicardCommandLine MarkDuplicates REMOVE_DUPLICATES=true M=$PICARD_MD_METRICS_TXT I=$TEMP0_BAM O=$DUPLESS_BAM && rm -f $TEMP0_BAM
+#python3 ../Strandless/Strandless.py -f BAM -i $DUPLESS_BAM -o $STRANDLESS_BAM -m $STRANDLESS_METRICS_TXT
+
+#PicardCommandLine SortSam SO=coordinate I=$STRANDLESS_BAM O=$TEMP1_BAM
+
+## Base Recalibration
+#/dev/datasets/FairWind/_tools/gatk-4.1.4.1/gatk BaseRecalibrator -I $TEMP1_BAM --known-sites $GATK_DBSNP_VCF -O $RECALIBRATE_TABLE_TSV -R $GENOME_FA
+#/dev/datasets/FairWind/_tools/gatk-4.1.4.1/gatk ApplyBQSR -bqsr $RECALIBRATE_TABLE_TSV -I $TEMP1_BAM -O $RECALIBRATED_BAM && rm -f $TEMP1_BAM
+#/dev/datasets/FairWind/_tools/gatk-4.1.4.1/gatk AnalyzeCovariates -bqsr $RECALIBRATE_TABLE_TSV -plots $RECALIBRATION_PLOTS_PDF
+
+## IGV Browser
+#PicardCommandLine SortSam SO=coordinate I=$RECALIBRATED_BAM O=$FINAL_BAM && samtools index $FINAL_BAM
+
+## BamQC
+#/dev/datasets/FairWind/_tools/qualimap_v2.2.1/qualimap bamqc -outformat PDF -outdir $OUTPUT_DIR -outfile $BAMQC_REPORT_PDF --java-mem-size=20G -bam $FINAL_BAM
+
+## Variant Call
+#/dev/datasets/FairWind/_tools/gatk-4.1.4.1/gatk HaplotypeCaller -I $FINAL_BAM -O $VCF -R $GENOME_FA
+
+## Annotation
+
+perl /dev/datasets/FairWind/_tools/annovar/table_annovar.pl $VCF /dev/datasets/FairWind/_tools/annovar/humandb -buildver $GENOME_ASSEMBLY -protocol knownGene,ensGene,refGene,abraom,AFR.sites.2015_08,ALL.sites.2015_08,AMR.sites.2015_08,ASN.sites.2012_04,avgwas_20150121,avsift,avsnp150,cadd13,cg69,clinvar_20190305,cosmic70,dann,dbnsfp35c,dbscsnv11,EAS.sites.2015_08,eigen,esp6500_all,EUR.sites.2015_08,exac03,fathmm,gene4denovo201907,gerp++,gme,gnomad211_genome,gwava,hrcr1,icgc21,intervar_20180118,kaviar_20150923,ljb26_all,mcap13,mitimpact24,MT_ensGene,nci60,popfreq_all_20150413,regsnpintron,revel,SAS.sites.2015_08,snp142 --operation g,g,g,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f --remove --vcfinput --thread $THREADS;
+
+python3 ../Annofit/Annofit.py $VCF."$GENOME_ASSEMBLY"_multianno.txt $OUTPUT_CSV;
+python3 ../Annofit/HumanSearch.py $OUTPUT_CSV $OUTPUT_XLSX

@@ -1,0 +1,125 @@
+#!/bin/bash
+
+# --- FUNC ---
+
+function Casava18_header() {
+	local header=$( ( zcat $1 || bzcat $1 || cat $1 ) 2> /dev/null | head -n 1 )
+	local id=$(echo $header | head -n 1 | cut -f 1-4 -d":" | sed 's/@//' | sed 's/:/_/g')
+	local sm=$(echo $header | head -n 1 | grep -Eo "[ATGCN]+$"); echo "@RG\tID:"$id"\tSM:"$id"_"$sm"\tLB:"$id"_"$sm"\tPL:ILLUMINA" >&1;
+}
+
+# --- CUSTOM ---
+
+root="/dev/datasets/ngs_data/Quarantine_BGI/Rawdata"
+samples=("1" "3" "5" "7" "6" "8" "9" "10")
+pools=("A" "B")
+
+OUTPUT_DIR="/dev/datasets/FairWind/_results/Quarantine_BGI"
+
+THREADS=10
+GENOME_FA="/dev/datasets/FairWind/_db/hg19/hg19.fa"
+GATK_DBSNP_VCF="/dev/datasets/FairWind/_db/dbsnp/dbsnp151_filtered.vcf.gz"
+GENOME_ASSEMBLY="hg19"
+
+PRIMARY_DIR="primary"
+TEMP_DIR="temp"
+DUPLESS_DIR="dupless"
+STRANDLESS_DIR="strandless"
+RECALIBRATED_DIR="recalibrated"
+FINAL_DIR="final"
+
+VCF_DIR="vcf"
+ANNO_DIR="anno"
+XLSX_DIR="xlsx"
+
+mkdir -p ""$OUTPUT_DIR"/"$PRIMARY_DIR""
+mkdir -p ""$OUTPUT_DIR"/"$TEMP_DIR""
+mkdir -p ""$OUTPUT_DIR"/"$DUPLESS_DIR""
+mkdir -p ""$OUTPUT_DIR"/"$STRANDLESS_DIR""
+mkdir -p ""$OUTPUT_DIR"/"$RECALIBRATED_DIR""
+mkdir -p ""$OUTPUT_DIR"/"$FINAL_DIR""
+
+mkdir -p ""$OUTPUT_DIR"/"$VCF_DIR""
+mkdir -p ""$OUTPUT_DIR"/"$ANNO_DIR""
+mkdir -p ""$OUTPUT_DIR"/"$XLSX_DIR""
+
+# for samp in ${samples[@]}; do {
+# 	for pool in ${pools[@]}; do {
+# 		fqs=("$root"/"$samp""$pool"/*.fq.gz)
+# 		R1=${fqs[0]}
+# 		R2=${fqs[1]}
+# 		
+# 		BASENAME=""$samp""$pool""
+# 		PRIMARY_BAM=""$OUTPUT_DIR"/"$TEMP_DIR"/"$BASENAME"_temp.bam"
+# 		RG_HEADER="$(Casava18_header $R1)"
+# 		
+# 		bwa mem -R $RG_HEADER -t $THREADS -v 0 $GENOME_FA $R1 $R2 | samtools view -bS -@ $THREADS -O BAM - > $PRIMARY_BAM
+# 		
+# 	} done
+# 	
+# 	BASE_A=""$OUTPUT_DIR"/"$TEMP_DIR"/"$samp"A_temp.bam"
+# 	BASE_B=""$OUTPUT_DIR"/"$TEMP_DIR"/"$samp"B_temp.bam"
+# 	PRIMARY_MERGED=""$OUTPUT_DIR"/"$ANNOPRIMARY_DIR"/"$samp"_primary.bam"
+# 	
+# 	PicardCommandLine MergeSamFiles I=$BASE_A I=$BASE_B O=$PRIMARY_MERGED && rm -f $BASE_A $BASE_B
+# 	
+# } done
+
+## Remove Dups
+
+# for samp in ${samples[@]}; do {
+# 	
+# 	PRIMARY_BAM=""$OUTPUT_DIR"/"$PRIMARY_DIR"/"$samp"_primary.bam"
+# 	TEMP0_BAM=""$OUTPUT_DIR"/"$TEMP_DIR"/"$samp"_temp0.bam"
+# 	DUPLESS_BAM=""$OUTPUT_DIR"/"$DUPLESS_DIR"/"$samp"_dupless.bam"
+# 	PICARD_MD_METRICS_TXT=""$OUTPUT_DIR"/"$DUPLESS_DIR"/"$samp"_dupless_metrics.txt"
+# 
+# 	PicardCommandLine SortSam SO=queryname I=$PRIMARY_BAM O=$TEMP0_BAM
+# 	PicardCommandLine MarkDuplicates REMOVE_DUPLICATES=true M=$PICARD_MD_METRICS_TXT I=$TEMP0_BAM O=$DUPLESS_BAM && rm -f $TEMP0_BAM
+# 	
+# } done
+
+## Strandless
+
+# for samp in ${samples[@]}; do {
+# 	
+# 	DUPLESS_BAM=""$OUTPUT_DIR"/"$DUPLESS_DIR"/"$samp"_dupless.bam"
+# 	STRANDLESS_BAM=""$OUTPUT_DIR"/"$STRANDLESS_DIR"/"$samp"_strandless.bam"
+# 	STRANDLESS_METRICS_TXT=""$OUTPUT_DIR"/"$STRANDLESS_DIR"/"$samp"_strandless_metrics.txt"
+# 
+# 	python3 ../Strandless/Strandless.py -f BAM -i $DUPLESS_BAM -o $STRANDLESS_BAM -m $STRANDLESS_METRICS_TXT
+# 	
+# } & done
+# wait
+
+## Base Recalibration & IGV Browser Prepare
+
+for samp in ${samples[@]}; do {
+	
+	TEMP1_BAM=""$OUTPUT_DIR"/"$TEMP_DIR"/"$samp"_temp1.bam"
+	STRANDLESS_BAM=""$OUTPUT_DIR"/"$STRANDLESS_DIR"/"$samp"_strandless.bam"
+	RECALIBRATE_TABLE_TSV=""$OUTPUT_DIR"/"$RECALIBRATED_DIR"/"$samp"_table.tsv"
+	RECALIBRATED_BAM=""$OUTPUT_DIR"/"$RECALIBRATED_DIR"/"$samp"_recalibrated.bam"
+	RECALIBRATION_PLOTS_PDF=""$OUTPUT_DIR"/"$RECALIBRATED_DIR"/"$samp"_recalibration.pdf"
+	FINAL_BAM=""$OUTPUT_DIR"/"$FINAL_DIR"/"$samp"_final.bam"
+
+	VCF=""$OUTPUT_DIR"/"$VCF_DIR"/"$samp".vcf"
+	ANNO=""$OUTPUT_DIR"/"$ANNO_DIR"/"$samp"_daemonically_annotated.csv"
+	XLSX=""$OUTPUT_DIR"/"$XLSX_DIR"/"$samp"_daemonic_search.xlsx"
+	
+# 	PicardCommandLine SortSam SO=coordinate I=$STRANDLESS_BAM O=$TEMP1_BAM
+# 
+# 	/dev/datasets/FairWind/_tools/gatk-4.1.4.1/gatk BaseRecalibrator -I $TEMP1_BAM --known-sites $GATK_DBSNP_VCF -O $RECALIBRATE_TABLE_TSV -R $GENOME_FA
+# 	/dev/datasets/FairWind/_tools/gatk-4.1.4.1/gatk ApplyBQSR -bqsr $RECALIBRATE_TABLE_TSV -I $TEMP1_BAM -O $RECALIBRATED_BAM && rm -f $TEMP1_BAM
+# 	/dev/datasets/FairWind/_tools/gatk-4.1.4.1/gatk AnalyzeCovariates -bqsr $RECALIBRATE_TABLE_TSV -plots $RECALIBRATION_PLOTS_PDF
+# 
+# 	PicardCommandLine SortSam SO=coordinate I=$RECALIBRATED_BAM O=$FINAL_BAM && samtools index $FINAL_BAM;
+	
+	/dev/datasets/FairWind/_tools/gatk-4.1.4.1/gatk HaplotypeCaller -I $FINAL_BAM -O $VCF -R $GENOME_FA --dont-use-soft-clipped-bases=true
+	
+	perl /dev/datasets/FairWind/_tools/annovar/table_annovar.pl $VCF /dev/datasets/FairWind/_tools/annovar/humandb -buildver $GENOME_ASSEMBLY -protocol knownGene,ensGene,refGene,abraom,AFR.sites.2015_08,ALL.sites.2015_08,AMR.sites.2015_08,ASN.sites.2012_04,avgwas_20150121,avsift,avsnp150,cadd13,cg69,clinvar_20190305,cosmic70,dann,dbnsfp35c,dbscsnv11,EAS.sites.2015_08,eigen,esp6500_all,EUR.sites.2015_08,exac03,fathmm,gene4denovo201907,gerp++,gme,gnomad211_genome,gwava,hrcr1,icgc21,intervar_20180118,kaviar_20150923,ljb26_all,mcap13,mitimpact24,MT_ensGene,nci60,popfreq_all_20150413,regsnpintron,revel,SAS.sites.2015_08,snp142 --operation g,g,g,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f --remove --vcfinput --thread $THREADS
+
+	python3 ../Annofit/Annofit.py $VCF."$GENOME_ASSEMBLY"_multianno.txt $ANNO
+	python3 ../Annofit/HumanSearch.py $ANNO $XLSX
+
+} done

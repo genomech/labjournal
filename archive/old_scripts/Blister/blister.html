@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module blister</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>blister</strong></big></big> (version 0.5, 2019 Oct 7)</font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/dev/datasets/FairWind/.cloud/core/scepter/libs/Blister/blister.py">/dev/datasets/FairWind/.cloud/core/scepter/libs/Blister/blister.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="bz2.html">bz2</a><br>
+<a href="datetime.html">datetime</a><br>
+<a href="functools.html">functools</a><br>
+</td><td width="25%" valign=top><a href="glob.html">glob</a><br>
+<a href="gzip.html">gzip</a><br>
+<a href="pandas.html">pandas</a><br>
+</td><td width="25%" valign=top><a href="psutil.html">psutil</a><br>
+<a href="subprocess.html">subprocess</a><br>
+<a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top><a href="time.html">time</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="blister.html#BST">BST</a>
+</font></dt><dt><font face="helvetica, arial"><a href="blister.html#Blister">Blister</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="BST">class <strong>BST</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#BST">BST</a>(sort_function,&nbsp;match_function)<br>
+&nbsp;<br>
+Primitive,&nbsp;but&nbsp;configurable&nbsp;binary&nbsp;search&nbsp;tree.<br>
+Useful&nbsp;if&nbsp;your&nbsp;class&nbsp;doesn't&nbsp;have&nbsp;search&nbsp;methods&nbsp;you&nbsp;need.<br>
+&nbsp;<br>
+Usage:<br>
+&nbsp;<br>
+def&nbsp;sort_func(a,&nbsp;b):&nbsp;return&nbsp;a&nbsp;&gt;&nbsp;b<br>
+def&nbsp;match_func(a,&nbsp;b):&nbsp;return&nbsp;a&nbsp;==&nbsp;b<br>
+tree&nbsp;=&nbsp;<a href="#Blister">Blister</a>.<a href="#BST">BST</a>(sort_func,&nbsp;match_func)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="BST-InOrder"><strong>InOrder</strong></a>(self, root=-1)</dt><dd><tt>Return&nbsp;sorted&nbsp;list&nbsp;of&nbsp;items.<br>
+&nbsp;<br>
+Usage:&nbsp;sorted_list&nbsp;=&nbsp;tree.<a href="#BST-InOrder">InOrder</a>()</tt></dd></dl>
+
+<dl><dt><a name="BST-Insert"><strong>Insert</strong></a>(self, value, root=-1)</dt><dd><tt>Insert&nbsp;item&nbsp;to&nbsp;<a href="#BST">BST</a>.<br>
+&nbsp;<br>
+Usage:&nbsp;tree.<a href="#BST-Insert">Insert</a>(value)</tt></dd></dl>
+
+<dl><dt><a name="BST-Search"><strong>Search</strong></a>(self, value, root=-1, lst=[])</dt><dd><tt>Return&nbsp;list&nbsp;of&nbsp;found&nbsp;items.<br>
+&nbsp;<br>
+Usage:&nbsp;found&nbsp;=&nbsp;tree.<a href="#BST-Search">Search</a>(value)</tt></dd></dl>
+
+<dl><dt><a name="BST-__init__"><strong>__init__</strong></a>(self, sort_function, match_function)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>Node</strong> = &lt;class 'blister.BST.Node'&gt;</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Blister">class <strong>Blister</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Library&nbsp;for&nbsp;routine&nbsp;files&nbsp;and&nbsp;console&nbsp;procedures.<br>
+Based&nbsp;on&nbsp;KnV/GnP&nbsp;programming&nbsp;philosophy&nbsp;(Kostyl'&nbsp;&amp;&nbsp;Velosiped,&nbsp;Govno&nbsp;&amp;&nbsp;Palki).<br>
+Save&nbsp;my&nbsp;time&nbsp;for&nbsp;coffee,&nbsp;games,&nbsp;fap,&nbsp;and&nbsp;sleep.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Blister-ThreadID"><strong>ThreadID</strong></a>(index)</dt></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="Blister-Bzip2Check"><strong>Bzip2Check</strong></a>(filename)</dt><dd><tt>Check&nbsp;if&nbsp;file&nbsp;is&nbsp;bzipped.</tt></dd></dl>
+
+<dl><dt><a name="Blister-CountLines"><strong>CountLines</strong></a>(filename)</dt><dd><tt>Count&nbsp;lines&nbsp;if&nbsp;file.&nbsp;Can&nbsp;handle&nbsp;gzipped&nbsp;and&nbsp;bzipped&nbsp;too.<br>
+Shell&nbsp;function,&nbsp;need&nbsp;packages&nbsp;gzip&nbsp;and&nbsp;bzip2.</tt></dd></dl>
+
+<dl><dt><a name="Blister-Dir"><strong>Dir</strong></a>(dir_path, create=True)</dt><dd><tt>Take&nbsp;dir&nbsp;path,&nbsp;return&nbsp;absolute&nbsp;path,&nbsp;or&nbsp;False&nbsp;if&nbsp;error.<br>
+Create&nbsp;new&nbsp;folder&nbsp;by&nbsp;default.</tt></dd></dl>
+
+<dl><dt><a name="Blister-EachFile"><strong>EachFile</strong></a>(title, filenames, dir_path, THREADS_NUM=12)</dt><dd><tt>Decorator&nbsp;for&nbsp;threading&nbsp;by&nbsp;each&nbsp;file.&nbsp;Really&nbsp;cool&nbsp;stuff.<br>
+&nbsp;<br>
+Usage:<br>
+&nbsp;<br>
+def&nbsp;the_thread(block,&nbsp;output_dir):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index,&nbsp;input_filename&nbsp;=&nbsp;block<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;do&nbsp;stuff<br>
+results&nbsp;=&nbsp;<a href="#Blister">Blister</a>.<a href="#Blister-EachFile">EachFile</a>(title,&nbsp;[filenames],&nbsp;dir_path,&nbsp;THREADS_NUM&nbsp;=&nbsp;cpu_count())(the_thread)()</tt></dd></dl>
+
+<dl><dt><a name="Blister-Erase"><strong>Erase</strong></a>(n=1)</dt><dd><tt>Erase&nbsp;n&nbsp;last&nbsp;strings&nbsp;in&nbsp;console.</tt></dd></dl>
+
+<dl><dt><a name="Blister-GitHubTable"><strong>GitHubTable</strong></a>(dataframe, index=False)</dt><dd><tt>My&nbsp;personal&nbsp;saviour.&nbsp;Turn&nbsp;pandas&nbsp;table&nbsp;into&nbsp;GitHub&nbsp;MD&nbsp;table.<br>
+Save&nbsp;lots&nbsp;of&nbsp;my&nbsp;time.</tt></dd></dl>
+
+<dl><dt><a name="Blister-GzipCheck"><strong>GzipCheck</strong></a>(filename)</dt><dd><tt>Check&nbsp;if&nbsp;file&nbsp;is&nbsp;gzipped.</tt></dd></dl>
+
+<dl><dt><a name="Blister-Input"><strong>Input</strong></a>(filenames)</dt><dd><tt>Take&nbsp;list&nbsp;of&nbsp;masks&nbsp;or&nbsp;filenames,&nbsp;return&nbsp;list&nbsp;of&nbsp;absolute&nbsp;filepaths,&nbsp;or&nbsp;False&nbsp;if&nbsp;error.</tt></dd></dl>
+
+<dl><dt><a name="Blister-Killer"><strong>Killer</strong></a>()</dt><dd><tt>Kill&nbsp;all&nbsp;stopped&nbsp;processes&nbsp;and&nbsp;clean&nbsp;the&nbsp;memory.</tt></dd></dl>
+
+<dl><dt><a name="Blister-Logo"><strong>Logo</strong></a>(script_name)</dt><dd><tt>Just&nbsp;a&nbsp;beautiful&nbsp;minimalistic&nbsp;logo&nbsp;with&nbsp;timestamp.<br>
+Call&nbsp;<a href="#Blister">Blister</a>.<a href="#Blister-Killer">Killer</a>().</tt></dd></dl>
+
+<dl><dt><a name="Blister-Output"><strong>Output</strong></a>(filename, output_dir, mod, suffix, rewrite=True, index=-1)</dt><dd><tt>Take&nbsp;input&nbsp;filename,&nbsp;output&nbsp;dir&nbsp;path,&nbsp;and&nbsp;make&nbsp;a&nbsp;new&nbsp;filename&nbsp;using&nbsp;mod&nbsp;and&nbsp;suffix.<br>
+Rewrite&nbsp;a&nbsp;file&nbsp;by&nbsp;default.&nbsp;Can&nbsp;be&nbsp;used&nbsp;with&nbsp;<a href="#Blister">Blister</a>.<a href="#Blister-Threading">Threading</a>().</tt></dd></dl>
+
+<dl><dt><a name="Blister-ProgressBar"><strong>ProgressBar</strong></a>(percent, start_time)</dt><dd><tt>Draw&nbsp;a&nbsp;cute&nbsp;minimalistic&nbsp;progressbar.<br>
+Can&nbsp;take&nbsp;start&nbsp;time&nbsp;from&nbsp;<a href="#Blister">Blister</a>.<a href="#Blister-Timestamp">Timestamp</a>().</tt></dd></dl>
+
+<dl><dt><a name="Blister-Read"><strong>Read</strong></a>(filename, mode='rt', index=-1)</dt><dd><tt>Context&nbsp;manager&nbsp;for&nbsp;opening&nbsp;files.&nbsp;Can&nbsp;handle&nbsp;gzipped&nbsp;and&nbsp;bzipped&nbsp;too.<br>
+Yield&nbsp;opened&nbsp;file.&nbsp;Can&nbsp;be&nbsp;used&nbsp;with&nbsp;<a href="#Blister">Blister</a>.<a href="#Blister-Threading">Threading</a>().</tt></dd></dl>
+
+<dl><dt><a name="Blister-Seal"><strong>Seal</strong></a>(dir_path)</dt><dd><tt>Seal&nbsp;a&nbsp;folder:&nbsp;count&nbsp;recursively&nbsp;MD5&nbsp;checksum,&nbsp;write&nbsp;it&nbsp;to&nbsp;all.md5,&nbsp;then&nbsp;make&nbsp;the&nbsp;folder&nbsp;read-only.<br>
+Shell&nbsp;function,&nbsp;need&nbsp;package&nbsp;md5deep.</tt></dd></dl>
+
+<dl><dt><a name="Blister-SecToTime"><strong>SecToTime</strong></a>(sec)</dt><dd><tt>Return&nbsp;seconds&nbsp;in&nbsp;hh:mm:ss&nbsp;format.</tt></dd></dl>
+
+<dl><dt><a name="Blister-Sleep"><strong>Sleep</strong></a>(max_level=70.0, interval=1, index=-1)</dt><dd><tt>Wait&nbsp;until&nbsp;memory&nbsp;percent&nbsp;is&nbsp;less&nbsp;than&nbsp;max&nbsp;level.<br>
+Can&nbsp;be&nbsp;useful&nbsp;if&nbsp;your&nbsp;script&nbsp;needs&nbsp;a&nbsp;lot&nbsp;of&nbsp;memory.<br>
+Can&nbsp;be&nbsp;used&nbsp;with&nbsp;<a href="#Blister">Blister</a>.<a href="#Blister-Threading">Threading</a>().</tt></dd></dl>
+
+<dl><dt><a name="Blister-Threading"><strong>Threading</strong></a>(title, THREADS_NUM=12)</dt><dd><tt>Context&nbsp;manager&nbsp;for&nbsp;multiprocessing.<br>
+&nbsp;<br>
+Usage:<br>
+&nbsp;<br>
+def&nbsp;the_thread(block):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index,&nbsp;item&nbsp;=&nbsp;block<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;do&nbsp;stuff<br>
+with&nbsp;<a href="#Blister">Blister</a>.<a href="#Blister-Threading">Threading</a>(title,&nbsp;THREADS_NUM&nbsp;=&nbsp;cpu_count())&nbsp;as&nbsp;pool:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;results&nbsp;=&nbsp;pool.map(functools.partial(the_thread),&nbsp;enumerate(iterable))</tt></dd></dl>
+
+<dl><dt><a name="Blister-Timestamp"><strong>Timestamp</strong></a>(title, filename_1='', filename_2='', index=-1)</dt><dd><tt>Context&nbsp;manager&nbsp;for&nbsp;timestamps.&nbsp;Can&nbsp;show&nbsp;input&nbsp;and&nbsp;output&nbsp;files&nbsp;if&nbsp;desired.<br>
+Yield&nbsp;start&nbsp;time.&nbsp;Can&nbsp;be&nbsp;used&nbsp;with&nbsp;<a href="#Blister">Blister</a>.<a href="#Blister-Threading">Threading</a>().</tt></dd></dl>
+
+<dl><dt><a name="Blister-Total"><strong>Total</strong></a>(total, start_time)</dt><dd><tt>Just&nbsp;a&nbsp;total&nbsp;number&nbsp;of&nbsp;something.&nbsp;Useless&nbsp;but&nbsp;cool.<br>
+Can&nbsp;take&nbsp;start&nbsp;time&nbsp;from&nbsp;<a href="#Blister">Blister</a>.<a href="#Blister-Timestamp">Timestamp</a>().</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#7799ee">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Author</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#7799ee"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Zanthia&nbsp;[regnveig@yandex.ru]</td></tr></table>
+</body></html>
