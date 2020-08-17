@@ -27,7 +27,8 @@
 
 ## Проекты
 
-
+* [Поиск вариантов в экзомных данных](./projects/ExomeVariants.md)
+* [NIPT](./projects/NIPT.md)
 
 ## Инструменты
 
