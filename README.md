@@ -2,6 +2,23 @@
 
 # Лабораторный журнал
 
+## Данные
+
+* [Метрика экзомных данных](./data/SamplesData.csv)
+
+## Проекты
+
+* [Поиск вариантов в экзомных данных](./projects/ExomeVariants.md)
+* [NIPT](./projects/NIPT.md)
+
+[Архивные материалы](./archive)
+
+## Инструменты
+
+1. [MachineConfig](./tools/MachineConfig): полуавтоматическая конфигурация биоинформационной машины
+2. [Scissors](./tools/Scissors): Пайплайн для обработки экзомных данных
+3. [FastContext](./tools/FastContext): Инструмент для контекстного анализа ридов
+
 ## Активные задачи
 
 | Task | Description | Status | Deadline |
@@ -20,22 +37,3 @@
 | Доработка Scissors | Механизм присваивания импакта ANNOVAR | Ожидает | - |
 | Доработка Scissors | TODO в коде | Ожидает | - |
 | Регистрация на конференции | [Сайт](https://www.медгенетика.рф/reg-member/) | Ожидает | 1 окт 2020 |
-
-## Данные
-
-* [Метрика экзомных данных](./data/SamplesData.csv)
-
-## Проекты
-
-* [Поиск вариантов в экзомных данных](./projects/ExomeVariants.md)
-* [NIPT](./projects/NIPT.md)
-
-## Инструменты
-
-1. [MachineConfig](./tools/MachineConfig): полуавтоматическая конфигурация биоинформационной машины
-2. [Scissors](./tools/Scissors): Пайплайн для обработки экзомных данных
-3. [FastContext](./tools/FastContext): Инструмент для контекстного анализа ридов
-
----
-
-[Архивные материалы](./archive)
