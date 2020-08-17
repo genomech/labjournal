@@ -12,6 +12,12 @@ fastqc -o $output_dir -t $core_number $input_dir/*.fastq.gz
 
 ### Обрезка адаптеров (*cutadapt*)
 
+Также cutadapt можно использовать для преобразования SOLiD в Illumina:
+
+```bash
+cutadapt -j 0 -c --format=sra-fastq --bwa --action=none -o [output] [file]
+```
+
 ### Выравнивание и сортировка (*bwa*)
 
 * Убрать неканонические хромосомы из bed-файла
