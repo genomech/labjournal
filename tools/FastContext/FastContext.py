@@ -1,3 +1,5 @@
+#!/bin/python3
+
 __version__ = "0.33"
 __author__ = "regnveig"
 
