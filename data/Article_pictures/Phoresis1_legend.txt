@@ -1,0 +1,15 @@
+1 - 100bp ladder 
+2 - Bridge olig
+3 - Blunt olig
+4 - Bridge, ligation 1
+5 - Blunt, ligation 1
+6 - Bridge+Blunt mix, ligation 1
+7 - Bridge, ligation 1, phosphorylation and ligation 2
+8 - Blunt, ligation 1, phosphorylation and ligation 2
+9 - Bridge+Blunt mix, ligation 1, phosphorylation and ligation 2
+
+A - 100bp ladder
+B - New Blunt, ligation 1
+C - New Blunt, ligation 1, phosphorylation and ligation 2
+D - Bridge+New blunt mix, ligation 1 
+E - Bridge+New blunt mix, ligation 1, phosphorylation and ligation 2
