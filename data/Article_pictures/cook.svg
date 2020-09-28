@@ -16,7 +16,7 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
-   sodipodi:docname="drawing.svg">
+   sodipodi:docname="cook.svg">
   <defs
      id="defs2">
     <linearGradient
@@ -183,8 +183,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
-     inkscape:cx="423.6793"
-     inkscape:cy="266.42569"
+     inkscape:cx="360.52434"
+     inkscape:cy="383.51263"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -208,7 +208,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -506,9 +506,7 @@
        id="path2382"
        inkscape:connector-curvature="0" />
     <g
-       aria-label="RNA-Seq
-Sequence
-CHiP-seq"
+       aria-label="RNA-Seq Sequence CHiP-seq"
        transform="matrix(0.07885015,-0.0868585,0.06665334,0.07342292,135.10569,193.82952)"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
        id="flowRoot2370">
@@ -977,8 +975,7 @@ CHiP-seq"
            style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Sawasdee;-inkscape-font-specification:'Sawasdee Bold'" /></flowRegion><flowPara
          id="flowPara1279"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:26.66666794px;font-family:Sawasdee;-inkscape-font-specification:'Sawasdee Bold';letter-spacing:1px">ML Algorithms</flowPara></flowRoot>    <g
-       aria-label="Gradient
-Boosting"
+       aria-label="Gradient Boosting"
        transform="matrix(0.18542636,-0.10116696,0.13972877,0.19855134,84.215676,193.59516)"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
        id="flowRoot1281">
@@ -1093,8 +1090,7 @@ Boosting"
          id="path1594" />
     </g>
     <g
-       aria-label="Random
-Forest"
+       aria-label="Random Forest"
        transform="matrix(0.08539031,0,0,0.08441784,141.93068,121.826)"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
        id="flowRoot1340">
@@ -1184,8 +1180,7 @@ Forest"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccccc" />
     <g
-       aria-label="LOGISTIC
-REGRESSION"
+       aria-label="LOGISTIC REGRESSION"
        transform="matrix(-0.00776599,-0.22752217,0.10530697,-0.00973798,153.40255,192.27452)"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
        id="flowRoot1372">
@@ -1461,8 +1456,7 @@ REGRESSION"
        rx="4.9444861"
        ry="3.2072344" />
     <g
-       aria-label="Input
-data"
+       aria-label="Input data"
        transform="matrix(0.12459152,0,0,0.11704946,57.058011,182.97684)"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
        id="flowRoot1639">
@@ -1703,8 +1697,7 @@ data"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccssscccc" />
     <g
-       aria-label="Quality
-Filter"
+       aria-label="Quality Filter"
        transform="matrix(0.1595249,0,0,0.15363408,11.837954,125.78426)"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
        id="flowRoot1629">
@@ -1833,29 +1826,29 @@ Filter"
     <ellipse
        style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.52899998;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path2249"
-       cx="195.92476"
-       cy="233.75525"
+       cx="195.78302"
+       cy="234.84193"
        rx="0.46772167"
        ry="0.50113034" />
     <ellipse
        style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.52899998;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path2249-0"
-       cx="199.14619"
-       cy="234.49219"
+       cx="198.81546"
+       cy="235.62611"
        rx="0.46772167"
        ry="0.50113034" />
     <ellipse
        style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.52899998;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path2249-00"
-       cx="130.6179"
-       cy="170.84064"
+       cx="130.21701"
+       cy="172.11017"
        rx="0.46772167"
        ry="0.50113034" />
     <ellipse
        style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.52899998;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path2249-9"
-       cx="142.16628"
-       cy="170.51971"
+       cx="141.8656"
+       cy="171.75583"
        rx="0.46772167"
        ry="0.50113034" />
     <g
