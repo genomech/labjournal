@@ -16,7 +16,10 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
-   sodipodi:docname="time_travel.svg">
+   sodipodi:docname="time_travel.svg"
+   inkscape:export-filename="/dev/datasets/FairWind/.cloud/core/labjournal/data/Article_pictures/time_travel.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300">
   <defs
      id="defs2">
     <linearGradient
@@ -756,7 +759,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.50000001"
-     inkscape:cx="537.18777"
+     inkscape:cx="132.03941"
      inkscape:cy="223.31362"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -3947,8 +3950,7 @@
       <g
          id="g2064">
         <g
-           aria-label="Physical
-models"
+           aria-label="Physical models"
            transform="matrix(0.26458333,0,0,0.26458333,-53.019161,141.76863)"
            style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#28220b;fill-opacity:1;stroke:none"
            id="flowRoot1431-2-6">
@@ -4210,8 +4212,7 @@ models"
              id="path2874" />
         </g>
         <g
-           aria-label="Statistical
-models"
+           aria-label="Statistical models"
            transform="matrix(0.26458333,0,0,0.26458333,-52.680494,183.3126)"
            style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#17280b;fill-opacity:1;stroke:none"
            id="flowRoot1431-2-64">
@@ -5112,8 +5113,7 @@ models"
            transform="translate(-2.1166667,-11.641684)"
            style="fill:#280b0b">
           <g
-             aria-label="scHiC
-"
+             aria-label="scHiC "
              transform="matrix(0.26458333,0,0,0.26458333,193.67952,126.6638)"
              style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#280b0b;fill-opacity:1;stroke:none"
              id="flowRoot1431-6">
@@ -5139,8 +5139,7 @@ models"
                id="path3288" />
           </g>
           <g
-             aria-label="High res microscopy
-"
+             aria-label="High res microscopy "
              transform="matrix(0.26458333,0,0,0.26458333,178.66531,132.01136)"
              style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#280b0b;fill-opacity:1;stroke:none"
              id="flowRoot1431-6-9">
