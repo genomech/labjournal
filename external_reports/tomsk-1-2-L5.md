@@ -17,3 +17,7 @@
 | GRIN2A | [245570](https://omim.org/entry/245570) | chr16:10032401-10032401 | G | A | 0/1 | 3/13 | nonsynonymous SNV | [0,002](https://www.ncbi.nlm.nih.gov/snp/rs78631453) | 75 |
 
 
+## Подтверждение
+
+Вариант в GRIN2A подтверждён по Сэнгеру (гетерозигота).
+Выравненные сиквенсы [здесь](https://benchling.com/s/seq-q5LmWpfTvQ90XGUryyFq).
