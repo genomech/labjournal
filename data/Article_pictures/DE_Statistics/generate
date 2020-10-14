@@ -1,0 +1,76 @@
+#!/usr/bin/python3
+
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+import math
+
+def get_cmap(n, name='Pastel2'): return plt.cm.get_cmap(name, n)
+
+samples_exoc = pd.read_csv("Samples_exoc.tsv", sep='\t')
+relig = pd.read_csv("relig.tsv", sep='\t')
+
+Protocols = list(set(samples_exoc["Protocol"].dropna().to_list()))
+Protocols.sort()
+
+BarWidth = 0.6
+CapSize = 12
+cmap = get_cmap(len(Protocols) + 1)
+Colors = [cmap(item) for item in list(range(len(Protocols)))]
+LightColors = [(item[0], item[1], item[2], 0.5) for item in Colors]
+Blackie = [(0.0, 0.0, 0.0, 1.0) for item in Colors]
+
+x = list(range(1, len(Protocols) + 1))
+
+fig, ax = plt.subplots(4, figsize=(8,10))
+plt.subplots_adjust(left=None, bottom=None, right=None, top=None, wspace=None, hspace=0.3)
+
+# 1
+
+y = [samples_exoc[samples_exoc["Protocol"] == item]['reported_pairs%of_total'].to_list() for 
+item in Protocols]
+ax[0].bar(x, height=[np.mean(yi) for yi in y], yerr=[np.std(yi) for yi in y], capsize=CapSize, width=BarWidth, tick_label=Protocols, color=Colors, edgecolor=Blackie, zorder=1)
+for i in range(len(x)): ax[0].scatter(x[i] + np.random.random(len(y[i])) * BarWidth - BarWidth / 2, y[i], color=Blackie[i], zorder=2)
+ax[0].set_xticklabels(['' for item in Protocols])
+ax[0].set_ylabel('%')
+ax[0].set_title('Reported pairs (% of total)', fontsize=16)
+fig.suptitle('This is a somewhat long figure title', fontsize=20)
+
+# 2
+
+y = [samples_exoc[samples_exoc["Protocol"] == item]['cis'].to_list() for 
+item in Protocols]
+ax[1].bar(x, height=[np.mean(yi) for yi in y], yerr=[np.std(yi) for yi in y], capsize=CapSize, width=BarWidth, tick_label=Protocols, color=Colors, edgecolor=Blackie, zorder=1)
+for i in range(len(x)): ax[1].scatter(x[i] + np.random.random(len(y[i])) * BarWidth - BarWidth / 2, y[i], color=Blackie[i], zorder=2)
+ax[1].set_xticklabels(['' for item in Protocols])
+ax[1].set_ylabel('%')
+ax[1].set_title('Cis (%)', fontsize=16)
+
+# 3
+
+y = [samples_exoc[samples_exoc["Protocol"] == item]['de%of_valid'].to_list() for 
+item in Protocols]
+ax[2].bar(x, height=[np.mean(yi) for yi in y], yerr=[np.std(yi) for yi in y], capsize=CapSize, width=BarWidth, tick_label=Protocols, color=Colors, edgecolor=Blackie, zorder=1)
+for i in range(len(x)): ax[2].scatter(x[i] + np.random.random(len(y[i])) * BarWidth - BarWidth / 2, y[i], color=Blackie[i], zorder=2)
+ax[2].set_xticklabels(['' for item in Protocols])
+ax[2].set_ylabel('%')
+ax[2].set_title('FR excess (% of valid)', fontsize=16)
+
+# 4
+
+merged = pd.merge(samples_exoc, relig, on=['Sample'], how='left')
+merged['True_DE'] = merged.apply(lambda x: None if math.isnan(x['100*relig/de(merged reads)']) else (x['de%of_valid'] * (100 - x['100*relig/de(merged reads)']) / 100), axis=1)
+print(merged)
+
+y = [merged[merged["Protocol"] == item]['True_DE'].to_list() for 
+item in Protocols]
+
+ax[3].bar(x, height=[np.mean(yi) for yi in y], yerr=[np.std(yi) for yi in y], capsize=CapSize, width=BarWidth, tick_label=Protocols, color=Colors, edgecolor=Blackie, zorder=1)
+for i in range(len(x)): ax[3].scatter(x[i] + np.random.random(len(y[i])) * BarWidth - BarWidth / 2, y[i], color=Blackie[i], zorder=2)
+ax[3].set_ylabel('%')
+ax[3].set_title('True DEnds (%, when applicable)', fontsize=16)
+ax[3].set_xticklabels(Protocols, rotation=30, fontsize=14)
+plt.setp(ax[3].xaxis.get_majorticklabels(), ha='right')
+
+#fig.tight_layout()
+plt.savefig(f"test.svg")

@@ -1,0 +1,55 @@
+Sample	Protocol	Comment	all_count_of_reads	reported_pairs%of_total	mult%of_total	unmap_one%of_total	unmap_both%of_total	duplicates%of_reported	count_of_hic_interactions	hic_interactions%of_total	de%of_valid	cis	trans	cis_short	cis_long
+1	Ma et al., in our hands		128195237	79	18	0	2	23	19993496	15	74	29	70	16	13
+2	Ma et al., in our hands		139017591	80	16	0	2	20	30537234	21	65	27	72	13	14
+3	Ma et al., in our hands		94349766	87	9	0	2	19	28086792	29	58	48	51	15	33
+4	N/A	Hi-C. Bowtie	147665727	75	14	7	2	14	51240007	34	46	14	85	7	6
+5	Ma et al., in our hands		113726911	86	10	0	2	18	34280550	30	56	40	59	13	26
+6	Ma et al., in our hands		136610279	85	12	0	2	21	28412596	20	68	28	71	14	14
+7	Ma et al., in our hands		63930110	79	18	0	2	16	14110002	22	66	23	76	11	12
+8	Ma et al., in our hands		83396199	79	17	0	2	19	15222272	18	71	28	71	13	15
+9	Ma et al., in our hands		146425167	81	15	0	2	20	32714878	22	65	27	72	11	16
+10	Ma et al. + new blunt + SDS	8 (Нарышкина) - Dnase	59088991	92	5	0	1	28	9987714	16	74	59	40	21	38
+12	Ma et al. + new blunt + SDS	3 (Васильева) - Dnase	138769927	89	8	0	1	18	43577438	31	57	34	65	11	23
+13	N/A	MNase 0.5 (длинные)	15847105	93	4	0	1	32	400818	2	95	12	87	3	8
+14	Ma et al. + new blunt + SDS	9 (Бикмухамбетова) - Dnase	121075216	89	8	0	1	20	32397384	26	62	33	66	10	22
+15	N/A	MNase 2 (короткие)	61403140	89	7	0	2	28	10143050	16	74	8	91	2	6
+16	N/A	K562 Dnase	60389488	89	8	0	1	25	16681524	27	58	25	74	9	16
+17	N/A	2 mesc	1761286	79	19	0	0	7	735384	41	43	47	52	4	43
+18	Ma et al + long linker	4 link	492236	84	10	0	4	6	74232	15	80	69	30	21	48
+19	N/A	K562 classical Hi-C 	3948705	81	16	1	0	6	2314614	58	22	42	57	3	38
+20	N/A	14 hi-c D, K562 Ma et al. modified lisys 	1320272	90	7	0	1	7	324706	24	70	69	30	24	45
+21	N/A	16 mesc	1418422	80	18	0	0	5	507728	35	52	37	62	3	34
+22	N/A	18 черви	3588447	0	1	0	97	30	144	0	98	16	83	1	15
+23	Ma et al + long linker	19 link	909080	86	11	0	1	5	265856	29	64	81	18	22	58
+24	Romani et al. + biotin-fillin	1, a549 hic biot	43258	93	4	0	1	6	11874	27	68	80	19	28	52
+25	Romani et al. + biotin-fillin	2, a549 hic biot	60310	92	5	0	1	6	20452	33	60	78	21	22	55
+26	Romani et al. + biotin-fillin	3, LNCaP hic biot	64269	93	4	0	1	6	21194	32	61	77	22	20	56
+27	Romani et al. + biotin-fillin	4, LNCaP hic biot	50962	92	4	0	2	6	14588	28	66	75	24	17	57
+28	Romani et al. + long linker 	5l, A549 Linker	57139	88	8	0	3	8	27052	47	41	75	24	17	58
+29	Romani et al. + long linker 	5s, A549 Linker	82932	89	7	0	3	8	35388	42	48	71	28	17	54
+30	Romani et al. + long linker 	6, LNCaP Linker	53335	89	7	0	3	7	16972	31	61	62	37	13	49
+31	N/A	hap1 1	56304	90	6	0	3	9	32032	56	29	74	25	10	64
+32	N/A	hap1 2	53446	91	5	0	2	8	31108	58	30	74	25	9	64
+33	N/A	single side	21528	89	9	0	1	0	2518	11	86	31	68	26	4
+34	N/A	single side	3611	94	4	0	0	0	564	15	82	76	23	30	45
+35	N/A	single side	3385	93	5	0	1	1	542	16	82	67	32	17	49
+36	N/A	single side	3891	93	4	0	1	1	626	16	83	69	30	24	44
+37	N/A	single side	3922	92	6	0	1	1	626	15	82	62	37	17	45
+38	N/A	single side	5651	91	6	0	1	0	1140	20	78	82	17	30	51
+39	N/A	single side	3449	93	4	0	1	0	550	15	82	70	29	21	48
+40	N/A	single side	3682	93	5	0	1	0	564	15	82	74	25	17	57
+41	Romani et al. + biotin-fillin	1 - Маша	85653932	93	5	0	1	16	25269652	29	62	70	29	23	47
+42	Romani et al. + biotin-fillin	3 - Маша	93873317	93	5	0	0	17	29291930	31	59	70	29	21	49
+43	Romani et al. + biotin-fillin	5 - Маша	81214801	92	5	0	1	16	25096924	30	60	69	30	20	48
+44	Romani et al. + biotin-fillin	6 - Маша	79952262	93	5	0	0	15	26548564	33	58	66	33	17	48
+45	Romani et al. + biotin-fillin	7 - Маша	117150296	92	5	0	0	17	37332928	31	58	63	36	15	48
+46	Romani et al. + biotin-fillin	8 - Маша	83705532	92	5	0	1	15	26662708	31	59	67	32	19	48
+47	Romani et al. + biotin-fillin	9 - Маша	81685769	92	5	0	1	15	28427050	34	55	65	34	16	48
+48	Romani et al. + biotin-fillin	10 - Маша	81936439	92	6	0	1	17	26412868	32	57	62	37	20	42
+49	Romani et al. + biotin-fillin	k562	109488829	91	6	0	1	16	41578236	37	50	80	19	25	54
+50	Romani et al. + biotin-fillin	LNCap	83824050	93	5	0	0	15	27818068	33	57	76	23	20	56
+H1_rep1	Ma et al., original paper	ma et.al	1000000	87	10	0	1	0	548584	54	36	47	52	15	32
+H1_rep2	Ma et al., original paper	ma et.al	1000000	84	10	0	4	1	490096	49	41	35	64	11	23
+K562_rep1	Ma et al., original paper	ma et.al	1000000	89	8	0	1	1	292490	29	67	58	41	28	30
+K562_rep2	Ma et al., original paper	ma et.al	1000000	71	13	0	14	1	210260	21	70	50	49	24	25
+51	Romani et al. + original linker		221917	85	12	0	2	11	100252	45	40	67	32	15	52
