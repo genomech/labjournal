@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 import math
+from scipy.stats import mannwhitneyu as mwu
 
 def get_cmap(n, name='Pastel2'): return plt.cm.get_cmap(name, n)
 
@@ -11,11 +12,26 @@ samples_exoc = pd.read_csv("Samples_exoc.tsv", sep='\t')
 relig = pd.read_csv("relig.tsv", sep='\t')
 
 Protocols = list(set(samples_exoc["Protocol"].dropna().to_list()))
-Protocols.sort()
+Protocols = ['Ma et al.,:original paper', 'Ma et al.,:this paper', 'Ma et al.:+ new blunt + SDS', 'Ma et al.:+ long linker', 'Romani et al.,:this paper', 'Romani et al.:+ long linker', 'Romani et al.:+ biotin-fillin']
+
+lst = []
+
+for prot_pair in [('Ma et al.,:this paper', 'Romani et al.,:this paper'),
+			   ('Ma et al.,:this paper', 'Romani et al.:+ biotin-fillin'),
+			   ('Romani et al.,:this paper', 'Romani et al.:+ biotin-fillin')]:
+	for par in ['cis','de%of_valid']:
+		elem1 = samples_exoc[samples_exoc["Protocol"] == prot_pair[0]][par].to_list()
+		elem2 = samples_exoc[samples_exoc["Protocol"] == prot_pair[1]][par].to_list()
+		statistic, pvalue = mwu(elem1, elem2)
+		lst += [ { "Pair_1": prot_pair[0], "Pair_2": prot_pair[1], "Size_1": len(elem1), "Size_2": len(elem2), "Parameter": par, "Statistic": statistic, "pValue": pvalue } ]
+
+print(pd.DataFrame(lst))
+
+exit()
 
 BarWidth = 0.6
 CapSize = 12
-cmap = get_cmap(len(Protocols) + 1)
+cmap = get_cmap(1)
 Colors = [cmap(item) for item in list(range(len(Protocols)))]
 LightColors = [(item[0], item[1], item[2], 0.5) for item in Colors]
 Blackie = [(0.0, 0.0, 0.0, 1.0) for item in Colors]
@@ -32,9 +48,11 @@ item in Protocols]
 ax[0].bar(x, height=[np.mean(yi) for yi in y], yerr=[np.std(yi) for yi in y], capsize=CapSize, width=BarWidth, tick_label=Protocols, color=Colors, edgecolor=Blackie, zorder=1)
 for i in range(len(x)): ax[0].scatter(x[i] + np.random.random(len(y[i])) * BarWidth - BarWidth / 2, y[i], color=Blackie[i], zorder=2)
 ax[0].set_xticklabels(['' for item in Protocols])
-ax[0].set_ylabel('%')
+ax[0].tick_params(labelsize=14)
+ax[0].set_ylabel('%', fontsize=14)
 ax[0].set_title('Reported pairs (% of total)', fontsize=16)
 fig.suptitle('This is a somewhat long figure title', fontsize=20)
+ax[0].set_ylim([60, 100])
 
 # 2
 
@@ -43,8 +61,10 @@ item in Protocols]
 ax[1].bar(x, height=[np.mean(yi) for yi in y], yerr=[np.std(yi) for yi in y], capsize=CapSize, width=BarWidth, tick_label=Protocols, color=Colors, edgecolor=Blackie, zorder=1)
 for i in range(len(x)): ax[1].scatter(x[i] + np.random.random(len(y[i])) * BarWidth - BarWidth / 2, y[i], color=Blackie[i], zorder=2)
 ax[1].set_xticklabels(['' for item in Protocols])
-ax[1].set_ylabel('%')
+ax[1].tick_params(labelsize=14)
+ax[1].set_ylabel('%', fontsize=14)
 ax[1].set_title('Cis (%)', fontsize=16)
+ax[1].set_ylim([20, 90])
 
 # 3
 
@@ -52,9 +72,11 @@ y = [samples_exoc[samples_exoc["Protocol"] == item]['de%of_valid'].to_list() for
 item in Protocols]
 ax[2].bar(x, height=[np.mean(yi) for yi in y], yerr=[np.std(yi) for yi in y], capsize=CapSize, width=BarWidth, tick_label=Protocols, color=Colors, edgecolor=Blackie, zorder=1)
 for i in range(len(x)): ax[2].scatter(x[i] + np.random.random(len(y[i])) * BarWidth - BarWidth / 2, y[i], color=Blackie[i], zorder=2)
+ax[2].tick_params(labelsize=14)
 ax[2].set_xticklabels(['' for item in Protocols])
-ax[2].set_ylabel('%')
+ax[2].set_ylabel('%', fontsize=14)
 ax[2].set_title('FR excess (% of valid)', fontsize=16)
+ax[2].set_ylim([20, 90])
 
 # 4
 
@@ -64,13 +86,17 @@ print(merged)
 
 y = [merged[merged["Protocol"] == item]['True_DE'].to_list() for 
 item in Protocols]
-
+y[-1] = [-100]
 ax[3].bar(x, height=[np.mean(yi) for yi in y], yerr=[np.std(yi) for yi in y], capsize=CapSize, width=BarWidth, tick_label=Protocols, color=Colors, edgecolor=Blackie, zorder=1)
 for i in range(len(x)): ax[3].scatter(x[i] + np.random.random(len(y[i])) * BarWidth - BarWidth / 2, y[i], color=Blackie[i], zorder=2)
-ax[3].set_ylabel('%')
+ax[3].set_ylabel('%', fontsize=14)
 ax[3].set_title('True DEnds (%, when applicable)', fontsize=16)
+Protocols = [' '.join(item.split(':')) for item in Protocols]
+ax[3].tick_params(labelsize=14)
 ax[3].set_xticklabels(Protocols, rotation=30, fontsize=14)
+ax[3].set_ylim([0, 70])
 plt.setp(ax[3].xaxis.get_majorticklabels(), ha='right')
 
+print(Protocols)
 #fig.tight_layout()
 plt.savefig(f"test.svg")
