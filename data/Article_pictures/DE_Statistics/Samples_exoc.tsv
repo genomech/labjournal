@@ -13,7 +13,7 @@ Sample	Protocol	Comment	all_count_of_reads	reported_pairs%of_total	mult%of_total
 13	N/A	MNase 0.5 (длинные)	15847105	93	4	0	1	32	400818	2	95	12	87	3	8
 14	Ma et al.:+ new blunt + SDS	9 (Бикмухамбетова) - Dnase	121075216	89	8	0	1	20	32397384	26	62	33	66	10	22
 15	N/A	MNase 2 (короткие)	61403140	89	7	0	2	28	10143050	16	74	8	91	2	6
-16	N/A	K562 Dnase	60389488	89	8	0	1	25	16681524	27	58	25	74	9	16
+16	Ma et al.:+ new blunt + SDS	K562 Dnase	60389488	89	8	0	1	25	16681524	27	58	25	74	9	16
 17	N/A	2 mesc	1761286	79	19	0	0	7	735384	41	43	47	52	4	43
 18	Ma et al.:+ long linker	4 link	492236	84	10	0	4	6	74232	15	80	69	30	21	48
 19	N/A	K562 classical Hi-C 	3948705	81	16	1	0	6	2314614	58	22	42	57	3	38
