@@ -23,11 +23,11 @@ for prot_pair in [('Ma et al.,:this paper', 'Romani et al.:+ long linker'),
 		elem1 = samples_exoc[samples_exoc["Protocol"] == prot_pair[0]][par].to_list()
 		elem2 = samples_exoc[samples_exoc["Protocol"] == prot_pair[1]][par].to_list()
 		statistic, pvalue = mwu(elem1, elem2)
-		lst += [ { "Pair_1": prot_pair[0], "Pair_2": prot_pair[1], "Size_1": len(elem1), "Size_2": len(elem2), "Parameter": par, "Statistic": statistic, "pValue": pvalue, "Symbol": None if pvalue >= 0.05 else ('***' if 0.05 > pvalue >= 0.01 else ('**' if 0.01 > pvalue >= 0.001 else '*')) } ]
+		lst += [ { "Pair_1": prot_pair[0], "Pair_2": prot_pair[1], "Size_1": len(elem1), "Size_2": len(elem2), "Parameter": par, "Statistic": statistic, "pValue": pvalue, "Symbol": None if pvalue >= 0.05 else ('*' if 0.05 > pvalue >= 0.01 else ('**' if 0.01 > pvalue >= 0.001 else '***')) } ]
 
 pd.DataFrame(lst).to_csv("pvalues.tsv", index=False, sep='\t')
 
-#exit()
+exit()
 
 BarWidth = 0.6
 CapSize = 12

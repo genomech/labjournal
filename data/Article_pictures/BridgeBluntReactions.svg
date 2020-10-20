@@ -16,7 +16,10 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
-   sodipodi:docname="BridgeBluntReactions.svg">
+   sodipodi:docname="BridgeBluntReactions.svg"
+   inkscape:export-filename="/dev/datasets/FairWind/.cloud/core/labjournal/data/Article_pictures/BridgeBluntReactions.png"
+   inkscape:export-xdpi="150"
+   inkscape:export-ydpi="150">
   <defs
      id="defs2">
     <inkscape:perspective
@@ -454,9 +457,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="2505.3665"
-     inkscape:cy="1760.4697"
+     inkscape:zoom="0.24748737"
+     inkscape:cx="731.57115"
+     inkscape:cy="1335.8636"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -490,6 +493,14 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(775.96922,-33.023672)">
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.80000001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect3305"
+       width="768.66718"
+       height="816.77563"
+       x="-802.69617"
+       y="-0.084035002"
+       ry="0" />
     <g
        id="g3182-3"
        transform="translate(-1.4774321e-7,30.691679)">
@@ -4562,14 +4573,7 @@
            style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:74.66666412px;font-family:FreeMono;-inkscape-font-specification:'FreeMono Bold'"
            id="flowPara2870-36">14</flowPara></flowRoot>    </g>
     <g
-       aria-label="Phosphate
-Biotin
-Ligation 1
-Phosphorylation and ligation 2
-No enrichment
-Blunt adapter
-Bridge adapter
-Target reactions"
+       aria-label="Phosphate Biotin Ligation 1 Phosphorylation and ligation 2 No enrichment Blunt adapter Bridge adapter Target reactions"
        transform="matrix(0.26458333,0,0,0.26458333,-718.6841,53.255725)"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.96000004;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
        id="flowRoot32409-3">
