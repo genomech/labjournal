@@ -10,16 +10,16 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   height="911.17151pt"
+   height="914.43549pt"
    version="1.1"
-   viewBox="0 0 605.48553 911.17151"
-   width="605.48553pt"
+   viewBox="0 0 1404.4606 914.43549"
+   width="1404.4606pt"
    id="svg1875"
    sodipodi:docname="DE_Statistics.svg"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
    inkscape:export-filename="/dev/datasets/FairWind/.cloud/core/labjournal/data/Article_pictures/DE_Statistics/DE_Statistics.png"
-   inkscape:export-xdpi="300"
-   inkscape:export-ydpi="300">
+   inkscape:export-xdpi="150"
+   inkscape:export-ydpi="150">
   <metadata
      id="metadata1879">
     <rdf:RDF>
@@ -28,7 +28,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -36,7 +36,7 @@
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1"
-     objecttolerance="11"
+     objecttolerance="1"
      gridtolerance="1"
      guidetolerance="1"
      inkscape:pageopacity="0"
@@ -45,9 +45,9 @@
      inkscape:window-height="1015"
      id="namedview1877"
      showgrid="false"
-     inkscape:zoom="0.7071068"
-     inkscape:cx="174.32948"
-     inkscape:cy="222.54931"
+     inkscape:zoom="0.3535534"
+     inkscape:cx="1642.7972"
+     inkscape:cy="372.20751"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -55,7 +55,9 @@
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
-     fit-margin-bottom="0" />
+     fit-margin-bottom="0"
+     showguides="true"
+     inkscape:guide-bbox="true" />
   <defs
      id="defs4"
      style="stroke-linecap:butt;stroke-linejoin:round">
@@ -124,24 +126,166 @@
          style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1"
          transform="matrix(-0.8,0,0,-0.8,-10,0)" />
     </marker>
+    <clipPath
+       id="clipPath2072"
+       clipPathUnits="userSpaceOnUse"
+       style="stroke-linecap:butt;stroke-linejoin:round">
+      <path
+         style="clip-rule:evenodd;stroke-linecap:butt;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         id="path2070"
+         d="M 0,0.028 H 611.971 V 791.999 H 0 Z" />
+    </clipPath>
+    <clipPath
+       id="clipPath2080"
+       clipPathUnits="userSpaceOnUse"
+       style="stroke-linecap:butt;stroke-linejoin:round">
+      <path
+         style="clip-rule:evenodd;stroke-linecap:butt;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         id="path2078"
+         d="m 56.7,721.2 h 498.55 v 14.099 H 56.7 Z" />
+    </clipPath>
+    <clipPath
+       id="clipPath2098"
+       clipPathUnits="userSpaceOnUse"
+       style="stroke-linecap:butt;stroke-linejoin:round">
+      <path
+         style="clip-rule:evenodd;stroke-linecap:butt;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         id="path2096"
+         d="M 56.7,56.799 H 555.25 V 70.898 H 56.7 Z" />
+    </clipPath>
+    <clipPath
+       id="clipPath2914"
+       clipPathUnits="userSpaceOnUse"
+       style="stroke-linecap:butt;stroke-linejoin:round">
+      <path
+         style="clip-rule:evenodd;stroke-linecap:butt;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         id="path2912-75"
+         d="M 0,0.028 H 611.971 V 791.999 H 0 Z" />
+    </clipPath>
+    <clipPath
+       id="clipPath2922"
+       clipPathUnits="userSpaceOnUse"
+       style="stroke-linecap:butt;stroke-linejoin:round">
+      <path
+         style="clip-rule:evenodd;stroke-linecap:butt;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         id="path2920"
+         d="m 56.7,721.2 h 498.55 v 14.099 H 56.7 Z" />
+    </clipPath>
+    <clipPath
+       id="clipPath2940"
+       clipPathUnits="userSpaceOnUse"
+       style="stroke-linecap:butt;stroke-linejoin:round">
+      <path
+         style="clip-rule:evenodd;stroke-linecap:butt;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         id="path2938"
+         d="M 56.7,56.799 H 555.25 V 70.898 H 56.7 Z" />
+    </clipPath>
   </defs>
   <rect
-     style="opacity:1;fill:#ffffff;fill-opacity:0.98705498;fill-rule:evenodd;stroke:#000000;stroke-width:2.26771641;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
-     id="rect2051"
-     width="655.5"
-     height="985.5"
-     x="-24"
-     y="-30.828466"
-     ry="0" />
-  <path
-     d="M 60.858334,876.95544 H 636.85833 V -59.044556 H 60.858334 Z"
+     style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2.26771641;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+     id="rect10120"
+     width="1660.9939"
+     height="1132.785"
+     x="-99.702049"
+     y="-86.827682" />
+  <g
+     id="patch_45"
+     style="stroke-linecap:butt;stroke-linejoin:round"
+     transform="translate(151.08764,-59.035803)" />
+  <g
+     id="PathCollection_28"
+     style="stroke-linecap:butt;stroke-linejoin:round"
+     transform="translate(151.08764,-59.035803)">
+    <g
+       clip-path="url(#p95b3edc81b)"
+       id="g1760"
+       style="stroke-linecap:butt;stroke-linejoin:round">
+      <use
+         style="stroke:#000000;stroke-linecap:butt;stroke-linejoin:round"
+         x="488.32806"
+         xlink:href="#m3fe4807ffe"
+         y="1043.1625"
+         id="use1758"
+         width="100%"
+         height="100%" />
+    </g>
+  </g>
+  <defs
+     id="defs1873">
+    <clipPath
+       id="pea656c08d2"
+       style="stroke-linecap:butt;stroke-linejoin:round">
+      <rect
+         height="147.08571"
+         width="446.39999"
+         x="72"
+         y="112.32"
+         id="rect1861"
+         style="stroke-linecap:butt;stroke-linejoin:round" />
+    </clipPath>
+    <clipPath
+       id="p0ca8e1095a"
+       style="stroke-linecap:butt;stroke-linejoin:round">
+      <rect
+         height="147.08571"
+         width="446.39999"
+         x="72"
+         y="303.53143"
+         id="rect1864"
+         style="stroke-linecap:butt;stroke-linejoin:round" />
+    </clipPath>
+    <clipPath
+       id="p03ddf2d029"
+       style="stroke-linecap:butt;stroke-linejoin:round">
+      <rect
+         height="147.08571"
+         width="446.39999"
+         x="72"
+         y="494.74286"
+         id="rect1867"
+         style="stroke-linecap:butt;stroke-linejoin:round" />
+    </clipPath>
+    <clipPath
+       id="p95b3edc81b"
+       style="stroke-linecap:butt;stroke-linejoin:round">
+      <rect
+         height="147.08571"
+         width="446.39999"
+         x="72"
+         y="685.95428"
+         id="rect1870"
+         style="stroke-linecap:butt;stroke-linejoin:round" />
+    </clipPath>
+  </defs>
+  <flowRoot
+     xml:space="preserve"
+     id="flowRoot2813"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:butt;stroke-linejoin:round"
+     transform="matrix(0.75,0,0,0.75,151.08764,-59.035803)"><flowRegion
+       id="flowRegion2815"
+       style="stroke-linecap:butt;stroke-linejoin:round"><rect
+         id="rect2817"
+         width="181.11864"
+         height="71.389832"
+         x="23.79661"
+         y="71.389832"
+         style="stroke-linecap:butt;stroke-linejoin:round" /></flowRegion><flowPara
+       id="flowPara2819"
+       style="stroke-linecap:butt;stroke-linejoin:round" /></flowRoot>  <path
+     d="m 151.08764,877.16532 h 576 V -58.834674 h -576 z"
      style="fill:#ffffff;stroke-linecap:butt;stroke-linejoin:round"
      id="path6"
      inkscape:connector-curvature="0" />
   <g
      id="patch_2"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        d="M 72,259.40571 H 518.4 V 112.32 H 72 Z"
        style="fill:#ffffff;stroke-linecap:butt;stroke-linejoin:round"
@@ -151,7 +295,7 @@
   <g
      id="patch_3"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        clip-path="url(#pea656c08d2)"
        d="M 92.290909,439.51067 H 129.18347 V 191.11592 H 92.290909 Z"
@@ -162,7 +306,7 @@
   <g
      id="patch_4"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        clip-path="url(#pea656c08d2)"
        d="m 153.77851,439.51067 h 36.89256 V 193.36723 h -36.89256 z"
@@ -173,7 +317,7 @@
   <g
      id="patch_5"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        clip-path="url(#pea656c08d2)"
        d="m 215.26612,439.51067 h 36.89256 v -269.407 h -36.89256 z"
@@ -184,7 +328,7 @@
   <g
      id="patch_6"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        clip-path="url(#pea656c08d2)"
        d="m 276.75372,439.51067 h 36.89256 V 184.36198 h -36.89256 z"
@@ -195,7 +339,7 @@
   <g
      id="patch_7"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        clip-path="url(#pea656c08d2)"
        d="m 338.24132,439.51067 h 36.89256 V 184.36198 h -36.89256 z"
@@ -206,7 +350,7 @@
   <g
      id="patch_8"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        clip-path="url(#pea656c08d2)"
        d="m 399.72893,439.51067 h 36.89256 v -266.1551 h -36.89256 z"
@@ -217,7 +361,7 @@
   <g
      id="patch_9"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        clip-path="url(#pea656c08d2)"
        d="m 461.21653,439.51067 h 36.89256 V 162.27768 h -36.89256 z"
@@ -228,7 +372,7 @@
   <g
      id="LineCollection_1"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        clip-path="url(#pea656c08d2)"
        d="M 110.73719,212.16833 V 170.06351"
@@ -275,7 +419,7 @@
   <g
      id="line2d_1"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <defs
        id="defs49">
       <path
@@ -349,7 +493,7 @@
   <g
      id="line2d_2"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        clip-path="url(#pea656c08d2)"
        id="g82"
@@ -415,7 +559,7 @@
   <g
      id="matplotlib.axis_1"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        id="xtick_1"
        style="stroke-linecap:butt;stroke-linejoin:round">
@@ -568,7 +712,7 @@
   <g
      id="matplotlib.axis_2"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        id="ytick_1"
        style="stroke-linecap:butt;stroke-linejoin:round">
@@ -890,7 +1034,7 @@
   <g
      id="PathCollection_1"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <defs
        id="defs227">
       <path
@@ -940,7 +1084,7 @@
   <g
      id="PathCollection_2"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        clip-path="url(#pea656c08d2)"
        id="g256"
@@ -1014,7 +1158,7 @@
   <g
      id="PathCollection_3"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        clip-path="url(#pea656c08d2)"
        id="g267"
@@ -1056,7 +1200,7 @@
   <g
      id="PathCollection_4"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        clip-path="url(#pea656c08d2)"
        id="g274"
@@ -1082,7 +1226,7 @@
   <g
      id="PathCollection_5"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        clip-path="url(#pea656c08d2)"
        id="g279"
@@ -1100,7 +1244,7 @@
   <g
      id="PathCollection_6"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        clip-path="url(#pea656c08d2)"
        id="g288"
@@ -1134,7 +1278,7 @@
   <g
      id="PathCollection_7"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        clip-path="url(#pea656c08d2)"
        id="g319"
@@ -1256,7 +1400,7 @@
   <g
      id="patch_10"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        d="M 72,259.40571 V 112.32"
        style="fill:none;stroke:#000000;stroke-width:0.80000001;stroke-linecap:square;stroke-linejoin:miter"
@@ -1266,7 +1410,7 @@
   <g
      id="patch_11"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        d="M 518.4,259.40571 V 112.32"
        style="fill:none;stroke:#000000;stroke-width:0.80000001;stroke-linecap:square;stroke-linejoin:miter"
@@ -1276,7 +1420,7 @@
   <g
      id="patch_12"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        d="M 72,259.40571 H 518.4"
        style="fill:none;stroke:#000000;stroke-width:0.80000001;stroke-linecap:square;stroke-linejoin:miter"
@@ -1286,7 +1430,7 @@
   <g
      id="patch_13"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        d="M 72,112.32 H 518.4"
        style="fill:none;stroke:#000000;stroke-width:0.80000001;stroke-linecap:square;stroke-linejoin:miter"
@@ -1296,7 +1440,7 @@
   <g
      id="text_7"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <!-- Reported pairs (% of total) -->
     <defs
        id="defs349">
@@ -1601,7 +1745,7 @@
   <g
      id="patch_14"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        d="M 72,450.61714 H 518.4 V 303.53143 H 72 Z"
        style="fill:#ffffff;stroke-linecap:butt;stroke-linejoin:round"
@@ -1611,7 +1755,7 @@
   <g
      id="patch_15"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        clip-path="url(#p0ca8e1095a)"
        d="m 92.290909,483.67011 h 36.881861 v -78.5008 H 92.290909 Z"
@@ -1622,7 +1766,7 @@
   <g
      id="patch_16"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        clip-path="url(#p0ca8e1095a)"
        d="m 153.76067,483.67011 h 36.88186 v -51.64526 h -36.88186 z"
@@ -1633,7 +1777,7 @@
   <g
      id="patch_17"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        clip-path="url(#p0ca8e1095a)"
        d="M 215.23044,483.67011 H 252.1123 V 421.28263 H 215.23044 Z"
@@ -1644,7 +1788,7 @@
   <g
      id="patch_18"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        clip-path="url(#p0ca8e1095a)"
        d="m 276.70021,483.67011 h 36.88186 V 359.72148 h -36.88186 z"
@@ -1655,7 +1799,7 @@
   <g
      id="patch_19"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        clip-path="url(#p0ca8e1095a)"
        d="m 338.16997,483.67011 h 36.88186 V 372.94266 h -36.88186 z"
@@ -1666,7 +1810,7 @@
   <g
      id="patch_20"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        clip-path="url(#p0ca8e1095a)"
        d="M 399.63974,483.67011 H 436.5216 V 369.08648 h -36.88186 z"
@@ -1677,7 +1821,7 @@
   <g
      id="patch_21"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        clip-path="url(#p0ca8e1095a)"
        d="m 461.10951,483.67011 h 36.88186 V 365.85989 h -36.88186 z"
@@ -1688,7 +1832,7 @@
   <g
      id="LineCollection_2"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        clip-path="url(#p0ca8e1095a)"
        d="M 110.73184,418.82243 V 391.51619"
@@ -1735,7 +1879,7 @@
   <g
      id="line2d_15"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        clip-path="url(#p0ca8e1095a)"
        id="g462"
@@ -1801,7 +1945,7 @@
   <g
      id="line2d_16"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        clip-path="url(#p0ca8e1095a)"
        id="g479"
@@ -1867,7 +2011,7 @@
   <g
      id="matplotlib.axis_3"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        id="xtick_8"
        style="stroke-linecap:butt;stroke-linejoin:round">
@@ -2012,7 +2156,7 @@
   <g
      id="matplotlib.axis_4"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        id="ytick_6"
        style="stroke-linecap:butt;stroke-linejoin:round">
@@ -2289,7 +2433,7 @@
   <g
      id="PathCollection_8"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        clip-path="url(#p0ca8e1095a)"
        id="g612"
@@ -2331,7 +2475,7 @@
   <g
      id="PathCollection_9"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        clip-path="url(#p0ca8e1095a)"
        id="g631"
@@ -2405,7 +2549,7 @@
   <g
      id="PathCollection_10"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        clip-path="url(#p0ca8e1095a)"
        id="g642"
@@ -2447,7 +2591,7 @@
   <g
      id="PathCollection_11"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        clip-path="url(#p0ca8e1095a)"
        id="g649"
@@ -2473,7 +2617,7 @@
   <g
      id="PathCollection_12"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        clip-path="url(#p0ca8e1095a)"
        id="g654"
@@ -2491,7 +2635,7 @@
   <g
      id="PathCollection_13"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        clip-path="url(#p0ca8e1095a)"
        id="g663"
@@ -2525,7 +2669,7 @@
   <g
      id="PathCollection_14"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        clip-path="url(#p0ca8e1095a)"
        id="g694"
@@ -2647,7 +2791,7 @@
   <g
      id="patch_22"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        d="M 72,450.61714 V 303.53143"
        style="fill:none;stroke:#000000;stroke-width:0.80000001;stroke-linecap:square;stroke-linejoin:miter"
@@ -2657,7 +2801,7 @@
   <g
      id="patch_23"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        d="M 518.4,450.61714 V 303.53143"
        style="fill:none;stroke:#000000;stroke-width:0.80000001;stroke-linecap:square;stroke-linejoin:miter"
@@ -2667,7 +2811,7 @@
   <g
      id="patch_24"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        d="M 72,450.61714 H 518.4"
        style="fill:none;stroke:#000000;stroke-width:0.80000001;stroke-linecap:square;stroke-linejoin:miter"
@@ -2677,7 +2821,7 @@
   <g
      id="patch_25"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        d="M 72,303.53143 H 518.4"
        style="fill:none;stroke:#000000;stroke-width:0.80000001;stroke-linecap:square;stroke-linejoin:miter"
@@ -2687,7 +2831,7 @@
   <g
      id="text_14"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <!-- Cis interactions (% of total) -->
     <defs
        id="defs712">
@@ -2948,7 +3092,7 @@
   <g
      id="patch_26"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        d="M 72,641.82857 H 518.4 V 494.74286 H 72 Z"
        style="fill:#ffffff;stroke-linecap:butt;stroke-linejoin:round"
@@ -2958,7 +3102,7 @@
   <g
      id="patch_27"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        clip-path="url(#p03ddf2d029)"
        d="M 92.290909,674.88154 H 129.02575 V 586.46485 H 92.290909 Z"
@@ -2969,7 +3113,7 @@
   <g
      id="patch_28"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        clip-path="url(#p03ddf2d029)"
        d="m 153.51564,674.88154 h 36.73484 V 566.83965 h -36.73484 z"
@@ -2980,7 +3124,7 @@
   <g
      id="patch_29"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        clip-path="url(#p03ddf2d029)"
        d="m 214.74038,674.88154 h 36.73484 V 571.17785 h -36.73484 z"
@@ -2991,7 +3135,7 @@
   <g
      id="patch_30"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        clip-path="url(#p03ddf2d029)"
        d="m 275.96511,674.88154 h 36.73484 V 555.89085 h -36.73484 z"
@@ -3002,7 +3146,7 @@
   <g
      id="patch_31"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        clip-path="url(#p03ddf2d029)"
        d="m 337.18985,674.88154 h 36.73484 V 608.7756 h -36.73484 z"
@@ -3013,7 +3157,7 @@
   <g
      id="patch_32"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        clip-path="url(#p03ddf2d029)"
        d="m 398.41458,674.88154 h 36.73484 v -82.63242 h -36.73484 z"
@@ -3024,7 +3168,7 @@
   <g
      id="patch_33"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        clip-path="url(#p03ddf2d029)"
        d="m 459.63932,674.88154 h 36.73484 V 576.9031 h -36.73484 z"
@@ -3035,7 +3179,7 @@
   <g
      id="LineCollection_3"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        clip-path="url(#p03ddf2d029)"
        d="M 110.65833,611.48761 V 561.44209"
@@ -3082,7 +3226,7 @@
   <g
      id="line2d_29"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        clip-path="url(#p03ddf2d029)"
        id="g829"
@@ -3148,7 +3292,7 @@
   <g
      id="line2d_30"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        clip-path="url(#p03ddf2d029)"
        id="g846"
@@ -3214,7 +3358,7 @@
   <g
      id="matplotlib.axis_5"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        id="xtick_15"
        style="stroke-linecap:butt;stroke-linejoin:round">
@@ -3359,7 +3503,7 @@
   <g
      id="matplotlib.axis_6"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        id="ytick_11"
        style="stroke-linecap:butt;stroke-linejoin:round">
@@ -3620,7 +3764,7 @@
   <g
      id="PathCollection_15"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        clip-path="url(#p03ddf2d029)"
        id="g973"
@@ -3662,7 +3806,7 @@
   <g
      id="PathCollection_16"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        clip-path="url(#p03ddf2d029)"
        id="g992"
@@ -3736,7 +3880,7 @@
   <g
      id="PathCollection_17"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        clip-path="url(#p03ddf2d029)"
        id="g1003"
@@ -3778,7 +3922,7 @@
   <g
      id="PathCollection_18"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        clip-path="url(#p03ddf2d029)"
        id="g1010"
@@ -3804,7 +3948,7 @@
   <g
      id="PathCollection_19"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        clip-path="url(#p03ddf2d029)"
        id="g1015"
@@ -3822,7 +3966,7 @@
   <g
      id="PathCollection_20"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        clip-path="url(#p03ddf2d029)"
        id="g1024"
@@ -3856,7 +4000,7 @@
   <g
      id="PathCollection_21"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        clip-path="url(#p03ddf2d029)"
        id="g1055"
@@ -3978,7 +4122,7 @@
   <g
      id="patch_34"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        d="M 72,641.82857 V 494.74286"
        style="fill:none;stroke:#000000;stroke-width:0.80000001;stroke-linecap:square;stroke-linejoin:miter"
@@ -3988,7 +4132,7 @@
   <g
      id="patch_35"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        d="M 518.4,641.82857 V 494.74286"
        style="fill:none;stroke:#000000;stroke-width:0.80000001;stroke-linecap:square;stroke-linejoin:miter"
@@ -3998,7 +4142,7 @@
   <g
      id="patch_36"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        d="M 72,641.82857 H 518.4"
        style="fill:none;stroke:#000000;stroke-width:0.80000001;stroke-linecap:square;stroke-linejoin:miter"
@@ -4008,7 +4152,7 @@
   <g
      id="patch_37"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        d="M 72,494.74286 H 518.4"
        style="fill:none;stroke:#000000;stroke-width:0.80000001;stroke-linecap:square;stroke-linejoin:miter"
@@ -4018,7 +4162,7 @@
   <g
      id="text_21"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <!-- FR excess (% of valid) -->
     <defs
        id="defs1073">
@@ -4223,7 +4367,7 @@
   <g
      id="patch_38"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        d="M 72,833.04 H 518.4 V 685.95429 H 72 Z"
        style="fill:#ffffff;stroke-linecap:butt;stroke-linejoin:round"
@@ -4233,7 +4377,7 @@
   <g
      id="patch_39"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        clip-path="url(#p95b3edc81b)"
        d="M 92.290909,833.04 H 129.18347 V 738.86312 H 92.290909 Z"
@@ -4244,7 +4388,7 @@
   <g
      id="patch_40"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        clip-path="url(#p95b3edc81b)"
        d="m 153.77851,833.04 h 36.89256 v -77.63762 h -36.89256 z"
@@ -4255,7 +4399,7 @@
   <g
      id="patch_41"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        clip-path="url(#p95b3edc81b)"
        d="m 215.26612,833.04 h 36.89256 v -55.80327 h -36.89256 z"
@@ -4266,7 +4410,7 @@
   <g
      id="patch_42"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        clip-path="url(#p95b3edc81b)"
        d="m 276.75372,833.04 h 36.89256 v -61.35575 h -36.89256 z"
@@ -4277,7 +4421,7 @@
   <g
      id="patch_43"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        clip-path="url(#p95b3edc81b)"
        d="m 338.24132,833.04 h 36.89256 v -32.7791 h -36.89256 z"
@@ -4288,7 +4432,7 @@
   <g
      id="patch_44"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        clip-path="url(#p95b3edc81b)"
        d="m 399.72893,833.04 h 36.89256 v -61.74798 h -36.89256 z"
@@ -4297,13 +4441,9 @@
        inkscape:connector-curvature="0" />
   </g>
   <g
-     id="patch_45"
-     style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)" />
-  <g
      id="LineCollection_4"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        clip-path="url(#p95b3edc81b)"
        d="M 110.73719,770.21473 V 707.51151"
@@ -4350,7 +4490,7 @@
   <g
      id="line2d_43"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        clip-path="url(#p95b3edc81b)"
        id="g1176"
@@ -4416,7 +4556,7 @@
   <g
      id="line2d_44"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        clip-path="url(#p95b3edc81b)"
        id="g1193"
@@ -4482,7 +4622,7 @@
   <g
      style="stroke-linecap:butt;stroke-linejoin:round"
      id="xtick_22"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        style="stroke-linecap:butt;stroke-linejoin:round"
        id="line2d_45">
@@ -4736,7 +4876,7 @@
   <g
      style="stroke-linecap:butt;stroke-linejoin:round"
      id="xtick_23"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        style="stroke-linecap:butt;stroke-linejoin:round"
        id="line2d_46">
@@ -4943,7 +5083,7 @@
   <g
      id="line2d_47"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        id="g1317"
        style="stroke-linecap:butt;stroke-linejoin:round">
@@ -4960,7 +5100,7 @@
   <g
      id="text_24"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(103.60833,-83.794555)">
+     transform="translate(193.83764,-83.584673)">
     <!-- Ma et al. + new blunt + SDS -->
     <defs
        id="defs1326">
@@ -5188,7 +5328,7 @@
   <g
      style="stroke-linecap:butt;stroke-linejoin:round"
      id="xtick_25"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        style="stroke-linecap:butt;stroke-linejoin:round"
        id="line2d_48">
@@ -5411,7 +5551,7 @@
   <g
      style="stroke-linecap:butt;stroke-linejoin:round"
      id="xtick_26"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        style="stroke-linecap:butt;stroke-linejoin:round"
        id="line2d_49">
@@ -5650,7 +5790,7 @@
   <g
      style="stroke-linecap:butt;stroke-linejoin:round"
      id="xtick_27"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        style="stroke-linecap:butt;stroke-linejoin:round"
        id="line2d_50">
@@ -5897,7 +6037,7 @@
   <g
      style="stroke-linecap:butt;stroke-linejoin:round"
      id="xtick_28"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        style="stroke-linecap:butt;stroke-linejoin:round"
        id="line2d_51">
@@ -6168,7 +6308,7 @@
   <g
      id="matplotlib.axis_8"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        id="ytick_16"
        style="stroke-linecap:butt;stroke-linejoin:round">
@@ -6367,7 +6507,7 @@
   <g
      id="PathCollection_22"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        clip-path="url(#p95b3edc81b)"
        id="g1704"
@@ -6409,7 +6549,7 @@
   <g
      id="PathCollection_23"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        clip-path="url(#p95b3edc81b)"
        id="g1723"
@@ -6483,7 +6623,7 @@
   <g
      id="PathCollection_24"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        clip-path="url(#p95b3edc81b)"
        id="g1734"
@@ -6525,7 +6665,7 @@
   <g
      id="PathCollection_25"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        clip-path="url(#p95b3edc81b)"
        id="g1741"
@@ -6551,7 +6691,7 @@
   <g
      id="PathCollection_26"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        clip-path="url(#p95b3edc81b)"
        id="g1746"
@@ -6569,7 +6709,7 @@
   <g
      id="PathCollection_27"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <g
        clip-path="url(#p95b3edc81b)"
        id="g1755"
@@ -6601,27 +6741,9 @@
     </g>
   </g>
   <g
-     id="PathCollection_28"
-     style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
-    <g
-       clip-path="url(#p95b3edc81b)"
-       id="g1760"
-       style="stroke-linecap:butt;stroke-linejoin:round">
-      <use
-         style="stroke:#000000;stroke-linecap:butt;stroke-linejoin:round"
-         x="488.32806"
-         xlink:href="#m3fe4807ffe"
-         y="1043.1625"
-         id="use1758"
-         width="100%"
-         height="100%" />
-    </g>
-  </g>
-  <g
      id="patch_46"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        d="M 72,833.04 V 685.95429"
        style="fill:none;stroke:#000000;stroke-width:0.80000001;stroke-linecap:square;stroke-linejoin:miter"
@@ -6631,7 +6753,7 @@
   <g
      id="patch_47"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        d="M 518.4,833.04 V 685.95429"
        style="fill:none;stroke:#000000;stroke-width:0.80000001;stroke-linecap:square;stroke-linejoin:miter"
@@ -6641,7 +6763,7 @@
   <g
      id="patch_48"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        d="M 72,833.04 H 498.368 518.4"
        style="fill:none;stroke:#000000;stroke-width:0.80000001;stroke-linecap:square;stroke-linejoin:miter"
@@ -6652,7 +6774,7 @@
   <g
      id="patch_49"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <path
        d="M 72,685.95429 H 518.4"
        style="fill:none;stroke:#000000;stroke-width:0.80000001;stroke-linecap:square;stroke-linejoin:miter"
@@ -6662,7 +6784,7 @@
   <g
      id="text_34"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(60.858334,-59.044556)">
+     transform="translate(151.08764,-58.834674)">
     <!-- Corrected DEnds estimation (% of valid) -->
     <defs
        id="defs1776">
@@ -6990,183 +7112,122 @@
          height="100%" />
     </g>
   </g>
-  <defs
-     id="defs1873">
-    <clipPath
-       id="pea656c08d2"
-       style="stroke-linecap:butt;stroke-linejoin:round">
-      <rect
-         height="147.08571"
-         width="446.39999"
-         x="72"
-         y="112.32"
-         id="rect1861"
-         style="stroke-linecap:butt;stroke-linejoin:round" />
-    </clipPath>
-    <clipPath
-       id="p0ca8e1095a"
-       style="stroke-linecap:butt;stroke-linejoin:round">
-      <rect
-         height="147.08571"
-         width="446.39999"
-         x="72"
-         y="303.53143"
-         id="rect1864"
-         style="stroke-linecap:butt;stroke-linejoin:round" />
-    </clipPath>
-    <clipPath
-       id="p03ddf2d029"
-       style="stroke-linecap:butt;stroke-linejoin:round">
-      <rect
-         height="147.08571"
-         width="446.39999"
-         x="72"
-         y="494.74286"
-         id="rect1867"
-         style="stroke-linecap:butt;stroke-linejoin:round" />
-    </clipPath>
-    <clipPath
-       id="p95b3edc81b"
-       style="stroke-linecap:butt;stroke-linejoin:round">
-      <rect
-         height="147.08571"
-         width="446.39999"
-         x="72"
-         y="685.95428"
-         id="rect1870"
-         style="stroke-linecap:butt;stroke-linejoin:round" />
-    </clipPath>
-  </defs>
   <path
      style="opacity:1;fill:none;fill-opacity:0.98705498;fill-rule:evenodd;stroke:#000000;stroke-width:0.80025005;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
-     d="M 544.83246,91.172239 V 68.971069 H 228.71478 v 41.039061"
+     d="M 635.06177,91.382121 V 69.180951 H 318.94409 v 41.039059"
      id="path2895"
      inkscape:connector-curvature="0" />
   <path
      style="opacity:1;fill:none;fill-opacity:0.98705498;fill-rule:evenodd;stroke:#000000;stroke-width:0.80025005;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
-     d="M 236.2221,110.01013 V 84.996462 h 239.2002 v 15.098148"
+     d="M 326.45141,110.22001 V 85.206344 h 239.2002 v 15.098146"
      id="path2893"
      inkscape:connector-curvature="0" />
   <path
      style="opacity:1;fill:none;fill-opacity:0.98705498;fill-rule:evenodd;stroke:#000000;stroke-width:0.80025005;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
-     d="M 482.22796,100.09461 V 84.501342 h 55.59375 v 6.670897"
+     d="M 572.45727,100.30449 V 84.711224 h 55.59375 v 6.670897"
      id="rect2690"
      inkscape:connector-curvature="0" />
   <path
      style="opacity:1;fill:none;fill-opacity:0.98705498;fill-rule:evenodd;stroke:#000000;stroke-width:0.80025005;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
-     d="M 544.83246,280.05652 V 260.97107 H 228.71478 v 71.63671"
+     d="M 635.06177,280.2664 V 261.18095 H 318.94409 v 71.63671"
      id="path2901"
      inkscape:connector-curvature="0" />
   <path
      style="opacity:1;fill:none;fill-opacity:0.98705498;fill-rule:evenodd;stroke:#000000;stroke-width:0.80025005;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
-     d="m 236.2221,332.60778 v -55.61132 h 239.2002 v 12.97559"
+     d="m 326.45141,332.81766 v -55.61132 h 239.2002 v 12.97559"
      id="rect2688-9"
      inkscape:connector-curvature="0" />
   <path
      style="opacity:1;fill:none;fill-opacity:0.98705498;fill-rule:evenodd;stroke:#000000;stroke-width:0.80025005;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
-     d="M 544.83246,486.2948 V 452.97107 H 228.71478 V 482.328"
+     d="M 635.06177,486.50468 V 453.18095 H 318.94409 v 29.35693"
      id="path2905"
      inkscape:connector-curvature="0" />
   <path
      style="opacity:1;fill:none;fill-opacity:0.98705498;fill-rule:evenodd;stroke:#000000;stroke-width:0.80025005;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
-     d="m 236.2221,482.328 v -13.33154 h 239.2002 v 28.70069"
+     d="m 326.45141,482.53788 v -13.33154 h 239.2002 v 28.70069"
      id="rect2688-1"
      inkscape:connector-curvature="0" />
-  <flowRoot
-     xml:space="preserve"
-     id="flowRoot2813"
-     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:butt;stroke-linejoin:round"
-     transform="matrix(0.75,0,0,0.75,60.858334,-59.044556)"><flowRegion
-       id="flowRegion2815"
-       style="stroke-linecap:butt;stroke-linejoin:round"><rect
-         id="rect2817"
-         width="181.11864"
-         height="71.389832"
-         x="23.79661"
-         y="71.389832"
-         style="stroke-linecap:butt;stroke-linejoin:round" /></flowRegion><flowPara
-       id="flowPara2819"
-       style="stroke-linecap:butt;stroke-linejoin:round" /></flowRoot>  <text
+  <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
-     x="371.97614"
-     y="69.883789"
+     x="462.20544"
+     y="70.093666"
      id="text2823-0"><tspan
        sodipodi:role="line"
        id="tspan2821-1"
        style="font-size:15.99999905px;letter-spacing:2.79750013px;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
-       x="371.97614"
-       y="69.883789">***</tspan></text>
+       x="462.20544"
+       y="70.093666">***</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
-     x="347.0722"
-     y="85.911636"
+     x="437.30151"
+     y="86.121513"
      id="text2823-7"><tspan
        sodipodi:role="line"
        id="tspan2821-8"
        style="font-size:15.99999905px;letter-spacing:1.5px;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
-       x="347.0722"
-       y="85.911636">**</tspan></text>
+       x="437.30151"
+       y="86.121513">**</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
-     x="501.27484"
-     y="85.911636"
+     x="591.50415"
+     y="86.121513"
      id="text2823-9"><tspan
        sodipodi:role="line"
        id="tspan2821-15"
        style="font-size:15.99999905px;letter-spacing:1.5px;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
-       x="501.27484"
-       y="85.911636">**</tspan></text>
+       x="591.50415"
+       y="86.121513">**</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
-     x="371.97614"
-     y="261.09247"
+     x="462.20544"
+     y="261.30237"
      id="text2823-4"><tspan
        sodipodi:role="line"
        id="tspan2821-9"
        style="font-size:15.99999905px;letter-spacing:2.79750013px;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
-       x="371.97614"
-       y="261.09247">***</tspan></text>
+       x="462.20544"
+       y="261.30237">***</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
-     x="347.0722"
-     y="277.21808"
+     x="437.30151"
+     y="277.42798"
      id="text2823-2"><tspan
        sodipodi:role="line"
        id="tspan2821-5"
        style="font-size:15.99999905px;letter-spacing:1.5px;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
-       x="347.0722"
-       y="277.21808">**</tspan></text>
+       x="437.30151"
+       y="277.42798">**</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
-     x="382.77362"
-     y="453.39331"
+     x="473.00293"
+     y="453.60321"
      id="text2823-74"><tspan
        sodipodi:role="line"
        id="tspan2821-99"
        style="font-size:15.99999905px;letter-spacing:1.5px;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
-       x="382.77362"
-       y="453.39331">*</tspan></text>
+       x="473.00293"
+       y="453.60321">*</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
-     x="351.8222"
-     y="470.02454"
+     x="442.05151"
+     y="470.23444"
      id="text2823-45"><tspan
        sodipodi:role="line"
        id="tspan2821-93"
        style="font-size:15.99999905px;letter-spacing:1.5px;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
-       x="351.8222"
-       y="470.02454">*</tspan></text>
+       x="442.05151"
+       y="470.23444">*</tspan></text>
   <g
      id="g5065"
      style="stroke-linecap:butt;stroke-linejoin:round"
-     transform="translate(1.5)">
+     transform="translate(91.72931,0.20988249)">
     <path
        inkscape:connector-curvature="0"
        id="path2907"
@@ -7194,7 +7255,7 @@
      xml:space="preserve"
      id="flowRoot4893"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:butt;stroke-linejoin:round"
-     transform="matrix(0,-0.75,0.75,0,-588.02847,-122.0323)"><flowRegion
+     transform="matrix(0,-0.75,0.75,0,-497.79916,-121.82242)"><flowRegion
        id="flowRegion4895"
        style="stroke-linecap:butt;stroke-linejoin:round"><rect
          id="rect4897"
@@ -7208,7 +7269,7 @@
      xml:space="preserve"
      id="flowRoot4893-2"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:butt;stroke-linejoin:round"
-     transform="matrix(0,-0.75,0.75,0,-588.02847,69.179134)"><flowRegion
+     transform="matrix(0,-0.75,0.75,0,-497.79916,69.389016)"><flowRegion
        id="flowRegion4895-0"
        style="stroke-linecap:butt;stroke-linejoin:round"><rect
          id="rect4897-7"
@@ -7222,7 +7283,7 @@
      xml:space="preserve"
      id="flowRoot4893-1"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:butt;stroke-linejoin:round"
-     transform="matrix(0,-0.75,0.75,0,-588.02847,260.41988)"><flowRegion
+     transform="matrix(0,-0.75,0.75,0,-497.79916,260.62976)"><flowRegion
        id="flowRegion4895-1"
        style="stroke-linecap:butt;stroke-linejoin:round"><rect
          id="rect4897-9"
@@ -7236,7 +7297,7 @@
      xml:space="preserve"
      id="flowRoot4893-5"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:butt;stroke-linejoin:round"
-     transform="matrix(0,-0.75,0.75,0,-588.02847,451.63131)"><flowRegion
+     transform="matrix(0,-0.75,0.75,0,-497.79916,451.84119)"><flowRegion
        id="flowRegion4895-6"
        style="stroke-linecap:butt;stroke-linejoin:round"><rect
          id="rect4897-77"
@@ -7246,18 +7307,11 @@
          y="793.67792"
          style="stroke-linecap:butt;stroke-linejoin:round" /></flowRegion><flowPara
        id="flowPara4899-4"
-       style="font-size:21.33333397px;stroke-linecap:butt;stroke-linejoin:round">Quality</flowPara></flowRoot>  <rect
-     style="opacity:1;fill:none;fill-opacity:0.98705498;fill-rule:evenodd;stroke:#000000;stroke-width:1.125;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
-     id="rect4967"
-     width="604.36053"
-     height="910.04651"
-     x="0.5625"
-     y="0.5625" />
-  <flowRoot
+       style="font-size:21.33333397px;stroke-linecap:butt;stroke-linejoin:round">Quality</flowPara></flowRoot>  <flowRoot
      xml:space="preserve"
      id="flowRoot4991"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:butt;stroke-linejoin:round"
-     transform="matrix(0.74999999,0,0,0.74999999,-122.79278,97.047094)"><flowRegion
+     transform="matrix(0.74999999,0,0,0.74999999,-32.56347,97.256976)"><flowRegion
        id="flowRegion4993"
        style="stroke-linecap:butt;stroke-linejoin:round"><rect
          id="rect4995"
@@ -7267,4 +7321,2327 @@
          y="844.70703"
          style="stroke-linecap:butt;stroke-linejoin:round" /></flowRegion><flowPara
        id="flowPara4997"
-       style="font-size:21.33333397px;stroke-linecap:butt;stroke-linejoin:round">N/A</flowPara></flowRoot></svg>
+       style="font-size:21.33333397px;stroke-linecap:butt;stroke-linejoin:round">N/A</flowPara></flowRoot>  <g
+     style="stroke-linecap:butt;stroke-linejoin:round"
+     id="g2066"
+     transform="matrix(0.99999997,0,0,-0.99999997,1218.7583,759.33284)">
+    <g
+       style="stroke-linecap:butt;stroke-linejoin:round"
+       id="g2068"
+       clip-path="url(#clipPath2072)" />
+  </g>
+  <g
+     style="stroke-linecap:butt;stroke-linejoin:round"
+     id="g2908"
+     transform="matrix(0.99999997,0,0,-0.99999997,684.79329,1139.7421)">
+    <g
+       style="stroke-linecap:butt;stroke-linejoin:round"
+       id="g2910"
+       clip-path="url(#clipPath2914)" />
+  </g>
+  <flowRoot
+     xml:space="preserve"
+     id="flowRoot2607-3"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.4320941;stroke-linecap:butt;stroke-linejoin:round"
+     transform="matrix(0.52370859,0,0,0.52370859,720.98881,-659.38487)"><flowRegion
+       id="flowRegion2609-6"
+       style="stroke-width:1.4320941;stroke-linecap:butt;stroke-linejoin:round"><rect
+         id="rect2611-1"
+         width="308.57144"
+         height="422.85715"
+         x="22.857143"
+         y="1266.2739"
+         style="stroke-width:1.4320941;stroke-linecap:butt;stroke-linejoin:round" /></flowRegion><flowPara
+       id="flowPara2613-0"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:192px;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono Bold';stroke-width:1.4320941;stroke-linecap:butt;stroke-linejoin:round">B</flowPara></flowRoot>  <flowRoot
+     xml:space="preserve"
+     id="flowRoot2607"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.39821184;stroke-linecap:butt;stroke-linejoin:round"
+     transform="matrix(0.53639943,0,0,0.53639943,17.49691,-676.92316)"><flowRegion
+       id="flowRegion2609"
+       style="stroke-width:1.39821184;stroke-linecap:butt;stroke-linejoin:round"><rect
+         id="rect2611"
+         width="308.57144"
+         height="422.85715"
+         x="22.857143"
+         y="1266.2739"
+         style="stroke-width:1.39821184;stroke-linecap:butt;stroke-linejoin:round" /></flowRegion><flowPara
+       id="flowPara2613"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:192px;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono Bold';stroke-width:1.39821184;stroke-linecap:butt;stroke-linejoin:round">A</flowPara></flowRoot>  <g
+     id="g10116"
+     transform="translate(90.229311,-5.9912466)"
+     style="stroke-linecap:butt;stroke-linejoin:round">
+    <path
+       inkscape:connector-curvature="0"
+       id="path2116"
+       style="fill:#cccccc;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       d="m 723.8471,80.737664 h 562.2726 V 62.049098 H 723.8471 Z" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path2118"
+       style="fill:#b4c7dc;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       d="m 723.8471,99.393092 h 562.2726 V 80.704528 H 723.8471 Z" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path2120"
+       style="fill:#ffa6a6;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       d="m 723.8471,155.36167 h 562.2726 V 99.361099 H 723.8471 Z" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path2122"
+       style="fill:#81d41a;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       d="m 723.8471,174.01824 h 562.2726 V 155.32967 H 723.8471 Z" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path2124"
+       style="fill:#ffa6a6;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       d="m 723.8471,304.61081 h 562.2726 V 173.98624 H 723.8471 Z" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path2126"
+       style="fill:#ffff6d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       d="m 723.8471,341.9228 h 562.2726 V 304.57882 H 723.8471 Z" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path2128"
+       style="fill:#ffa6a6;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       d="m 723.8471,453.85881 h 562.2726 V 341.88967 H 723.8471 Z" />
+    <path
+       d="M 723.74997,62.146221 H 1286.25"
+       style="fill:none;stroke:#000000;stroke-width:0.09998999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path2132"
+       inkscape:connector-curvature="0" />
+    <path
+       d="M 723.8151,62.081092 V 453.98792"
+       style="fill:none;stroke:#000000;stroke-width:0.09998999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path2136"
+       inkscape:connector-curvature="0" />
+    <path
+       d="M 780.65778,62.081092 V 453.98792"
+       style="fill:none;stroke:#000000;stroke-width:0.09998999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path2140"
+       inkscape:connector-curvature="0" />
+    <path
+       d="M 1022.0849,62.081092 V 453.98792"
+       style="fill:none;stroke:#000000;stroke-width:0.09998999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path2144"
+       inkscape:connector-curvature="0" />
+    <path
+       d="M 1286.1848,62.081092 V 453.98792"
+       style="fill:none;stroke:#000000;stroke-width:0.09998999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path2148"
+       inkscape:connector-curvature="0" />
+    <path
+       d="M 1286.1848,62.081092 V 453.98792"
+       style="fill:none;stroke:#000000;stroke-width:0.09998999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path2152"
+       inkscape:connector-curvature="0" />
+    <path
+       d="M 723.74997,80.802793 H 1286.25"
+       style="fill:none;stroke:#000000;stroke-width:0.09998999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path2156"
+       inkscape:connector-curvature="0" />
+    <path
+       d="M 723.74997,99.458221 H 1286.25"
+       style="fill:none;stroke:#000000;stroke-width:0.09998999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path2160"
+       inkscape:connector-curvature="0" />
+    <path
+       d="M 723.74997,118.11479 H 1286.25"
+       style="fill:none;stroke:#000000;stroke-width:0.09998999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path2164"
+       inkscape:connector-curvature="0" />
+    <path
+       d="M 723.74997,136.77022 H 1286.25"
+       style="fill:none;stroke:#000000;stroke-width:0.09998999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path2168"
+       inkscape:connector-curvature="0" />
+    <path
+       d="M 723.74997,155.42679 H 1286.25"
+       style="fill:none;stroke:#000000;stroke-width:0.09998999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path2172"
+       inkscape:connector-curvature="0" />
+    <path
+       d="M 723.74997,174.08222 H 1286.25"
+       style="fill:none;stroke:#000000;stroke-width:0.09998999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path2176"
+       inkscape:connector-curvature="0" />
+    <path
+       d="M 723.74997,192.7388 H 1286.25"
+       style="fill:none;stroke:#000000;stroke-width:0.09998999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path2180"
+       inkscape:connector-curvature="0" />
+    <path
+       d="M 723.74997,211.39537 H 1286.25"
+       style="fill:none;stroke:#000000;stroke-width:0.09998999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path2184"
+       inkscape:connector-curvature="0" />
+    <path
+       d="M 723.74997,230.0508 H 1286.25"
+       style="fill:none;stroke:#000000;stroke-width:0.09998999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path2188"
+       inkscape:connector-curvature="0" />
+    <path
+       d="M 723.74997,248.70737 H 1286.25"
+       style="fill:none;stroke:#000000;stroke-width:0.09998999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path2192"
+       inkscape:connector-curvature="0" />
+    <path
+       d="M 723.74997,267.3628 H 1286.25"
+       style="fill:none;stroke:#000000;stroke-width:0.09998999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path2196"
+       inkscape:connector-curvature="0" />
+    <path
+       d="M 723.74997,286.01937 H 1286.25"
+       style="fill:none;stroke:#000000;stroke-width:0.09998999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path2200"
+       inkscape:connector-curvature="0" />
+    <path
+       d="M 723.74997,304.6748 H 1286.25"
+       style="fill:none;stroke:#000000;stroke-width:0.09998999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path2204"
+       inkscape:connector-curvature="0" />
+    <path
+       d="M 723.74997,323.33136 H 1286.25"
+       style="fill:none;stroke:#000000;stroke-width:0.09998999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path2208"
+       inkscape:connector-curvature="0" />
+    <path
+       d="M 723.74997,341.98679 H 1286.25"
+       style="fill:none;stroke:#000000;stroke-width:0.09998999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path2212"
+       inkscape:connector-curvature="0" />
+    <path
+       d="M 723.74997,360.64336 H 1286.25"
+       style="fill:none;stroke:#000000;stroke-width:0.09998999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path2216"
+       inkscape:connector-curvature="0" />
+    <path
+       d="M 723.74997,379.29993 H 1286.25"
+       style="fill:none;stroke:#000000;stroke-width:0.09998999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path2220"
+       inkscape:connector-curvature="0" />
+    <path
+       d="M 723.74997,397.95536 H 1286.25"
+       style="fill:none;stroke:#000000;stroke-width:0.09998999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path2224"
+       inkscape:connector-curvature="0" />
+    <path
+       d="M 723.74997,416.61194 H 1286.25"
+       style="fill:none;stroke:#000000;stroke-width:0.09998999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path2228"
+       inkscape:connector-curvature="0" />
+    <path
+       d="M 723.74997,435.26736 H 1286.25"
+       style="fill:none;stroke:#000000;stroke-width:0.09998999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path2232"
+       inkscape:connector-curvature="0" />
+    <path
+       d="M 723.74997,453.92394 H 1286.25"
+       style="fill:none;stroke:#000000;stroke-width:0.09998999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path2236"
+       inkscape:connector-curvature="0" />
+    <path
+       d="M 723.74997,453.92394 H 1286.25"
+       style="fill:none;stroke:#000000;stroke-width:0.09998999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path2240"
+       inkscape:connector-curvature="0" />
+    <text
+       y="75.522781"
+       x="729.35333"
+       style="font-variant:normal;font-weight:bold;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2246">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="729.35333 737.58514 743.97607 747.74896 754.14001 757.32977 761.10272 771.26666"
+         y="75.522781"
+         sodipodi:role="line"
+         id="tspan2244">Rate [%]</tspan>
+    </text>
+    <text
+       y="75.522781"
+       x="887.0224"
+       style="font-variant:normal;font-weight:bold;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2252">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="887.0224 896.51172 902.90277 909.29388"
+         y="75.522781"
+         sodipodi:role="line"
+         id="tspan2250">Mask</tspan>
+    </text>
+    <text
+       y="75.522781"
+       x="1123.3009"
+       style="font-variant:normal;font-weight:bold;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2258">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="1123.3009 1131.5326 1137.9237 1144.8978 1151.8718 1155.6448 1162.6189 1169.01 1175.401 1178.5908"
+         y="75.522781"
+         sodipodi:role="line"
+         id="tspan2256">Hypothesis</tspan>
+    </text>
+    <text
+       y="94.146217"
+       x="748.65668"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2264">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="748.65668 755.04761 761.43872 764.62842 771.01953"
+         y="94.146217"
+         sodipodi:role="line"
+         id="tspan2262">16,52</tspan>
+    </text>
+    <text
+       y="94.146217"
+       x="783.96106"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2270">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="783.96106 787.73401 794.12506 800.51599 806.90704 813.2981 822.78741 829.17853"
+         y="94.146217"
+         sodipodi:role="line"
+         id="tspan2268">-genome-</tspan>
+    </text>
+    <text
+       y="94.146217"
+       x="1025.3881"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2276">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="1025.3881 1033.6199 1040.011 1042.5261 1045.0414 1051.4325 1057.8235 1061.0133 1067.4044 1073.7954 1076.9852 1083.3762 1089.7673 1096.1582 1102.5493 1112.0388"
+         y="94.146217"
+         sodipodi:role="line"
+         id="tspan2274">Unligated genome</tspan>
+    </text>
+    <text
+       y="112.77079"
+       x="755.03815"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2282">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="755.03815 761.4292 764.61896 771.01001"
+         y="112.77079"
+         sodipodi:role="line"
+         id="tspan2280">7,86</tspan>
+    </text>
+    <text
+       y="112.77079"
+       x="783.96106"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2288">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="783.96106 787.73401 794.12506 800.51599 806.90704 813.2981 822.78741 829.17853 832.95142 836.7243 843.11523 846.88818 849.40338 855.79443 862.18555 868.5766 872.34937 878.74042 885.13147 888.32123 894.03778 897.81067 901.58362 907.97455 914.3656 920.75665 923.27191 927.0448 933.43585 937.20862 940.98157 947.37262 953.76367 960.15472 966.54565 976.03516 982.42609"
+         y="112.77079"
+         sodipodi:role="line"
+         id="tspan2286">-genome--bridge-gatc--egdirb--genome-</tspan>
+    </text>
+    <text
+       y="112.77079"
+       x="1025.3881"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2294">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="1025.3881 1033.6199 1040.011 1046.402 1052.1184 1058.5095 1064.9005 1070.6169 1073.8069 1080.1979 1086.5889 1089.7788 1092.2939 1094.8092 1101.2003 1107.5913 1110.7811 1113.2963 1119.6874 1126.0785 1129.2682 1135.6593 1139.4321 1145.8232 1152.2141 1158.6052 1164.3218"
+         y="112.77079"
+         sodipodi:role="line"
+         id="tspan2292">Unexpected ligation product</tspan>
+    </text>
+    <text
+       y="131.52335"
+       x="755.03815"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2300">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="755.03815 761.4292 764.61896 771.01001"
+         y="131.52335"
+         sodipodi:role="line"
+         id="tspan2298">6,83</tspan>
+    </text>
+    <text
+       y="131.52335"
+       x="783.96106"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2306">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="783.96106 787.73401 794.12506 800.51599 806.90704 813.2981 822.78741 829.17853 832.95142 836.7243 843.11523 846.88818 853.27924 857.05212 859.56738 865.95844 872.34937 878.74042 882.51331 888.90442 895.29547 898.48523 904.2016 907.97455 911.74744 918.13849 924.5296 930.92053 933.43585 937.20862 943.59973 947.37262 951.14551 957.53656 963.92749 970.3186 976.70966 986.19897 992.59003"
+         y="131.52335"
+         sodipodi:role="line"
+         id="tspan2304">-genome--a-bridge-gatc--egdirb--genome-</tspan>
+    </text>
+    <text
+       y="131.52335"
+       x="1025.3881"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2312">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="1025.3881 1033.6199 1040.011 1046.402 1052.1184 1058.5095 1064.9005 1070.6169 1073.8069 1080.1979 1086.5889 1089.7788 1092.2939 1094.8092 1101.2003 1107.5913 1110.7811 1113.2963 1119.6874 1126.0785 1129.2682 1135.6593 1139.4321 1145.8232 1152.2141 1158.6052 1164.3218"
+         y="131.52335"
+         sodipodi:role="line"
+         id="tspan2310">Unexpected ligation product</tspan>
+    </text>
+    <text
+       y="150.14677"
+       x="755.03815"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2318">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="755.03815 761.4292 764.61896 771.01001"
+         y="150.14677"
+         sodipodi:role="line"
+         id="tspan2316">6,41</tspan>
+    </text>
+    <text
+       y="150.14677"
+       x="783.96106"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2324">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="783.96106 787.73401 794.12506 800.51599 806.90704 813.2981 822.78741 829.17853 832.95142 836.7243 843.11523 846.88818 849.40338 855.79443 862.18555 868.5766 872.34937 876.12225 882.51331 888.90442 892.09412 897.81067 901.58362 907.97455 914.3656 920.75665 923.27191 927.0448 933.43585 937.20862 940.3985 944.17145 947.94421 954.33527 960.72632 967.11743 973.50848 982.9978 989.38885"
+         y="150.14677"
+         sodipodi:role="line"
+         id="tspan2322">-genome--bridge--gatc-egdirb-t--genome-</tspan>
+    </text>
+    <text
+       y="150.14677"
+       x="1025.3881"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2330">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="1025.3881 1033.6199 1040.011 1046.402 1052.1184 1058.5095 1064.9005 1070.6169 1073.8069 1080.1979 1086.5889 1089.7788 1092.2939 1094.8092 1101.2003 1107.5913 1110.7811 1113.2963 1119.6874 1126.0785 1129.2682 1135.6593 1139.4321 1145.8232 1152.2141 1158.6052 1164.3218"
+         y="150.14677"
+         sodipodi:role="line"
+         id="tspan2328">Unexpected ligation product</tspan>
+    </text>
+    <text
+       y="168.77136"
+       x="755.03815"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2336">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="755.03815 761.4292 764.61896 771.01001"
+         y="168.77136"
+         sodipodi:role="line"
+         id="tspan2334">3,39</tspan>
+    </text>
+    <text
+       y="168.77136"
+       x="783.96106"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2342">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="783.96106 787.73401 794.12506 800.51599 806.90704 813.2981 822.78741 829.17853 832.95142 836.7243 843.11523 846.88818 853.27924 857.05212 859.56738 865.95844 872.34937 878.74042 882.51331 888.90442 895.29547 898.48523 904.2016 907.97455 911.74744 918.13849 924.5296 930.92053 933.43585 937.20862 943.59973 947.37262 950.56238 954.33527 958.10815 964.49927 970.89032 977.28125 983.6723 993.16162 999.55267"
+         y="168.77136"
+         sodipodi:role="line"
+         id="tspan2340">-genome--a-bridge-gatc--egdirb-t--genome-</tspan>
+    </text>
+    <text
+       y="168.77136"
+       x="1025.3881"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2348">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="1025.3881 1033.0369 1038.7533 1045.1443 1051.5354 1057.2518 1060.4417 1066.8328 1073.2238 1076.4136 1078.9288 1081.4441 1087.8351 1094.2262 1097.4159 1099.9312 1106.3223 1112.7133 1115.9031 1122.2941 1126.067 1132.4581 1138.849 1145.2401 1150.9567"
+         y="168.77136"
+         sodipodi:role="line"
+         id="tspan2346">Expected ligation product</tspan>
+    </text>
+    <text
+       y="187.39479"
+       x="755.03815"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2354">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="755.03815 761.4292 764.61896 771.01001"
+         y="187.39479"
+         sodipodi:role="line"
+         id="tspan2352">2,28</tspan>
+    </text>
+    <text
+       y="187.39479"
+       x="783.96106"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2360">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="783.96106 787.73401 794.12506 800.51599 806.90704 813.2981 822.78741 829.17853 832.95142 836.7243 843.11523 846.88818 849.40338 855.79443 862.18555 868.5766 872.34937 878.74042 885.13147 888.32123 894.03778 897.81067 901.58362 907.97455 914.3656 920.75665 923.27191 927.0448 933.43585 937.20862 940.98157 947.37262 951.14551 953.66077 960.05182 966.44287 972.8338"
+         y="187.39479"
+         sodipodi:role="line"
+         id="tspan2358">-genome--bridge-gatc--egdirb--bridge-</tspan>
+    </text>
+    <text
+       y="187.39479"
+       x="1025.3881"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2366">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="1025.3881 1033.6199 1040.011 1046.402 1052.1184 1058.5095 1064.9005 1070.6169 1073.8069 1080.1979 1086.5889 1089.7788 1092.2939 1094.8092 1101.2003 1107.5913 1110.7811 1113.2963 1119.6874 1126.0785 1129.2682 1135.6593 1139.4321 1145.8232 1152.2141 1158.6052 1164.3218"
+         y="187.39479"
+         sodipodi:role="line"
+         id="tspan2364">Unexpected ligation product</tspan>
+    </text>
+    <text
+       y="206.11536"
+       x="755.03815"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2372">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="755.03815 761.4292 764.61896 771.01001"
+         y="206.11536"
+         sodipodi:role="line"
+         id="tspan2370">2,26</tspan>
+    </text>
+    <text
+       y="206.11536"
+       x="783.96106"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2378">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="783.96106 787.73401 794.12506 800.51599 806.90704 809.4223 813.19519 819.58624 823.35913 827.13196 833.52301 837.2959 839.81116 846.20221 852.59326 858.98419 862.75708 869.14819 875.53925 878.729 884.44556 888.21844 891.99121 898.38226 904.77338 911.16443 913.67963 917.45258 923.84351 927.61639 931.38928 937.78033 944.17145 950.56238 956.95343 966.44287 972.8338"
+         y="206.11536"
+         sodipodi:role="line"
+         id="tspan2376">-egdirb--bridge-gatc--egdirb--genome-</tspan>
+    </text>
+    <text
+       y="206.11536"
+       x="1025.3881"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2384">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="1025.3881 1033.6199 1040.011 1046.402 1052.1184 1058.5095 1064.9005 1070.6169 1073.8069 1080.1979 1086.5889 1089.7788 1092.2939 1094.8092 1101.2003 1107.5913 1110.7811 1113.2963 1119.6874 1126.0785 1129.2682 1135.6593 1139.4321 1145.8232 1152.2141 1158.6052 1164.3218"
+         y="206.11536"
+         sodipodi:role="line"
+         id="tspan2382">Unexpected ligation product</tspan>
+    </text>
+    <text
+       y="224.73878"
+       x="755.03815"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2390">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="755.03815 761.4292 764.61896 771.01001"
+         y="224.73878"
+         sodipodi:role="line"
+         id="tspan2388">2,24</tspan>
+    </text>
+    <text
+       y="224.73878"
+       x="783.96106"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2396">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="783.96106 787.73401 794.12506 800.51599 806.90704 813.2981 822.78741 829.17853 832.95142 836.7243 843.11523 849.50629 852.69604 858.4126 862.18555 868.5766 874.96753 881.35858 883.87378 887.64673 894.03778 897.81067 901.58362 907.97455 914.3656 920.75665 927.14777 936.63702 943.02814"
+         y="224.73878"
+         sodipodi:role="line"
+         id="tspan2394">-genome--gatc-egdirb--genome-</tspan>
+    </text>
+    <text
+       y="224.73878"
+       x="1025.3881"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2402">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="1025.3881 1033.6199 1040.011 1046.402 1052.1184 1058.5095 1064.9005 1070.6169 1073.8069 1080.1979 1086.5889 1089.7788 1092.2939 1094.8092 1101.2003 1107.5913 1110.7811 1113.2963 1119.6874 1126.0785 1129.2682 1135.6593 1139.4321 1145.8232 1152.2141 1158.6052 1164.3218"
+         y="224.73878"
+         sodipodi:role="line"
+         id="tspan2400">Unexpected ligation product</tspan>
+    </text>
+    <text
+       y="243.36223"
+       x="755.03815"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2408">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="755.03815 761.4292 764.61896 771.01001"
+         y="243.36223"
+         sodipodi:role="line"
+         id="tspan2406">2,12</tspan>
+    </text>
+    <text
+       y="243.36223"
+       x="783.96106"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2414">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="783.96106 787.73401 794.12506 800.51599 806.90704 813.2981 822.78741 829.17853 832.95142 836.7243 843.11523 849.50629 852.69604 858.4126 862.18555 868.5766 874.96753 881.35858 883.87378 887.64673 894.03778"
+         y="243.36223"
+         sodipodi:role="line"
+         id="tspan2412">-genome--gatc-egdirb-</tspan>
+    </text>
+    <text
+       y="243.36223"
+       x="1025.3881"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2420">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="1025.3881 1033.6199 1040.011 1046.402 1052.1184 1058.5095 1064.9005 1070.6169 1073.8069 1080.1979 1086.5889 1089.7788 1092.2939 1094.8092 1101.2003 1107.5913 1110.7811 1113.2963 1119.6874 1126.0785 1129.2682 1135.6593 1139.4321 1145.8232 1152.2141 1158.6052 1164.3218"
+         y="243.36223"
+         sodipodi:role="line"
+         id="tspan2418">Unexpected ligation product</tspan>
+    </text>
+    <text
+       y="262.11594"
+       x="755.03815"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2426">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="755.03815 761.4292 764.61896 771.01001"
+         y="262.11594"
+         sodipodi:role="line"
+         id="tspan2424">1,97</tspan>
+    </text>
+    <text
+       y="262.11594"
+       x="783.96106"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2432">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="783.96106 787.73401 794.12506 797.89783 800.41321 806.80414 813.19519 819.58624 823.35913 829.75006 836.14117 839.33105 845.04742 848.82037 852.59326 858.98419 865.37524 871.76636 878.15741 887.64673 894.03778"
+         y="262.11594"
+         sodipodi:role="line"
+         id="tspan2430">-bridge-gatc--genome-</tspan>
+    </text>
+    <text
+       y="262.11594"
+       x="1025.3881"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2438">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="1025.3881 1033.6199 1040.011 1046.402 1052.1184 1058.5095 1064.9005 1070.6169 1073.8069 1080.1979 1086.5889 1089.7788 1092.2939 1094.8092 1101.2003 1107.5913 1110.7811 1113.2963 1119.6874 1126.0785 1129.2682 1135.6593 1139.4321 1145.8232 1152.2141 1158.6052 1164.3218"
+         y="262.11594"
+         sodipodi:role="line"
+         id="tspan2436">Unexpected ligation product</tspan>
+    </text>
+    <text
+       y="280.73935"
+       x="755.03815"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2444">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="755.03815 761.4292 764.61896 771.01001"
+         y="280.73935"
+         sodipodi:role="line"
+         id="tspan2442">1,91</tspan>
+    </text>
+    <text
+       y="280.73935"
+       x="783.96106"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2450">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="783.96106 787.73401 794.12506 800.51599 806.90704 813.2981 822.78741 829.17853 832.95142 836.7243 843.11523 849.50629 852.69604 858.4126 862.18555 868.5766 874.96753 881.35858 883.87378 887.64673 894.03778 897.81067 901.58362 907.97455 911.74744 914.26263 920.65375 927.0448 933.43585"
+         y="280.73935"
+         sodipodi:role="line"
+         id="tspan2448">-genome--gatc-egdirb--bridge-</tspan>
+    </text>
+    <text
+       y="280.73935"
+       x="1025.3881"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2456">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="1025.3881 1033.6199 1040.011 1046.402 1052.1184 1058.5095 1064.9005 1070.6169 1073.8069 1080.1979 1086.5889 1089.7788 1092.2939 1094.8092 1101.2003 1107.5913 1110.7811 1113.2963 1119.6874 1126.0785 1129.2682 1135.6593 1139.4321 1145.8232 1152.2141 1158.6052 1164.3218"
+         y="280.73935"
+         sodipodi:role="line"
+         id="tspan2454">Unexpected ligation product</tspan>
+    </text>
+    <text
+       y="299.36392"
+       x="755.03815"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2462">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="755.03815 761.4292 764.61896 771.01001"
+         y="299.36392"
+         sodipodi:role="line"
+         id="tspan2460">1,90</tspan>
+    </text>
+    <text
+       y="299.36392"
+       x="783.96106"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2468">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="783.96106 787.73401 794.12506 800.51599 806.90704 813.2981 822.78741 829.17853 832.95142 836.7243 843.11523 846.88818 849.40338 855.79443 862.18555 868.5766 872.34937 878.74042 885.13147 888.32123 894.03778 897.81067 901.58362 907.97455 914.3656 920.75665 927.14777 936.63702 943.02814"
+         y="299.36392"
+         sodipodi:role="line"
+         id="tspan2466">-genome--bridge-gatc--genome-</tspan>
+    </text>
+    <text
+       y="299.36392"
+       x="1025.3881"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2474">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="1025.3881 1033.6199 1040.011 1046.402 1052.1184 1058.5095 1064.9005 1070.6169 1073.8069 1080.1979 1086.5889 1089.7788 1092.2939 1094.8092 1101.2003 1107.5913 1110.7811 1113.2963 1119.6874 1126.0785 1129.2682 1135.6593 1139.4321 1145.8232 1152.2141 1158.6052 1164.3218"
+         y="299.36392"
+         sodipodi:role="line"
+         id="tspan2472">Unexpected ligation product</tspan>
+    </text>
+    <text
+       y="317.98737"
+       x="755.03815"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2480">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="755.03815 761.4292 764.61896 771.01001"
+         y="317.98737"
+         sodipodi:role="line"
+         id="tspan2478">1,88</tspan>
+    </text>
+    <text
+       y="317.98737"
+       x="783.96106"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2486">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="783.96106 787.73401 794.12506 800.51599 806.90704 813.2981 822.78741 829.17853 832.95142 836.7243 843.11523 846.88818 853.27924 857.05212 859.56738 865.95844 872.34937 878.74042 882.51331 888.90442 895.29547 898.48523 904.2016 907.97455 911.74744 918.13849 924.5296 930.92053 933.43585 937.20862 943.59973 947.37262 951.14551 957.53656 961.30939 963.82471 970.21564 976.60675 982.9978"
+         y="317.98737"
+         sodipodi:role="line"
+         id="tspan2484">-genome--a-bridge-gatc--egdirb--bridge-</tspan>
+    </text>
+    <text
+       y="317.98737"
+       x="1025.3881"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2492">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="1025.3881 1033.6199 1040.011 1046.402 1052.1184 1058.5095 1064.9005 1070.6169 1073.8069 1080.1979 1086.5889 1089.7788 1092.2939 1094.8092 1101.2003 1107.5913 1110.7811 1113.2963 1119.6874 1126.0785 1129.2682 1135.6593 1139.4321 1145.8232 1152.2141 1158.6052 1164.3218 1167.5115 1170.7013 1173.8911 1180.2822 1186.6731 1193.0642 1199.4553 1202.645 1209.0361 1212.809 1215.9988 1225.4882 1231.8792 1234.3945 1237.5842 1240.0995 1249.589 1255.9799 1259.7528"
+         y="317.98737"
+         sodipodi:role="line"
+         id="tspan2490">Unexpected ligation product, adapter multimers</tspan>
+    </text>
+    <text
+       y="336.70792"
+       x="755.03815"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2498">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="755.03815 761.4292 764.61896 771.01001"
+         y="336.70792"
+         sodipodi:role="line"
+         id="tspan2496">1,83</tspan>
+    </text>
+    <text
+       y="336.70792"
+       x="783.96106"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2504">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="783.96106 787.73401 794.12506 800.51599 806.90704 809.4223 813.19519 819.58624 823.35913 827.13196 833.52301 837.2959 839.81116 846.20221 852.59326 858.98419 862.75708 866.53003 872.92108 879.31213 882.50189 888.21844 891.99121 898.38226 904.77338 911.16443 913.67963 917.45258 923.84351 927.61639 930.80627 934.57916 938.35193 944.74304 951.13409 957.52515 963.91608 973.40552 979.79663"
+         y="336.70792"
+         sodipodi:role="line"
+         id="tspan2502">-egdirb--bridge--gatc-egdirb-t--genome-</tspan>
+    </text>
+    <text
+       y="336.70792"
+       x="1025.3881"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2510">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="1025.3881 1033.6199 1040.011 1046.402 1052.1184 1058.5095 1064.9005 1070.6169 1073.8069 1080.1979 1086.5889 1089.7788 1092.2939 1094.8092 1101.2003 1107.5913 1110.7811 1113.2963 1119.6874 1126.0785 1129.2682 1135.6593 1139.4321 1145.8232 1152.2141 1158.6052 1164.3218 1167.5115 1170.7013 1173.8911 1180.2822 1186.6731 1193.0642 1199.4553 1202.645 1209.0361 1212.809 1215.9988 1225.4882 1231.8792 1234.3945 1237.5842 1240.0995 1249.589 1255.9799 1259.7528"
+         y="336.70792"
+         sodipodi:role="line"
+         id="tspan2508">Unexpected ligation product, adapter multimers</tspan>
+    </text>
+    <text
+       y="355.33136"
+       x="755.03815"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2516">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="755.03815 761.4292 764.61896 771.01001"
+         y="355.33136"
+         sodipodi:role="line"
+         id="tspan2514">1,47</tspan>
+    </text>
+    <text
+       y="355.33136"
+       x="783.96106"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2522">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="783.96106 787.73401 794.12506 800.51599 806.90704 813.2981 822.78741 829.17853 832.95142 836.7243 843.11523 849.50629 855.8974 858.4126 862.18555 868.5766 872.34937 876.12225 882.51331 888.90442 895.29547 901.6864 911.17584 917.56677"
+         y="355.33136"
+         sodipodi:role="line"
+         id="tspan2520">-genome--egdirb--genome-</tspan>
+    </text>
+    <text
+       y="355.33136"
+       x="1025.3881"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2528">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="1025.3881 1033.6199 1040.011 1046.402 1052.1184 1058.5095 1064.9005 1070.6169 1073.8069 1080.1979 1086.5889 1089.7788 1092.2939 1094.8092 1101.2003 1107.5913 1110.7811 1113.2963 1119.6874 1126.0785 1129.2682 1135.6593 1139.4321 1145.8232 1152.2141 1158.6052 1164.3218"
+         y="355.33136"
+         sodipodi:role="line"
+         id="tspan2526">Unexpected ligation product</tspan>
+    </text>
+    <text
+       y="373.9548"
+       x="755.03815"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2534">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="755.03815 761.4292 764.61896 771.01001"
+         y="373.9548"
+         sodipodi:role="line"
+         id="tspan2532">1,41</tspan>
+    </text>
+    <text
+       y="373.9548"
+       x="783.96106"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2540">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="783.96106 787.73401 794.12506 800.51599 806.90704 813.2981 822.78741 829.17853 832.95142 836.7243 843.11523 849.50629 852.69604 858.4126 862.18555 868.5766 874.96753 881.35858 883.87378 887.64673 894.03778 897.81067 901.00043 904.77338 908.54626 914.93732 921.32825 927.7193 934.11041 943.59973 949.99078"
+         y="373.9548"
+         sodipodi:role="line"
+         id="tspan2538">-genome--gatc-egdirb-t--genome-</tspan>
+    </text>
+    <text
+       y="373.9548"
+       x="1025.3881"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2546">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="1025.3881 1033.6199 1040.011 1046.402 1052.1184 1058.5095 1064.9005 1070.6169 1073.8069 1080.1979 1086.5889 1089.7788 1092.2939 1094.8092 1101.2003 1107.5913 1110.7811 1113.2963 1119.6874 1126.0785 1129.2682 1135.6593 1139.4321 1145.8232 1152.2141 1158.6052 1164.3218"
+         y="373.9548"
+         sodipodi:role="line"
+         id="tspan2544">Unexpected ligation product</tspan>
+    </text>
+    <text
+       y="392.57938"
+       x="755.03815"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2552">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="755.03815 761.4292 764.61896 771.01001"
+         y="392.57938"
+         sodipodi:role="line"
+         id="tspan2550">1,40</tspan>
+    </text>
+    <text
+       y="392.57938"
+       x="783.96106"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2558">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="783.96106 787.73401 794.12506 800.51599 806.90704 809.4223 813.19519 819.58624 823.35913 827.13196 833.52301 837.2959 839.81116 846.20221 852.59326 858.98419 862.75708 869.14819 875.53925 878.729 884.44556 888.21844 891.99121 898.38226 904.77338 911.16443 917.55536 927.0448 933.43585"
+         y="392.57938"
+         sodipodi:role="line"
+         id="tspan2556">-egdirb--bridge-gatc--genome-</tspan>
+    </text>
+    <text
+       y="392.57938"
+       x="1025.3881"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2564">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="1025.3881 1033.6199 1040.011 1046.402 1052.1184 1058.5095 1064.9005 1070.6169 1073.8069 1080.1979 1086.5889 1089.7788 1092.2939 1094.8092 1101.2003 1107.5913 1110.7811 1113.2963 1119.6874 1126.0785 1129.2682 1135.6593 1139.4321 1145.8232 1152.2141 1158.6052 1164.3218"
+         y="392.57938"
+         sodipodi:role="line"
+         id="tspan2562">Unexpected ligation product</tspan>
+    </text>
+    <text
+       y="411.33191"
+       x="755.03815"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2570">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="755.03815 761.4292 764.61896 771.01001"
+         y="411.33191"
+         sodipodi:role="line"
+         id="tspan2568">1,29</tspan>
+    </text>
+    <text
+       y="411.33191"
+       x="783.96106"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2576">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="783.96106 787.73401 794.12506 800.51599 806.90704 813.2981 822.78741 829.17853 832.95142 836.7243 843.11523 846.88818 849.40338 855.79443 862.18555 868.5766 872.34937 876.12225 882.51331 888.90442 895.29547 901.6864 911.17584 917.56677"
+         y="411.33191"
+         sodipodi:role="line"
+         id="tspan2574">-genome--bridge--genome-</tspan>
+    </text>
+    <text
+       y="411.33191"
+       x="1025.3881"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2582">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="1025.3881 1033.6199 1040.011 1046.402 1052.1184 1058.5095 1064.9005 1070.6169 1073.8069 1080.1979 1086.5889 1089.7788 1092.2939 1094.8092 1101.2003 1107.5913 1110.7811 1113.2963 1119.6874 1126.0785 1129.2682 1135.6593 1139.4321 1145.8232 1152.2141 1158.6052 1164.3218"
+         y="411.33191"
+         sodipodi:role="line"
+         id="tspan2580">Unexpected ligation product</tspan>
+    </text>
+    <text
+       y="429.95535"
+       x="755.03815"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2588">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="755.03815 761.4292 764.61896 771.01001"
+         y="429.95535"
+         sodipodi:role="line"
+         id="tspan2586">1,27</tspan>
+    </text>
+    <text
+       y="429.95535"
+       x="783.96106"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2594">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="783.96106 787.73401 794.12506 800.51599 806.90704 813.2981 822.78741 829.17853 832.95142 836.7243 843.11523 846.88818 853.27924 857.05212 859.56738 865.95844 872.34937 878.74042 882.51331 888.90442 895.29547 898.48523 904.2016 907.97455 911.74744 918.13849 924.5296 930.92053 937.31158 946.80103 953.19196"
+         y="429.95535"
+         sodipodi:role="line"
+         id="tspan2592">-genome--a-bridge-gatc--genome-</tspan>
+    </text>
+    <text
+       y="429.95535"
+       x="1025.3881"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2600">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="1025.3881 1033.6199 1040.011 1046.402 1052.1184 1058.5095 1064.9005 1070.6169 1073.8069 1080.1979 1086.5889 1089.7788 1092.2939 1094.8092 1101.2003 1107.5913 1110.7811 1113.2963 1119.6874 1126.0785 1129.2682 1135.6593 1139.4321 1145.8232 1152.2141 1158.6052 1164.3218"
+         y="429.95535"
+         sodipodi:role="line"
+         id="tspan2598">Unexpected ligation product</tspan>
+    </text>
+    <text
+       y="448.57993"
+       x="755.03815"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2606">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="755.03815 761.4292 764.61896 771.01001"
+         y="448.57993"
+         sodipodi:role="line"
+         id="tspan2604">0,97</tspan>
+    </text>
+    <text
+       y="448.57993"
+       x="783.96106"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2612">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="783.96106 787.73401 794.12506 800.51599 806.90704 813.2981 822.78741 829.17853 832.95142 836.7243 843.11523 846.88818 849.40338 855.79443 862.18555 868.5766 872.34937 878.74042 885.13147 888.32123 894.03778 897.81067 901.58362 907.97455 914.3656 920.75665 923.27191 927.0448 933.43585"
+         y="448.57993"
+         sodipodi:role="line"
+         id="tspan2610">-genome--bridge-gatc--egdirb-</tspan>
+    </text>
+    <text
+       y="448.57993"
+       x="1025.3881"
+       style="font-variant:normal;font-weight:normal;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       id="text2618">
+      <tspan
+         style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+         x="1025.3881 1033.6199 1040.011 1046.402 1052.1184 1058.5095 1064.9005 1070.6169 1073.8069 1080.1979 1086.5889 1089.7788 1092.2939 1094.8092 1101.2003 1107.5913 1110.7811 1113.2963 1119.6874 1126.0785 1129.2682 1135.6593 1139.4321 1145.8232 1152.2141 1158.6052 1164.3218"
+         y="448.57993"
+         sodipodi:role="line"
+         id="tspan2616">Unexpected ligation product</tspan>
+    </text>
+  </g>
+  <g
+     id="g9786"
+     style="stroke-linecap:butt;stroke-linejoin:round"
+     transform="translate(90.22931,0.00875342)">
+    <path
+       inkscape:connector-curvature="0"
+       id="path2958"
+       style="fill:#cccccc;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       d="M 723.84708,511.18967 H 1286.1198 V 492.5011 H 723.84708 Z" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path2960"
+       style="fill:#b4c7dc;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       d="M 723.84708,529.8451 H 1286.1198 V 511.15653 H 723.84708 Z" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path2962"
+       style="fill:#81d41a;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       d="M 723.84708,548.50167 H 1286.1198 V 529.8131 H 723.84708 Z" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path2964"
+       style="fill:#ffa6a6;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       d="M 723.84708,884.31084 H 1286.1198 V 548.46968 H 723.84708 Z" />
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g2966"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <path
+         inkscape:connector-curvature="0"
+         id="path2968"
+         style="fill:none;stroke:#000000;stroke-width:0.08751002;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="M 56.608,714.104 H 548.901" />
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g2970"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <path
+         inkscape:connector-curvature="0"
+         id="path2972"
+         style="fill:none;stroke:#000000;stroke-width:0.08751002;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="M 56.665,714.161 V 371.169" />
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g2974"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <path
+         inkscape:connector-curvature="0"
+         id="path2976"
+         style="fill:none;stroke:#000000;stroke-width:0.08751002;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="M 106.413,714.161 V 371.169" />
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g2978"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <path
+         inkscape:connector-curvature="0"
+         id="path2980"
+         style="fill:none;stroke:#000000;stroke-width:0.08751002;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="M 317.707,714.161 V 371.169" />
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g2982"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <path
+         inkscape:connector-curvature="0"
+         id="path2984"
+         style="fill:none;stroke:#000000;stroke-width:0.08751002;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="M 548.844,714.161 V 371.169" />
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g2986"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <path
+         inkscape:connector-curvature="0"
+         id="path2988"
+         style="fill:none;stroke:#000000;stroke-width:0.08751002;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="M 548.844,714.161 V 371.169" />
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g2990"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <path
+         inkscape:connector-curvature="0"
+         id="path2992"
+         style="fill:none;stroke:#000000;stroke-width:0.08751002;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="M 56.608,697.776 H 548.901" />
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g2994"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <path
+         inkscape:connector-curvature="0"
+         id="path2996"
+         style="fill:none;stroke:#000000;stroke-width:0.08751002;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="M 56.608,681.449 H 548.901" />
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g2998"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3000"
+         style="fill:none;stroke:#000000;stroke-width:0.08751002;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="M 56.608,665.121 H 548.901" />
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3002"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3004"
+         style="fill:none;stroke:#000000;stroke-width:0.08751002;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="M 56.608,648.794 H 548.901" />
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3006"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3008"
+         style="fill:none;stroke:#000000;stroke-width:0.08751002;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="M 56.608,632.466 H 548.901" />
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3010"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3012"
+         style="fill:none;stroke:#000000;stroke-width:0.08751002;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="M 56.608,616.139 H 548.901" />
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3014"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3016"
+         style="fill:none;stroke:#000000;stroke-width:0.08751002;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="M 56.608,599.811 H 548.901" />
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3018"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3020"
+         style="fill:none;stroke:#000000;stroke-width:0.08751002;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="M 56.608,583.483 H 548.901" />
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3022"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3024"
+         style="fill:none;stroke:#000000;stroke-width:0.08751002;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="M 56.608,567.156 H 548.901" />
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3026"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3028"
+         style="fill:none;stroke:#000000;stroke-width:0.08751002;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="M 56.608,550.828 H 548.901" />
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3030"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3032"
+         style="fill:none;stroke:#000000;stroke-width:0.08751002;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="M 56.608,534.501 H 548.901" />
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3034"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3036"
+         style="fill:none;stroke:#000000;stroke-width:0.08751002;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="M 56.608,518.173 H 548.901" />
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3038"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3040"
+         style="fill:none;stroke:#000000;stroke-width:0.08751002;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="M 56.608,501.846 H 548.901" />
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3042"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3044"
+         style="fill:none;stroke:#000000;stroke-width:0.08751002;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="M 56.608,485.518 H 548.901" />
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3046"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3048"
+         style="fill:none;stroke:#000000;stroke-width:0.08751002;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="M 56.608,469.191 H 548.901" />
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3050"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3052"
+         style="fill:none;stroke:#000000;stroke-width:0.08751002;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="M 56.608,452.863 H 548.901" />
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3054"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3056"
+         style="fill:none;stroke:#000000;stroke-width:0.08751002;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="M 56.608,436.535 H 548.901" />
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3058"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3060"
+         style="fill:none;stroke:#000000;stroke-width:0.08751002;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="M 56.608,420.208 H 548.901" />
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3062"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3064"
+         style="fill:none;stroke:#000000;stroke-width:0.08751002;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="M 56.608,403.88 H 548.901" />
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3066"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3068"
+         style="fill:none;stroke:#000000;stroke-width:0.08751002;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="M 56.608,387.553 H 548.901" />
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3070"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3072"
+         style="fill:none;stroke:#000000;stroke-width:0.08751002;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="M 56.608,371.225 H 548.901" />
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3074"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3076"
+         style="fill:none;stroke:#000000;stroke-width:0.08751002;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="M 56.608,371.225 H 548.901" />
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3078"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3082"
+         style="font-variant:normal;font-weight:bold;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,61.512,702.397)">
+        <tspan
+           id="tspan3080"
+           sodipodi:role="line"
+           y="0"
+           x="0 7.20432 12.797674 16.099653 21.693008 24.484682 27.786661 36.681995"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">Rate [%]</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3084"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3088"
+         style="font-variant:normal;font-weight:bold;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,199.502,702.397)">
+        <tspan
+           id="tspan3086"
+           sodipodi:role="line"
+           y="0"
+           x="0 8.3049803 13.898334 19.491688"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">Mask</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3090"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3094"
+         style="font-variant:normal;font-weight:bold;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,406.29,702.397)">
+        <tspan
+           id="tspan3092"
+           sodipodi:role="line"
+           y="0"
+           x="0 7.20432 12.797674 18.901335 25.004993 28.306974 34.410633 40.003986 45.597343 48.389015"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">Hypothesis</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3096"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3100"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,78.406,686.098)">
+        <tspan
+           id="tspan3098"
+           sodipodi:role="line"
+           y="0"
+           x="0 5.5933542 11.186708 13.978382 19.571735"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">19,03</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3102"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3106"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,109.304,686.098)">
+        <tspan
+           id="tspan3104"
+           sodipodi:role="line"
+           y="0"
+           x="0 3.30198 8.8953342 14.488688 20.082043 25.675396 33.980377 39.57373"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">-genome-</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3108"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3112"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,320.598,686.098)">
+        <tspan
+           id="tspan3110"
+           sodipodi:role="line"
+           y="0"
+           x="0 7.20432 12.797674 14.998994 17.200314 22.793669 28.387022 31.178696 36.772049 42.365402 45.157078 50.750431 56.343784 61.937141 67.530495 75.835472"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">Unligated genome</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3114"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3118"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,83.991,669.798)">
+        <tspan
+           id="tspan3116"
+           sodipodi:role="line"
+           y="0"
+           x="0 5.5933542 8.3850279 13.978382"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">6,98</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3120"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3124"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,109.304,669.798)">
+        <tspan
+           id="tspan3122"
+           sodipodi:role="line"
+           y="0"
+           x="0 3.30198 8.8953342 14.488688 20.082043 25.675396 33.980377 39.57373 42.87571 46.177689 51.771046 55.073025 60.666378 63.968357 66.169678 71.763031 77.356384 82.949738 86.251717 91.845078 97.438431 100.2301 105.2331 108.53508 111.83706 117.43041 123.02377 128.61713 130.81845 134.12042 139.71378 143.01576 145.80743 149.10941 152.41139 158.00475 163.5981 169.19145 174.78481 183.08978 188.68314"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">-genome--a-bridge-gatc--egdirb-t--genome-</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3126"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3130"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,320.598,669.798)">
+        <tspan
+           id="tspan3128"
+           sodipodi:role="line"
+           y="0"
+           x="0 6.6940141 11.697014 17.290367 22.883722 27.886723 30.678396 36.271751 41.865105 44.656776 46.858097 49.059418 54.652771 60.246124 63.0378 65.23912 70.832474 76.425827 79.217499 84.81086 88.112839 93.706192 99.299545 104.8929 109.8959"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">Expected ligation product</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3132"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3136"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,83.991,653.386)">
+        <tspan
+           id="tspan3134"
+           sodipodi:role="line"
+           y="0"
+           x="0 5.5933542 8.3850279 13.978382"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">5,92</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3138"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3142"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,109.304,653.386)">
+        <tspan
+           id="tspan3140"
+           sodipodi:role="line"
+           y="0"
+           x="0 3.30198 8.8953342 14.488688 20.082043 25.675396 33.980377 39.57373 42.87571 46.177689 51.771046 55.073025 57.274345 62.867699 68.461052 74.054405 77.356384 80.658363 86.251717 91.845078 94.636749 99.639748 102.94173 108.53508 114.12843 119.72179 121.92311 125.22509 130.81845 134.12042 136.91209 140.21408 143.51605 149.10941 154.70276 160.29613 165.88948 174.19446 179.78781"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">-genome--bridge--gatc-egdirb-t--genome-</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3144"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3148"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,320.598,653.386)">
+        <tspan
+           id="tspan3146"
+           sodipodi:role="line"
+           y="0"
+           x="0 7.20432 12.797674 18.391027 23.394028 28.987383 34.580734 39.583736 42.375408 47.968765 53.562119 56.35379 58.555111 60.756432 66.349785 71.943138 74.734818 76.936134 82.529488 88.122841 90.914513 96.507874 99.809853 105.40321 110.99656 116.58991 121.59291"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">Unexpected ligation product</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3150"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3154"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,83.991,637.087)">
+        <tspan
+           id="tspan3152"
+           sodipodi:role="line"
+           y="0"
+           x="0 5.5933542 8.3850279 13.978382"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">5,83</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3156"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3160"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,109.304,637.087)">
+        <tspan
+           id="tspan3158"
+           sodipodi:role="line"
+           y="0"
+           x="0 3.30198 8.8953342 14.488688 20.082043 25.675396 33.980377 39.57373 42.87571 46.177689 51.771046 55.073025 60.666378 63.968357 66.169678 71.763031 77.356384 82.949738 86.251717 91.845078 97.438431 100.2301 105.2331 108.53508 111.83706 117.43041 123.02377 128.61713 130.81845 134.12042 139.71378 143.01576 146.31773 151.91109 157.50444 163.09779 168.69115 176.99614 182.58949"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">-genome--a-bridge-gatc--egdirb--genome-</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3162"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3166"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,320.598,637.087)">
+        <tspan
+           id="tspan3164"
+           sodipodi:role="line"
+           y="0"
+           x="0 7.20432 12.797674 18.391027 23.394028 28.987383 34.580734 39.583736 42.375408 47.968765 53.562119 56.35379 58.555111 60.756432 66.349785 71.943138 74.734818 76.936134 82.529488 88.122841 90.914513 96.507874 99.809853 105.40321 110.99656 116.58991 121.59291"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">Unexpected ligation product</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3168"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3172"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,83.991,620.787)">
+        <tspan
+           id="tspan3170"
+           sodipodi:role="line"
+           y="0"
+           x="0 5.5933542 8.3850279 13.978382"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">5,62</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3174"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3178"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,109.304,620.787)">
+        <tspan
+           id="tspan3176"
+           sodipodi:role="line"
+           y="0"
+           x="0 3.30198 8.8953342 14.488688 20.082043 25.675396 33.980377 39.57373 42.87571 46.177689 51.771046 55.073025 57.274345 62.867699 68.461052 74.054405 77.356384 82.949738 88.543091 91.33477 96.337769 99.639748 102.94173 108.53508 114.12843 119.72179 121.92311 125.22509 130.81845 134.12042 137.42241 143.01576 148.60912 154.20247 159.79582 168.1008 173.69415"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">-genome--bridge-gatc--egdirb--genome-</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3180"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3184"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,320.598,620.787)">
+        <tspan
+           id="tspan3182"
+           sodipodi:role="line"
+           y="0"
+           x="0 7.20432 12.797674 18.391027 23.394028 28.987383 34.580734 39.583736 42.375408 47.968765 53.562119 56.35379 58.555111 60.756432 66.349785 71.943138 74.734818 76.936134 82.529488 88.122841 90.914513 96.507874 99.809853 105.40321 110.99656 116.58991 121.59291"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">Unexpected ligation product</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3186"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3190"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,83.991,604.488)">
+        <tspan
+           id="tspan3188"
+           sodipodi:role="line"
+           y="0"
+           x="0 5.5933542 8.3850279 13.978382"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">4,59</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3192"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3196"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,109.304,604.488)">
+        <tspan
+           id="tspan3194"
+           sodipodi:role="line"
+           y="0"
+           x="0 3.30198 8.8953342 14.488688 20.082043 25.675396 33.980377 39.57373 42.87571 46.177689 51.771046 55.073025 60.666378 63.968357 66.169678 71.763031 77.356384 82.949738 86.251717 91.845078 97.438431 100.2301 105.2331 108.53508 111.83706 117.43041 123.02377 128.61713 134.21048 142.51546 148.10881"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">-genome--a-bridge-gatc--genome-</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3198"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3202"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,320.598,604.488)">
+        <tspan
+           id="tspan3200"
+           sodipodi:role="line"
+           y="0"
+           x="0 7.20432 12.797674 18.391027 23.394028 28.987383 34.580734 39.583736 42.375408 47.968765 53.562119 56.35379 58.555111 60.756432 66.349785 71.943138 74.734818 76.936134 82.529488 88.122841 90.914513 96.507874 99.809853 105.40321 110.99656 116.58991 121.59291"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">Unexpected ligation product</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3204"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3208"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,83.991,588.104)">
+        <tspan
+           id="tspan3206"
+           sodipodi:role="line"
+           y="0"
+           x="0 5.5933542 8.3850279 13.978382"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">4,05</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3210"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3214"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,109.304,588.104)">
+        <tspan
+           id="tspan3212"
+           sodipodi:role="line"
+           y="0"
+           x="0 3.30198 8.8953342 14.488688 20.082043 25.675396 33.980377 39.57373 42.87571 46.177689 51.771046 55.073025 57.274345 62.867699 68.461052 74.054405 77.356384 82.949738 88.543091 91.33477 96.337769 99.639748 102.94173 108.53508 114.12843 119.72179 125.31515 133.62012 139.21347"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">-genome--bridge-gatc--genome-</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3216"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3220"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,320.598,588.104)">
+        <tspan
+           id="tspan3218"
+           sodipodi:role="line"
+           y="0"
+           x="0 7.20432 12.797674 18.391027 23.394028 28.987383 34.580734 39.583736 42.375408 47.968765 53.562119 56.35379 58.555111 60.756432 66.349785 71.943138 74.734818 76.936134 82.529488 88.122841 90.914513 96.507874 99.809853 105.40321 110.99656 116.58991 121.59291"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">Unexpected ligation product</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3222"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3226"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,83.991,571.805)">
+        <tspan
+           id="tspan3224"
+           sodipodi:role="line"
+           y="0"
+           x="0 5.5933542 8.3850279 13.978382"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">3,14</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3228"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3232"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,109.304,571.805)">
+        <tspan
+           id="tspan3230"
+           sodipodi:role="line"
+           y="0"
+           x="0 3.30198 8.8953342 14.488688 20.082043 25.675396 33.980377 39.57373 42.87571 46.177689 51.771046 57.364399 60.156071 65.159073 68.461052 74.054405 79.647758 85.241112 87.442436 90.744415 96.337769 99.639748 102.43142 105.7334 109.03539 114.62874 120.22209 125.81544 131.4088 139.71378 145.30713"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">-genome--gatc-egdirb-t--genome-</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3234"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3238"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,320.598,571.805)">
+        <tspan
+           id="tspan3236"
+           sodipodi:role="line"
+           y="0"
+           x="0 7.20432 12.797674 18.391027 23.394028 28.987383 34.580734 39.583736 42.375408 47.968765 53.562119 56.35379 58.555111 60.756432 66.349785 71.943138 74.734818 76.936134 82.529488 88.122841 90.914513 96.507874 99.809853 105.40321 110.99656 116.58991 121.59291"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">Unexpected ligation product</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3240"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3244"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,83.991,555.506)">
+        <tspan
+           id="tspan3242"
+           sodipodi:role="line"
+           y="0"
+           x="0 5.5933542 8.3850279 13.978382"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">2,30</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3246"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3250"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,109.304,555.506)">
+        <tspan
+           id="tspan3248"
+           sodipodi:role="line"
+           y="0"
+           x="0 3.30198 8.8953342 14.488688 20.082043 25.675396 33.980377 39.57373 42.87571 46.177689 51.771046 57.364399 60.156071 65.159073 68.461052 74.054405 79.647758 85.241112 87.442436 90.744415 96.337769 99.639748 102.94173 108.53508 114.12843 119.72179 125.31515 133.62012 139.21347"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">-genome--gatc-egdirb--genome-</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3252"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3256"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,320.598,555.506)">
+        <tspan
+           id="tspan3254"
+           sodipodi:role="line"
+           y="0"
+           x="0 7.20432 12.797674 18.391027 23.394028 28.987383 34.580734 39.583736 42.375408 47.968765 53.562119 56.35379 58.555111 60.756432 66.349785 71.943138 74.734818 76.936134 82.529488 88.122841 90.914513 96.507874 99.809853 105.40321 110.99656 116.58991 121.59291"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">Unexpected ligation product</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3258"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3262"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,83.991,539.093)">
+        <tspan
+           id="tspan3260"
+           sodipodi:role="line"
+           y="0"
+           x="0 5.5933542 8.3850279 13.978382"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">0,99</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3264"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3268"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,109.304,539.093)">
+        <tspan
+           id="tspan3266"
+           sodipodi:role="line"
+           y="0"
+           x="0 3.30198 8.8953342 14.488688 20.082043 25.675396 33.980377 39.57373 42.87571 46.177689 51.771046 55.073025 57.274345 62.867699 68.461052 74.054405 77.356384 80.658363 86.251717 91.845078 97.438431 103.03178 111.33676 116.93011"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">-genome--bridge--genome-</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3270"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3274"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,320.598,539.093)">
+        <tspan
+           id="tspan3272"
+           sodipodi:role="line"
+           y="0"
+           x="0 7.20432 12.797674 18.391027 23.394028 28.987383 34.580734 39.583736 42.375408 47.968765 53.562119 56.35379 58.555111 60.756432 66.349785 71.943138 74.734818 76.936134 82.529488 88.122841 90.914513 96.507874 99.809853 105.40321 110.99656 116.58991 121.59291"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">Unexpected ligation product</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3276"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3280"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,83.991,522.794)">
+        <tspan
+           id="tspan3278"
+           sodipodi:role="line"
+           y="0"
+           x="0 5.5933542 8.3850279 13.978382"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">0,99</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3282"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3286"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,109.304,522.794)">
+        <tspan
+           id="tspan3284"
+           sodipodi:role="line"
+           y="0"
+           x="0 3.30198 8.8953342 14.488688 20.082043 25.675396 33.980377 39.57373 42.87571 46.177689 51.771046 57.364399 62.957752 65.159073 68.461052 74.054405 77.356384 80.658363 86.251717 91.845078 97.438431 103.03178 111.33676 116.93011"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">-genome--egdirb--genome-</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3288"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3292"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,320.598,522.794)">
+        <tspan
+           id="tspan3290"
+           sodipodi:role="line"
+           y="0"
+           x="0 7.20432 12.797674 18.391027 23.394028 28.987383 34.580734 39.583736 42.375408 47.968765 53.562119 56.35379 58.555111 60.756432 66.349785 71.943138 74.734818 76.936134 82.529488 88.122841 90.914513 96.507874 99.809853 105.40321 110.99656 116.58991 121.59291"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">Unexpected ligation product</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3294"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3298"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,83.991,506.494)">
+        <tspan
+           id="tspan3296"
+           sodipodi:role="line"
+           y="0"
+           x="0 5.5933542 8.3850279 13.978382"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">0,93</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3300"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3304"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,109.304,506.494)">
+        <tspan
+           id="tspan3302"
+           sodipodi:role="line"
+           y="0"
+           x="0 3.30198 8.8953342 14.488688 20.082043 25.675396 33.980377 39.57373 42.87571 46.177689 51.771046 57.364399 62.957752 65.159073 68.461052 74.054405 77.356384 80.148064 83.450043 86.752022 92.345375 97.938728 103.53208 109.12543 117.43041 123.02377"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">-genome--egdirb-t--genome-</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3306"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3310"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,320.598,506.494)">
+        <tspan
+           id="tspan3308"
+           sodipodi:role="line"
+           y="0"
+           x="0 7.20432 12.797674 18.391027 23.394028 28.987383 34.580734 39.583736 42.375408 47.968765 53.562119 56.35379 58.555111 60.756432 66.349785 71.943138 74.734818 76.936134 82.529488 88.122841 90.914513 96.507874 99.809853 105.40321 110.99656 116.58991 121.59291"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">Unexpected ligation product</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3312"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3316"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,83.991,490.195)">
+        <tspan
+           id="tspan3314"
+           sodipodi:role="line"
+           y="0"
+           x="0 5.5933542 8.3850279 13.978382"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">0,72</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3318"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3322"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,109.304,490.195)">
+        <tspan
+           id="tspan3320"
+           sodipodi:role="line"
+           y="0"
+           x="0 3.30198 8.8953342 14.488688 20.082043 25.675396 33.980377 39.57373 42.87571 46.177689 51.771046 55.073025 60.666378 63.968357 66.169678 71.763031 77.356384 82.949738 86.251717 91.845078 97.438431 100.2301 105.2331 108.53508 111.83706 117.43041 123.02377 128.61713 130.81845 134.12042 139.71378"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">-genome--a-bridge-gatc--egdirb-</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3324"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3328"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,320.598,490.195)">
+        <tspan
+           id="tspan3326"
+           sodipodi:role="line"
+           y="0"
+           x="0 7.20432 12.797674 18.391027 23.394028 28.987383 34.580734 39.583736 42.375408 47.968765 53.562119 56.35379 58.555111 60.756432 66.349785 71.943138 74.734818 76.936134 82.529488 88.122841 90.914513 96.507874 99.809853 105.40321 110.99656 116.58991 121.59291"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">Unexpected ligation product</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3330"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3334"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,83.991,473.811)">
+        <tspan
+           id="tspan3332"
+           sodipodi:role="line"
+           y="0"
+           x="0 5.5933542 8.3850279 13.978382"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">0,71</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3336"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3340"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,109.304,473.811)">
+        <tspan
+           id="tspan3338"
+           sodipodi:role="line"
+           y="0"
+           x="0 3.30198 8.8953342 14.488688 20.082043 25.675396 33.980377 39.57373 42.87571 46.177689 51.771046 55.073025 60.666378 63.968357 66.169678 71.763031 77.356384 82.949738 86.251717 89.553703 95.147057 100.74041 106.33376 111.92712 120.23209 125.82545"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">-genome--a-bridge--genome-</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3342"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3346"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,320.598,473.811)">
+        <tspan
+           id="tspan3344"
+           sodipodi:role="line"
+           y="0"
+           x="0 7.20432 12.797674 18.391027 23.394028 28.987383 34.580734 39.583736 42.375408 47.968765 53.562119 56.35379 58.555111 60.756432 66.349785 71.943138 74.734818 76.936134 82.529488 88.122841 90.914513 96.507874 99.809853 105.40321 110.99656 116.58991 121.59291"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">Unexpected ligation product</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3348"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3352"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,83.991,457.512)">
+        <tspan
+           id="tspan3350"
+           sodipodi:role="line"
+           y="0"
+           x="0 5.5933542 8.3850279 13.978382"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">0,64</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3354"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3358"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,109.304,457.512)">
+        <tspan
+           id="tspan3356"
+           sodipodi:role="line"
+           y="0"
+           x="0 3.30198 8.8953342 12.197314 14.398634 19.991987 25.585342 31.178696 34.480675 37.782658 43.376011 48.969364 51.76104 56.764038 60.066017 65.65937 71.252724 76.846077 79.047401 82.34938 87.942734 91.244713 94.036385 97.338371 100.64035 106.2337 111.82706 117.42041 123.01376 131.31874 136.91209"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">-bridge--gatc-egdirb-t--genome-</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3360"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3364"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,320.598,457.512)">
+        <tspan
+           id="tspan3362"
+           sodipodi:role="line"
+           y="0"
+           x="0 7.20432 12.797674 18.391027 23.394028 28.987383 34.580734 39.583736 42.375408 47.968765 53.562119 56.35379 58.555111 60.756432 66.349785 71.943138 74.734818 76.936134 82.529488 88.122841 90.914513 96.507874 99.809853 105.40321 110.99656 116.58991 121.59291"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">Unexpected ligation product</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3366"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3370"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,83.991,441.213)">
+        <tspan
+           id="tspan3368"
+           sodipodi:role="line"
+           y="0"
+           x="0 5.5933542 8.3850279 13.978382"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">0,59</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3372"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3376"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,109.304,441.213)">
+        <tspan
+           id="tspan3374"
+           sodipodi:role="line"
+           y="0"
+           x="0 3.30198 6.60396 9.3956337 14.988988 17.780663 21.082642 24.384623 29.977976 35.571331 38.363003 43.366005 46.667984 52.261337 57.854691 63.448048 65.649368 68.951347 74.544701 77.84668 80.638351 83.940331 87.242317 92.83567 98.429024 104.02238 109.61573 117.92071 123.51406"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">--[6]--gatc-egdirb-t--genome-</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3378"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3382"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,320.598,441.213)">
+        <tspan
+           id="tspan3380"
+           sodipodi:role="line"
+           y="0"
+           x="0 7.20432 12.797674 18.391027 23.394028 28.987383 34.580734 39.583736 42.375408 47.968765 53.562119 56.35379 58.555111 60.756432 66.349785 71.943138 74.734818 76.936134 82.529488 88.122841 90.914513 96.507874 99.809853 105.40321 110.99656 116.58991 121.59291"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">Unexpected ligation product</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3384"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3388"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,83.991,424.913)">
+        <tspan
+           id="tspan3386"
+           sodipodi:role="line"
+           y="0"
+           x="0 5.5933542 8.3850279 13.978382"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">0,54</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3390"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3394"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,109.304,424.913)">
+        <tspan
+           id="tspan3392"
+           sodipodi:role="line"
+           y="0"
+           x="0 3.30198 8.8953342 12.197314 14.398634 19.991987 25.585342 31.178696 34.480675 40.074032 45.667385 48.459057 53.462059 56.764038 60.066017 65.65937 71.252724 76.846077 79.047401 82.34938 87.942734 91.244713 94.546692 100.14005 105.7334 111.32676 116.92011 125.22509 130.81845"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">-bridge-gatc--egdirb--genome-</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3396"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3400"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,320.598,424.913)">
+        <tspan
+           id="tspan3398"
+           sodipodi:role="line"
+           y="0"
+           x="0 7.20432 12.797674 18.391027 23.394028 28.987383 34.580734 39.583736 42.375408 47.968765 53.562119 56.35379 58.555111 60.756432 66.349785 71.943138 74.734818 76.936134 82.529488 88.122841 90.914513 96.507874 99.809853 105.40321 110.99656 116.58991 121.59291"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">Unexpected ligation product</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3402"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3406"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,83.991,408.501)">
+        <tspan
+           id="tspan3404"
+           sodipodi:role="line"
+           y="0"
+           x="0 5.5933542 8.3850279 13.978382"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">0,51</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3408"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3412"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,109.304,408.501)">
+        <tspan
+           id="tspan3410"
+           sodipodi:role="line"
+           y="0"
+           x="0 3.30198 8.8953342 12.197314 14.398634 19.991987 25.585342 31.178696 34.480675 40.074032 45.667385 48.459057 53.462059 56.764038 60.066017 65.65937 71.252724 76.846077 82.43943 90.744415 96.337769"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">-bridge-gatc--genome-</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3414"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3418"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,320.598,408.501)">
+        <tspan
+           id="tspan3416"
+           sodipodi:role="line"
+           y="0"
+           x="0 7.20432 12.797674 18.391027 23.394028 28.987383 34.580734 39.583736 42.375408 47.968765 53.562119 56.35379 58.555111 60.756432 66.349785 71.943138 74.734818 76.936134 82.529488 88.122841 90.914513 96.507874 99.809853 105.40321 110.99656 116.58991 121.59291"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">Unexpected ligation product</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3420"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3424"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,83.991,392.202)">
+        <tspan
+           id="tspan3422"
+           sodipodi:role="line"
+           y="0"
+           x="0 5.5933542 8.3850279 13.978382"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">0,49</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3426"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3430"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,109.304,392.202)">
+        <tspan
+           id="tspan3428"
+           sodipodi:role="line"
+           y="0"
+           x="0 3.30198 8.8953342 14.488688 20.082043 25.675396 33.980377 39.57373 42.87571 46.177689 51.771046 55.073025 60.666378 63.968357 66.169678 71.763031 77.356384 82.949738 86.251717 91.845078 97.438431 100.2301 105.2331 108.53508 111.83706 114.62874 120.22209 123.01376 126.31574"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">-genome--a-bridge-gatc--[6]--</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3432"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3436"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,320.598,392.202)">
+        <tspan
+           id="tspan3434"
+           sodipodi:role="line"
+           y="0"
+           x="0 7.20432 12.797674 18.391027 23.394028 28.987383 34.580734 39.583736 42.375408 47.968765 53.562119 56.35379 58.555111 60.756432 66.349785 71.943138 74.734818 76.936134 82.529488 88.122841 90.914513 96.507874 99.809853 105.40321 110.99656 116.58991 121.59291"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">Unexpected ligation product</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3438"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3442"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,83.991,375.902)">
+        <tspan
+           id="tspan3440"
+           sodipodi:role="line"
+           y="0"
+           x="0 5.5933542 8.3850279 13.978382"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">0,47</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3444"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3448"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,109.304,375.902)">
+        <tspan
+           id="tspan3446"
+           sodipodi:role="line"
+           y="0"
+           x="0 3.30198 8.8953342 14.488688 20.082043 25.675396 33.980377 39.57373 42.87571 46.177689 51.771046 55.073025 57.274345 62.867699 68.461052 74.054405 77.356384 82.949738 88.543091 91.33477 96.337769 99.639748 102.94173 108.53508 114.12843 119.72179 121.92311 125.22509 130.81845"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">-genome--bridge-gatc--egdirb-</tspan>
+      </text>
+    </g>
+    <g
+       transform="matrix(1.1426123,0,0,-1.1426123,659.06896,1308.5422)"
+       id="g3450"
+       style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">
+      <text
+         id="text3454"
+         style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         transform="matrix(1,0,0,-1,320.598,375.902)">
+        <tspan
+           id="tspan3452"
+           sodipodi:role="line"
+           y="0"
+           x="0 7.20432 12.797674 18.391027 23.394028 28.987383 34.580734 39.583736 42.375408 47.968765 53.562119 56.35379 58.555111 60.756432 66.349785 71.943138 74.734818 76.936134 82.529488 88.122841 90.914513 96.507874 99.809853 105.40321 110.99656 116.58991 121.59291"
+           style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round">Unexpected ligation product</tspan>
+      </text>
+    </g>
+  </g>
+  <flowRoot
+     xml:space="preserve"
+     id="flowRoot9082"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:butt;stroke-linejoin:round"
+     transform="matrix(0.74999999,0,0,0.74999999,366.2171,111.37806)"><flowRegion
+       id="flowRegion9084"
+       style="stroke-linecap:butt;stroke-linejoin:round"><rect
+         id="rect9086"
+         width="575.5849"
+         height="137.17871"
+         x="864.08447"
+         y="-121.53644"
+         style="stroke-linecap:butt;stroke-linejoin:round" /></flowRegion><flowPara
+       id="flowPara9088"
+       style="font-size:21.33333397px;stroke-linecap:butt;stroke-linejoin:round">Ma et al., this paper</flowPara></flowRoot>  <flowRoot
+     xml:space="preserve"
+     id="flowRoot9082-0"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:butt;stroke-linejoin:round"
+     transform="matrix(0.74999999,0,0,0.74999999,347.93584,547.38592)"><flowRegion
+       id="flowRegion9084-6"
+       style="stroke-linecap:butt;stroke-linejoin:round"><rect
+         id="rect9086-4"
+         width="575.5849"
+         height="137.17871"
+         x="864.08447"
+         y="-121.53644"
+         style="stroke-linecap:butt;stroke-linejoin:round" /></flowRegion><flowPara
+       id="flowPara9088-7"
+       style="font-size:21.33333397px;stroke-linecap:butt;stroke-linejoin:round">Romani et al., this paper</flowPara></flowRoot></svg>
