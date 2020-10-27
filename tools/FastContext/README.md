@@ -2,6 +2,20 @@
 
 FastQ Context Analysis Tool.
 
+## Requirements
+
+1. Python 3.8+
+2. Python packages:
+
+	* BioPython
+	* contextlib
+	* multiprocessing
+	* argparse
+	* bz2, gzip
+	* functools
+	* json
+	* pandas
+
 ## Usage
 
 | Parameter | Comment |
