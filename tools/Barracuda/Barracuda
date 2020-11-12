@@ -3,7 +3,7 @@
 import pysam
 
 count = 0
-Stats = {"Total": 1000000, "Unmapped": 0, "TargetPair": 0, "TargetMateUnmappedF": 0, "TargetMateUnmappedR": 0}
+Stats = {"Total": 1000000, "Unmapped": 0, "TargetPair": 0, "TargetMateUnmappedF": 0, "TargetMateUnmappedR": 0, "TargetMateMisplacedF": 0, "TargetMateMisplacedR": 0}
 
 AllBam = pysam.AlignmentFile("/dev/datasets/FairWind/_results/NarimanBarcodes/200915_X578_FCHCMFGCCX2_L8_CHKPE85220080212_single_ASA23/200915_X578_FCHCMFGCCX2_L8_CHKPE85220080212_single_ASA23.bam", "rb")
 UnmappedBam = pysam.AlignmentFile("/dev/datasets/FairWind/_results/NarimanBarcodes/200915_X578_FCHCMFGCCX2_L8_CHKPE85220080212_single_ASA23/unmapped.bam", "wb", template=AllBam)
@@ -45,6 +45,11 @@ for Read in AllBam:
 			if CurrentPair["Reads"][0]["Mapped"]: Stats["TargetMateUnmapped" + CurrentPair["Reads"][0]["Direction"]] += 2
 			if CurrentPair["Reads"][1]["Mapped"]: Stats["TargetMateUnmapped" + CurrentPair["Reads"][1]["Direction"]] += 2
 			
+		if (sum([item["Proper"] for item in CurrentPair["Reads"] if item["Mapped"]]) == 1) and (sum([item["Mapped"] for item in CurrentPair["Reads"]]) == 2):
+			[MatelessTarget.write(item["Read"]) for item in CurrentPair["Reads"]]
+			if CurrentPair["Reads"][0]["Proper"]: Stats["TargetMateMisplaced" + CurrentPair["Reads"][0]["Direction"]] += 2
+			if CurrentPair["Reads"][1]["Proper"]: Stats["TargetMateMisplaced" + CurrentPair["Reads"][1]["Direction"]] += 2
+			
 		CurrentPair = {"Name": Read.qname, "Reads": [ { "Read": Read } ] if ((not Read.is_secondary) and (not Read.is_supplementary)) else [] }
 
 Stats["Total"] = int(count)
@@ -52,5 +57,7 @@ Stats["Unmapped"] /= Stats["Total"]
 Stats["TargetPair"] /= Stats["Total"]
 Stats["TargetMateUnmappedF"] /= Stats["Total"]
 Stats["TargetMateUnmappedR"] /= Stats["Total"]
+Stats["TargetMateMisplacedF"] /= Stats["Total"]
+Stats["TargetMateMisplacedR"] /= Stats["Total"]
 
 print(Stats)
