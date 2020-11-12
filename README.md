@@ -11,7 +11,7 @@
 * [Поиск вариантов в экзомных данных](./projects/ExomeVariants.md)
 * [NIPT](./projects/NIPT.md)
 * [Дипломная работа](./projects/Graduate.md)
-* [Баркоды (Нариман)](./projects/BarcodesNariman.md)
+* [Баркоды (Нариман)](./projects/NarimanBarcodes.md)
 
 [Архивные материалы](./archive)
 
