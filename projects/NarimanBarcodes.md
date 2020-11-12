@@ -11,5 +11,5 @@ Cutadapt:
 BWA: 
 
 | Metrics | Pair Unmapped | Mapped But Misplaced | F Only Mapped Properly | R Only Mapped Properly | Both Mapped Properly |
-|:---|:---|:---|:---|:---|
+|:---|:---|:---|:---|:---|:---|
 | % | 4,42 | 15.06 | 8,28 | 4,88 | 67,36 |
