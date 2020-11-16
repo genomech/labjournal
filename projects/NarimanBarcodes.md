@@ -16,6 +16,6 @@ BWA:
 
 ## Пары топовых баркодов
 
-![Top_Mate_Rate_500](../data/graphs/Barracuda/Top_Mate_Rate_500.png)
+![Top_Mate_Rate_500](../data/graphs/Barracuda/Top_Mate_Rate_500.svg)
 
-![Top-10_Mates_Rate_100](../data/graphs/Barracuda/Top-10_Mates_Rate_100.png)
+![Top-10_Mates_Rate_100](../data/graphs/Barracuda/Top-10_Mates_Rate_100.svg)
