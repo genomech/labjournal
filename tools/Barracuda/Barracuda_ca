@@ -152,7 +152,6 @@ while 1:
 		#Result = pandas.DataFrame(index=list(range(34)), columns=['RA', 'RT', 'RG', 'RC', 'RN', 'FA', 'FT', 'FG', 'FC', 'FN'])
 		#Result.fillna(0, inplace=True)
 		
-		
 		def Raskidat(Series):
 			Direction = Series["Barcode"][0]
 			Sum = Series["Sum"]
