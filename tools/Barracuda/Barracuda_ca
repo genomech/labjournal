@@ -11,6 +11,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import pickle
 import json
+from pandarallel import pandarallel
 
 #with open("/dev/datasets/FairWind/.cloud/FORGE/data_file.json", "r") as write_file: Connections = json.load(write_file)
 
@@ -19,7 +20,7 @@ import json
 #print(Connections)
 #exit()
 
-
+pandarallel.initialize(nb_workers=12, verbose=1)
 
 Stats = {"Total": 0, "NotCut": 0, "CutR": 0, "CutF": 0, "CutBoth": 0}
 
@@ -121,7 +122,7 @@ while 1:
 		#print(Stats)
 		
 		#G = nx.read_edgelist("test.edgelist.gz")
-		with open('/dev/datasets/FairWind/.cloud/FORGE/test.pickle', 'rb') as f: G = pickle.load(f)
+		#with open('/dev/datasets/FairWind/.cloud/FORGE/test.pickle', 'rb') as f: G = pickle.load(f)
 		
 		#remove = [edge for edge in G.edges(data=True) if edge[2]["weight"] < 250]
 		#G.remove_edges_from(remove)
@@ -136,14 +137,60 @@ while 1:
 		#plt.savefig("Graph.svg")
 		#exit()
 		
-		Data = []
-		for Node in list(G.nodes):
-			Data += [{ "Barcode": Node, "Sum": sum([int(G.edges[Node, x]['weight']) for x in list(G.neighbors(Node))])}]
-		Data = pandas.DataFrame(Data).sort_values(by=['Sum'], ascending=False)
+		#Data = []
+		#for Node in list(G.nodes):
+			#Data += [{ "Barcode": Node, "Sum": sum([int(G.edges[Node, x]['weight']) for x in list(G.neighbors(Node))])}]
+		#Data = pandas.DataFrame(Data).sort_values(by=['Sum'], ascending=False)
 		
 		
-		Connections = {}
-		Target = Data.iloc[:100,:]
+		##Connections = {}
+		#Target = Data.iloc[:250000,:]
+		#Target.to_csv('/dev/datasets/FairWind/.cloud/FORGE/temp.csv')
+		#del Target
+		#del Data
+		
+		#Result = pandas.DataFrame(index=list(range(34)), columns=['RA', 'RT', 'RG', 'RC', 'RN', 'FA', 'FT', 'FG', 'FC', 'FN'])
+		#Result.fillna(0, inplace=True)
+		
+		
+		def Raskidat(Series):
+			Direction = Series["Barcode"][0]
+			Sum = Series["Sum"]
+			Barcode = list(Series["Barcode"][2:])
+			BigList = [[[(Sum if ((Direction == direct) and (item == chars)) else 0) for item in Barcode] for chars in ['A', 'T', 'G', 'C', 'N']] for direct in ['F', 'R']]
+			BigList = [item for sublist in BigList for item in sublist]
+			BigList = [item for sublist in BigList for item in sublist]
+			Header = [[[direct + chars + str(index) for index, item in enumerate(Barcode)] for chars in ['A', 'T', 'G', 'C', 'N']] for direct in ['F', 'R']]
+			Header = [item for sublist in Header for item in sublist]
+			Header = [item for sublist in Header for item in sublist]
+			return pandas.Series(BigList, index=Header)
+		
+		Result = []
+		for index, Target in enumerate(pandas.read_csv('/dev/datasets/FairWind/.cloud/FORGE/temp.csv', chunksize=1000)):
+			Target = Target.parallel_apply(Raskidat, axis=1)
+			Target = Target.sum(axis=0)
+			Result += [Target]
+			print(f"Chunk #{index} finished", end='\r')
+		
+		Result = pandas.DataFrame(Result)
+		Result = Result.sum(axis=0)
+		Result.to_csv('/dev/datasets/FairWind/.cloud/FORGE/positions.csv')
+		#print(Target)
+		exit()
+		
+		
+		for bc in Target.iterrows():
+			Direction = bc[1]["Barcode"][0]
+			Barcode =  bc[1]["Barcode"][2:]
+			for i in range(34):
+				Result.loc[i,Direction+Barcode[i]] += 1
+				Result.loc[i,Direction+"0"] += 1
+		for direct in ['R', 'F']:
+			for char in ['A', 'T', 'G', 'C', 'N']:
+				Target[direct + char] = Target[direct + char] / Target[direct + "0"]
+		
+		Target.to_csv('/dev/datasets/FairWind/.cloud/FORGE/positions.csv')
+		exit()
 		
 		for bc in Target.iterrows():
 			Neighbors = G.neighbors(bc[1]["Barcode"])

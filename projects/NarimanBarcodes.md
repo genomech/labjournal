@@ -24,5 +24,25 @@ BWA:
 
 Красный - топовый баркод, имеющий самый больший процент сходства с остальными.
 Жёлтый - те риды, которые отличаются от него на 1 букву, зелёный - на 2 буквы.
+Различия проверялись алгоритмом Левенштейна.
+
+Топовый баркод почему-то имеет все A на местах случайных букв о_О:
+
+```
+AActcAAgaaAAcgtAActaAAtcgAAgtaAAgt
+```
 
 ![Cluster](../data/graphs/Barracuda/cluster_analysis.svg)
+
+Было выяснено, что, несмотря на преобладание А в топовых баркодах, она наполовину меньше представлена на вырожденных позициях:
+
+| |  |
+|:---:|:---:|
+| ![FreqPosF](../data/graphs/Barracuda/FreqPosF.svg) | ![FreqPosF](../data/graphs/Barracuda/FreqPosR.svg) |
+
+Также оказалось, что распределение ридов по числу букв А отличается от ожидаемого:
+
+| |  |
+|:---:|:---:|
+| ![NumberA_F](../data/graphs/Barracuda/NumberA_F.svg) | ![NumberA_R](../data/graphs/Barracuda/NumberA_R.svg) |
+| ![NumberG_F](../data/graphs/Barracuda/NumberA_F.svg) | ![NumberG_R](../data/graphs/Barracuda/NumberA_R.svg) |
