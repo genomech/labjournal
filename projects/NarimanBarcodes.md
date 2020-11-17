@@ -19,3 +19,7 @@ BWA:
 ![Top_Mate_Rate_500](../data/graphs/Barracuda/Top_Mate_Rate_500.svg)
 
 ![Top-10_Mates_Rate_100](../data/graphs/Barracuda/Top-10_Mates_Rate_100.svg)
+
+## Кластерный анализ первых 23 баркодов (R)
+
+![Cluster](../data/graphs/Barracuda/cluster_analysis.svg)
