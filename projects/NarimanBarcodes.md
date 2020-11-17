@@ -38,11 +38,11 @@ AActcAAgaaAAcgtAActaAAtcgAAgtaAAgt
 
 | |  |
 |:---:|:---:|
-| ![FreqPosF](../data/graphs/Barracuda/FreqPosF.svg) | ![FreqPosF](../data/graphs/Barracuda/FreqPosR.svg) |
+| ![FreqPosF](../data/graphs/Barracuda/FreqsPosF.svg) | ![FreqPosF](../data/graphs/Barracuda/FreqsPosR.svg) |
 
 Также оказалось, что распределение ридов по числу букв А отличается от ожидаемого:
 
 | |  |
 |:---:|:---:|
 | ![NumberA_F](../data/graphs/Barracuda/NumberA_F.svg) | ![NumberA_R](../data/graphs/Barracuda/NumberA_R.svg) |
-| ![NumberG_F](../data/graphs/Barracuda/NumberA_F.svg) | ![NumberG_R](../data/graphs/Barracuda/NumberA_R.svg) |
+| ![NumberG_F](../data/graphs/Barracuda/NumberG_F.svg) | ![NumberG_R](../data/graphs/Barracuda/NumberG_R.svg) |
