@@ -20,6 +20,8 @@ BWA:
 
 ![Top-10_Mates_Rate_100](../data/graphs/Barracuda/Top-10_Mates_Rate_100.svg)
 
+![Top-10_Mates_Absolute_100](../data/graphs/Barracuda/Top-10_Mates_Absolute_100.svg)
+
 ## Кластерный анализ первых 23 баркодов (R)
 
 Красный - топовый баркод, имеющий самый больший процент сходства с остальными.

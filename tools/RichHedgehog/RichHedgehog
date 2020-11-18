@@ -1,0 +1,8 @@
+#!/bin/python3
+
+import pysam
+import pandas
+
+Intervals = pandas.read_csv("/dev/datasets/FairWind/_db/MedExome_hg19_500_merged.bed", sep='\t', header=None)
+
+print(Intervals)
