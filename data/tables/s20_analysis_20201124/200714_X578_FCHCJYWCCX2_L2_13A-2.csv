@@ -1,0 +1,24 @@
+Rate [%],Mask
+47.4685,-genome-
+44.0058,-genome--illumina--genome-
+0.9026,-genome--bridge--genome-
+0.7552,-genome--egdirb--genome-
+0.5357,-genome--illumina--[8]--
+0.5319,-genome--illumina--[9]--
+0.5264,-genome--illumina--[7]--
+0.5109,-genome--illumina--[5]--
+0.5039,-genome--illumina--[4]--
+0.5021,-genome--illumina--[3]--
+0.4991,-genome--illumina--[6]--
+0.4818,-genome--illumina--[1]--
+0.4749,-genome--illumina--[2]--
+0.4742,-genome--bridge--genome--illumina--genome-
+0.4707,-genome--illumina-
+0.3933,-genome--egdirb--genome--illumina--genome-
+0.0328,-genome--egdirb--genome--bridge--genome--illumina--genome-
+0.0292,-genome--illumina--genome--illumina--genome-
+0.0176,-genome--bridge--genome--bridge--genome-
+0.0145,-genome--egdirb--genome--bridge--genome-
+0.0113,-genome--illumina--genome--bridge--genome-
+0.0112,-genome--egdirb--genome--egdirb--genome-
+0.0105,-genome--bridge--genome--illumina--[8]--
