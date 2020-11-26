@@ -7,6 +7,8 @@
 \usepackage{amsmath}
 \setmainfont{Liberation Serif}
 
+\usepackage[square,sort,comma,numbers]{natbib}
+\bibliographystyle{plainnat}
 \usepackage{xltxtra}
 \usepackage{microtype}
 
@@ -204,6 +206,8 @@ SNP могут быть синонимичными (без замены амин
 
 \paragraph{NGS.}
 Секвенирование нового поколения (NGS) "--- это комплекс технологий, позволяющих прочитать за сравнительно небольшое время миллионы коротких последовательностей ДНК.
+Благодаря этому единовременно можно проанализировать несколько генов, либо весь геном (в отличие от традиционных методов).
+
 
 Проблемы данных NGS:
 
@@ -220,19 +224,28 @@ SNP могут быть синонимичными (без замены амин
 
 \paragraph{Полногеномное секвенирование (WGS).}
 
+Полногеномное секвенирование со слабым покрытием может быть использовано для определения CNV "--- например, NIPT, когда используется свободная ДНК плода (cfDNA), циркулирующая в крови матери\cite{yu}.
 WGS также может быть использовано в диагностике микробиома с целью определения источника хронической инфекции, реконструкции путей передачи инфекции, а также выявления антибиотикорезистентных штаммов\cite{balloux}.
 
 \paragraph{Полноэкзомное секвенирование (WES)}
+Полноэкзомное секвенирование часто включает тестирование ребёнка и родителей (так называемый трио-тест), что позволяет улучшить интерпретацию вариантов\cite{yohe}.
 
-\paragraph{Таргетные панели}
+\paragraph{Таргетные панели.}
+Данный вид тестов позволяет анализировать гены, ответственные за отдельные группы заболеваний "--- например, существуют таргетные панели для иммунодефицитов, почечных, неврологических болезней, болезней соединительной ткани, сетчатки, а также предрасположенности к отдельным видам онкологических заболеваний.
+Также таргетные панели позволяют анализировать клетки опухолей "--- некоторые приспособлены к выявлению общих для многих раковых линий мутаций, другие же разработаны для специфического типа опухолей\cite{yohe}.
 
 \paragraph{Hi-C}
 
 \subsection{Базовая схема обработки результатов секвенирования}
 
-\paragraph{Удаление адаптерных последовательностей.}
+\paragraph{Демультиплексирование.}
 В процессе секвенирования к целевым фрагментам ДНК могут пришиваться так называемые адаптерные последовательности.
-Если целевая ДНК короче длины прочтения, то фрагменты адаптера могут попасть в готовые данные, и встаёт вопрос об их удалении.
+Эти адаптеры могут содержать так называемые баркоды "--- последовательности, с помощью которых можно отличить ДНК различных образцов.
+Процесс сортировки данных секвенирования по баркодам называется демультиплексированием.
+Чаще всего демультиплексирование производится самим секвенатором, но иногда его приходится производить вручную.
+
+\paragraph{Удаление адаптерных последовательностей.}
+Если целевая ДНК короче длины прочтения, то фрагменты адаптера на 3' конце могут попасть в готовые данные, и встаёт вопрос об их удалении.
 Также присутствие адаптера в прочтениях может быть признаком контаминации, и такие прочтения следует исключить из дальнейшего анализа\cite{cutadapt}.
 
 \paragraph{Картирование.}
@@ -307,7 +320,7 @@ WGS также может быть использовано в диагност�
 
 \section{Материалы и методы}
 
-Данные секвенирования клеточной линии K562 (Hi-C\cite{rao}, WGS\cite{zhou}) были взяты из публичных источников
+Данные секвенирования клеточной линии K562 (Hi-C\cite{rao}, WGS\cite{zhou}\cite{dixon}) были взяты из публичных источников.
 
 Контроль качества "--- FastQC\cite{fastqc}.
 
@@ -373,7 +386,82 @@ BWA показал лучшие показатели;
 
 \section{Предварительные выводы}
 
+\appendix
+
+\section{Data Accession Codes}
+\begin{tabular}{| l | l | l | l | l | l |}
+\hline
+Name & Article & Type & Reads, M & Source & Accession Codes \\
+\hline
+K562\_GSM1551618\_HIC069 & Rao et al. \cite{rao} & Hi-C & 456.8 & GEO & \begin{minipage}{4cm} \vspace{0.5em} SRR1658693 \vspace{0.5em} \end{minipage} \\
+\hline
+K562\_GSM1551619\_HIC070 & Rao et al. \cite{rao} & Hi-C & 591.9 & GEO & \begin{minipage}{4cm} \vspace{0.5em} SRR1658694 \vspace{0.5em} \end{minipage} \\
+\hline
+K562\_GSM1551620\_HIC071 & Rao et al. \cite{rao} & Hi-C & 79.9 & GEO & \begin{minipage}{4cm} \vspace{0.5em} SRR1658695 \\ SRR1658696 \vspace{0.5em} \end{minipage} \\
+\hline
+K562\_GSM1551621\_HIC072 & Rao et al. \cite{rao} & Hi-C & 79.6 & GEO & \begin{minipage}{4cm} \vspace{0.5em} SRR1658697 \\ SRR1658698 \vspace{0.5em} \end{minipage} \\
+\hline
+K562\_GSM1551622\_HIC073 & Rao et al. \cite{rao} & Hi-C & 77.4 & GEO & \begin{minipage}{4cm} \vspace{0.5em} SRR1658699 \\ SRR1658700 \vspace{0.5em} \end{minipage} \\
+\hline
+K562\_GSM1551623\_HIC074 & Rao et al. \cite{rao} & Hi-C & 80.8 & GEO & \begin{minipage}{4cm} \vspace{0.5em} SRR1658702 \\ SRR1658701 \vspace{0.5em} \end{minipage} \\
+\hline
+ENCSR025GPQ & Zhou et al. \cite{zhou} & WGS & ? & ENCODE & \begin{minipage}{4cm} \vspace{0.5em} ENCFF574YLG \\ ENCFF921AXL \\ ENCFF590SSX \vspace{0.5em} \end{minipage} \\
+\hline
+ENCSR053AXS & Zhou et al. \cite{zhou} & WGS & ? & ENCODE & \begin{minipage}{4cm} \vspace{0.5em} ENCFF004THU \\ ENCFF066GQD \\ ENCFF313MGL \\ ENCFF506TKC \\ ENCFF080MQF \vspace{0.5em} \end{minipage} \\
+\hline
+ENCSR711UNY & Zhou et al. \cite{zhou} & WGS & ? & ENCODE & \begin{minipage}{4cm}\vspace{0.5em} ENCFF471WSA \\ ENCFF826SYZ \\ ENCFF590SSX \vspace{0.5em} \end{minipage} \\
+\hline
+\end{tabular}
+
+% https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6301019/
+% Dixon JR, Xu J, Dileep V, et al. Integrative detection and analysis of structural variation in cancer genomes. Nat Genet. 2018;50(10):1388-1398. doi:10.1038/s41588-018-0195-8
+% 
+% SRR6251264
+% 
+% https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE148362 - repli-seq?
+% 
+% K562_GSE148362_G1 (24.8M) - SRR11518301
+% K562_GSE148362_S1 (30.9M) - SRR11518302
+% K562_GSE148362_S2 (45.4M) - SRR11518303
+% K562_GSE148362_S3 (49.8M) - SRR11518304
+% K562_GSE148362_S4 (44.1M) - SRR11518305
+% K562_GSE148362_S5 (38.4M) - SRR11518306
+% K562_GSE148362_S6 (35.2M) - SRR11518307
+% K562_GSE148362_G2 (33.0M) - SRR11518308
+% 
+% https://pubmed.ncbi.nlm.nih.gov/31506350/ (HiC) - 4 разных образца:
+% 
+% K562_InSituHiC_HS_1_CGATGT (86.3) - SRR9019504
+% K562_InSituHiC_HS_2_GCCAAT (127.1) - SRR9019505
+% K562_InSituHiC_NHS_1_ATCACG (86.4M) - SRR9019506
+% K562_InSituHiC_NHS_2_ACAGTG (128.5) - SRR9019507
+% 
+% https://pubmed.ncbi.nlm.nih.gov/29142137/ (HiC) - 4 образца:
+% 
+% K562_pD_stable_HiC_rep1 (67.2M) - SRR5470535, SRR5470534
+% K562_pD_stable_HiC_rep2 (52.9M) - SRR5470536, SRR5470537
+% K562_pD_transient_HiC (81.3M) - SRR5470539, SRR5470538
+% K562_pDdE_transient_HiC (55.2M) - SRR5470541, SRR5470540
+% 
+% https://pubmed.ncbi.nlm.nih.gov/28435001/ (HiC):
+% 
+% K562_GSM2588815_R1 (72.9M) - SRR5479813
+% 
+% https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6728079/ (WES):
+% 
+% K562_GSM2536769_WT_bulkm_exome (39.2M) - SRR5345331
+% K562_GSM2536770_WT_transfected_exome (49.4M) - SRR5345332
+% K562_GSM2536771_MT2_exome (42.0M) - SRR5345333
+% K562_GSM2536772_MT3_exome (43.7M) - SRR5345334
+% K562_GSM2536773_MT4_exome (39.9M) - SRR5345335
+% K562_GSM2536774_MT5_exome (40.8M) - SRR5345336
+%
+% На крайняк - https://www.encodeproject.org/search/?type=Experiment&assay_term_name=ChIA-PET&replicates.library.biosample.donor.organism.scientific_name=Homo%20sapiens&biosample_ontology.term_name=K562&status=released 
+
 \begin{thebibliography}{100}
+
+\bibitem{yohe}
+Yohe S, Thyagarajan B. Review of Clinical Next-Generation Sequencing. Arch Pathol Lab Med. 2017 Nov;141(11):1544-1557. doi: 10.5858/arpa.2016-0501-RA
 
 \bibitem{balloux}
 Balloux F, Brønstad Brynildsrud O, van Dorp L, et al. From Theory to Practice: Translating Whole-Genome Sequencing (WGS) into the Clinic. Trends Microbiol. 2018;26(12):1035-1048. doi:10.1016/j.tim.2018.08.004
@@ -458,6 +546,16 @@ Saleheen D, Natarajan P, Armean IM, et al. Human knockouts and phenotypic analys
 
 \bibitem{wutz}
 Wutz G, Várnai C, Nagasaka K, et al. Topologically associating domains and chromatin loops depend on cohesin and are regulated by CTCF, WAPL, and PDS5 proteins. EMBO J. 2017;36(24):3573-3599. doi:10.15252/embj.201798004
+
+\bibitem{yu}
+Yu D, Zhang K, Han M, et al. Noninvasive prenatal testing for fetal subchromosomal copy number variations and chromosomal aneuploidy by low-pass whole-genome sequencing. Mol Genet Genomic Med. 2019;7(6):e674. doi:10.1002/mgg3.674
+
+\bibitem{gatk}
+Van der Auwera GA, Carneiro MO, Hartl C, et al. From FastQ data to high confidence variant calls: the Genome Analysis Toolkit best practices pipeline. Curr Protoc Bioinformatics. 2013;43(1110):11.10.1-11.10.33. doi:10.1002/0471250953.bi1110s43
+
+\bibitem{dixon}
+Dixon JR, Xu J, Dileep V, et al. Integrative detection and analysis of structural variation in cancer genomes. Nat Genet. 2018;50(10):1388-1398. doi:10.1038/s41588-018-0195-8
+
 \end{thebibliography}
 
 \end{document}
