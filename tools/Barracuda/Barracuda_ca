@@ -136,13 +136,18 @@ while 1:
 		#plt.tight_layout()
 		#plt.savefig("Graph.svg")
 		#exit()
+		Data = []
+		for bc1, bc2 in G.edges:
+			Data += [{ "Barcode1": bc1, "Barcode2": bc2"Sum": sum([int(G.edges[Node, x]['weight']) for x in list(G.neighbors(Node))])}]
+		Data = pandas.DataFrame(Data).sort_values(by=['Sum'], ascending=False)
+		Data.to_csv('/dev/datasets/FairWind/.cloud/FORGE/all_bc.csv')
 		
 		Data = []
 		for Node in list(G.nodes):
 			Data += [{ "Barcode": Node, "Sum": sum([int(G.edges[Node, x]['weight']) for x in list(G.neighbors(Node))])}]
 		Data = pandas.DataFrame(Data).sort_values(by=['Sum'], ascending=False)
-		
-		
+		Data.to_csv('/dev/datasets/FairWind/.cloud/FORGE/all_bc.csv')
+		exit()
 		Connections = {}
 		Target = Data.iloc[:1000,:]
 		#Target.to_csv('/dev/datasets/FairWind/.cloud/FORGE/temp.csv')
