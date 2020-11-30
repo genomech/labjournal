@@ -1,0 +1,88 @@
+This is BibTeX, Version 0.99d (TeX Live 2019/dev/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: Emil_Graduate_202101.aux
+The style file: plainnat.bst
+I found no \bibdata command---while reading file Emil_Graduate_202101.aux
+Warning--I didn't find a database entry for "herder"
+Warning--I didn't find a database entry for "richter"
+Warning--I didn't find a database entry for "lancet"
+Warning--I didn't find a database entry for "omim"
+Warning--I didn't find a database entry for "wutz"
+Warning--I didn't find a database entry for "theisen"
+Warning--I didn't find a database entry for "huber"
+Warning--I didn't find a database entry for "sanger"
+Warning--I didn't find a database entry for "yu"
+Warning--I didn't find a database entry for "balloux"
+Warning--I didn't find a database entry for "yohe"
+Warning--I didn't find a database entry for "cutadapt"
+Warning--I didn't find a database entry for "richards"
+Warning--I didn't find a database entry for "burrows"
+Warning--I didn't find a database entry for "ebbert"
+Warning--I didn't find a database entry for "gme"
+Warning--I didn't find a database entry for "abraom"
+Warning--I didn't find a database entry for "saleheen"
+Warning--I didn't find a database entry for "ziegler"
+Warning--I didn't find a database entry for "rao"
+Warning--I didn't find a database entry for "zhou"
+Warning--I didn't find a database entry for "dixon"
+Warning--I didn't find a database entry for "fastqc"
+Warning--I didn't find a database entry for "bowtie2"
+Warning--I didn't find a database entry for "bwa"
+Warning--I didn't find a database entry for "picard"
+Warning--I didn't find a database entry for "heldenbrand"
+Warning--I didn't find a database entry for "bedtools"
+Warning--I didn't find a database entry for "vep"
+Warning--I didn't find a database entry for "annovar"
+Warning--I didn't find a database entry for "hgmd"
+Warning--I didn't find a database entry for "gnomad"
+Warning--I didn't find a database entry for "dbnsfp"
+Warning--I didn't find a database entry for "dbscsnv"
+Warning--I didn't find a database entry for "regsnpintron"
+Warning--I didn't find a database entry for "lek"
+Warning--I didn't find a database entry for "wang"
+Warning--I didn't find a database entry for "ray"
+Warning--I didn't find a database entry for "moquin"
+Warning--I didn't find a database entry for "belaghzal"
+Warning--I didn't find a database entry for "banaszak"
+You've used 0 entries,
+            2773 wiz_defined-function locations,
+            632 strings with 5094 characters,
+and the built_in function-call counts, 33 in all, are:
+= -- 0
+> -- 0
+< -- 0
++ -- 0
+- -- 0
+* -- 2
+:= -- 10
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 1
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 0
+newline$ -- 8
+num.names$ -- 0
+pop$ -- 0
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 1
+stack$ -- 0
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 0
+width$ -- 0
+write$ -- 7
+(There was 1 error message)

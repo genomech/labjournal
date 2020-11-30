@@ -145,7 +145,26 @@
 
 Генетическое детерминирование патологий
 
-Частые и редкие (орфанные) патологии
+\paragraph{Частые и редкие (орфанные) патологии.}
+Генетические патологии делятся на группы по частоте встречаемости в популяции "--- частые и редкие (орфанные).
+Определения орфанных заболеваний могут различаться "--- например, в США, согласно ``Health Promotion and Disease Prevention Amendments of 1984'', редкими считаются патологии, поражающие менее 200 тыс. населения страны (примерно 1 : 1630 при текущей численности населения в 326 млн человек)\cite{herder}.
+Европейское Медицинское Агентство определяет границу как 1 : 2000.
+Систематический анализ показал, что существует более 290 определений, и среднее значение находится в интервале 40--50 на 100 тыс. населения\cite{richter}.
+
+Некоторые заболевания могут быть орфанными в одной популяции и частыми в другой (эффект основателя).
+Например, бета-талассемия в Средиземноморье.
+
+Несмотря на то, что каждое из орфанных заболеваний само по себе встречается редко, в сумме они поражают значительный процент населения (предположительно 5--8\% европейской популяции).
+Общее число орфанных болезней неизвестно по причине недостатков стандартизации, наиболее частая оценка "--- 5000--8000.
+Около 80\% редких болезней имеют генетическую природу и начинаются в раннем детстве\cite{lancet}.
+
+Основные источники информации по орфанным заболеваниям:
+
+\begin{enumerate}
+\item Global Genes
+\item Online Mendelian Inheritance in Man (OMIM)\cite{omim}
+\item Orphadata
+\end{enumerate}
 
 \subsection{Механизмы развития патологий}
 
@@ -187,9 +206,40 @@ SNP могут быть синонимичными (без замены амин
 
 \paragraph{Кариотипирование.}
 
-\paragraph{CGH.}
+\paragraph{Флуоресцентная \textit{in situ} гибридизация (FISH).}
+Основой является гибридизация содержащих флуоресцентную метку последовательностей с комплементарными ими участками НК.
+Гибридизация может производиться на ДНК (метафазные или интерфазные хромосомы) и на РНК.
+FISH позволяет определить количественные характеристики НК и их пространственное расположение в ядре.
+Метод является <<золотым стандартом>> в определении хромосомных патологий "--- как в клетках с врождёнными перестройками, так и в клетках опухолей.
 
-\paragraph{FISH.}
+Данные при FISH можно получить как за счёт спектрального анализа сигналов, так и за счёт их отсутствия/присутствия.
+Всего 7 флюорофоров дают 127 вариантов цветовых меток; это позволяет реализовать, например, спектральное кариотипирование.
+В методике MER-FISH количество цветовых меток увеличено до 1001.
+Тем не менее, лимитирующими факторами остаются:
+
+\begin{itemize}
+\item потребность в хорошо обученном персонале. 
+Протокол FISH зависит от характера пробы и образца, и должен быть настроен эмпирически;
+\item цена реактивов;
+\item время гибридизации.
+Кинетика реакций гибридизации в ядре изучена недостаточно, и требуется достаточно долгое время, чтобы получить сигналы, которые можно измерить и сравнить между собой.
+\end{itemize}
+
+В настоящее время методика FISH значительно усложнилась.
+Биотехнологические компании предлагают панели олигонуклеотидов для определённых целей, определяющие участки от десятков килобаз до мегабаз, а также олиги с высокой чувствительностью, позволяющие определить сплайс-варианты и даже SNP.
+Разрабатываются технологии micro-FISH ($\mu$FISH), сочетающие FISH с микрофлюидными технологиями.
+При этом процесс удешевляется, автоматизируется, ускоряется (за счёт уменьшения объёмов, а соответственно, времени гибридизации) и упрощается для использования в обширных исследованиях и для внедрения в клинику\cite{huber}.
+
+\paragraph{CGH.}
+Как и в случае с FISH, основой метода является флуоресцентная гибридизация.
+Однако CGH использует два образца генома "--- тест и контроль, каждый из которых метится флюорофором, а затем гибридизуется 1 : 1.
+Таким образом в тестовом образце можно обнаружить CNV и перестройки.
+
+В отличие от FISH, CGH проверяет весь геном на наличие перестроек, не требует знаний о целевом регионе и может быть использован на интерфазных клетках.
+Однако, как и у классических методов, разрешение CGH ограничено 5--10 Мб.
+
+В настоящее время CGH используется в виде array-CGH (aCGH), комбинируя этот метод с микрочипами. <...>
+\cite{theisen}
 
 \paragraph{STS.}
 
@@ -475,6 +525,16 @@ GSM2536774\_MT5 & Banaszak et al. \cite{banaszak} & WES\footnotemark[1] & 40.8 &
 
 \begin{thebibliography}{100}
 
+% ---- GATK RECOMMENDATIONS ----
+
+\bibitem{gatk}
+Van der Auwera GA, Carneiro MO, Hartl C, et al. From FastQ data to high confidence variant calls: the Genome Analysis Toolkit best practices pipeline. Curr Protoc Bioinformatics. 2013;43(1110):11.10.1-11.10.33. doi:10.1002/0471250953.bi1110s43
+
+\bibitem{heldenbrand}
+Heldenbrand JR, Baheti S, Bockol MA, et al. Recommendations for performance optimizations when using GATK3.8 and GATK4 [published correction appears in BMC Bioinformatics. 2019 Dec 17;20(1):722]. BMC Bioinformatics. 2019;20(1):557. Published 2019 Nov 8. doi:10.1186/s12859-019-3169-7
+
+% ---- K562 DATA ----
+
 \bibitem{rao}
 Rao SS, Huntley MH, Durand NC, et al. A 3D map of the human genome at kilobase resolution reveals principles of chromatin looping [published correction appears in Cell. 2015 Jul 30;162(3):687-8]. Cell. 2014;159(7):1665-1680. doi:10.1016/j.cell.2014.11.021
 
@@ -499,37 +559,7 @@ Belaghzal H, Dekker J, Gibcus JH. Hi-C 2.0: An optimized Hi-C procedure for high
 \bibitem{banaszak}
 Banaszak LG, Giudice V, Zhao X, et al. Abnormal RNA splicing and genomic instability after induction of DNMT3A mutations by CRISPR/Cas9 gene editing. Blood Cells Mol Dis. 2018;69:10-22. doi:10.1016/j.bcmd.2017.12.002
 
-% ---- %
-
-\bibitem{yohe}
-Yohe S, Thyagarajan B. Review of Clinical Next-Generation Sequencing. Arch Pathol Lab Med. 2017 Nov;141(11):1544-1557. doi: 10.5858/arpa.2016-0501-RA
-
-\bibitem{balloux}
-Balloux F, Brønstad Brynildsrud O, van Dorp L, et al. From Theory to Practice: Translating Whole-Genome Sequencing (WGS) into the Clinic. Trends Microbiol. 2018;26(12):1035-1048. doi:10.1016/j.tim.2018.08.004
-
-\bibitem{heldenbrand}
-Heldenbrand JR, Baheti S, Bockol MA, et al. Recommendations for performance optimizations when using GATK3.8 and GATK4 [published correction appears in BMC Bioinformatics. 2019 Dec 17;20(1):722]. BMC Bioinformatics. 2019;20(1):557. Published 2019 Nov 8. doi:10.1186/s12859-019-3169-7
-
-\bibitem{regsnpintron}
-Lin, H., Hargreaves, K.A., Li, R. et al. RegSNPs-intron: a computational framework for predicting pathogenic impact of intronic single nucleotide variants. Genome Biol 20, 254 (2019). doi:10.1186/s13059-019-1847-4
-
-\bibitem{dbnsfp}
-Liu X, Wu C, Li C, Boerwinkle E. dbNSFP v3.0: A One-Stop Database of Functional Predictions and Annotations for Human Nonsynonymous and Splice-Site SNVs. Hum Mutat. 2016;37(3):235-241. doi:10.1002/humu.22932
-
-\bibitem{gme}
-Scott EM, Halees A, Itan Y, et al. Characterization of Greater Middle Eastern genetic variation for enhanced disease gene discovery. Nat Genet. 2016;48(9):1071-1076. doi:10.1038/ng.3592
-
-\bibitem{gnomad}
-Karczewski, K.J., Francioli, L.C., Tiao, G. et al. The mutational constraint spectrum quantified from variation in 141,456 humans. Nature 581, 434–443 (2020). doi:10.1038/s41586-020-2308-7
-
-\bibitem{hgmd}
-Stenson PD, Mort M, Ball EV, et al. The Human Gene Mutation Database: towards a comprehensive repository of inherited mutation data for medical research, genetic diagnosis and next-generation sequencing studies. Hum Genet. 2017;136(6):665-677. doi:10.1007/s00439-017-1779-6
-
-\bibitem{omim}
-Amberger JS, Bocchini CA, Schiettecatte F, Scott AF, Hamosh A. OMIM.org: Online Mendelian Inheritance in Man (OMIM®), an online catalog of human genes and genetic disorders. Nucleic Acids Res. 2015;43(Database issue):D789-D798. doi:10.1093/nar/gku1205
-
-\bibitem{dbscsnv}
-Jian X, Boerwinkle E, Liu X. In silico tools for splicing defect prediction: a survey from the viewpoint of end users. Genet Med. 2014;16(7):497-503. doi:10.1038/gim.2013.176
+% ---- TOOLS ----
 
 \bibitem{annovar}
 Wang K, Li M, Hakonarson H. ANNOVAR: functional annotation of genetic variants from high-throughput sequencing data. Nucleic Acids Res. 2010;38(16):e164. doi:10.1093/nar/gkq603
@@ -555,6 +585,40 @@ Li H, Durbin R. Fast and accurate short read alignment with Burrows-Wheeler tran
 \bibitem{bedtools}
 Quinlan AR and Hall IM, 2010. BEDTools: a flexible suite of utilities for comparing genomic features. Bioinformatics. 26, 6, pp. 841–842.
 
+% ---- DATABASES ----
+
+\bibitem{regsnpintron}
+Lin, H., Hargreaves, K.A., Li, R. et al. RegSNPs-intron: a computational framework for predicting pathogenic impact of intronic single nucleotide variants. Genome Biol 20, 254 (2019). doi:10.1186/s13059-019-1847-4
+
+\bibitem{dbnsfp}
+Liu X, Wu C, Li C, Boerwinkle E. dbNSFP v3.0: A One-Stop Database of Functional Predictions and Annotations for Human Nonsynonymous and Splice-Site SNVs. Hum Mutat. 2016;37(3):235-241. doi:10.1002/humu.22932
+
+\bibitem{gme}
+Scott EM, Halees A, Itan Y, et al. Characterization of Greater Middle Eastern genetic variation for enhanced disease gene discovery. Nat Genet. 2016;48(9):1071-1076. doi:10.1038/ng.3592
+
+\bibitem{gnomad}
+Karczewski, K.J., Francioli, L.C., Tiao, G. et al. The mutational constraint spectrum quantified from variation in 141,456 humans. Nature 581, 434–443 (2020). doi:10.1038/s41586-020-2308-7
+
+\bibitem{hgmd}
+Stenson PD, Mort M, Ball EV, et al. The Human Gene Mutation Database: towards a comprehensive repository of inherited mutation data for medical research, genetic diagnosis and next-generation sequencing studies. Hum Genet. 2017;136(6):665-677. doi:10.1007/s00439-017-1779-6
+
+\bibitem{omim}
+Amberger JS, Bocchini CA, Schiettecatte F, Scott AF, Hamosh A. OMIM.org: Online Mendelian Inheritance in Man (OMIM®), an online catalog of human genes and genetic disorders. Nucleic Acids Res. 2015;43(Database issue):D789-D798. doi:10.1093/nar/gku1205
+
+\bibitem{dbscsnv}
+Jian X, Boerwinkle E, Liu X. In silico tools for splicing defect prediction: a survey from the viewpoint of end users. Genet Med. 2014;16(7):497-503. doi:10.1038/gim.2013.176
+
+\bibitem{abraom}
+Naslavsky MS, Yamamoto GL, de Almeida TF, Ezquina SAM, Sunaga DY, Pho N, Bozoklian D, Sandberg TOM, Brito LA, Lazar M, Bernardo DV, Amaro E Jr, Duarte YAO, Lebrão ML, Passos-Bueno MR, Zatz M. Exomic variants of an elderly cohort of Brazilians in the ABraOM database. Hum Mutat. 2017 Jul;38(7):751-763. doi: 10.1002/humu.23220.
+
+% ---- OTHER ----
+
+\bibitem{yohe}
+Yohe S, Thyagarajan B. Review of Clinical Next-Generation Sequencing. Arch Pathol Lab Med. 2017 Nov;141(11):1544-1557. doi: 10.5858/arpa.2016-0501-RA
+
+\bibitem{balloux}
+Balloux F, Brønstad Brynildsrud O, van Dorp L, et al. From Theory to Practice: Translating Whole-Genome Sequencing (WGS) into the Clinic. Trends Microbiol. 2018;26(12):1035-1048. doi:10.1016/j.tim.2018.08.004
+
 \bibitem{sanger}
 Sanger F, Nicklen S, Coulson AR. DNA sequencing with chain-terminating inhibitors. Proc Natl Acad Sci U S A. 1977;74(12):5463-5467. doi:10.1073/pnas.74.12.5463
 
@@ -570,9 +634,6 @@ Richards S, Aziz N, Bale S, et al. Standards and guidelines for the interpretati
 \bibitem{lek}
 Lek M, Karczewski KJ, Minikel EV, et al. Analysis of protein-coding genetic variation in 60,706 humans. Nature. 2016;536(7616):285-291. doi:10.1038/nature19057
 
-\bibitem{abraom}
-Naslavsky MS, Yamamoto GL, de Almeida TF, Ezquina SAM, Sunaga DY, Pho N, Bozoklian D, Sandberg TOM, Brito LA, Lazar M, Bernardo DV, Amaro E Jr, Duarte YAO, Lebrão ML, Passos-Bueno MR, Zatz M. Exomic variants of an elderly cohort of Brazilians in the ABraOM database. Hum Mutat. 2017 Jul;38(7):751-763. doi: 10.1002/humu.23220.
-
 \bibitem{ziegler}
 Ziegler A, Colin E, Goudenège D, Bonneau D. A snapshot of some pLI score pitfalls. Hum Mutat. 2019 Jul;40(7):839-841. doi: 10.1002/humu.23763
 
@@ -585,8 +646,20 @@ Wutz G, Várnai C, Nagasaka K, et al. Topologically associating domains and chro
 \bibitem{yu}
 Yu D, Zhang K, Han M, et al. Noninvasive prenatal testing for fetal subchromosomal copy number variations and chromosomal aneuploidy by low-pass whole-genome sequencing. Mol Genet Genomic Med. 2019;7(6):e674. doi:10.1002/mgg3.674
 
-\bibitem{gatk}
-Van der Auwera GA, Carneiro MO, Hartl C, et al. From FastQ data to high confidence variant calls: the Genome Analysis Toolkit best practices pipeline. Curr Protoc Bioinformatics. 2013;43(1110):11.10.1-11.10.33. doi:10.1002/0471250953.bi1110s43
+\bibitem{herder}
+Herder M. What Is the Purpose of the Orphan Drug Act?. PLoS Med. 2017;14(1):e1002191. Published 2017 Jan 3. doi:10.1371/journal.pmed.1002191
+
+\bibitem{richter}
+Richter T, Nestler-Parr S, Babela R, Khan ZM, Tesoro T, Molsen E, Hughes DA; International Society for Pharmacoeconomics and Outcomes Research Rare Disease Special Interest Group. Rare Disease Terminology and Definitions-A Systematic Global Review: Report of the ISPOR Rare Disease Special Interest Group. Value Health. 2015 Sep;18(6):906-14. doi: 10.1016/j.jval.2015.05.008
+
+\bibitem{lancet}
+The Lancet Neurology. Rare neurological diseases: a united approach is needed. Lancet Neurol. 2011 Feb;10(2):109. doi: 10.1016/S1474-4422(11)70001-1. Erratum in: Lancet Neurol. 2011 Mar;10(3):205.
+
+\bibitem{huber}
+D. Huber, L. Voith von Voithenberg, G.V. Kaigala. Fluorescence in situ hybridization (FISH): History, limitations and what to expect from micro-scale FISH? Micro and Nano Engineering, Volume 1, 2018, Pages 15-24, ISSN 2590-0072. doi: 10.1016/j.mne.2018.10.006.
+
+\bibitem{theisen}
+Theisen, A. (2008) Microarray-based Comparative Genomic Hybridization (aCGH). Nature Education 1(1):45
 
 \end{thebibliography}
 
