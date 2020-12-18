@@ -11,14 +11,17 @@ def get_cmap(n, name='Pastel2'): return plt.cm.get_cmap(name, n)
 samples_exoc = pd.read_csv("Samples_exoc.tsv", sep='\t')
 relig = pd.read_csv("relig.tsv", sep='\t')
 
+print(samples_exoc)
+print(relig)
+
 Protocols = list(set(samples_exoc["Protocol"].dropna().to_list()))
-Protocols = ['Ma et al.,:original paper', 'Ma et al.,:this paper', 'Ma et al.:+ new blunt + SDS', 'Ma et al.:+ long linker', 'Romani et al.,:this paper', 'Romani et al.:+ long linker', 'Romani et al.:+ biotin-fillin']
+Protocols = ['Ma et al. (reanalyzed)', 'Protocol: Ma et al.', 'Protocol: Ma et al., new blunt', 'Protocol: Ma et al., long linker', 'Ramani et al. (reanalyzed)', 'Protocol: Ramani et al.', 'Protocol: Ramani et al., long linker', 'Protocol: Ramani et al., biotin-fillin']
 
 lst = []
 
-for prot_pair in [('Ma et al.,:this paper', 'Romani et al.:+ long linker'),
-			   ('Ma et al.,:this paper', 'Romani et al.:+ biotin-fillin'),
-			   ('Romani et al.:+ long linker', 'Romani et al.:+ biotin-fillin')]:
+for prot_pair in [('Protocol: Ma et al.', 'Protocol: Ramani et al., long linker'),
+			   ('Protocol: Ma et al.', 'Protocol: Ramani et al., biotin-fillin'),
+			   ('Protocol: Ramani et al., long linker', 'Protocol: Ramani et al., biotin-fillin')]:
 	for par in ['reported_pairs%of_total', 'cis','de%of_valid']:
 		elem1 = samples_exoc[samples_exoc["Protocol"] == prot_pair[0]][par].to_list()
 		elem2 = samples_exoc[samples_exoc["Protocol"] == prot_pair[1]][par].to_list()
@@ -27,7 +30,7 @@ for prot_pair in [('Ma et al.,:this paper', 'Romani et al.:+ long linker'),
 
 pd.DataFrame(lst).to_csv("pvalues.tsv", index=False, sep='\t')
 
-exit()
+#exit()
 
 BarWidth = 0.6
 CapSize = 12
@@ -90,7 +93,7 @@ ax[3].bar(x, height=[np.mean(yi) for yi in y], yerr=[np.std(yi) for yi in y], ca
 for i in range(len(x)): ax[3].scatter(x[i] + np.random.random(len(y[i])) * BarWidth - BarWidth / 2, y[i], color=Blackie[i], zorder=2)
 ax[3].set_ylabel('%', fontsize=14)
 ax[3].set_title('Corrected DEnds estimation (% of valid)', fontsize=16)
-Protocols = [' '.join(item.split(':')) for item in Protocols]
+Protocols = [' '.join(item.split('?')) for item in Protocols]
 ax[3].tick_params(labelsize=14)
 ax[3].set_xticklabels(Protocols, rotation=30, fontsize=14)
 ax[3].set_ylim([0, 70])

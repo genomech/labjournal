@@ -45,9 +45,9 @@
      inkscape:window-height="1015"
      id="namedview1877"
      showgrid="false"
-     inkscape:zoom="1"
-     inkscape:cx="1406.4487"
-     inkscape:cy="635.04718"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="1182.5803"
+     inkscape:cy="338.20965"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -7388,16 +7388,19 @@
      id="path2136"
      style="fill:none;stroke:#000000;stroke-width:0.09998999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
      d="M 814.04441,56.089845 V 447.99667" />
-  <path
-     inkscape:connector-curvature="0"
-     id="path2140"
-     style="fill:none;stroke:#000000;stroke-width:0.09998999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-     d="M 870.88709,56.089845 V 447.99667" />
-  <path
-     inkscape:connector-curvature="0"
-     id="path2144"
-     style="fill:none;stroke:#000000;stroke-width:0.09998999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-     d="M 1112.3142,56.089845 V 447.99667" />
+  <g
+     id="g2430">
+    <path
+       d="M 870.88709,56.089845 V 447.99667"
+       style="fill:none;stroke:#000000;stroke-width:0.09998999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path2140"
+       inkscape:connector-curvature="0" />
+    <path
+       d="M 1112.3142,56.089845 V 447.99667"
+       style="fill:none;stroke:#000000;stroke-width:0.09998999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path2144"
+       inkscape:connector-curvature="0" />
+  </g>
   <path
      inkscape:connector-curvature="0"
      id="path2148"
@@ -7533,14 +7536,14 @@
   <text
      id="text2252"
      style="font-variant:normal;font-weight:bold;font-size:11.43297672px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
-     x="977.25171"
+     x="951.0437"
      y="69.531532">
     <tspan
        id="tspan2250"
        sodipodi:role="line"
-       y="69.531532"
-       x="977.25171 986.74103 993.13208 999.52319"
-       style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round">Mask</tspan>
+       x="951.0437"
+       style="stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+       y="69.531532">Read structure</tspan>
   </text>
   <text
      id="text2258"
@@ -8593,17 +8596,17 @@
   <g
      style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
      id="g3084"
-     transform="matrix(1.1426123,0,0,-1.1426123,749.29827,1308.551)">
+     transform="matrix(1.1426123,0,0,-1.1426123,723.09028,1308.551)">
     <text
        transform="matrix(1,0,0,-1,199.502,702.397)"
        style="font-variant:normal;font-weight:bold;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
        id="text3088">
       <tspan
          style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
-         x="0 8.3049803 13.898334 19.491688"
+         x="0"
          y="0"
          sodipodi:role="line"
-         id="tspan3086">Mask</tspan>
+         id="tspan3086">Read structure</tspan>
     </text>
   </g>
   <g
@@ -9651,4 +9654,67 @@
          y="1266.2739"
          style="stroke-width:1.4320941;stroke-linecap:butt;stroke-linejoin:round" /></flowRegion><flowPara
        id="flowPara2613-0-9"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:192px;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono Bold';stroke-width:1.4320941;stroke-linecap:butt;stroke-linejoin:round">C</flowPara></flowRoot></svg>
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:192px;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono Bold';stroke-width:1.4320941;stroke-linecap:butt;stroke-linejoin:round">C</flowPara></flowRoot>  <path
+     d="m 1040.9469,918.99125 h 18.75 v -18.75 h -18.75 z"
+     style="fill:#e9afaf;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+     id="path2964-2"
+     inkscape:connector-curvature="0" />
+  <path
+     d="m 830.40589,918.99125 h 18.75 v -18.75 h -18.75 z"
+     style="fill:#87aade;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round"
+     id="path2960-6"
+     inkscape:connector-curvature="0" />
+  <path
+     d="m 940.71455,918.99125 h 18.75 v -18.75 h -18.75 z"
+     style="fill:#5fd35f;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.99999988;stroke-linecap:butt;stroke-linejoin:round"
+     id="path2962-7"
+     inkscape:connector-curvature="0" />
+  <g
+     style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+     id="g3102-5"
+     transform="matrix(1.1426123,0,0,-1.1426123,736.42473,1695.4499)">
+    <text
+       transform="matrix(1,0,0,-1,109.304,686.098)"
+       style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+       id="text3106-8">
+      <tspan
+         style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         x="0 3.30198 8.8953342 14.488688 20.082043 25.675396 33.980377 39.57373"
+         y="0"
+         sodipodi:role="line"
+         id="tspan3104-7">-genome-</tspan>
+    </text>
+  </g>
+  <g
+     style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+     id="g3102-0"
+     transform="matrix(1.1426123,0,0,-1.1426123,946.96577,1695.4499)">
+    <text
+       transform="matrix(1,0,0,-1,109.304,686.098)"
+       style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+       id="text3106-4">
+      <tspan
+         style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         x="0 3.30198 8.8953342 14.488688 20.082043 25.675396 33.980377 39.57373"
+         y="0"
+         sodipodi:role="line"
+         id="tspan3104-8">-genome-</tspan>
+    </text>
+  </g>
+  <g
+     style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+     id="g3102-9"
+     transform="matrix(1.1426123,0,0,-1.1426123,846.73339,1695.4499)">
+    <text
+       transform="matrix(1,0,0,-1,109.304,686.098)"
+       style="font-variant:normal;font-weight:normal;font-size:10.00599957px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+       id="text3106-6">
+      <tspan
+         style="stroke-width:0.87518752;stroke-linecap:butt;stroke-linejoin:round"
+         x="0 3.30198 8.8953342 14.488688 20.082043 25.675396 33.980377 39.57373"
+         y="0"
+         sodipodi:role="line"
+         id="tspan3104-1">-genome-</tspan>
+    </text>
+  </g>
+</svg>
