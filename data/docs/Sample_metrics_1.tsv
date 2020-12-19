@@ -1,0 +1,9 @@
+Article	Data type	Read type	Sequencing reads/pairs	Total	Mapped	Mapped, % of total	Supplementary	Supplementary, % of total	Properly paired	Properly paired, % of mapped	Mapped pairs	Singletons	With mate mapped to a different chr	With mate mapped to a different chr, % of mapped	With mate mapped to a different chr (mapQ>=5)	With mate mapped to a different chr (mapQ>=5), % of mapped with mate mapped to a different chr
+Rao et al.	Hi-C	PE	1 366 228 845	2 978 750 615	2 917 677 819	97,95	246 292 925	8,268	788 993 734	27,04	2 617 761 638	53 623 256	613 610 714	21,03	516 836 715	84,23
+Zhou et al.	WGS	SE	2 621 311 293	2 752 058 305	2 571 190 809	93,43	130 747 012	4,751	-	-	-	-	-	-	-	-
+Dixon et al.	WGS	PE	366 291 496	737 534 099	735 463 017	99,72	4 951 107	0,671	714 606 830	97,16	729 588 656	923 254	9 178 702	1,25	4 701 395	51,22
+Wang et al.	Repli-seq	SE	301 663 640	301 669 278	295 908 772	98,09	5 638	0,002	-	-	-	-	-	-	-	-
+Ray et al.	Hi-C	PE	428 306 794	856 613 588	799 515 024	93,33	0	0,000	287 157 650	35,92	751 519 632	47 995 392	182 059 212	22,77	138 365 411	76,00
+Moquin et al.	Hi-C	PE	256 500 659	513 013 573	495 370 870	96,56	12 255	0,002	231 037 062	46,64	485 019 362	10 339 253	87 973 844	17,76	66 476 423	75,56
+Belaghzal et al.	Hi-C	PE	72 914 268	172 533 452	171 488 360	99,39	26 704 916	15,478	42 469 548	24,77	144 135 150	648 294	58 337 934	34,02	51 351 515	88,02
+Banaszak et al.	WES	PE	254 983 225	510 192 582	507 955 293	99,56	226 132	0,044	504 977 650	99,41	506 680 110	1 049 051	580 530	0,11	472 463	81,38
