@@ -1,0 +1,54 @@
+\select@language {russian}
+\contentsline {section}{\numberline {1}Введение}{3}{section.1}% 
+\contentsline {subsection}{\numberline {1.1}Актуальность}{3}{subsection.1.1}% 
+\contentsline {subsection}{\numberline {1.2}Цели}{3}{subsection.1.2}% 
+\contentsline {subsection}{\numberline {1.3}Задачи}{3}{subsection.1.3}% 
+\contentsline {section}{\numberline {2}Обзор литературы}{3}{section.2}% 
+\contentsline {paragraph}{Частые и редкие (орфанные) патологии.}{4}{section*.3}% 
+\contentsline {subsection}{\numberline {2.1}Механизмы развития генетических патологий}{5}{subsection.2.1}% 
+\contentsline {subsection}{\numberline {2.2}Типы генетических аномалий, лежащих в основе генетических патологий}{6}{subsection.2.2}% 
+\contentsline {subsection}{\numberline {2.3}Функциональные классы генетических вариантов}{7}{subsection.2.3}% 
+\contentsline {subsection}{\numberline {2.4}Методы детектирования генетических вариантов}{7}{subsection.2.4}% 
+\contentsline {paragraph}{Кариотипирование.}{7}{section*.4}% 
+\contentsline {paragraph}{Флуоресцентная \textit {in situ} гибридизация (FISH).}{8}{section*.5}% 
+\contentsline {paragraph}{Сравнительная геномная гибридизация (CGH).}{9}{section*.6}% 
+\contentsline {paragraph}{Мультиплексная лигат-зависимая амплификация зонда (MLPA).}{10}{section*.7}% 
+\contentsline {paragraph}{Секвенирование по Сэнгеру.}{10}{section*.8}% 
+\contentsline {paragraph}{NGS.}{11}{section*.9}% 
+\contentsline {subsection}{\numberline {2.5}Виды NGS}{11}{subsection.2.5}% 
+\contentsline {paragraph}{Полногеномное секвенирование (WGS).}{11}{section*.10}% 
+\contentsline {paragraph}{Полноэкзомное секвенирование (WES)}{11}{section*.11}% 
+\contentsline {paragraph}{Таргетные панели.}{12}{section*.12}% 
+\contentsline {paragraph}{Технологии захвата конформации хромосом (3C).}{12}{section*.13}% 
+\contentsline {subsection}{\numberline {2.6}Базовая схема обработки результатов секвенирования}{12}{subsection.2.6}% 
+\contentsline {paragraph}{Демультиплексирование.}{12}{section*.14}% 
+\contentsline {paragraph}{Удаление адаптерных последовательностей.}{12}{section*.15}% 
+\contentsline {paragraph}{Картирование.}{13}{section*.16}% 
+\contentsline {paragraph}{Удаление дубликатов.}{13}{section*.17}% 
+\contentsline {paragraph}{Рекалибровка качества прочтений (BQSR).}{14}{section*.18}% 
+\contentsline {paragraph}{Поиск вариантов.}{14}{section*.19}% 
+\contentsline {subsection}{\numberline {2.7}Аннотация, фильтрация и интерпретация результатов}{14}{subsection.2.7}% 
+\contentsline {paragraph}{Номер экзона, функциональный класс варианта.}{14}{section*.20}% 
+\contentsline {paragraph}{Частота аллеля по основным базам данных.}{14}{section*.21}% 
+\contentsline {paragraph}{Loss-of-function (LoF).}{15}{section*.22}% 
+\contentsline {paragraph}{Клинические данные из бд и статей.}{15}{section*.23}% 
+\contentsline {paragraph}{Анализ и предсказание функционального эффекта in silico.}{16}{section*.24}% 
+\contentsline {subsection}{\numberline {2.8}Когортный и семейный анализ}{16}{subsection.2.8}% 
+\contentsline {subsection}{\numberline {2.9}Случайные находки}{16}{subsection.2.9}% 
+\contentsline {subsection}{\numberline {2.10}Exo-C: суть метода}{16}{subsection.2.10}% 
+\contentsline {section}{\numberline {3}Материалы и методы}{17}{section.3}% 
+\contentsline {paragraph}{Данные секвенирования.}{17}{section*.25}% 
+\contentsline {paragraph}{Контроль качества.}{17}{section*.26}% 
+\contentsline {paragraph}{Удаление адаптерных последовательностей.}{17}{section*.27}% 
+\contentsline {paragraph}{Картирование.}{17}{section*.28}% 
+\contentsline {paragraph}{Удаление ПЦР-дубликатов.}{18}{section*.29}% 
+\contentsline {paragraph}{Рекалибровка качества прочтений (BQSR).}{18}{section*.30}% 
+\contentsline {paragraph}{Оценка покрытия и обогащения.}{19}{section*.31}% 
+\contentsline {paragraph}{Поиск вариантов.}{19}{section*.32}% 
+\contentsline {paragraph}{Рекалибровка и ранжирование вариантов.}{19}{section*.33}% 
+\contentsline {paragraph}{Аннотация вариантов.}{19}{section*.34}% 
+\contentsline {paragraph}{Фильтрация вариантов.}{20}{section*.35}% 
+\contentsline {section}{\numberline {4}Результаты}{20}{section.4}% 
+\contentsline {section}{\numberline {5}Обсуждение результатов}{20}{section.5}% 
+\contentsline {section}{\numberline {6}Предварительные выводы}{20}{section.6}% 
+\contentsline {section}{\numberline {A}Данные секвенирования K562}{21}{appendix.A}% 
