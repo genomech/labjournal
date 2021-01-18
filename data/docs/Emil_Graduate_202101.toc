@@ -48,7 +48,7 @@
 \contentsline {subsection}{\numberline {4.1}Сравнение данных секвенирования клеточной линии K562}{26}{subsection.4.1}% 
 \contentsline {section}{\numberline {5}Обсуждение результатов}{27}{section.5}% 
 \contentsline {subsection}{\numberline {5.1}Контрольные образцы}{27}{subsection.5.1}% 
-\contentsline {subsection}{\numberline {5.2}Оценка наших библиотек}{27}{subsection.5.2}% 
-\contentsline {section}{\numberline {6}Предварительные выводы}{27}{section.6}% 
-\contentsline {section}{\numberline {7}План работы}{27}{section.7}% 
-\contentsline {section}{\numberline {A}Данные секвенирования K562}{28}{appendix.A}% 
+\contentsline {subsection}{\numberline {5.2}Оценка наших библиотек}{28}{subsection.5.2}% 
+\contentsline {section}{\numberline {6}Предварительные выводы}{28}{section.6}% 
+\contentsline {section}{\numberline {7}План работы}{28}{section.7}% 
+\contentsline {section}{\numberline {A}Данные секвенирования K562}{29}{appendix.A}% 
