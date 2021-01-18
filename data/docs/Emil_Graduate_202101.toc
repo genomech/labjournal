@@ -1,0 +1,54 @@
+\select@language {russian}
+\contentsline {section}{\numberline {1}Введение}{4}{section.1}% 
+\contentsline {subsection}{\numberline {1.1}Актуальность}{4}{subsection.1.1}% 
+\contentsline {subsection}{\numberline {1.2}Цели}{4}{subsection.1.2}% 
+\contentsline {subsection}{\numberline {1.3}Задачи}{4}{subsection.1.3}% 
+\contentsline {section}{\numberline {2}Обзор литературы}{4}{section.2}% 
+\contentsline {paragraph}{Частые и редкие (орфанные) патологии.}{4}{section*.3}% 
+\contentsline {subsection}{\numberline {2.1}Механизмы развития генетических патологий}{5}{subsection.2.1}% 
+\contentsline {subsection}{\numberline {2.2}Типы генетических аномалий, лежащих в основе генетических патологий}{6}{subsection.2.2}% 
+\contentsline {subsection}{\numberline {2.3}Функциональные классы генетических вариантов}{7}{subsection.2.3}% 
+\contentsline {subsection}{\numberline {2.4}Методы детектирования генетических вариантов}{8}{subsection.2.4}% 
+\contentsline {paragraph}{Кариотипирование.}{8}{section*.4}% 
+\contentsline {paragraph}{Флуоресцентная \textit {in situ} гибридизация (FISH).}{9}{section*.5}% 
+\contentsline {paragraph}{Сравнительная геномная гибридизация (CGH).}{10}{section*.6}% 
+\contentsline {paragraph}{Мультиплексная лигат-зависимая амплификация зонда (MLPA).}{10}{section*.7}% 
+\contentsline {paragraph}{Секвенирование по Сэнгеру.}{11}{section*.8}% 
+\contentsline {paragraph}{NGS.}{11}{section*.9}% 
+\contentsline {subsection}{\numberline {2.5}Виды NGS}{12}{subsection.2.5}% 
+\contentsline {paragraph}{Полногеномное секвенирование (WGS).}{12}{section*.10}% 
+\contentsline {paragraph}{Таргетные панели.}{12}{section*.11}% 
+\contentsline {paragraph}{Полноэкзомное секвенирование (WES).}{13}{section*.12}% 
+\contentsline {paragraph}{Технологии захвата конформации хромосом (3C).}{13}{section*.13}% 
+\contentsline {subsection}{\numberline {2.6}Базовая схема обработки результатов секвенирования}{14}{subsection.2.6}% 
+\contentsline {paragraph}{Демультиплексирование.}{14}{section*.14}% 
+\contentsline {paragraph}{Удаление адаптерных последовательностей.}{14}{section*.15}% 
+\contentsline {paragraph}{Картирование прочтений.}{14}{section*.16}% 
+\contentsline {paragraph}{Удаление дубликатов.}{16}{section*.17}% 
+\contentsline {paragraph}{Рекалибровка качества прочтений (BQSR).}{16}{section*.18}% 
+\contentsline {paragraph}{Поиск генетических вариантов.}{17}{section*.19}% 
+\contentsline {subsection}{\numberline {2.7}Аннотация, фильтрация и интерпретация результатов}{18}{subsection.2.7}% 
+\contentsline {paragraph}{Когортный и семейный анализ.}{20}{section*.20}% 
+\contentsline {paragraph}{Cлучайные находки.}{20}{section*.21}% 
+\contentsline {subsection}{\numberline {2.8}Exo-C: суть метода}{21}{subsection.2.8}% 
+\contentsline {section}{\numberline {3}Материалы и методы}{21}{section.3}% 
+\contentsline {paragraph}{Данные секвенирования.}{21}{section*.22}% 
+\contentsline {paragraph}{Контроль качества.}{22}{section*.23}% 
+\contentsline {paragraph}{Удаление адаптерных последовательностей.}{22}{section*.24}% 
+\contentsline {paragraph}{Картирование.}{22}{section*.25}% 
+\contentsline {paragraph}{Удаление ПЦР-дубликатов.}{23}{section*.26}% 
+\contentsline {paragraph}{Рекалибровка качества прочтений (BQSR).}{23}{section*.27}% 
+\contentsline {paragraph}{Оценка покрытия и обогащения.}{23}{section*.28}% 
+\contentsline {paragraph}{Поиск вариантов.}{23}{section*.29}% 
+\contentsline {paragraph}{Рекалибровка и ранжирование вариантов.}{24}{section*.30}% 
+\contentsline {paragraph}{Аннотация вариантов.}{24}{section*.31}% 
+\contentsline {paragraph}{Фильтрация генетических вариантов.}{24}{section*.32}% 
+\contentsline {paragraph}{Интерпретация.}{26}{section*.33}% 
+\contentsline {section}{\numberline {4}Результаты}{26}{section.4}% 
+\contentsline {subsection}{\numberline {4.1}Сравнение данных секвенирования клеточной линии K562}{26}{subsection.4.1}% 
+\contentsline {section}{\numberline {5}Обсуждение результатов}{27}{section.5}% 
+\contentsline {subsection}{\numberline {5.1}Контрольные образцы}{27}{subsection.5.1}% 
+\contentsline {subsection}{\numberline {5.2}Оценка наших библиотек}{27}{subsection.5.2}% 
+\contentsline {section}{\numberline {6}Предварительные выводы}{27}{section.6}% 
+\contentsline {section}{\numberline {7}План работы}{27}{section.7}% 
+\contentsline {section}{\numberline {A}Данные секвенирования K562}{28}{appendix.A}% 
