@@ -1,0 +1,224 @@
+\documentclass[a4paper]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{bibunits,verbatim,geometry,ifpdf}
+
+%============================================================
+\makeatletter
+\RequirePackage{bibunits}
+\renewcommand{\@bibunitname}{\jobname-\the\@bibunitauxcnt}
+\newcounter{qnum}\newcounter{qnuma}\setcounter{qnum}{0}
+\def\@biblabel#1{#1.\hfill}
+%\endinput
+\renewenvironment{thebibliography}[1]
+      {\list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{99}}%
+            \leftmargin\labelwidth
+            \advance\leftmargin\labelsep
+%            \advance\leftmargin\parindent
+            \setcounter{qnuma}{\c@enumiv}
+            \@openbib@code
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \setcounter{enumiv}{\theqnuma}
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
+\makeatother
+%============================================================
+
+\ifpdf
+  \usepackage[pdftex,hyperindex,unicode]{hyperref}
+\else
+  \usepackage[hypertex]{hyperref}
+\fi
+\usepackage{color}
+\definecolor{darkblue}{rgb}{0,0,.6}
+\hypersetup{
+  pdftitle           = {\mytitle},
+  pdfauthor          = {Igor A. Kotelnikov},
+  pdfsubject         = {GOST, BibTeX},
+  pdfstartview       = {FitH},
+%  pdfborder          = {0 0 0},
+%  bookmarksopen      = true,
+  bookmarksnumbered  = true,
+%  bookmarksopenlevel = 2,
+  colorlinks = true,     linkcolor  = darkblue,
+  citecolor  = darkblue, filecolor  = darkblue,
+  menucolor  = darkblue, urlcolor   = darkblue
+}
+
+
+\begin{document}	
+
+\newcommand{\bibentry}[1]{
+\begin{bibunit}
+\nocite{*}
+\putbib[bib/#1]
+\nopagebreak
+\verbatiminput{bib/#1.bib}
+\end{bibunit}
+}
+
+\title{\mytitle}
+\maketitle
+\begin{abstract}
+  \mydescription
+\end{abstract}
+
+\bibliographyunit[\section]
+\bibliographystyle{\mybibstyle}
+
+\section{Books}
+
+\subsection{One--three authors}
+\bibentry{ex01}
+\bibentry{ex02}
+\bibentry{ex03}
+
+\subsection{Four and more authors}
+\bibentry{ex04}
+\bibentry{ex05}
+
+\subsection{Collective author}
+\bibentry{ex06}
+
+\subsection{Compiler}
+\bibentry{ex07}
+
+\subsection{Multiple-volume publications}
+\bibentry{ex08}
+\bibentry{ex09}
+\bibentry{ex10}
+\bibentry{ex64}
+
+\subsection{Translated}
+\bibentry{ex11}
+
+\subsection{Collections}
+\bibentry{ex12}
+\bibentry{ex63}
+
+\subsection{Dictionary}
+\bibentry{ex13}
+
+
+\section{Parts of \ldots}
+
+\subsection{Book}
+\bibentry{ex14}
+\bibentry{ex15}
+\bibentry{ex61}
+
+\subsection{Collection}
+\bibentry{ex16}
+
+\subsection{Journal}
+\bibentry{ex17}
+\bibentry{ex18}
+\bibentry{ex19}
+\bibentry{ex60}
+\bibentry{ex68}
+\bibentry{ex74}
+\bibentry{ex76}
+
+\subsection{Newspaper}
+\bibentry{ex20}
+
+\subsection{Encyclopedia}
+\bibentry{ex21}
+
+\subsection{Proceedings}
+\bibentry{ex22}
+\bibentry{ex23}
+\bibentry{ex65}
+
+\subsubsection{With crossreference}
+\bibentry{ex24}
+\bibentry{ex72}
+\bibentry{ex73}
+
+\subsubsection{With multiple languages}
+\bibentry{ex25}
+\bibentry{ex26}
+\bibentry{ex27}
+
+
+\section{Others}
+
+\subsection{Standard}
+\bibentry{ex28}
+
+\subsection{Dissertation}
+\bibentry{ex29}
+\bibentry{ex30}
+\bibentry{ex31}
+\bibentry{ex32}
+Allowed built-in values of \verb|type| field in \verb|@THESIS| entry are \verb|mathesis| for masters thesis, \verb|phdthesis| for Ph.D. thesis, and \verb|docthesis| for doctor of sciences dissertation. Any other value of \verb|type| is reproduced literally.
+\bibentry{ex33}
+\bibentry{ex34}
+\bibentry{ex35}
+\bibentry{ex36}
+\bibentry{ex70}
+\bibentry{ex71}
+
+\subsection{Preprint}
+\bibentry{ex37}
+
+\subsection{Report}
+\bibentry{ex38}
+\bibentry{ex39}
+\bibentry{ex40}
+
+\subsection{Catalog}
+\bibentry{ex41}
+
+\subsection{Instruction}
+\bibentry{ex42}
+\bibentry{ex67}
+
+\subsection{Patent}
+\bibentry{ex43}
+\bibentry{ex44}
+
+
+\section{Electronic resources}
+
+\subsection{Common Fields}
+\verb|Url|, \verb|eprint|, \verb|doi| and \verb|media| fields can be assigned to any entry. Allowed values of \verb|media| are \verb|online|, \verb|eresource| and \verb|text| (default).
+\bibentry{ex45}
+\bibentry{ex46}
+\bibentry{ex47}
+\bibentry{ex48}
+\bibentry{ex49}
+\bibentry{ex50}
+\bibentry{ex51}
+\bibentry{ex58}
+\bibentry{ex66}
+\bibentry{ex69}
+
+\subsection{Online Entry}
+\bibentry{ex52}
+\bibentry{ex53}
+\bibentry{ex54}
+\bibentry{ex57}
+\bibentry{ex59}
+\bibentry{ex62}
+\bibentry{ex75}
+
+
+\section{Use of macros}
+
+\texttt{jan}, \texttt{feb}, \texttt{mar},\ldots{} \texttt{dec} macros in \texttt{month} field
+are automatically translated to Russian or English if necessary. Other languages are not supported.
+\bibentry{ex55}
+\bibentry{ex56}
+
+
+\end{document}

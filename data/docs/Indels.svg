@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="190.12204mm"
+   height="97.061859mm"
+   viewBox="0 0 190.12204 97.061859"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   sodipodi:docname="Indels.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="387.96744"
+     inkscape:cy="257.79819"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1015"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-17.764881,-78.90773)">
+    <rect
+       style="opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.79374999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5999999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect1387"
+       width="190.12204"
+       height="97.061859"
+       x="17.764881"
+       y="78.90773" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot817"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'Linux Libertine Mono';-inkscape-font-specification:'Linux Libertine Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="scale(0.26458333)"><flowRegion
+         id="flowRegion819"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Linux Libertine Mono';-inkscape-font-specification:'Linux Libertine Mono'"><rect
+           id="rect821"
+           width="417.14285"
+           height="70.714287"
+           x="218.57143"
+           y="556.09113"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Linux Libertine Mono';-inkscape-font-specification:'Linux Libertine Mono'" /></flowRegion><flowPara
+         id="flowPara823" /></flowRoot>    <rect
+       style="opacity:1;vector-effect:none;fill:#8dd35f;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.79374999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5999999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect901"
+       width="155.59537"
+       height="11.626225"
+       x="42.776718"
+       y="88.934341" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Linux Libertine Mono';-inkscape-font-specification:'Linux Libertine Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:0.78431373;stroke:none;stroke-width:0.26458332"
+       x="44.347515"
+       y="98.373528"
+       id="text827"><tspan
+         sodipodi:role="line"
+         id="tspan825"
+         x="44.347515"
+         y="98.373528"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Mono';-inkscape-font-specification:'Liberation Mono';fill:#000000;fill-opacity:0.78431373;stroke-width:0.26458332">TTTGTTTGTTTATTTGTTTGAAAA</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Linux Libertine Mono';-inkscape-font-specification:'Linux Libertine Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="28.264795"
+       y="98.233032"
+       id="text827-92-2"><tspan
+         sodipodi:role="line"
+         id="tspan825-0-8"
+         x="28.264795"
+         y="98.233032"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Liberation Mono';-inkscape-font-specification:'Liberation Mono Bold';fill:#000000;fill-opacity:1;stroke-width:0.26458332">1</tspan></text>
+    <rect
+       style="opacity:1;vector-effect:none;fill:#b7bec8;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.79374999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5999999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect901-7"
+       width="130.45996"
+       height="11.626225"
+       x="42.730209"
+       y="110.73643" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Linux Libertine Mono';-inkscape-font-specification:'Linux Libertine Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:0.78431373;stroke:none;stroke-width:0.26458332"
+       x="44.301006"
+       y="120.17561"
+       id="text827-92"><tspan
+         sodipodi:role="line"
+         id="tspan825-0"
+         x="44.301006"
+         y="120.17561"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Mono';-inkscape-font-specification:'Liberation Mono';fill:#000000;fill-opacity:0.78431373;stroke-width:0.26458332">TTTGTTTATTTGTTTGAAAA</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Linux Libertine Mono';-inkscape-font-specification:'Linux Libertine Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="28.34231"
+       y="120.08939"
+       id="text827-92-2-9"><tspan
+         sodipodi:role="line"
+         id="tspan825-0-8-7"
+         x="28.34231"
+         y="120.08939"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Liberation Mono';-inkscape-font-specification:'Liberation Mono Bold';fill:#000000;fill-opacity:1;stroke-width:0.26458332">2</tspan></text>
+    <rect
+       style="opacity:1;vector-effect:none;fill:#87aade;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.79374999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5999999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect901-1"
+       width="155.40639"
+       height="11.626225"
+       x="42.849068"
+       y="132.39677" />
+    <rect
+       style="opacity:1;vector-effect:none;fill:#c83737;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.79374993;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5999999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect901-1-23"
+       width="6.8617406"
+       height="11.626225"
+       x="88.58419"
+       y="132.39677" />
+    <rect
+       style="opacity:1;vector-effect:none;fill:#c83737;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.79374993;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5999999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect901-1-23-7"
+       width="6.8617406"
+       height="11.626225"
+       x="113.92753"
+       y="132.39677" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Linux Libertine Mono';-inkscape-font-specification:'Linux Libertine Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:0.78431373;stroke:none;stroke-width:0.26458332"
+       x="44.419861"
+       y="141.83595"
+       id="text827-2"><tspan
+         sodipodi:role="line"
+         id="tspan825-7"
+         x="44.419861"
+         y="141.83595"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Mono';-inkscape-font-specification:'Liberation Mono';fill:#000000;fill-opacity:0.78431373;stroke-width:0.26458332">TTTGTTTATTTG    TTTGAAAA</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Linux Libertine Mono';-inkscape-font-specification:'Linux Libertine Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="28.497339"
+       y="141.69029"
+       id="text827-92-2-3"><tspan
+         sodipodi:role="line"
+         id="tspan825-0-8-6"
+         x="28.497339"
+         y="141.69029"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Liberation Mono';-inkscape-font-specification:'Liberation Mono Bold';fill:#000000;fill-opacity:1;stroke-width:0.26458332">3</tspan></text>
+    <rect
+       style="opacity:1;vector-effect:none;fill:#87aade;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.79374999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5999999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect901-0"
+       width="155.40639"
+       height="11.626225"
+       x="43.017017"
+       y="154.24611" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Linux Libertine Mono';-inkscape-font-specification:'Linux Libertine Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:0.78431373;stroke:none;stroke-width:0.26458332"
+       x="44.587811"
+       y="163.6853"
+       id="text827-9"><tspan
+         sodipodi:role="line"
+         id="tspan825-3"
+         x="44.587811"
+         y="163.6853"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Mono';-inkscape-font-specification:'Liberation Mono';fill:#000000;fill-opacity:0.78431373;stroke-width:0.26458332">TTT    GTTTATTTGTTTGAAAA</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Linux Libertine Mono';-inkscape-font-specification:'Linux Libertine Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="28.611027"
+       y="163.5448"
+       id="text827-92-2-1"><tspan
+         sodipodi:role="line"
+         id="tspan825-0-8-2"
+         x="28.611027"
+         y="163.5448"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Liberation Mono';-inkscape-font-specification:'Liberation Mono Bold';fill:#000000;fill-opacity:1;stroke-width:0.26458332">4</tspan></text>
+    <rect
+       style="opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.79374993;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5999999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect901-1-2-6"
+       width="24.888018"
+       height="14.366552"
+       x="120.78928"
+       y="131.16835" />
+    <rect
+       style="opacity:1;vector-effect:none;fill:#214478;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.79374993;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5999999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect901-1-2"
+       width="24.898233"
+       height="3.3107493"
+       x="120.77797"
+       y="136.55452" />
+    <rect
+       style="opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.79374993;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5999999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect901-1-2-6-9"
+       width="24.888018"
+       height="13.705094"
+       x="63.911686"
+       y="153.30116" />
+    <rect
+       style="opacity:1;vector-effect:none;fill:#214478;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.79374993;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.5999999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect901-1-2-2"
+       width="24.898233"
+       height="3.3107493"
+       x="63.900379"
+       y="158.40385" />
+  </g>
+</svg>

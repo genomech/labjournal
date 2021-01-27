@@ -1,0 +1,18 @@
+\edef\mybibstyle{gost2003}
+ % cmap надо грузить до inputenc, чтобы работал поиск
+\RequirePackage{cmap}
+\RequirePackage[cp1251]{inputenc}
+\newcommand*{\mytitle}{The GOST bundle: \mybibstyle.bst}
+\newcommand{\mydescription}{
+   Example bibliographic description using the style \texttt{\mybibstyle.bst}.
+   No customization is applied.
+
+   ѕример оформлени€ библиографического описани€ с помощью стил€ \texttt{\mybibstyle.bst}.
+    оманды форматировани€ не изменены.
+
+   This is style is intended for composing bibliographic catalogs and descriptions.
+
+   ƒанный стиль предназначен дл€ составлени€ библиотечных каталогов и описаний.
+
+}
+\input gost
