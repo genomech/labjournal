@@ -1,0 +1,55 @@
+\selectlanguage *[babelshorthands=true]{russian}
+\contentsline {section}{\numberline {1}Введение}{5}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Актуальность}{5}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Цель}{5}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Задачи}{5}{subsection.1.3}%
+\contentsline {section}{\numberline {2}Обзор литературы}{6}{section.2}%
+\contentsline {paragraph}{Частые и редкие (орфанные) патологии.}{6}{section*.3}%
+\contentsline {subsection}{\numberline {2.1}Механизмы развития генетических патологий}{7}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Типы генетических аномалий, лежащих в основе генетических патологий}{8}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Функциональные классы генетических вариантов}{10}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Методы детекции генетических вариантов}{11}{subsection.2.4}%
+\contentsline {paragraph}{Кариотипирование.}{11}{section*.4}%
+\contentsline {paragraph}{Флуоресцентная \textit {in situ} гибридизация (\textit {англ.} Fluorescence In Situ Hybridization, FISH).}{12}{section*.5}%
+\contentsline {paragraph}{Сравнительная геномная гибридизация (\textit {англ.} Comparative Genomic Hybridization, CGH).}{12}{section*.6}%
+\contentsline {paragraph}{Мультиплексная лигаза-зависимая амплификация зонда (\textit {англ.} Multiplex Ligation-dependent Probe Amplification, MLPA).}{13}{section*.7}%
+\contentsline {paragraph}{Секвенирование по Сэнгеру.}{14}{section*.8}%
+\contentsline {paragraph}{Секвенирование нового поколения (\textit {англ.} New Generation Sequencing, NGS).}{14}{section*.9}%
+\contentsline {subsection}{\numberline {2.5}Виды NGS}{15}{subsection.2.5}%
+\contentsline {paragraph}{Полногеномное секвенирование (\textit {англ.} Whole Genome Sequencing, WGS).}{15}{section*.10}%
+\contentsline {paragraph}{Таргетные панели.}{15}{section*.11}%
+\contentsline {paragraph}{Полноэкзомное секвенирование (\textit {англ.} Whole Exome Sequencing, WES).}{16}{section*.12}%
+\contentsline {paragraph}{Технологии захвата конформации хромосом (3C).}{16}{section*.13}%
+\contentsline {subsection}{\numberline {2.6}Базовая схема обработки результатов высокопроизводительного секвенирования для поиска и клинической интерпретации однонуклеотидных полиморфизмов}{17}{subsection.2.6}%
+\contentsline {paragraph}{Демультиплексикация.}{17}{section*.14}%
+\contentsline {paragraph}{Удаление адаптерных последовательностей.}{17}{section*.15}%
+\contentsline {paragraph}{Картирование прочтений.}{17}{section*.16}%
+\contentsline {paragraph}{Удаление дубликатов.}{19}{section*.17}%
+\contentsline {paragraph}{Рекалибровка качества прочтений (\textit {англ.} Base Quality Score Recalibration, BQSR).}{20}{section*.18}%
+\contentsline {paragraph}{Поиск генетических вариантов.}{21}{section*.19}%
+\contentsline {subsection}{\numberline {2.7}Аннотация, фильтрация и интерпретация результатов}{21}{subsection.2.7}%
+\contentsline {paragraph}{Когортный и семейный анализ.}{24}{section*.20}%
+\contentsline {subsection}{\numberline {2.8}Exo-C: суть метода}{24}{subsection.2.8}%
+\contentsline {section}{\numberline {3}Материалы и методы}{25}{section.3}%
+\contentsline {paragraph}{Данные секвенирования.}{25}{section*.21}%
+\contentsline {paragraph}{Контроль качества NGS-данных.}{25}{section*.22}%
+\contentsline {paragraph}{Удаление адаптерных последовательностей.}{25}{section*.23}%
+\contentsline {paragraph}{Картирование.}{25}{section*.24}%
+\contentsline {paragraph}{Удаление ПЦР-дубликатов.}{26}{section*.25}%
+\contentsline {paragraph}{Рекалибровка качества прочтений (BQSR).}{26}{section*.26}%
+\contentsline {paragraph}{Оценка покрытия и обогащения.}{27}{section*.27}%
+\contentsline {paragraph}{Поиск вариантов.}{27}{section*.28}%
+\contentsline {paragraph}{Рекалибровка и ранжирование вариантов.}{27}{section*.29}%
+\contentsline {paragraph}{Аннотация вариантов.}{27}{section*.30}%
+\contentsline {paragraph}{Фильтрация генетических вариантов.}{28}{section*.31}%
+\contentsline {paragraph}{Интерпретация.}{29}{section*.32}%
+\contentsline {section}{\numberline {4}Результаты}{29}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Результаты секвенирования Exo-C-библиотек}{30}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Автоматизация обработки данных секвенирования}{30}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Сравнение данных секвенирования клеточной линии K562}{31}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Обсуждение результатов}{33}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Контрольные образцы}{33}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Оценка результатов секвенирования Exo-C-библиотек}{33}{subsection.5.2}%
+\contentsline {section}{\numberline {6}Предварительные выводы}{34}{section.6}%
+\contentsline {section}{\numberline {7}План работы}{35}{section.7}%
+\contentsline {section}{\numberline {A}Данные секвенирования клеточной линии K562}{36}{appendix.A}%
