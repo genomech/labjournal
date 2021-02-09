@@ -1,0 +1,19 @@
+[Desktop Entry]
+Comment[ru_RU]=
+Comment=
+Exec=ssh -p 8023 minja@gate.sysbio.cytogen.ru
+GenericName[ru_RU]=Lab Server Access
+GenericName=Lab Server Access
+Icon=system-run
+MimeType=
+Name[ru_RU]=lab-server
+Name=lab-server
+Path=
+StartupNotify=true
+Terminal=true
+TerminalOptions=\s--noclose
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=none
+X-KDE-SubstituteUID=false
+X-KDE-Username=

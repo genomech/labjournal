@@ -1,0 +1,19 @@
+[Desktop Entry]
+Comment[ru_RU]=
+Comment=
+Exec=yandex-disk sync
+GenericName[ru_RU]=Sync Yandex Disk
+GenericName=Sync Yandex Disk
+Icon=system-run
+MimeType=
+Name[ru_RU]=ya.disk-sync
+Name=ya.disk-sync
+Path=
+StartupNotify=true
+Terminal=true
+TerminalOptions=\s--noclose
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=none
+X-KDE-SubstituteUID=false
+X-KDE-Username=

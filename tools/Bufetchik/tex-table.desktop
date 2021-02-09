@@ -1,0 +1,19 @@
+[Desktop Entry]
+Comment[ru_RU]=
+Comment=
+Exec=echo "import pandas,tabulate,pyperclip;data=pandas.read_clipboard(sep='\\\\t');pyperclip.copy(tabulate.tabulate(data,headers='keys',tablefmt='latex',showindex=False))" | python3
+GenericName[ru_RU]=TSV to TeX Table
+GenericName=TSV to TeX Table
+Icon=system-run
+MimeType=
+Name[ru_RU]=md_table
+Name=md_table
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=
