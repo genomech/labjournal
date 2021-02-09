@@ -1,13 +1,13 @@
 [Desktop Entry]
 Comment[ru_RU]=
 Comment=
-Exec=ssh -p 8023 minja@gate.sysbio.cytogen.ru
-GenericName[ru_RU]=Lab Server Access
-GenericName=Lab Server Access
+Exec=bib=$(doi2bib $(xclip -selection clipboard -o)); echo 'import pyperclip;pyperclip.copy("""'"$bib"'""")' | python3
+GenericName[ru_RU]=DOI to BibTeX item
+GenericName=DOI to BibTeX item
 Icon=system-run
 MimeType=
-Name[ru_RU]=lab-server
-Name=lab-server
+Name[ru_RU]=doi2bib
+Name=doi2bib
 Path=
 StartupNotify=true
 Terminal=true

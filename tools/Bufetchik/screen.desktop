@@ -1,19 +1,19 @@
 [Desktop Entry]
 Comment[ru_RU]=
 Comment=
-Exec=ssh -p 8023 minja@gate.sysbio.cytogen.ru
-GenericName[ru_RU]=Lab Server Access
-GenericName=Lab Server Access
+Exec=sleep 1; screen -r || screen
+GenericName[ru_RU]=Screen session resume or start
+GenericName=Screen session resume or start
 Icon=system-run
 MimeType=
-Name[ru_RU]=lab-server
-Name=lab-server
+Name[ru_RU]=screen
+Name=screen
 Path=
 StartupNotify=true
 Terminal=true
 TerminalOptions=
 Type=Application
 X-DBUS-ServiceName=
-X-DBUS-StartupType=none
+X-DBUS-StartupType=
 X-KDE-SubstituteUID=false
 X-KDE-Username=
