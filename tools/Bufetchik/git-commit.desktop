@@ -1,0 +1,19 @@
+[Desktop Entry]
+Comment[ru_RU]=
+Comment=
+Exec={ cd $(xclip -selection clipboard -o); git add *; } && { git commit -a -m "-"; git push origin master; }
+GenericName[ru_RU]=
+GenericName=
+Icon=system-run
+MimeType=
+Name[ru_RU]=git-commit
+Name=git-commit
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=
