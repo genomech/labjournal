@@ -1,7 +1,7 @@
 [Desktop Entry]
 Comment[ru_RU]=
 Comment=
-Exec={ cd $(xclip -selection clipboard -o); git add *; } && { git commit -a -m "-"; git push origin master; }
+Exec=cd $(xclip -selection clipboard -o); git add *; git commit -a -m "-"; git push origin master;
 GenericName[ru_RU]=Git commit and push
 GenericName=Git commit and push
 Icon=system-run
