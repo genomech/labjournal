@@ -41,14 +41,14 @@
      guidetolerance="1"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1920"
+     inkscape:window-width="1832"
      inkscape:window-height="1015"
      id="namedview1877"
      showgrid="false"
-     inkscape:zoom="0.35355339"
-     inkscape:cx="745.84076"
-     inkscape:cy="404.27477"
-     inkscape:window-x="0"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="1668.1359"
+     inkscape:cy="520.21179"
+     inkscape:window-x="88"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg1875"
@@ -24371,21 +24371,21 @@
   <rect
      style="opacity:1;vector-effect:none;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.41732275;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
      id="rect5234-0-378"
-     width="38.670238"
+     width="30.652727"
      height="18.167919"
-     x="1161.4818"
+     x="1169.9906"
      y="542.00677"
      ry="0"
      rx="0" />
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.14952469px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.41732275;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
-     x="1194.0206"
+     x="1195.5206"
      y="555.44836"
      id="text5253-2-03"><tspan
        sodipodi:role="line"
        id="tspan5251-9-7"
-       x="1194.0206"
+       x="1195.5206"
        y="555.44836"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.14952469px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:end;text-anchor:end;fill:#ffffff;stroke:none;stroke-width:1.41732275;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none">448</tspan></text>
   <flowRoot
@@ -24402,7 +24402,9 @@
          x="-630"
          y="135.37683" /></flowRegion><flowPara
        id="flowPara4835-8-8"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.33333397px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#ffffff;stroke-width:0.82307744;stroke-linecap:butt;stroke-linejoin:round">Protocol: Ma et al., K562</flowPara></flowRoot>  <image
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.33333397px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#ffffff;stroke-width:0.82307744;stroke-linecap:butt;stroke-linejoin:round"><flowSpan
+   style="-inkscape-font-specification:sans-serif;font-family:sans-serif;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+   id="flowSpan4864">Above diagonal: </flowSpan>Protocol: Ma et al., K562</flowPara></flowRoot>  <image
      y="860.57446"
      x="107.82048"
      id="image4815"
@@ -24421,21 +24423,21 @@
   <rect
      style="opacity:1;vector-effect:none;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.41732275;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
      id="rect5234-0-378-9"
-     width="38.670238"
+     width="30.652727"
      height="18.167919"
-     x="1161.4818"
+     x="1169.9906"
      y="83.506088"
      ry="0"
      rx="0" />
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.14952469px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.41732275;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
-     x="1194.0206"
+     x="1195.5206"
      y="96.947708"
      id="text5253-2-03-88"><tspan
        sodipodi:role="line"
        id="tspan5251-9-7-5"
-       x="1194.0206"
+       x="1195.5206"
        y="96.947708"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.14952469px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:end;text-anchor:end;fill:#ffffff;stroke:none;stroke-width:1.41732275;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none">505</tspan></text>
   <flowRoot
@@ -24452,7 +24454,9 @@
          x="-630"
          y="135.37683" /></flowRegion><flowPara
        id="flowPara4835-8-8-7"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.33333397px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#ffffff;stroke-width:0.82307744;stroke-linecap:butt;stroke-linejoin:round">Ma et al. (reanalyzed), K562, capture</flowPara></flowRoot>  <image
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.33333397px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#ffffff;stroke-width:0.82307744;stroke-linecap:butt;stroke-linejoin:round"><flowSpan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-linecap:butt;stroke-linejoin:round"
+   id="flowSpan4856">Above diagonal:</flowSpan> Ma et al. (reanalyzed), K562, capture</flowPara></flowRoot>  <image
      y="1273.8115"
      x="108.10317"
      id="image4864"
@@ -24477,20 +24481,20 @@
   <rect
      style="opacity:1;vector-effect:none;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.41732275;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
      id="rect5234-0-378-79"
-     width="38.670238"
+     width="30.652727"
      height="18.167919"
-     x="1575.5106"
+     x="1584.0194"
      y="83.506073"
      ry="0"
      rx="0" />
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.14952469px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.41732275;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
-     x="1608.0497"
+     x="1609.5497"
      y="96.947693"
      id="text5253-2-03-9"><tspan
        sodipodi:role="line"
-       x="1608.0497"
+       x="1609.5497"
        y="96.947693"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.14952469px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:end;text-anchor:end;fill:#ffffff;stroke:none;stroke-width:1.41732275;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
        id="tspan5768">434</tspan></text>
@@ -24508,7 +24512,9 @@
          x="-630"
          y="135.37683" /></flowRegion><flowPara
        id="flowPara4835-8-8-1"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.33333397px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#ffffff;stroke-width:0.82307744;stroke-linecap:butt;stroke-linejoin:round">Ma et al. (reanalyzed), K562, WGS</flowPara></flowRoot>  <image
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.33333397px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#ffffff;stroke-width:0.82307744;stroke-linecap:butt;stroke-linejoin:round"><flowSpan
+   style="-inkscape-font-specification:sans-serif;font-family:sans-serif;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+   id="flowSpan4862">Above diagonal: </flowSpan>Ma et al. (reanalyzed), K562, WGS</flowPara></flowRoot>  <image
      y="565.06482"
      x="1274.5238"
      id="image4971"
@@ -24526,21 +24532,21 @@
   <rect
      style="opacity:1;vector-effect:none;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.41732275;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
      id="rect5234-0-378-75"
-     width="38.670238"
+     width="30.652727"
      height="18.167919"
-     x="1575.5106"
+     x="1584.0194"
      y="542.00684"
      ry="0"
      rx="0" />
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.14952469px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.41732275;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
-     x="1608.0497"
+     x="1609.5497"
      y="555.44843"
      id="text5253-2-03-1"><tspan
        sodipodi:role="line"
        id="tspan5251-9-7-7"
-       x="1608.0497"
+       x="1609.5497"
        y="555.44843"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.14952469px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:end;text-anchor:end;fill:#ffffff;stroke:none;stroke-width:1.41732275;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none">275</tspan></text>
   <flowRoot
@@ -24573,7 +24579,9 @@
          x="-630"
          y="135.37683" /></flowRegion><flowPara
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.33333397px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#ffffff;stroke-width:0.82307744;stroke-linecap:butt;stroke-linejoin:round"
-       id="flowPara5258">Control: Protocol Ramani et al., biotin-fillin</flowPara></flowRoot>  <flowRoot
+       id="flowPara5258"><flowSpan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-linecap:butt;stroke-linejoin:round"
+   id="flowSpan4858">Below diagonal:</flowSpan> Protocol Ramani et al., biotin-fillin</flowPara></flowRoot>  <flowRoot
      transform="matrix(0.91121437,0,0,0.91121437,1850.8488,309.72116)"
      xml:space="preserve"
      id="flowRoot4829-6-1-8-0-4"
@@ -24587,7 +24595,9 @@
          x="-630"
          y="135.37683" /></flowRegion><flowPara
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.33333397px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#ffffff;stroke-width:0.82307744;stroke-linecap:butt;stroke-linejoin:round"
-       id="flowPara5258-8">Control: Protocol Ramani et al., biotin-fillin</flowPara></flowRoot>  <flowRoot
+       id="flowPara5258-8"><flowSpan
+   style="-inkscape-font-specification:sans-serif;font-family:sans-serif;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+   id="flowSpan4868">Below diagonal:</flowSpan> Protocol Ramani et al., biotin-fillin</flowPara></flowRoot>  <flowRoot
      transform="matrix(0.91121437,0,0,0.91121437,1436.82,768.02336)"
      xml:space="preserve"
      id="flowRoot4829-6-1-8-0-2"
@@ -24601,4 +24611,6 @@
          x="-630"
          y="135.37683" /></flowRegion><flowPara
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.33333397px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#ffffff;stroke-width:0.82307744;stroke-linecap:butt;stroke-linejoin:round"
-       id="flowPara5258-6">Control: Protocol Ramani et al., biotin-fillin</flowPara></flowRoot></svg>
+       id="flowPara5258-6"><flowSpan
+   style="-inkscape-font-specification:sans-serif;font-family:sans-serif;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+   id="flowSpan4870">Below diagonal: </flowSpan>Protocol Ramani et al., biotin-fillin</flowPara></flowRoot></svg>

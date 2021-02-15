@@ -1,0 +1,13 @@
+#	Protocol	Hi-C pro (Bowtie2-based), reported pairs, %*	Bowtie2 after cutadapt split, reported pairs, %*	BWA (no preprocessing), reported pairs, %*
+1	Protocol: Ma et. al.	37	48	79
+2	Protocol: Ma et. al.	37	48	80
+3	Protocol: Ma et. al.	63	67	87
+4	Protocol: Ma et. al.	55	60	86
+5	Protocol: Ma et. al.	55	62	85
+6	Protocol: Ma et. al.	34	45	79
+7	Protocol: Ma et. al.	34	49	79
+8	Protocol: Ma et. al.	40	51	81
+15	Protocol: Ramani et. al. + biotin-fillin	51	-	93
+16	Protocol: Ramani et. al. + biotin-fillin	42	-	92
+17	Protocol: Ramani et. al. + biotin-fillin	48	-	93
+18	Protocol: Ramani et. al. + biotin-fillin	49	-	92

@@ -1,0 +1,7 @@
+Pair_1	Pair_2	Size_1	Size_2	Protocol	Statistic	pValue	Symbol
+Hi-C pro (Bowtie2-based), reported pairs, %*	Bowtie2 after cutadapt split, reported pairs, %*	8	8	Protocol: Ma et. al.	17.0	0.06334280646149172	
+Hi-C pro (Bowtie2-based), reported pairs, %*	Bowtie2 after cutadapt split, reported pairs, %*	4	0	Protocol: Ramani et. al. + biotin-fillin	-	-	-
+Bowtie2 after cutadapt split, reported pairs, %*	BWA (no preprocessing), reported pairs, %*	8	8	Protocol: Ma et. al.	0.0	0.00044945639405704485	***
+Bowtie2 after cutadapt split, reported pairs, %*	BWA (no preprocessing), reported pairs, %*	0	4	Protocol: Ramani et. al. + biotin-fillin	-	-	-
+Hi-C pro (Bowtie2-based), reported pairs, %*	BWA (no preprocessing), reported pairs, %*	8	8	Protocol: Ma et. al.	0.0	0.00044158299742634485	***
+Hi-C pro (Bowtie2-based), reported pairs, %*	BWA (no preprocessing), reported pairs, %*	4	4	Protocol: Ramani et. al. + biotin-fillin	0.0	0.014214767999398257	*

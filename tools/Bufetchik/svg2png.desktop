@@ -1,0 +1,19 @@
+[Desktop Entry]
+Comment[ru_RU]=
+Comment=
+Exec=sleep 1; xclip -selection clipboard -o | sed "s#file://##" { read file001; echo $file001; inkscape -C --export-dpi=150 -b="#FFFFFF" --export-png=$file001.png $file001; }
+GenericName[ru_RU]=SVG to PNG
+GenericName=SVG to PNG
+Icon=system-run
+MimeType=
+Name[ru_RU]=svg2png
+Name=svg2png
+Path=
+StartupNotify=true
+Terminal=true
+TerminalOptions=\s--noclose
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=

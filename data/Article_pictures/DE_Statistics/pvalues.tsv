@@ -1,10 +1,16 @@
-Pair_1	Pair_2	Parameter	Size_1	Size_2	Statistic	Symbol	pValue
-Protocol: Ma et al.	Protocol: Ramani et al., long linker	reported_pairs%of_total	8	3	0.0	**	0.008784786380206232
-Protocol: Ma et al.	Protocol: Ramani et al., long linker	cis	8	3	0.0	**	0.009182612933875983
-Protocol: Ma et al.	Protocol: Ramani et al., long linker	de%of_valid	8	3	2.0	*	0.02597175110110105
-Protocol: Ma et al.	Protocol: Ramani et al., biotin-fillin	reported_pairs%of_total	8	14	0.0	***	4.93260274037905e-05
-Protocol: Ma et al.	Protocol: Ramani et al., biotin-fillin	cis	8	14	0.0	***	7.463185768796488e-05
-Protocol: Ma et al.	Protocol: Ramani et al., biotin-fillin	de%of_valid	8	14	27.0	*	0.02554592465532372
-Protocol: Ramani et al., long linker	Protocol: Ramani et al., biotin-fillin	reported_pairs%of_total	3	14	0.0	**	0.0030537906041283136
-Protocol: Ramani et al., long linker	Protocol: Ramani et al., biotin-fillin	cis	3	14	17.0		0.3292289284039833
-Protocol: Ramani et al., long linker	Protocol: Ramani et al., biotin-fillin	de%of_valid	3	14	10.5		0.10315821000657666
+Pair_1	Pair_2	Size_1	Size_2	Parameter	Statistic	pValue	Symbol
+Protocol: Ma et al.	Protocol: Ramani et al., long linker	8	3	reported_pairs%of_total	0.0	0.008784786380206232	**
+Protocol: Ma et al.	Protocol: Ramani et al., long linker	8	3	cis	0.0	0.009182612933875983	**
+Protocol: Ma et al.	Protocol: Ramani et al., long linker	8	3	de%of_valid	2.0	0.02597175110110105	*
+Protocol: Ma et al.	Protocol: Ramani et al., biotin-fillin	8	14	reported_pairs%of_total	0.0	4.93260274037905e-05	***
+Protocol: Ma et al.	Protocol: Ramani et al., biotin-fillin	8	14	cis	0.0	7.463185768796488e-05	***
+Protocol: Ma et al.	Protocol: Ramani et al., biotin-fillin	8	14	de%of_valid	27.0	0.02554592465532372	*
+Protocol: Ramani et al., long linker	Protocol: Ramani et al., biotin-fillin	3	14	reported_pairs%of_total	0.0	0.0030537906041283136	**
+Protocol: Ramani et al., long linker	Protocol: Ramani et al., biotin-fillin	3	14	cis	17.0	0.3292289284039833	
+Protocol: Ramani et al., long linker	Protocol: Ramani et al., biotin-fillin	3	14	de%of_valid	10.5	0.10315821000657666	
+Protocol: Ramani et al., biotin-fillin	Ramani et al. (reanalyzed)	14	1	reported_pairs%of_total	0.0	0.050093672788194474	
+Protocol: Ramani et al., biotin-fillin	Ramani et al. (reanalyzed)	14	1	cis	0.0	0.06588592570536994	
+Protocol: Ramani et al., biotin-fillin	Ramani et al. (reanalyzed)	14	1	de%of_valid	0.0	0.06553961618422227	
+Protocol: Ramani et al., biotin-fillin	Protocol: Ramani et al.	14	1	reported_pairs%of_total	0.0	0.050093672788194474	
+Protocol: Ramani et al., biotin-fillin	Protocol: Ramani et al.	14	1	cis	4.5	0.321268352475522	
+Protocol: Ramani et al., biotin-fillin	Protocol: Ramani et al.	14	1	de%of_valid	0.0	0.06553961618422227	

@@ -21,7 +21,9 @@ lst = []
 
 for prot_pair in [('Protocol: Ma et al.', 'Protocol: Ramani et al., long linker'),
 			   ('Protocol: Ma et al.', 'Protocol: Ramani et al., biotin-fillin'),
-			   ('Protocol: Ramani et al., long linker', 'Protocol: Ramani et al., biotin-fillin')]:
+			   ('Protocol: Ramani et al., long linker', 'Protocol: Ramani et al., biotin-fillin'),
+			   ('Protocol: Ramani et al., biotin-fillin', 'Ramani et al. (reanalyzed)'),
+			   ('Protocol: Ramani et al., biotin-fillin', 'Protocol: Ramani et al.')]:
 	for par in ['reported_pairs%of_total', 'cis','de%of_valid']:
 		elem1 = samples_exoc[samples_exoc["Protocol"] == prot_pair[0]][par].to_list()
 		elem2 = samples_exoc[samples_exoc["Protocol"] == prot_pair[1]][par].to_list()
@@ -30,7 +32,7 @@ for prot_pair in [('Protocol: Ma et al.', 'Protocol: Ramani et al., long linker'
 
 pd.DataFrame(lst).to_csv("pvalues.tsv", index=False, sep='\t')
 
-#exit()
+exit()
 
 BarWidth = 0.6
 CapSize = 12
