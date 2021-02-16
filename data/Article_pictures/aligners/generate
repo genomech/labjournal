@@ -30,7 +30,7 @@ for prot_pair in [('Hi-C pro (Bowtie2-based), reported pairs, %*', 'Bowtie2 afte
 pd.DataFrame(lst).to_csv("pvalues.tsv", index=False, sep='\t')
 
 BarWidth = 0.6
-CapSize = 12
+CapSize = 24
 cmap = get_cmap(1)
 Colors = [cmap(item) for item in list(range(len(Aligners)))]
 LightColors = [(item[0], item[1], item[2], 0.5) for item in Colors]
@@ -47,9 +47,9 @@ y = [data[data["Protocol"] == Protocols[0]][col].to_list() for col in Aligners]
 ax[0].bar(x, height=[np.mean(yi) for yi in y], yerr=[np.std(yi) for yi in y], capsize=CapSize, width=BarWidth, tick_label=Aligners, color=Colors, edgecolor=Blackie, zorder=1)
 for i in range(len(x)): ax[0].scatter(x[i] + np.random.random(len(y[i])) * BarWidth - BarWidth / 2, y[i], color=Blackie[i], zorder=2)
 ax[0].set_xticklabels(['' for item in Aligners])
-ax[0].tick_params(labelsize=14)
-ax[0].set_ylabel('reported pairs, %*', fontsize=14)
-ax[0].set_title(Protocols[0], fontsize=16)
+ax[0].tick_params(labelsize=18)
+ax[0].set_ylabel('reported pairs, %*', fontsize=18)
+ax[0].set_title(Protocols[0], fontsize=24)
 #fig.suptitle('This is a somewhat long figure title', fontsize=20)
 ax[0].set_ylim([30, 100])
 
@@ -59,13 +59,13 @@ ax[1].bar(x, height=[np.mean(yi) for yi in y], yerr=[np.std(yi) for yi in y], ca
 for i in range(len(x)): ax[1].scatter(x[i] + np.random.random(len(y[i])) * BarWidth - BarWidth / 2, y[i], color=Blackie[i], zorder=2)
 ax[1].set_xticklabels(['' for item in Aligners])
 ax[1].tick_params(labelsize=18)
-ax[1].set_ylabel('reported pairs, %*', fontsize=14)
-ax[1].set_title(Protocols[1], fontsize=16)
+ax[1].set_ylabel('reported pairs, %*', fontsize=18)
+ax[1].set_title(Protocols[1], fontsize=24)
 #fig.suptitle('This is a somewhat long figure title', fontsize=20)
 
-ax[1].tick_params(labelsize=14)
-ax[1].set_xticklabels([item[:-20] for item in Aligners], rotation=30, fontsize=14)
-ax[1].set_ylim([30, 100])
+ax[1].tick_params(labelsize=18)
+ax[1].set_xticklabels([item[:-20] for item in Aligners], rotation=30, fontsize=18)
+ax[1].set_ylim([30, 105])
 plt.setp(ax[1].xaxis.get_majorticklabels(), ha='right')
 
 plt.savefig(f"test.svg")

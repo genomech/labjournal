@@ -1,0 +1,463 @@
+\RequirePackage{ifxetex,ifluatex}
+\newif\ifxetexorluatex
+\ifxetex
+  \xetexorluatextrue
+\else
+  \ifluatex
+    \xetexorluatextrue
+  \else
+    \xetexorluatexfalse
+  \fi
+\fi
+
+\ifxetexorluatex %% Using xelatex or lualatex
+
+\RequirePackage{fontspec}                           
+%\defaultfontfeatures{Ligatures=TeX}
+\defaultfontfeatures{Ligatures={TeX},Renderer=Basic}
+\RequirePackage{polyglossia}                          
+\setdefaultlanguage[spelling=modern]{russian}         
+\setotherlanguage{english}                            
+
+ \setmainfont[
+   Path = {fonts/} ,
+   Extension = .ttf ,
+   UprightFont = *-Regular,
+   ItalicFont = *-Italic,
+   BoldFont = *-Bold,
+   BoldItalicFont = *-BoldItalic
+ ]{LiberationSerif}
+
+%\setmainfont[
+%  Path = {fonts/} ,
+%  Extension = .ttf ,
+%  UprightFont = *Regular,
+%  ItalicFont = *Italic,
+%  BoldFont = *Bold,
+%  BoldItalicFont = *BoldItalic
+%]{TimesNewRoman}
+
+\setmonofont{DejaVu Sans Mono}
+\setmonofont[
+  Path = {fonts/},
+  Extension = .ttf,
+  UprightFont = *-R
+]{UbuntuMono}
+
+\else %% Using latex
+
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T2A]{fontenc}
+\RequirePackage[english,russian]{babel}
+\RequirePackage{cmap}
+
+\fi
+
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{graphics}
+\RequirePackage{graphicx}
+\RequirePackage{color}
+\RequirePackage{xcolor}
+
+\RequirePackage{tabularx}
+
+%% links and hyperlinks
+\RequirePackage[hyperfootnotes=false, unicode,colorlinks,hyperindex,linktocpage]{hyperref} 
+\definecolor{linkcolor}{HTML}{799B03}
+\definecolor{urlcolor}{HTML}{799B03} 
+\hypersetup{
+  colorlinks=false,
+  allbordercolors={0 0 1},
+  pdfborderstyle={/S/U/W 1}
+}
+
+%% Footnote with email on first page
+\RequirePackage[bottom]{footmisc}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\renewcommand{\arraystretch}{1.25}
+%% For last page number
+\RequirePackage{lastpage}
+
+%% Font in captions of pics and tables
+\RequirePackage[font=small, tableposition=top]{caption}
+\captionsetup[table]{name=\ifLangEng{Table}{Таблица}}
+\captionsetup[figure]{name=\ifLangEng{Fig.}{Рис.}}
+\setlength{\captionmargin}{20pt}
+
+%% Interval between lines
+\RequirePackage[nodisplayskipstretch]{setspace}
+
+%% Greek symbols
+\RequirePackage{upgreek}
+
+%% Condition in macros ifEngLang
+\RequirePackage{xstring}
+
+%%%%Counter of chapters for correct numbering of figures
+\setcounter{section}{1}
+%% \numberwithin{equation}{1}
+%% \numberwithin{figure}{1}
+%% \numberwithin{table}{1}
+
+%%%%%%%% Page layout %%%%%%%%
+%% For debug
+%% \RequirePackage[showframe, includefoot, asymmetric]{geometry} 
+\RequirePackage[includefoot, asymmetric]{geometry}
+\geometry{left=2.5cm}
+\geometry{right=2.5cm}
+\geometry{top=1.75cm}
+\geometry{bottom=1.95cm}
+\geometry{headsep=4.7pt}
+\geometry{footskip=0.7cm}
+
+%% %%%%%%%% Running titles %%%%%%%%
+\RequirePackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[CE]{\fontsize{8pt}{10pt}\selectfont\@runningAuthors}
+\fancyhead[CO]{\fontsize{8pt}{10pt}\textit{\@runningTitle}}
+\fancyfoot{}
+\fancyfoot[CE,CO]{\fontsize{8pt}{8pt}\textit{\runningreferenceshort \ \@DOI}}
+\renewcommand{\headrulewidth}{0.0pt} %% remove line
+\renewcommand{\footrulewidth}{0.0pt} %% remove line
+
+%% For first page
+\fancypagestyle{fplain}{
+  \fancyhf{} 
+  \fancyfoot{}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+%% Remove interval between lines after red line
+\setlength{\parskip}{0cm}
+
+%% Remove line breaks
+\exhyphenpenalty=10000
+\hyphenpenalty=10000
+
+%% Styles of sections and subsections
+\setcounter{secnumdepth}{3} %Remove number of section
+%%\renewcommand*\thesubsection{\arabic{subsection}}
+%%\renewcommand{\subsection}{\arabic{subsection}}
+
+\renewcommand{\thesubsection}{\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{subsection}.\arabic{subsubsection}}
+
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+  {2.5ex \@plus 1ex \@minus .2ex}%
+  {1.3ex \@plus .2ex}%
+  {\centering\fontsize{12}{12}\selectfont\bfseries}}
+
+%% \setcounter{subsecnumdepth}{0} %Remove number of section
+\renewcommand\subsection{\@startsection {subsection}{2}{\z@}%
+  {1.9ex \@plus 1ex \@minus .2ex}%
+  {1.3ex \@plus .2ex}%
+  {\fontsize{12}{12}\selectfont\bfseries}}
+%%
+\renewcommand\subsubsection{\@startsection {subsubsection}{3}{\z@}%
+  {1.9ex \@plus 1ex \@minus .2ex}%
+  {1.3ex \@plus .2ex}%
+  {\fontsize{12}{12}\selectfont\bfseries}}
+
+
+\sloppy
+\frenchspacing
+
+%% Change [1] to 1. in bibliography
+\renewcommand{\@biblabel}[1]{#1.}
+
+\renewcommand{\@makefntext}[1]{\parindent=1em\noindent
+  \hbox{\hss\@makefnmark}#1}
+
+% \renewenvironment{thebibliography}[1]{
+%   \list{\@biblabel{\@arabic\c@enumiv}}{%
+%     \setstretch{1.0}
+%     \settowidth\labelwidth{\@biblabel{#1}}%
+%     \leftmargin\labelwidth
+%     \advance\leftmargin by 1ex%
+%     \topsep=0pt\parsep=0pt\itemsep=0ex%
+%     \@openbib@code
+%     \usecounter{enumiv}%
+%     \let\p@enumiv\@empty
+%     \renewcommand\theenumiv{\@arabic\c@enumiv}%
+%   }%
+% }
+{  \endlist  }
+
+%% If language english (macros)
+\newcommand\ifLangEng[2]{%
+  \IfStrEq{\@lang}{eng}%
+          {%
+            #1%
+          }%
+          {%
+            #2%
+          }%
+}
+
+%% Receive and accept date macros
+\newcommand\acceptdate{%
+  \vspace{40pt}
+  \setstretch{0.8}
+  \fontsize{10pt}{16pt}\selectfont
+  \begin{tabular}{p{\textwidth}}
+    \ifLangEng{Accepted}{Рукопись поступила в редакцию} \@artreceived \\
+    \ifLangEng{Revised}{Переработанный вариант поступил} \@artaccepted \\
+    \ifLangEng{Published}{Дата опубликования} \@artpublished
+  \end{tabular}
+}
+
+%% Receive and accept date macros
+\newcommand\acknowledgment[1]{%
+  \vspace{14pt}
+  \setstretch{1.0}
+  \fontsize{11pt}{14pt}{\selectfont #1}
+}
+
+%%Global variables
+\def\lang#1{\gdef\@lang{#1}}                   %% language
+\def\artclass#1{\gdef\@artclass{#1}}           %% Name of section (between the signs of '=')
+%\def\artclassB#1{\gdef\@artclassB{#1}}
+\def\artvolume#1{\gdef\@artvolume{#1}}
+\def\artnumber#1{\gdef\@artnumber{#1}}
+\def\artreceived#1{\gdef\@artreceived{#1}}
+\def\artaccepted#1{\gdef\@artaccepted{#1}}
+\def\artpublished#1{\gdef\@artpublished{#1}}
+\def\UDK#1{\gdef\@UDK{#1}}                     %% UDC
+\def\title#1{\gdef\@title{#1}}                 %% Title 
+\def\year#1{\gdef\@year{#1}}                   %% Year
+\def\authors#1{\gdef\@authors{#1}}             %% Authors list
+\def\thanks#1{\gdef\@thanks{#1}}               %% Congratulations, grants
+\def\affiliations#1{\gdef\@affiliations{#1}}    %% Institutions
+\def\abstract#1{\gdef\@abstract{#1}}           %% Abstract
+\def\keywords#1{\gdef\@keywords{#1}}           %% Key words
+
+%%%%  Macroses for running titles (RT)
+\def\runningAuthors#1{\gdef\@runningAuthors{#1}}               %% Authors in RT
+\def\runningTitle#1{\gdef\@runningTitle{#1}}                   %% Title of article in RT
+\def\DOI#1{\gdef\@DOI{#1}}                       %% URL to rt
+
+\newcommand{\mbb}{\ifLangEng{Mathematical Biology and Bioinformatics}{Математическая биология и биоинформатика}}
+\newcommand{\mbblinked}{\ifLangEng{Mathematical~Biology~and~Bioinformatics}{Математическая~биология~и~биоинформатика}}
+\newcommand{\runningUrl}{\href{http://www.matbio.org/journal.php}{\mbb}}
+\newcommand{\runningUrlLinked}{\href{http://www.matbio.org/journal.php}{\mbblinked}}
+\newcommand{\pages}{\thepage--\pageref*{LastPage}}
+
+\newcommand{\runningreference}{\@year. \ifLangEng{V}{Т}. \@artvolume. \textnumero~\@artnumber. \ifLangEng{P}{С}. \pages.}
+\newcommand{\runningreferenceshort}{\mbblinked.~\@year.~\ifLangEng{V}{Т}.~\@artvolume.\textnumero~\@artnumber.}
+
+%%%% First page
+\renewcommand{\maketitle}{%
+  %% \thispagestyle{frontpage}
+  \thispagestyle{fplain}
+
+  {
+
+    \vspace*{-25pt}
+    
+    \setlength
+    \parindent{0pt}
+    \begin{minipage}{\textwidth}
+      \begin{center}
+        %% Upper link and info
+        \hfil{
+          \setstretch{0.8}
+          \itshape
+          \selectfont
+          \setlength
+          \tabcolsep{0pt}
+          \begin{tabular}{p{\textwidth}}
+            \centering
+            \fontsize{12pt}{10pt}
+            \textcolor{blue}{\runningUrl} \\
+            %% \textcolor{blue}{\@runningreferencefull} \\
+            \fontsize{10pt}{16pt}\selectfont{\runningreference \ \@DOI}
+          \end{tabular}
+        }
+
+        %%%%=====Mat.Modeling======
+        \hbox to \textwidth{
+          \fontsize{11pt}{13pt}
+          \selectfont
+          \leaders\hbox{\bf{=}}\hfil
+          \centering
+          \textbf{\@artclass}
+          \leaders\hbox{\bf{=}}\hfil}
+%
+%      \hbox to \textwidth{
+%		\fontsize{11pt}{13pt}
+%   	\selectfont
+%   	\leaders\hbox{\bf{=}}\hfil
+%   	\centering
+%   	\textbf{\@artclassB}
+%	    \leaders\hbox{\bf{=}}\hfil}
+
+
+        \vspace*{12pt}
+        %%%%UDK
+        \parbox{\textwidth}{
+          \fontsize{9pt}{11pt}
+          \selectfont \ifLangEng{UDC}{УДК}:\,\,\@UDK}\\[14pt]
+
+        %%%%Title
+        \parbox{\textwidth}{
+          \setstretch{1.3}
+          \fontsize{18pt}{20pt}
+          \bfseries
+          \selectfont\centering\@title}\\[6pt]
+
+        %%%% Year,copyright,authors
+        \parbox{\textwidth}{
+          \centering{
+            \fontsize{12pt}{12pt}
+            \bfseries
+%            \copyright
+%            \@year
+        }{
+            \fontsize{14pt}{14pt}
+            \bfseries
+            \selectfont{\@authors}}}\\[6pt]
+
+        %%%%Address
+        \parbox{\textwidth}{
+          \normalsize
+          \normalfont
+          \itshape
+          \selectfont
+          \centering\@affiliations}\\[12pt]
+
+        %%%%Abstract
+        \parbox{12.8cm}{
+          \setstretch{0.9}
+                     {\fontsize{11pt}{11pt}
+                       \bfseries
+                       \itshape
+                       \selectfont \ifLangEng{Abstract}{Аннотация}.}
+                     {\fontsize{11pt}{11pt}\selectfont\@abstract}}\\[11pt]
+
+        %%%%Keywords
+        \parbox{14cm}{
+          \fontsize{11pt}{13pt}
+          \bfseries
+          \itshape
+          \selectfont \ifLangEng{Key words}{Ключевые слова}: \mdseries\selectfont\@keywords}\\[11pt]
+        \vspace*{6pt}
+      \end{center}
+  \end{minipage}}
+  \normalsize\normalfont
+  
+}
+
+%% Table and figure captions
+\def\tablecaptionfont{\fontsize{11pt}{13pt}\selectfont}
+\def\figurecaptionfont{\fontsize{10pt}{12pt}\selectfont}
+\long\def\@makecaption#1#2{%
+  \vskip 10\p@
+  \setbox\@tempboxa\hbox{\captionfont\textbf{#1.} #2}% Заменили двоеточие на точку...
+  \ifdim \wd\@tempboxa >15cm
+  \centerline{\parbox{15cm}{\unhbox\@tempboxa}}
+  \else
+  \centerline{\box\@tempboxa}\fi}
+
+%%  Теорема
+\newtheorem{theorem}{\hspace{\parindent}\bf{\ifLangEng{T\,h\,e\,o\,r\,e\,m\,}{Т\,е\,о\,р\,е\,м\,а\,}}}
+
+% %%  Следствие
+% \newtheorem{corollary}{\hspace{\parindent}\bf{С\,л\,е\,д\,с\,т\,в\,и\,е\,}}
+%
+% %%  Лемма
+% \newtheorem{lemma}{\hspace{\parindent}\bf{Л\,е\,м\,м\,а\,}}
+%
+%%  Утверждение
+\newtheorem{statement}{\hspace{\parindent}\bf{\ifLangEng{S\,t\,a\,t\,e\,m\,e\,n\,t\,}{У\,т\,в\,е\,р\,ж\,д\,е\,н\,и\,е\,}}}
+%
+% %%  Предложение
+% \newtheorem{proposition}{\hspace{\parindent}\bf{П\,р\,е\,д\,л\,о\,ж\,е\,н\,и\,е\,}}
+%
+% %%  Алгоритм
+% %\newtheorem{algorithm}{\hspace{\parindent}\bf{А\,л\,г\,о\,р\,и\,т\,м\,}}
+%
+% %%  Определение
+% \newtheorem{definition}{\hspace{\parindent}\bf{О\,п\,р\,е\,д\,е\,л\,е\,н\,и\,е\,}}
+%
+% %%  Задача
+% \newtheorem{problem}{\hspace{\parindent}\bf{З\,а\,д\,а\,ч\,а\,}}
+%
+%%  Доказательство
+% \newenvironment{proof}
+% {\vspace{1pt}\par{\
+% Д\,о\,к\,а\,з\,а\,т\,е\,л\,ь\,с\,т\,в\,о.\,\ }}%
+% {\noindent\vspace{1pt}}
+%
+%%  Доказательство
+\newenvironment{proof}{\vspace{1pt}
+  \par{ifLangEng{\,P\,r\,o\,o\,f.\,\ }{\,Д\,о\,к\,а\,з\,а\,т\,е\,л\,ь\,с\,т\,в\,о.\,\ }}}{\vspace{1pt}}
+
+%%  Доказательство теоремы
+\newenvironment{proofoftheorem}[1]{\vspace{1pt}\par{\ifLangEng{\,P\,r\,o\,o\,f.\, }{\,Д\,о\,к\,а\,з\,а\,т\,е\,л\,ь\,с\,т\,в\,о.\,} #1}}{\noindent\vspace{1pt}}
+%
+% %%  Доказательство следствия
+% \newenvironment{proofofcorollary}[1]
+% {\vspace{1pt}\par{
+% Д\,о\,к\,а\,з\,а\,т\,е\,л\,ь\,с\,т\,в\,о\, с\,л\,е\,д\,с\,т\,в\,и\,я\, #1.}}%
+% {\noindent\vspace{1pt}}
+%
+% %%  Доказательство леммы
+% \newenvironment{proofoflemma}[1]
+% {\vspace{1pt}\par{
+% Д\,о\,к\,а\,з\,а\,т\,е\,л\,ь\,с\,т\,в\,о\, л\,е\,м\,м\,ы\, #1.}}%
+% {\noindent\vspace{1pt}}
+%
+% %%  Доказательство утверждения
+% \newenvironment{proofofstatement}[1]
+% {\vspace{1pt}\par{
+% Д\,о\,к\,а\,з\,а\,т\,е\,л\,ь\,с\,т\,в\,о\, у\,т\,в\,е\,р\,ж\,д\,е\,н\,и\,я\, #1.}}%
+% {\noindent\vspace{1pt}}
+%
+% %%  Доказательство предложения
+% \newenvironment{proofofproposition}[1]
+% {\vspace{1pt}\par{
+% Д\,о\,к\,а\,з\,а\,т\,е\,л\,ь\,с\,т\,в\,о\, п\,р\,е\,д\,л\,о\,ж\,е\,н\,и\,я\, #1.}}%
+% {\noindent\vspace{1pt}}
+%
+% %%  Алгоритм
+% \newtheorem{alg}{\hspace{\parindent}{А\,л\,г\,о\,р\,и\,т\,м\,}}%
+% \newenvironment{algorithm}[1][\unskip]{\begin{alg}[#1]\em}{\end{alg}}%
+% \def\thealgorithm{\thealg}
+%
+% %%  Замечание
+% \newtheorem{rem}{\hspace{\parindent}{З\,а\,м\,е\,ч\,а\,н\,и\,е}}%
+% \newenvironment{remark}[1][\unskip]{\begin{rem}[#1]\em}{\end{rem}}%
+% \def\theremark{\therem}
+%
+% %%  Пример
+\newtheorem{exmpl}{\hspace{\parindent}{П\,р\,и\,м\,е\,р\,}}%
+\newenvironment{example}[1][\unskip]{\begin{exmpl}[#1]\em}{\end{exmpl}}%
+\def\theexample{\theexmpl}
+
+%%  Точки после номеров теорем
+\def\afterthmseparator{.}
+\def\@begintheorem#1#2{%
+  \setlength{\topsep}{1pt}%
+  \setlength{\partopsep}{0mm}%
+  \trivlist\item[\hskip\labelsep{\rm
+      #1\ #2\unskip\afterthmseparator}]\itshape}
+\def\@opargbegintheorem#1#2#3{%
+  \setlength{\topsep}{1pt}%
+  \setlength{\partopsep}{0mm}%
+  \trivlist\item[\hskip\labelsep{\rm
+      #1\ #2\ {\rm{#3}}\afterthmseparator}]\itshape}
+
+%%  Приложение
+\newcounter{isappendix}
+\setcounter{isappendix}{1}
+\def\appendix
+    {\section*{\bf \ifLangEng{APPENDIX}{ПРИЛОЖЕНИЕ} \arabic{isappendix}.}
+      \refstepcounter{isappendix}
+      % \@addtoreset{equation}{isappendix}
+      % \def\theequation%
+      % {{\ifnum \arabic{isappendix} > 0 {\mbox{П.}\arabic{equation}}%
+      % \else{\arabic{equation}}\fi}}
+    }
