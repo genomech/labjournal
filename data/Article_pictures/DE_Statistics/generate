@@ -17,9 +17,13 @@ print(relig)
 Protocols = list(set(samples_exoc["Protocol"].dropna().to_list()))
 Protocols = ['Ma et al. (reanalyzed)', 'Protocol: Ma et al.', 'Protocol: Ma et al., new blunt', 'Protocol: Ma et al., long linker', 'Ramani et al. (reanalyzed)', 'Protocol: Ramani et al.', 'Protocol: Ramani et al., long linker', 'Protocol: Ramani et al., biotin-fillin']
 
+merged = pd.merge(samples_exoc, relig, on=['Sample'], how='left')
+merged['True_DE'] = merged.apply(lambda x: None if math.isnan(x['100*relig/de(merged reads)']) else (x['de%of_valid'] * (100 - x['100*relig/de(merged reads)']) / 100), axis=1)
+
 lst = []
 
-for prot_pair in [('Protocol: Ma et al.', 'Protocol: Ramani et al., long linker'),
+for prot_pair in [('Protocol: Ma et al.', 'Protocol: Ma et al., new blunt'),
+	('Protocol: Ma et al.', 'Protocol: Ramani et al., long linker'),
 			   ('Protocol: Ma et al.', 'Protocol: Ramani et al., biotin-fillin'),
 			   ('Protocol: Ramani et al., long linker', 'Protocol: Ramani et al., biotin-fillin'),
 			   ('Protocol: Ramani et al., biotin-fillin', 'Ramani et al. (reanalyzed)'),
@@ -27,8 +31,13 @@ for prot_pair in [('Protocol: Ma et al.', 'Protocol: Ramani et al., long linker'
 	for par in ['reported_pairs%of_total', 'cis','de%of_valid']:
 		elem1 = samples_exoc[samples_exoc["Protocol"] == prot_pair[0]][par].to_list()
 		elem2 = samples_exoc[samples_exoc["Protocol"] == prot_pair[1]][par].to_list()
+		print((elem1, elem2))
 		statistic, pvalue = mwu(elem1, elem2)
 		lst += [ { "Pair_1": prot_pair[0], "Pair_2": prot_pair[1], "Size_1": len(elem1), "Size_2": len(elem2), "Parameter": par, "Statistic": statistic, "pValue": pvalue, "Symbol": None if pvalue >= 0.05 else ('*' if 0.05 > pvalue >= 0.01 else ('**' if 0.01 > pvalue >= 0.001 else '***')) } ]
+	elem1 = merged[merged["Protocol"] == prot_pair[0]]['True_DE'].to_list()
+	elem2 = merged[merged["Protocol"] == prot_pair[1]]['True_DE'].to_list()
+	statistic, pvalue = mwu(elem1, elem2)
+	lst += [ { "Pair_1": prot_pair[0], "Pair_2": prot_pair[1], "Size_1": len(elem1), "Size_2": len(elem2), "Parameter": 'True_DE', "Statistic": statistic, "pValue": pvalue, "Symbol": None if pvalue >= 0.05 else ('*' if 0.05 > pvalue >= 0.01 else ('**' if 0.01 > pvalue >= 0.001 else '***')) } ]
 
 pd.DataFrame(lst).to_csv("pvalues.tsv", index=False, sep='\t')
 
@@ -84,9 +93,6 @@ ax[2].set_title('FR excess (% of valid)', fontsize=16)
 ax[2].set_ylim([20, 109])
 
 # 4
-
-merged = pd.merge(samples_exoc, relig, on=['Sample'], how='left')
-merged['True_DE'] = merged.apply(lambda x: None if math.isnan(x['100*relig/de(merged reads)']) else (x['de%of_valid'] * (100 - x['100*relig/de(merged reads)']) / 100), axis=1)
 
 y = [merged[merged["Protocol"] == item]['True_DE'].to_list() for 
 item in Protocols]
