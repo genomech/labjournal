@@ -1,0 +1,71 @@
+#!/usr/bin/python3
+
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+import math
+from scipy.stats import mannwhitneyu as mwu
+
+def get_cmap(n, name='Pastel2'): return plt.cm.get_cmap(name, n)
+
+data = pd.read_csv("data.tsv", sep='\t', na_values='-')
+
+Protocols = sorted(list(set(data["Protocol"].dropna().to_list())))
+Aligners = data.columns.to_list()[2:]
+print(Aligners)
+
+lst= []
+for prot_pair in [('Hi-C pro (Bowtie2-based), reported pairs, %*', 'Bowtie2 after cutadapt split, reported pairs, %*'),
+			   ('Bowtie2 after cutadapt split, reported pairs, %*', 'BWA (no preprocessing), reported pairs, %*'),
+			   ('Hi-C pro (Bowtie2-based), reported pairs, %*', 'BWA (no preprocessing), reported pairs, %*')]:
+	for par in Protocols:
+		elem1 = [item for item in data[data["Protocol"] == par][prot_pair[0]].to_list() if item == item]
+		elem2 = [item for item in data[data["Protocol"] == par][prot_pair[1]].to_list() if item == item]
+		if not elem1 or not elem2:
+			lst += [ { "Pair_1": prot_pair[0], "Pair_2": prot_pair[1], "Size_1": len(elem1), "Size_2": len(elem2), "Protocol": par, "Statistic": "-", "pValue": "-", "Symbol": "-" } ]
+		else:
+			statistic, pvalue = mwu(elem1, elem2)
+			lst += [ { "Pair_1": prot_pair[0], "Pair_2": prot_pair[1], "Size_1": len(elem1), "Size_2": len(elem2), "Protocol": par, "Statistic": statistic, "pValue": pvalue, "Symbol": None if pvalue >= 0.05 else ('*' if 0.05 > pvalue >= 0.01 else ('**' if 0.01 > pvalue >= 0.001 else '***')) } ]
+
+pd.DataFrame(lst).to_csv("pvalues.tsv", index=False, sep='\t')
+
+BarWidth = 0.6
+CapSize = 24
+cmap = get_cmap(1)
+Colors = [cmap(item) for item in list(range(len(Aligners)))]
+LightColors = [(item[0], item[1], item[2], 0.5) for item in Colors]
+Blackie = [(0.0, 0.0, 0.0, 1.0) for item in Colors]
+
+x = list(range(1, len(Aligners) + 1))
+
+fig, ax = plt.subplots(2, figsize=(8,13))
+plt.subplots_adjust(left=None, bottom=None, right=None, top=None, wspace=None, hspace=0.3)
+
+# 1
+
+y = [data[data["Protocol"] == Protocols[0]][col].to_list() for col in Aligners]
+ax[0].bar(x, height=[np.mean(yi) for yi in y], yerr=[np.std(yi) for yi in y], capsize=CapSize, width=BarWidth, tick_label=Aligners, color=Colors, edgecolor=Blackie, zorder=1)
+for i in range(len(x)): ax[0].scatter(x[i] + np.random.random(len(y[i])) * BarWidth - BarWidth / 2, y[i], color=Blackie[i], zorder=2)
+ax[0].set_xticklabels(['' for item in Aligners])
+ax[0].tick_params(labelsize=18)
+ax[0].set_ylabel('reported pairs, %*', fontsize=18)
+ax[0].set_title(Protocols[0], fontsize=24)
+#fig.suptitle('This is a somewhat long figure title', fontsize=20)
+ax[0].set_ylim([30, 100])
+
+
+y = [data[data["Protocol"] == Protocols[1]][col].to_list() for col in Aligners]
+ax[1].bar(x, height=[np.mean(yi) for yi in y], yerr=[np.std(yi) for yi in y], capsize=CapSize, width=BarWidth, tick_label=Aligners, color=Colors, edgecolor=Blackie, zorder=1)
+for i in range(len(x)): ax[1].scatter(x[i] + np.random.random(len(y[i])) * BarWidth - BarWidth / 2, y[i], color=Blackie[i], zorder=2)
+ax[1].set_xticklabels(['' for item in Aligners])
+ax[1].tick_params(labelsize=18)
+ax[1].set_ylabel('reported pairs, %*', fontsize=18)
+ax[1].set_title(Protocols[1], fontsize=24)
+#fig.suptitle('This is a somewhat long figure title', fontsize=20)
+
+ax[1].tick_params(labelsize=18)
+ax[1].set_xticklabels([item[:-20] for item in Aligners], rotation=30, fontsize=18)
+ax[1].set_ylim([30, 105])
+plt.setp(ax[1].xaxis.get_majorticklabels(), ha='right')
+
+plt.savefig(f"test.svg")
