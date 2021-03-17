@@ -1,0 +1,96 @@
+\selectlanguage *[babelshorthands=true]{russian}
+\contentsline {section}{Список сокращений}{3}{Doc-Start}%
+\contentsline {section}{Введение}{6}{Doc-Start}%
+\contentsline {section}{\numberline {1}Обзор литературы}{7}{section.1}%
+\contentsline {paragraph}{Частые и редкие (орфанные) патологии.}{8}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Механизмы развития генетических патологий}{10}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Типы генетических аномалий, лежащих в основе генетических патологий}{11}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Функциональные классы генетических вариантов}{13}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Методы детекции генетических вариантов}{15}{subsection.1.4}%
+\contentsline {paragraph}{Кариотипирование.}{15}{subsection.1.4}%
+\contentsline {paragraph}{Флуоресцентная \textit {in situ} гибридизация}{16}{Item.12}%
+\contentsline {paragraph}{Сравнительная геномная гибридизация}{17}{Item.12}%
+\contentsline {paragraph}{Мультиплексная лигаза-зависимая амплификация зонда}{18}{Item.12}%
+\contentsline {paragraph}{Секвенирование по Сэнгеру.}{19}{Item.12}%
+\contentsline {paragraph}{Секвенирование нового поколения}{20}{Item.12}%
+\contentsline {subsection}{\numberline {1.5}Виды NGS}{21}{subsection.1.5}%
+\contentsline {paragraph}{Полногеномное секвенирование}{21}{subsection.1.5}%
+\contentsline {paragraph}{Таргетные панели.}{21}{subsection.1.5}%
+\contentsline {paragraph}{Полноэкзомное секвенирование}{22}{Item.16}%
+\contentsline {paragraph}{Технологии захвата конформации хромосом}{23}{Item.16}%
+\contentsline {subsection}{\numberline {1.6}Базовая схема обработки результатов высокопроизводительного секвенирования для поиска и клинической интерпретации однонуклеотидных полиморфизмов}{24}{subsection.1.6}%
+\contentsline {paragraph}{Демультиплексикация.}{24}{subsection.1.6}%
+\contentsline {paragraph}{Удаление адаптерных последовательностей.}{24}{figure.1}%
+\contentsline {paragraph}{Картирование прочтений.}{24}{figure.1}%
+\contentsline {paragraph}{Удаление дубликатов.}{28}{figure.2}%
+\contentsline {paragraph}{Рекалибровка качества прочтений}{29}{figure.2}%
+\contentsline {paragraph}{Поиск генетических вариантов.}{30}{Item.19}%
+\contentsline {subsection}{\numberline {1.7}Аннотация, фильтрация и интерпретация результатов}{31}{subsection.1.7}%
+\contentsline {paragraph}{Когортный и семейный анализ.}{34}{Item.25}%
+\contentsline {subsection}{\numberline {1.8}Exo-C: суть метода}{35}{subsection.1.8}%
+\contentsline {section}{\numberline {2}Материалы и методы}{36}{section.2}%
+\contentsline {paragraph}{Данные секвенирования.}{37}{section.2}%
+\contentsline {paragraph}{Контроль качества NGS\hyp {}данных.}{37}{section.2}%
+\contentsline {paragraph}{Удаление адаптерных последовательностей.}{37}{section.2}%
+\contentsline {paragraph}{Картирование.}{37}{section.2}%
+\contentsline {paragraph}{Удаление ПЦР\hyp {}дубликатов.}{38}{section.2}%
+\contentsline {paragraph}{Рекалибровка качества прочтений (BQSR).}{39}{section.2}%
+\contentsline {paragraph}{Оценка покрытия и обогащения.}{40}{section.2}%
+\contentsline {paragraph}{Поиск вариантов.}{40}{section.2}%
+\contentsline {paragraph}{Рекалибровка и ранжирование вариантов.}{40}{section.2}%
+\contentsline {paragraph}{Аннотация вариантов.}{40}{section.2}%
+\contentsline {paragraph}{Фильтрация генетических вариантов.}{41}{Item.39}%
+\contentsline {paragraph}{Интерпретация.}{43}{Item.41}%
+\contentsline {section}{\numberline {3}Результаты}{43}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Результаты секвенирования Exo-C\hyp {}библиотек}{44}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Автоматизация обработки данных секвенирования}{45}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Сравнение данных секвенирования клеточной линии K562}{47}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Обсуждение результатов}{50}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Контрольные образцы}{51}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Оценка результатов секвенирования Exo-C\hyp {}библиотек}{51}{subsection.4.2}%
+\contentsline {section}{Предварительные выводы}{52}{subsection.4.2}%
+\contentsline {section}{План работы}{53}{Item.50}%
+\contentsline {section}{Список литературы}{56}{Item.53}%
+\selectlanguage *{russian}
+\contentsline {section}{\numberline {A}Краткое клиническое описание пациентов}{56}{appendix.A}%
+\contentsline {paragraph}{Жалобы.}{56}{table.9}%
+\contentsline {paragraph}{Анамнез.}{56}{table.9}%
+\contentsline {paragraph}{Генеалогия.}{59}{table.9}%
+\contentsline {paragraph}{Обследование.}{59}{table.9}%
+\contentsline {paragraph}{Предварительный диагноз.}{59}{table.9}%
+\contentsline {paragraph}{Жалобы.}{59}{table.9}%
+\contentsline {paragraph}{Анамнез.}{59}{table.9}%
+\contentsline {paragraph}{Генеалогия.}{59}{table.9}%
+\contentsline {paragraph}{Предварительный диагноз.}{59}{table.9}%
+\contentsline {paragraph}{Жалобы.}{59}{table.9}%
+\contentsline {paragraph}{Анамнез.}{59}{table.9}%
+\contentsline {paragraph}{Генеалогия.}{60}{table.9}%
+\contentsline {paragraph}{Предварительный диагноз.}{60}{table.9}%
+\contentsline {paragraph}{Жалобы.}{60}{table.9}%
+\contentsline {paragraph}{Анамнез.}{60}{table.9}%
+\contentsline {paragraph}{Генеалогия.}{60}{table.9}%
+\contentsline {paragraph}{Предварительный диагноз.}{60}{table.9}%
+\contentsline {paragraph}{Жалобы.}{60}{table.9}%
+\contentsline {paragraph}{Анамнез.}{60}{table.9}%
+\contentsline {paragraph}{Обследование.}{61}{table.9}%
+\contentsline {paragraph}{Генеалогия.}{61}{table.9}%
+\contentsline {paragraph}{Предварительный диагноз.}{61}{table.9}%
+\contentsline {paragraph}{Жалобы.}{61}{table.9}%
+\contentsline {paragraph}{Анамнез.}{61}{table.9}%
+\contentsline {paragraph}{Обследование.}{61}{table.9}%
+\contentsline {paragraph}{Генеалогия.}{62}{table.9}%
+\contentsline {paragraph}{Предварительный диагноз.}{62}{table.9}%
+\contentsline {paragraph}{Жалобы.}{62}{table.9}%
+\contentsline {paragraph}{Анамнез.}{62}{table.9}%
+\contentsline {paragraph}{Генеалогия.}{63}{table.9}%
+\contentsline {paragraph}{Предварительный диагноз.}{63}{table.9}%
+\contentsline {paragraph}{Жалобы.}{63}{table.9}%
+\contentsline {paragraph}{Анамнез.}{63}{table.9}%
+\contentsline {paragraph}{Обследование.}{64}{table.9}%
+\contentsline {paragraph}{Генеалогия.}{64}{table.9}%
+\contentsline {paragraph}{Предварительный диагноз.}{64}{table.9}%
+\contentsline {paragraph}{Жалобы.}{64}{table.9}%
+\contentsline {paragraph}{Анамнез.}{64}{table.9}%
+\contentsline {paragraph}{Генеалогия.}{64}{table.9}%
+\contentsline {paragraph}{Обследование.}{64}{table.9}%
+\contentsline {paragraph}{Предварительный диагноз.}{65}{table.9}%
