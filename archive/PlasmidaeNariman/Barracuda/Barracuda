@@ -1,0 +1,63 @@
+#!/bin/python3
+
+import pysam
+
+count = 0
+Stats = {"Total": 1000000, "Unmapped": 0, "TargetPair": 0, "TargetMateUnmappedF": 0, "TargetMateUnmappedR": 0, "TargetMateMisplacedF": 0, "TargetMateMisplacedR": 0}
+
+AllBam = pysam.AlignmentFile("/dev/datasets/FairWind/_results/NarimanBarcodes/200915_X578_FCHCMFGCCX2_L8_CHKPE85220080212_single_ASA23/200915_X578_FCHCMFGCCX2_L8_CHKPE85220080212_single_ASA23.bam", "rb")
+UnmappedBam = pysam.AlignmentFile("/dev/datasets/FairWind/_results/NarimanBarcodes/200915_X578_FCHCMFGCCX2_L8_CHKPE85220080212_single_ASA23/unmapped.bam", "wb", template=AllBam)
+TargetPairs = pysam.AlignmentFile("/dev/datasets/FairWind/_results/NarimanBarcodes/200915_X578_FCHCMFGCCX2_L8_CHKPE85220080212_single_ASA23/target.bam", "wb", template=AllBam)
+MatelessTarget = pysam.AlignmentFile("/dev/datasets/FairWind/_results/NarimanBarcodes/200915_X578_FCHCMFGCCX2_L8_CHKPE85220080212_single_ASA23/mateless.bam", "wb", template=AllBam)
+
+CurrentPair = {"Name": None, "Reads": [] }
+
+TargetReads = {"PosReverse": ((2501, False, "LeftPos"), (3186, True, "RightPos")), "Error": 2}
+
+for Read in AllBam:
+	
+	count += 1
+	if count == Stats["Total"]: break
+
+	if Read.qname == CurrentPair["Name"]: CurrentPair["Reads"] += [ { "Read": Read } ] if ((not Read.is_secondary) and (not Read.is_supplementary)) else []
+	else:
+		
+		for item in CurrentPair["Reads"]:
+			item["Mapped"] = not item["Read"].is_unmapped
+			if not item["Read"].is_unmapped:
+				item["Direction"] = "F" if not item["Read"].is_reverse else "R"
+				item["LeftPos"] = item["Read"].reference_start - (item["Read"].cigar[0][1] if (item["Read"].cigar[0][0] == 4) else 0)
+				item["RightPos"] = item["Read"].reference_end + (item["Read"].cigar[-1][1] if (item["Read"].cigar[-1][0] == 4) else 0)
+				item["Proper"] = ((2501 - 2 <= item["LeftPos"] <= 2501 + 2) and (item["Direction"] == "F")) or ((3186 - 2 <= item["RightPos"] <= 3186 + 2) and (item["Direction"] == "R"))
+				
+		# Unmapped
+		if all([not item["Mapped"] for item in CurrentPair["Reads"]]):
+			
+			[UnmappedBam.write(item["Read"]) for item in CurrentPair["Reads"]]
+			Stats["Unmapped"] += 2
+		
+		if all([item["Proper"] for item in CurrentPair["Reads"] if item["Mapped"]]) and (sum([item["Mapped"] for item in CurrentPair["Reads"]]) == 2): 
+			[TargetPairs.write(item["Read"]) for item in CurrentPair["Reads"]]
+			Stats["TargetPair"] += 2
+		
+		if all([item["Proper"] for item in CurrentPair["Reads"] if item["Mapped"]]) and (sum([item["Mapped"] for item in CurrentPair["Reads"]]) == 1):
+			[MatelessTarget.write(item["Read"]) for item in CurrentPair["Reads"]]
+			if CurrentPair["Reads"][0]["Mapped"]: Stats["TargetMateUnmapped" + CurrentPair["Reads"][0]["Direction"]] += 2
+			if CurrentPair["Reads"][1]["Mapped"]: Stats["TargetMateUnmapped" + CurrentPair["Reads"][1]["Direction"]] += 2
+			
+		if (sum([item["Proper"] for item in CurrentPair["Reads"] if item["Mapped"]]) == 1) and (sum([item["Mapped"] for item in CurrentPair["Reads"]]) == 2):
+			[MatelessTarget.write(item["Read"]) for item in CurrentPair["Reads"]]
+			if CurrentPair["Reads"][0]["Proper"]: Stats["TargetMateMisplaced" + CurrentPair["Reads"][0]["Direction"]] += 2
+			if CurrentPair["Reads"][1]["Proper"]: Stats["TargetMateMisplaced" + CurrentPair["Reads"][1]["Direction"]] += 2
+			
+		CurrentPair = {"Name": Read.qname, "Reads": [ { "Read": Read } ] if ((not Read.is_secondary) and (not Read.is_supplementary)) else [] }
+
+Stats["Total"] = int(count)
+Stats["Unmapped"] /= Stats["Total"]
+Stats["TargetPair"] /= Stats["Total"]
+Stats["TargetMateUnmappedF"] /= Stats["Total"]
+Stats["TargetMateUnmappedR"] /= Stats["Total"]
+Stats["TargetMateMisplacedF"] /= Stats["Total"]
+Stats["TargetMateMisplacedR"] /= Stats["Total"]
+
+print(Stats)
