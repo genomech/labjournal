@@ -1,0 +1,448 @@
+\selectlanguage *[babelshorthands=true]{russian}
+\contentsline {section}{Список сокращений}{3}{Doc-Start}%
+\contentsline {section}{Введение}{6}{Doc-Start}%
+\contentsline {section}{\numberline {1}Обзор литературы}{7}{section.1}%
+\contentsline {paragraph}{Частые и редкие (орфанные) патологии.}{8}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Механизмы развития генетических патологий}{10}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Типы генетических аномалий, лежащих в основе генетических патологий}{11}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Функциональные классы генетических вариантов}{13}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Методы детекции генетических вариантов}{15}{subsection.1.4}%
+\contentsline {paragraph}{Кариотипирование.}{15}{subsection.1.4}%
+\contentsline {paragraph}{Флуоресцентная \textit {in situ} гибридизация}{16}{Item.12}%
+\contentsline {paragraph}{Сравнительная геномная гибридизация}{17}{Item.12}%
+\contentsline {paragraph}{Мультиплексная лигаза-зависимая амплификация зонда}{18}{Item.12}%
+\contentsline {paragraph}{Секвенирование по Сэнгеру.}{19}{Item.12}%
+\contentsline {paragraph}{Секвенирование нового поколения}{20}{Item.12}%
+\contentsline {subsection}{\numberline {1.5}Виды NGS}{21}{subsection.1.5}%
+\contentsline {paragraph}{Полногеномное секвенирование}{21}{subsection.1.5}%
+\contentsline {paragraph}{Таргетные панели.}{21}{subsection.1.5}%
+\contentsline {paragraph}{Полноэкзомное секвенирование}{22}{Item.16}%
+\contentsline {paragraph}{Технологии захвата конформации хромосом}{23}{Item.16}%
+\contentsline {subsection}{\numberline {1.6}Базовая схема обработки результатов высокопроизводительного секвенирования для поиска и клинической интерпретации однонуклеотидных полиморфизмов}{24}{subsection.1.6}%
+\contentsline {paragraph}{Демультиплексикация.}{24}{subsection.1.6}%
+\contentsline {paragraph}{Удаление адаптерных последовательностей.}{24}{figure.1}%
+\contentsline {paragraph}{Картирование прочтений.}{24}{figure.1}%
+\contentsline {paragraph}{Удаление дубликатов.}{28}{figure.2}%
+\contentsline {paragraph}{Рекалибровка качества прочтений}{29}{figure.2}%
+\contentsline {paragraph}{Поиск генетических вариантов.}{30}{Item.19}%
+\contentsline {subsection}{\numberline {1.7}Аннотация, фильтрация и интерпретация результатов}{31}{subsection.1.7}%
+\contentsline {paragraph}{Когортный и семейный анализ.}{34}{Item.25}%
+\contentsline {subsection}{\numberline {1.8}Exo-C: суть метода}{35}{subsection.1.8}%
+\contentsline {section}{\numberline {2}Материалы и методы}{36}{section.2}%
+\contentsline {paragraph}{Данные секвенирования.}{37}{section.2}%
+\contentsline {paragraph}{Контроль качества NGS\hyp {}данных.}{37}{section.2}%
+\contentsline {paragraph}{Удаление адаптерных последовательностей.}{37}{section.2}%
+\contentsline {paragraph}{Картирование.}{37}{section.2}%
+\contentsline {paragraph}{Удаление ПЦР\hyp {}дубликатов.}{38}{section.2}%
+\contentsline {paragraph}{Рекалибровка качества прочтений (BQSR).}{39}{section.2}%
+\contentsline {paragraph}{Оценка покрытия и обогащения.}{40}{section.2}%
+\contentsline {paragraph}{Поиск вариантов.}{40}{section.2}%
+\contentsline {paragraph}{Рекалибровка и ранжирование вариантов.}{40}{section.2}%
+\contentsline {paragraph}{Аннотация вариантов.}{40}{section.2}%
+\contentsline {paragraph}{Фильтрация генетических вариантов.}{41}{Item.39}%
+\contentsline {paragraph}{Интерпретация.}{43}{Item.41}%
+\contentsline {section}{\numberline {3}Результаты}{43}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Результаты секвенирования Exo-C\hyp {}библиотек}{44}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Автоматизация обработки данных секвенирования}{45}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Сравнение данных секвенирования клеточной линии K562}{47}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Обсуждение результатов}{51}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Контрольные образцы}{53}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Оценка результатов секвенирования Exo-C\hyp {}библиотек}{53}{subsection.4.2}%
+\contentsline {section}{Предварительные выводы}{54}{subsection.4.2}%
+\contentsline {section}{План работы}{55}{Item.50}%
+\contentsline {section}{Список литературы}{57}{Item.53}%
+\selectlanguage *{russian}
+\contentsline {section}{\numberline {A}Краткое клиническое описание пациентов}{57}{appendix.A}%
+\contentsline {paragraph}{Неонатальный период:}{61}{table.10}%
+\contentsline {paragraph}{Генеалогический анализ и наследственность:}{61}{table.10}%
+\contentsline {paragraph}{Прочее:}{61}{table.10}%
+\contentsline {paragraph}{Неонатальный период:}{63}{table.10}%
+\contentsline {paragraph}{Формула развития:}{63}{table.10}%
+\contentsline {paragraph}{Генеалогический анализ и наследственность:}{63}{table.10}%
+\contentsline {paragraph}{Эпидемиологический анамнез:}{63}{table.10}%
+\contentsline {paragraph}{Прочее:}{64}{table.10}%
+\contentsline {paragraph}{Неонатальный период:}{65}{table.10}%
+\contentsline {paragraph}{Формула развития:}{65}{table.10}%
+\contentsline {paragraph}{Генеалогический анализ и наследственность:}{65}{table.10}%
+\contentsline {paragraph}{Прочее:}{65}{table.10}%
+\contentsline {paragraph}{Неонатальный период:}{67}{table.10}%
+\contentsline {paragraph}{Формула развития:}{67}{table.10}%
+\contentsline {paragraph}{Генеалогический анализ и наследственность:}{67}{table.10}%
+\contentsline {paragraph}{Прочее:}{67}{table.10}%
+\contentsline {paragraph}{Неонатальный период:}{69}{table.10}%
+\contentsline {paragraph}{Формула развития:}{69}{table.10}%
+\contentsline {paragraph}{Генеалогический анализ и наследственность:}{69}{table.10}%
+\contentsline {paragraph}{Прочее:}{69}{table.10}%
+\contentsline {paragraph}{Нервная система:}{70}{table.10}%
+\contentsline {paragraph}{Костно-мышечная система:}{70}{table.10}%
+\contentsline {paragraph}{Прочие:}{70}{table.10}%
+\contentsline {paragraph}{Неонатальный период:}{71}{table.10}%
+\contentsline {paragraph}{Формула развития:}{71}{table.10}%
+\contentsline {paragraph}{Генеалогический анализ и наследственность:}{72}{table.10}%
+\contentsline {paragraph}{Оперативные вмешательства:}{72}{table.10}%
+\contentsline {paragraph}{Прочие:}{72}{table.10}%
+\contentsline {paragraph}{Кровеносная система:}{72}{table.10}%
+\contentsline {paragraph}{Дыхательная система:}{72}{table.10}%
+\contentsline {paragraph}{Пищеварительная система:}{72}{table.10}%
+\contentsline {paragraph}{Мочевыделительная система:}{72}{table.10}%
+\contentsline {paragraph}{Нервная система:}{73}{table.10}%
+\contentsline {paragraph}{Кроветворная система:}{73}{table.10}%
+\contentsline {paragraph}{Эндокринная система:}{73}{table.10}%
+\contentsline {paragraph}{Костно-мышечная система:}{73}{table.10}%
+\contentsline {paragraph}{Органы чувств:}{73}{table.10}%
+\contentsline {paragraph}{Местные изменения:}{73}{table.10}%
+\contentsline {paragraph}{Неонатальный период:}{77}{table.10}%
+\contentsline {paragraph}{Формула развития:}{77}{table.10}%
+\contentsline {paragraph}{Генеалогический анализ и наследственность:}{77}{table.10}%
+\contentsline {paragraph}{Оперативные вмешательства:}{77}{table.10}%
+\contentsline {paragraph}{Сопутствующие заболевания:}{77}{table.10}%
+\contentsline {paragraph}{Эпидемиологический анамнез:}{77}{table.10}%
+\contentsline {paragraph}{Трансфузионный анамнез:}{77}{table.10}%
+\contentsline {paragraph}{Аллергологический анамнез:}{77}{table.10}%
+\contentsline {paragraph}{Кровеносная система:}{77}{table.10}%
+\contentsline {paragraph}{Дыхательная система:}{77}{table.10}%
+\contentsline {paragraph}{Пищеварительная система:}{77}{table.10}%
+\contentsline {paragraph}{Мочевыделительная система:}{78}{table.10}%
+\contentsline {paragraph}{Нервная система:}{78}{table.10}%
+\contentsline {paragraph}{Кроветворная система:}{78}{table.10}%
+\contentsline {paragraph}{Эндокринная система:}{78}{table.10}%
+\contentsline {paragraph}{Костно-мышечная система:}{78}{table.10}%
+\contentsline {paragraph}{Органы чувств:}{78}{table.10}%
+\contentsline {paragraph}{Местные изменения:}{78}{table.10}%
+\contentsline {paragraph}{02.2006}{79}{table.10}%
+\contentsline {paragraph}{10.2006}{79}{table.10}%
+\contentsline {paragraph}{01.2007}{79}{table.10}%
+\contentsline {paragraph}{12.2008}{79}{table.10}%
+\contentsline {paragraph}{09.2009}{79}{table.10}%
+\contentsline {paragraph}{10.2012}{79}{table.10}%
+\contentsline {paragraph}{11.2012}{79}{table.10}%
+\contentsline {paragraph}{16.10.2013}{80}{table.10}%
+\contentsline {paragraph}{19.10.2013}{80}{table.10}%
+\contentsline {paragraph}{21.01.2014}{80}{table.10}%
+\contentsline {paragraph}{24.01.2014}{80}{table.10}%
+\contentsline {paragraph}{10.2014}{80}{table.10}%
+\contentsline {paragraph}{07.07.2015}{80}{table.10}%
+\contentsline {paragraph}{13.07.2015}{80}{table.10}%
+\contentsline {paragraph}{07.2015}{80}{table.10}%
+\contentsline {paragraph}{15.04.2016}{80}{table.10}%
+\contentsline {paragraph}{19.08.2016}{81}{table.10}%
+\contentsline {paragraph}{14.09.2016}{81}{table.10}%
+\contentsline {paragraph}{10.2016}{81}{table.10}%
+\contentsline {paragraph}{30.10.2016}{81}{table.10}%
+\contentsline {paragraph}{02.11.2016}{81}{table.10}%
+\contentsline {paragraph}{07.2017}{81}{table.10}%
+\contentsline {paragraph}{18.07.2017}{81}{table.10}%
+\contentsline {paragraph}{12.08.2017}{81}{table.10}%
+\contentsline {paragraph}{04.10.2017}{81}{table.10}%
+\contentsline {paragraph}{02.2018}{82}{table.10}%
+\contentsline {paragraph}{08.2018}{82}{table.10}%
+\contentsline {paragraph}{11.2018}{82}{table.10}%
+\contentsline {paragraph}{12.2018}{82}{table.10}%
+\contentsline {paragraph}{06.2019}{82}{table.10}%
+\contentsline {paragraph}{Неонатальный период:}{82}{table.10}%
+\contentsline {paragraph}{Формула развития:}{82}{table.10}%
+\contentsline {paragraph}{Генеалогический анализ и наследственность:}{82}{table.10}%
+\contentsline {paragraph}{Травмы и оперативные вмешательства:}{82}{table.10}%
+\contentsline {paragraph}{Сопутствующие заболевания:}{82}{table.10}%
+\contentsline {paragraph}{Эпидемиологический анамнез:}{82}{table.10}%
+\contentsline {paragraph}{Трансфузионный анамнез:}{83}{table.10}%
+\contentsline {paragraph}{Аллергологический анамнез:}{83}{table.10}%
+\contentsline {paragraph}{Кровеносная система:}{83}{table.10}%
+\contentsline {paragraph}{Дыхательная система:}{83}{table.10}%
+\contentsline {paragraph}{Пищеварительная система:}{83}{table.10}%
+\contentsline {paragraph}{Мочевыделительная система:}{83}{table.10}%
+\contentsline {paragraph}{Нервная система:}{83}{table.10}%
+\contentsline {paragraph}{Кроветворная система:}{83}{table.10}%
+\contentsline {paragraph}{Эндокринная система:}{83}{table.10}%
+\contentsline {paragraph}{Костно-мышечная система:}{83}{table.10}%
+\contentsline {paragraph}{Органы чувств:}{83}{table.10}%
+\contentsline {paragraph}{Местные изменения:}{83}{table.10}%
+\contentsline {paragraph}{2013}{84}{table.10}%
+\contentsline {paragraph}{04.10.2016}{84}{table.10}%
+\contentsline {paragraph}{07.07.2017}{84}{table.10}%
+\contentsline {paragraph}{07.09.2017}{84}{table.10}%
+\contentsline {paragraph}{04.10.2017}{84}{table.10}%
+\contentsline {paragraph}{01.03.2018}{84}{table.10}%
+\contentsline {paragraph}{08.2018}{84}{table.10}%
+\contentsline {paragraph}{11.2018}{84}{table.10}%
+\contentsline {paragraph}{02.2019}{84}{table.10}%
+\contentsline {paragraph}{05.2019}{85}{table.10}%
+\contentsline {paragraph}{Неонатальный период:}{88}{table.10}%
+\contentsline {paragraph}{Формула развития:}{88}{table.10}%
+\contentsline {paragraph}{Генеалогический анализ и наследственность:}{88}{table.10}%
+\contentsline {paragraph}{Оперативные вмешательства:}{88}{table.10}%
+\contentsline {paragraph}{Сопутствующие заболевания:}{88}{table.10}%
+\contentsline {paragraph}{Эпидемиологический анамнез:}{88}{table.10}%
+\contentsline {paragraph}{Трансфузионный анамнез:}{88}{table.10}%
+\contentsline {paragraph}{Аллергологический анамнез:}{88}{table.10}%
+\contentsline {paragraph}{Кровеносная система:}{88}{table.10}%
+\contentsline {paragraph}{Дыхательная система:}{89}{table.10}%
+\contentsline {paragraph}{Пищеварительная система:}{89}{table.10}%
+\contentsline {paragraph}{Мочевыделительная система:}{89}{table.10}%
+\contentsline {paragraph}{Нервная система:}{89}{table.10}%
+\contentsline {paragraph}{Кроветворная система:}{89}{table.10}%
+\contentsline {paragraph}{Эндокринная система:}{89}{table.10}%
+\contentsline {paragraph}{Костно-мышечная система:}{89}{table.10}%
+\contentsline {paragraph}{Органы чувств:}{89}{table.10}%
+\contentsline {paragraph}{Местные изменения:}{89}{table.10}%
+\contentsline {paragraph}{Неонатальный период:}{91}{table.10}%
+\contentsline {paragraph}{Формула развития:}{91}{table.10}%
+\contentsline {paragraph}{Генеалогический анализ и наследственность:}{91}{table.10}%
+\contentsline {paragraph}{Оперативные вмешательства:}{91}{table.10}%
+\contentsline {paragraph}{Сопутствующие заболевания:}{91}{table.10}%
+\contentsline {paragraph}{Эпидемиологический анамнез:}{91}{table.10}%
+\contentsline {paragraph}{Трансфузионный анамнез:}{91}{table.10}%
+\contentsline {paragraph}{Аллергологический анамнез:}{91}{table.10}%
+\contentsline {paragraph}{Кровеносная система:}{92}{table.10}%
+\contentsline {paragraph}{Дыхательная система:}{92}{table.10}%
+\contentsline {paragraph}{Пищеварительная система:}{92}{table.10}%
+\contentsline {paragraph}{Мочевыделительная система:}{92}{table.10}%
+\contentsline {paragraph}{Нервная система:}{92}{table.10}%
+\contentsline {paragraph}{Кроветворная система:}{92}{table.10}%
+\contentsline {paragraph}{Эндокринная система:}{92}{table.10}%
+\contentsline {paragraph}{Костно-мышечная система:}{92}{table.10}%
+\contentsline {paragraph}{Органы чувств:}{92}{table.10}%
+\contentsline {paragraph}{Местные изменения:}{92}{table.10}%
+\contentsline {paragraph}{Неонатальный период:}{93}{table.10}%
+\contentsline {paragraph}{Формула развития:}{93}{table.10}%
+\contentsline {paragraph}{Генеалогический анализ и наследственность:}{93}{table.10}%
+\contentsline {paragraph}{Оперативные вмешательства:}{93}{table.10}%
+\contentsline {paragraph}{Сопутствующие заболевания:}{93}{table.10}%
+\contentsline {paragraph}{Эпидемиологический анамнез:}{93}{table.10}%
+\contentsline {paragraph}{Трансфузионный анамнез:}{93}{table.10}%
+\contentsline {paragraph}{Аллергологический анамнез:}{94}{table.10}%
+\contentsline {paragraph}{Кровеносная система:}{94}{table.10}%
+\contentsline {paragraph}{Дыхательная система:}{94}{table.10}%
+\contentsline {paragraph}{Пищеварительная система:}{94}{table.10}%
+\contentsline {paragraph}{Мочевыделительная система:}{94}{table.10}%
+\contentsline {paragraph}{Нервная система:}{94}{table.10}%
+\contentsline {paragraph}{Кроветворная система:}{94}{table.10}%
+\contentsline {paragraph}{Эндокринная система:}{94}{table.10}%
+\contentsline {paragraph}{Костно-мышечная система:}{94}{table.10}%
+\contentsline {paragraph}{Органы чувств:}{94}{table.10}%
+\contentsline {paragraph}{Местные изменения:}{94}{table.10}%
+\contentsline {paragraph}{Неонатальный период:}{95}{table.10}%
+\contentsline {paragraph}{Формула развития:}{95}{table.10}%
+\contentsline {paragraph}{Генеалогический анализ и наследственность:}{95}{table.10}%
+\contentsline {paragraph}{Оперативные вмешательства:}{95}{table.10}%
+\contentsline {paragraph}{Сопутствующие заболевания:}{95}{table.10}%
+\contentsline {paragraph}{Эпидемиологический анамнез:}{95}{table.10}%
+\contentsline {paragraph}{Трансфузионный анамнез:}{95}{table.10}%
+\contentsline {paragraph}{Аллергологический анамнез:}{95}{table.10}%
+\contentsline {paragraph}{Кровеносная система:}{95}{table.10}%
+\contentsline {paragraph}{Дыхательная система:}{95}{table.10}%
+\contentsline {paragraph}{Пищеварительная система:}{95}{table.10}%
+\contentsline {paragraph}{Мочевыделительная система:}{96}{table.10}%
+\contentsline {paragraph}{Нервная система:}{96}{table.10}%
+\contentsline {paragraph}{Кроветворная система:}{96}{table.10}%
+\contentsline {paragraph}{Эндокринная система:}{96}{table.10}%
+\contentsline {paragraph}{Костно-мышечная система:}{96}{table.10}%
+\contentsline {paragraph}{Органы чувств:}{96}{table.10}%
+\contentsline {paragraph}{Местные изменения:}{96}{table.10}%
+\contentsline {paragraph}{10.2019}{97}{table.10}%
+\contentsline {paragraph}{10.12.2019}{97}{table.10}%
+\contentsline {paragraph}{13.01.2020}{97}{table.10}%
+\contentsline {paragraph}{02.2020}{97}{table.10}%
+\contentsline {paragraph}{10.03.2020}{97}{table.10}%
+\contentsline {paragraph}{01.04.2020}{97}{table.10}%
+\contentsline {paragraph}{02.04.2020}{98}{table.10}%
+\contentsline {paragraph}{08.04.2020}{98}{table.10}%
+\contentsline {paragraph}{15.04.2020}{98}{table.10}%
+\contentsline {paragraph}{Генеалогический анализ и наследственность:}{98}{table.10}%
+\contentsline {paragraph}{Вредные привычки:}{98}{table.10}%
+\contentsline {paragraph}{Оперативные вмешательства:}{98}{table.10}%
+\contentsline {paragraph}{Сопутствующие заболевания:}{98}{table.10}%
+\contentsline {paragraph}{Эпидемиологический анамнез:}{98}{table.10}%
+\contentsline {paragraph}{Семейно-половой и гинекологический анамнез:}{98}{table.10}%
+\contentsline {paragraph}{Трансфузионный анамнез:}{98}{table.10}%
+\contentsline {paragraph}{Аллергологический анамнез:}{99}{table.10}%
+\contentsline {paragraph}{10.2019}{99}{table.10}%
+\contentsline {paragraph}{03.2020}{100}{table.10}%
+\contentsline {paragraph}{Генеалогический анализ и наследственность:}{100}{table.10}%
+\contentsline {paragraph}{Вредные привычки:}{100}{table.10}%
+\contentsline {paragraph}{Оперативные вмешательства:}{100}{table.10}%
+\contentsline {paragraph}{Сопутствующие заболевания:}{100}{table.10}%
+\contentsline {paragraph}{Эпидемиологический анамнез:}{100}{table.10}%
+\contentsline {paragraph}{Семейно-половой и гинекологический анамнез:}{100}{table.10}%
+\contentsline {paragraph}{Трансфузионный анамнез:}{101}{table.10}%
+\contentsline {paragraph}{Аллергологический анамнез:}{101}{table.10}%
+\contentsline {paragraph}{2016}{101}{table.10}%
+\contentsline {paragraph}{01.2019}{101}{table.10}%
+\contentsline {paragraph}{03.2020}{101}{table.10}%
+\contentsline {paragraph}{05.2018}{102}{table.10}%
+\contentsline {paragraph}{09.2019}{102}{table.10}%
+\contentsline {paragraph}{11.2019}{102}{table.10}%
+\contentsline {paragraph}{03.2020}{102}{table.10}%
+\contentsline {paragraph}{Неонатальный период:}{102}{table.10}%
+\contentsline {paragraph}{Формула развития:}{103}{table.10}%
+\contentsline {paragraph}{Генеалогический анализ и наследственность:}{103}{table.10}%
+\contentsline {paragraph}{Оперативные вмешательства:}{103}{table.10}%
+\contentsline {paragraph}{Сопутствующие заболевания:}{103}{table.10}%
+\contentsline {paragraph}{Эпидемиологический анамнез:}{103}{table.10}%
+\contentsline {paragraph}{Трансфузионный анамнез:}{103}{table.10}%
+\contentsline {paragraph}{Аллергологический анамнез:}{103}{table.10}%
+\contentsline {paragraph}{Кровеносная система:}{103}{table.10}%
+\contentsline {paragraph}{Дыхательная система:}{104}{table.10}%
+\contentsline {paragraph}{Пищеварительная система:}{104}{table.10}%
+\contentsline {paragraph}{Мочевыделительная система:}{104}{table.10}%
+\contentsline {paragraph}{Нервная система:}{104}{table.10}%
+\contentsline {paragraph}{Кроветворная система:}{104}{table.10}%
+\contentsline {paragraph}{Эндокринная система:}{104}{table.10}%
+\contentsline {paragraph}{Костно-мышечная система:}{104}{table.10}%
+\contentsline {paragraph}{Местные изменения:}{104}{table.10}%
+\contentsline {paragraph}{05.2020}{105}{table.10}%
+\contentsline {paragraph}{07.07.2020}{105}{table.10}%
+\contentsline {paragraph}{07.07.2020}{105}{table.10}%
+\contentsline {paragraph}{07.07.2020}{105}{table.10}%
+\contentsline {paragraph}{07.07.2020}{105}{table.10}%
+\contentsline {paragraph}{09.07.2020}{105}{table.10}%
+\contentsline {paragraph}{09.07.2020}{105}{table.10}%
+\contentsline {paragraph}{09.07.2020}{105}{table.10}%
+\contentsline {paragraph}{09.07.2020}{105}{table.10}%
+\contentsline {paragraph}{Окулист:}{105}{table.10}%
+\contentsline {paragraph}{Физиотерапевт:}{106}{table.10}%
+\contentsline {paragraph}{Педиатр:}{106}{table.10}%
+\contentsline {paragraph}{Травматолог-ортопед:}{106}{table.10}%
+\contentsline {paragraph}{Неонатальный период:}{107}{table.10}%
+\contentsline {paragraph}{Генеалогический анализ и наследственность:}{107}{table.10}%
+\contentsline {paragraph}{Оперативные вмешательства:}{107}{table.10}%
+\contentsline {paragraph}{Сопутствующие заболевания:}{107}{table.10}%
+\contentsline {paragraph}{Эпидемиологический анамнез:}{107}{table.10}%
+\contentsline {paragraph}{Трансфузионный анамнез:}{108}{table.10}%
+\contentsline {paragraph}{Аллергологический анамнез:}{108}{table.10}%
+\contentsline {paragraph}{Кровеносная система:}{108}{table.10}%
+\contentsline {paragraph}{Дыхательная система:}{108}{table.10}%
+\contentsline {paragraph}{Пищеварительная система:}{108}{table.10}%
+\contentsline {paragraph}{Мочевыделительная система:}{108}{table.10}%
+\contentsline {paragraph}{Нервная система:}{108}{table.10}%
+\contentsline {paragraph}{Кроветворная система:}{108}{table.10}%
+\contentsline {paragraph}{Эндокринная система:}{108}{table.10}%
+\contentsline {paragraph}{Костно-мышечная система:}{108}{table.10}%
+\contentsline {paragraph}{Органы чувств:}{109}{table.10}%
+\contentsline {paragraph}{Местные изменения:}{109}{table.10}%
+\contentsline {paragraph}{02.2019}{109}{table.10}%
+\contentsline {paragraph}{29.07.2019}{109}{table.10}%
+\contentsline {paragraph}{30.08.2019}{109}{table.10}%
+\contentsline {paragraph}{17.10.2019}{109}{table.10}%
+\contentsline {paragraph}{01.2020}{109}{table.10}%
+\contentsline {paragraph}{10.07.2015}{110}{table.10}%
+\contentsline {paragraph}{10.09.2015}{110}{table.10}%
+\contentsline {paragraph}{2016}{110}{table.10}%
+\contentsline {paragraph}{30.03.2016}{110}{table.10}%
+\contentsline {paragraph}{Неонатальный период:}{111}{table.10}%
+\contentsline {paragraph}{Генеалогический анализ и наследственность:}{111}{table.10}%
+\contentsline {paragraph}{Оперативные вмешательства:}{111}{table.10}%
+\contentsline {paragraph}{Сопутствующие заболевания:}{111}{table.10}%
+\contentsline {paragraph}{Эпидемиологический анамнез:}{111}{table.10}%
+\contentsline {paragraph}{Трансфузионный анамнез:}{111}{table.10}%
+\contentsline {paragraph}{Аллергологический анамнез:}{111}{table.10}%
+\contentsline {paragraph}{Кровеносная система:}{111}{table.10}%
+\contentsline {paragraph}{Дыхательная система:}{111}{table.10}%
+\contentsline {paragraph}{Пищеварительная система:}{112}{table.10}%
+\contentsline {paragraph}{Мочевыделительная система:}{112}{table.10}%
+\contentsline {paragraph}{Нервная система:}{112}{table.10}%
+\contentsline {paragraph}{Кроветворная система:}{112}{table.10}%
+\contentsline {paragraph}{Эндокринная система:}{112}{table.10}%
+\contentsline {paragraph}{Костно-мышечная система:}{112}{table.10}%
+\contentsline {paragraph}{Органы чувств:}{112}{table.10}%
+\contentsline {paragraph}{Местные изменения:}{112}{table.10}%
+\contentsline {paragraph}{Неонатальный период:}{113}{table.10}%
+\contentsline {paragraph}{Генеалогический анализ и наследственность:}{113}{table.10}%
+\contentsline {paragraph}{Оперативные вмешательства и травмы:}{113}{table.10}%
+\contentsline {paragraph}{Сопутствующие заболевания:}{113}{table.10}%
+\contentsline {paragraph}{Гинекологический анамнез:}{113}{table.10}%
+\contentsline {paragraph}{Эпидемиологический анамнез:}{113}{table.10}%
+\contentsline {paragraph}{Трансфузионный анамнез:}{113}{table.10}%
+\contentsline {paragraph}{Аллергологический анамнез:}{113}{table.10}%
+\contentsline {paragraph}{Кровеносная система:}{114}{table.10}%
+\contentsline {paragraph}{Дыхательная система:}{114}{table.10}%
+\contentsline {paragraph}{Пищеварительная система:}{114}{table.10}%
+\contentsline {paragraph}{Мочевыделительная система:}{114}{table.10}%
+\contentsline {paragraph}{Нервная система:}{114}{table.10}%
+\contentsline {paragraph}{Кроветворная система:}{114}{table.10}%
+\contentsline {paragraph}{Эндокринная система:}{114}{table.10}%
+\contentsline {paragraph}{Костно-мышечная система:}{114}{table.10}%
+\contentsline {paragraph}{Органы чувств:}{114}{table.10}%
+\contentsline {paragraph}{Местные изменения:}{114}{table.10}%
+\contentsline {paragraph}{02.2018}{115}{table.10}%
+\contentsline {paragraph}{15.01.2020}{115}{table.10}%
+\contentsline {paragraph}{02.03.2020}{115}{table.10}%
+\contentsline {paragraph}{23.04.2020}{115}{table.10}%
+\contentsline {paragraph}{Неонатальный период:}{116}{table.10}%
+\contentsline {paragraph}{Генеалогический анализ и наследственность:}{116}{table.10}%
+\contentsline {paragraph}{Оперативные вмешательства:}{116}{table.10}%
+\contentsline {paragraph}{Сопутствующие заболевания:}{116}{table.10}%
+\contentsline {paragraph}{Эпидемиологический анамнез:}{116}{table.10}%
+\contentsline {paragraph}{Трансфузионный анамнез:}{116}{table.10}%
+\contentsline {paragraph}{Аллергологический анамнез:}{116}{table.10}%
+\contentsline {paragraph}{Кровеносная система:}{116}{table.10}%
+\contentsline {paragraph}{Дыхательная система:}{116}{table.10}%
+\contentsline {paragraph}{Пищеварительная система:}{116}{table.10}%
+\contentsline {paragraph}{Мочевыделительная система:}{117}{table.10}%
+\contentsline {paragraph}{Нервная система:}{117}{table.10}%
+\contentsline {paragraph}{Кроветворная система:}{117}{table.10}%
+\contentsline {paragraph}{Эндокринная система:}{117}{table.10}%
+\contentsline {paragraph}{Костно-мышечная система:}{117}{table.10}%
+\contentsline {paragraph}{Органы чувств:}{117}{table.10}%
+\contentsline {paragraph}{Местные изменения:}{117}{table.10}%
+\contentsline {paragraph}{17.10.2019}{117}{table.10}%
+\contentsline {paragraph}{30.01.2020}{118}{table.10}%
+\contentsline {paragraph}{Неонатальный период:}{118}{table.10}%
+\contentsline {paragraph}{Формула развития:}{118}{table.10}%
+\contentsline {paragraph}{Генеалогический анализ и наследственность:}{118}{table.10}%
+\contentsline {paragraph}{Оперативные вмешательства:}{118}{table.10}%
+\contentsline {paragraph}{Сопутствующие заболевания:}{118}{table.10}%
+\contentsline {paragraph}{Эпидемиологический анамнез:}{118}{table.10}%
+\contentsline {paragraph}{Трансфузионный анамнез:}{119}{table.10}%
+\contentsline {paragraph}{Аллергологический анамнез:}{119}{table.10}%
+\contentsline {paragraph}{01.02.2018}{119}{table.10}%
+\contentsline {paragraph}{04.01.2020}{119}{table.10}%
+\contentsline {paragraph}{Неонатальный период:}{121}{table.10}%
+\contentsline {paragraph}{Генеалогический анализ и наследственность:}{121}{table.10}%
+\contentsline {paragraph}{Оперативные вмешательства:}{121}{table.10}%
+\contentsline {paragraph}{Сопутствующие заболевания:}{121}{table.10}%
+\contentsline {paragraph}{Эпидемиологический анамнез:}{121}{table.10}%
+\contentsline {paragraph}{Трансфузионный анамнез:}{121}{table.10}%
+\contentsline {paragraph}{Аллергологический анамнез:}{121}{table.10}%
+\contentsline {paragraph}{Кровеносная система:}{121}{table.10}%
+\contentsline {paragraph}{Дыхательная система:}{122}{table.10}%
+\contentsline {paragraph}{Пищеварительная система:}{122}{table.10}%
+\contentsline {paragraph}{Мочевыделительная система:}{122}{table.10}%
+\contentsline {paragraph}{Нервная система:}{122}{table.10}%
+\contentsline {paragraph}{Кроветворная система:}{122}{table.10}%
+\contentsline {paragraph}{Эндокринная система:}{122}{table.10}%
+\contentsline {paragraph}{Костно-мышечная система:}{122}{table.10}%
+\contentsline {paragraph}{Органы чувств:}{122}{table.10}%
+\contentsline {paragraph}{Местные изменения:}{122}{table.10}%
+\contentsline {paragraph}{13.07.2016}{122}{table.10}%
+\contentsline {paragraph}{09.08.2017}{122}{table.10}%
+\contentsline {paragraph}{07.10.2017}{122}{table.10}%
+\contentsline {paragraph}{04.02.2018}{123}{table.10}%
+\contentsline {paragraph}{18.06.2019}{123}{table.10}%
+\contentsline {paragraph}{07.2017}{124}{table.10}%
+\contentsline {paragraph}{23.11.2017}{124}{table.10}%
+\contentsline {paragraph}{01.2018}{124}{table.10}%
+\contentsline {paragraph}{03.02.2018}{124}{table.10}%
+\contentsline {paragraph}{05.03.2018}{124}{table.10}%
+\contentsline {paragraph}{07.2018}{124}{table.10}%
+\contentsline {paragraph}{01.2019}{124}{table.10}%
+\contentsline {paragraph}{Неонатальный период:}{125}{table.10}%
+\contentsline {paragraph}{Формула развития:}{125}{table.10}%
+\contentsline {paragraph}{Генеалогический анализ и наследственность:}{125}{table.10}%
+\contentsline {paragraph}{Оперативные вмешательства:}{125}{table.10}%
+\contentsline {paragraph}{Сопутствующие заболевания:}{125}{table.10}%
+\contentsline {paragraph}{Эпидемиологический анамнез:}{125}{table.10}%
+\contentsline {paragraph}{Трансфузионный анамнез:}{125}{table.10}%
+\contentsline {paragraph}{Аллергологический анамнез:}{125}{table.10}%
+\contentsline {paragraph}{Кровеносная система:}{125}{table.10}%
+\contentsline {paragraph}{Дыхательная система:}{125}{table.10}%
+\contentsline {paragraph}{Пищеварительная система:}{125}{table.10}%
+\contentsline {paragraph}{Мочевыделительная система:}{125}{table.10}%
+\contentsline {paragraph}{Нервная система:}{125}{table.10}%
+\contentsline {paragraph}{Кроветворная система:}{126}{table.10}%
+\contentsline {paragraph}{Эндокринная система:}{126}{table.10}%
+\contentsline {paragraph}{Костно-мышечная система:}{126}{table.10}%
+\contentsline {paragraph}{Органы чувств:}{126}{table.10}%
+\contentsline {paragraph}{Местные изменения:}{126}{table.10}%
+\contentsline {paragraph}{17.04.2017}{126}{table.10}%
+\contentsline {paragraph}{11.09.2019}{126}{table.10}%
