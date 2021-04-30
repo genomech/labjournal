@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+X-Aspera-Version=3.9.9.177872
+Type=Application
+Exec=/home/fairwind/.aspera/connect/bin/asperaconnect %U
+Icon=/home/fairwind/.aspera/connect/res/connect.png
+Name=IBM Aspera Connect
+Comment=High-performance transfer application
+GenericName=File transfer
+MimeType=x-scheme-handler/fasp;
+Terminal=false
+Categories=Network;WebBrowser;
+
