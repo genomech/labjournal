@@ -249,17 +249,6 @@ Comprehensive, integrated, and phased whole-genome analysis of the primary
 \newblock P.~472--484. \BibDash
 \newblock Access mode: \BibUrl{https://doi.org/10.1101/gr.234948.118}.
 
-\bibitem[Asim et~al.(2015)Asim, Kumar, Muthuswamy, Jain, and
-  Agarwal]{Asim_2015}
-\selectlanguageifdefined{eng}
-{Down} syndrome: an insight of the disease~/ Asim~Ambreen, Kumar~Ashok,
-  Muthuswamy~Srinivasan, Jain~Shalu, and Agarwal~Sarita~//
-  \href{https://doi.org/10.1186/s12929-015-0138-y}{\BibEmph{J Biomed Sci}}.
-  \BibDash
-\newblock 2015. \BibDash June. \BibDash
-\newblock Vol.~22, no.~1. \BibDash
-\newblock Access mode: \BibUrl{https://doi.org/10.1186/s12929-015-0138-y}.
-
 \bibitem[Moquin et~al.(2017)Moquin, Thomas, Whalen, Warburton, Fernandez,
   McBride, Pollard, and Miranda]{Moquin_2017}
 \selectlanguageifdefined{eng}
@@ -942,6 +931,17 @@ Systematic dissection of biases in whole-exome and whole-genome sequencing
 \newblock Vol.~10, no.~1. \BibDash
 \newblock Access mode: \BibUrl{https://doi.org/10.1038/s41598-020-59026-y}.
 
+\bibitem[Tan et~al.(2015)Tan, Abecasis, and Kang]{Tan_2015}
+\selectlanguageifdefined{eng}
+Tan~Adrian, Abecasis~Gon{\c{c}}alo~R., Kang~Hyun~Min. Unified representation of
+  genetic variants~//
+  \href{https://doi.org/10.1093/bioinformatics/btv112}{\BibEmph{Bioinformatics}}.
+  \BibDash
+\newblock 2015. \BibDash Feb. \BibDash
+\newblock Vol.~31, no.~13. \BibDash
+\newblock P.~2202--2204. \BibDash
+\newblock Access mode: \BibUrl{https://doi.org/10.1093/bioinformatics/btv112}.
+
 \bibitem[Tang et~al.(2011)Tang, Dean, and Thomas]{Tang_2011}
 \selectlanguageifdefined{eng}
 Tang~B, Dean~B, Thomas~E~A. Disease- and age-related changes in histone
@@ -1162,6 +1162,17 @@ A cookbook for {DNase} {Hi-C}~/ Gridina~Maria, Mozheiko~Evgeniy, Valeev~Emil,
 \newblock Vol.~37, no.~3. \BibDash
 \newblock P.~235--241. \BibDash
 \newblock Access mode: \BibUrl{https://doi.org/10.1002/humu.22932}.
+
+\bibitem[Chern et~al.(2019)Chern, Lee, Frey, Lee, and Blank]{Chern_2019}
+\selectlanguageifdefined{eng}
+The influence of {BRCA} variants of unknown significance on cancer risk
+  management decision-making~/ Chern~Jing-Yi, Lee~Sarah~S., Frey~Melissa~K.,
+  Lee~Jessica, and Blank~Stephanie~V.~//
+  \href{https://doi.org/10.3802/jgo.2019.30.e60}{\BibEmph{J Gynecol Oncol}}.
+  \BibDash
+\newblock 2019. \BibDash
+\newblock Vol.~30, no.~4. \BibDash
+\newblock Access mode: \BibUrl{https://doi.org/10.3802/jgo.2019.30.e60}.
 
 \bibitem[Karczewski et~al.(2020)Karczewski, , Francioli, Tiao, Cummings,
   Alföldi, Wang, Collins, Laricchia, Ganna, Birnbaum, Gauthier, Brand,
