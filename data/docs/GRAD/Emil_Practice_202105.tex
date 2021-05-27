@@ -1,0 +1,676 @@
+\documentclass[a4paper,14pt]{extarticle}
+
+% ------ GLOBAL ------
+\usepackage{indentfirst}
+\usepackage{calc,etoolbox,float,microtype,soul,xspace,textcomp,xltxtra}
+\usepackage[table]{xcolor}
+
+% ------ LANGUAGE ------
+
+\usepackage{polyglossia}
+\setdefaultlanguage[babelshorthands=true]{russian}
+\setotherlanguage{english}
+\defaultfontfeatures{Ligatures=TeX,Mapping=tex-text}
+
+% ------ PAGE VIEW ------
+
+\usepackage[left=3cm,right=1.5cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{hyphenat}
+
+\usepackage{enumitem}
+\setlist[itemize]{label={---}}
+
+\setmainfont[Ligatures=TeX]{Liberation Serif}
+\setsansfont[Ligatures=TeX]{Liberation Sans}
+\setlength{\parindent}{0cm}
+
+\linespread{1.3}
+
+\renewcommand{\labelitemi}{$\bullet$}
+
+% ------ HEADER & FOOTER ------
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}\renewcommand{\headrulewidth}{0mm}\fancyfoot[CE,CO]{\thepage}
+\fancypagestyle{plain}{\fancyhead{}\renewcommand{\headrulewidth}{0mm}\fancyfoot{}}
+
+% ------ TABLES ------
+
+\usepackage{multirow,tabularx,rotating,wrapfig}
+
+\definecolor{tableheadcolor}{RGB}{200,200,200}
+\definecolor{tableoddrowcolor}{RGB}{238,238,238}
+\definecolor{tableevenrowcolor}{gray}{1.0}
+
+\newsavebox{\defaultsavebox}
+
+\newcommand{\headerbigrow}[2]{\parbox[c][3.8em]{\widthof{\textbf{#1}}}{\textbf{#2}}}
+\newcommand{\bigrow}[2]{\parbox[c][3.8em]{\widthof{#1}}{#2}}
+
+\newenvironment{booktable}[2]
+{\begin{table}[H]\setlength\arrayrulewidth{1pt}\begin{lrbox}{\defaultsavebox}\bgroup\def\arraystretch{1}}
+{\egroup\end{lrbox}\resizebox{\textwidth}{!}{\usebox{\defaultsavebox}}\end{table}}
+
+\newcommand{\neworrenewcommand}[1]{\providecommand{#1}{}\renewcommand{#1}}
+
+\newcommand{\variant}[9]{\neworrenewcommand{\vvariant}[4]{\begin{table}[H]\setlength\arrayrulewidth{1pt}\begin{lrbox}{\defaultsavebox}\bgroup\def\arraystretch{1}\begin{tabular}{| l | l | l | l | l | l | l |}\rowcolor{tableheadcolor}\hline\textbf{Ген} & \textbf{Положение (hg19)} & \textbf{Замена} & \textbf{Генотип} & \textbf{Тип замены} & \textbf{Глубина} & \textbf{Ref/Alt} \\ \hline \hline #1 & #2 & #3 & #4 & #5 & #6 & #7 \\ \hline \hline \multicolumn{2}{| >{\bfseries}p{0.3\textwidth}}{~} & \multicolumn{5}{ >{}p{0.65\textwidth} |}{~} \\ \hline \multicolumn{2}{| >{\bfseries}p{0.3\textwidth}}{OMIM фенотип:} & \multicolumn{5}{ >{}p{0.65\textwidth} |}{#8} \\ \hline \multicolumn{2}{| >{\bfseries}p{0.3\textwidth}}{HGMD:} & \multicolumn{5}{ >{}p{0.65\textwidth} |}{#9} \\ \hline \multicolumn{2}{| >{\bfseries}p{0.3\textwidth}}{Экзон:} & \multicolumn{5}{ >{}p{0.65\textwidth} |}{##1} \\ \hline 
+\multicolumn{2}{| >{\bfseries}p{0.3\textwidth}}{Частота аллеля:} & \multicolumn{5}{ >{}p{0.65\textwidth} |}{##2} \\ \hline 
+\multicolumn{2}{| >{\bfseries}p{0.3\textwidth}}{Критерии патогенности (согласно российским рекомендациям по интерпретации данных MPS\,\ecitep{Ryzhkova_2017}):} & \multicolumn{5}{ >{}p{0.65\textwidth} |}{##3} \\ \hline
+\multicolumn{2}{| >{\bfseries}p{0.3\textwidth}}{Комментарий:} & \multicolumn{5}{ >{}p{0.65\textwidth} |}{##4} \\ \hline \hline\end{tabular}\egroup\end{lrbox}\resizebox{\textwidth}{!}{\usebox{\defaultsavebox}}\end{table}}\vvariant}
+
+\newcommand{\reportgen}[9]{
+\begin{tabular}{ >{\bfseries}p{0.35\textwidth} l }
+Код пациента: & #1 \\ \hline
+Вид материала: & #2 \\ \hline
+Дата забора: & #3 \\ \hline
+Экзомная панель: & #4 \\ \hline
+Количество прочтений: & \numprint[\mln]{#5} \\ \hline
+Длина прочтений: & \numprint[bp]{#6} \\ \hline
+Выравнивание: & \numprint[\%]{#7} \\ \hline
+Покрытие экзома: & ~ \\ \hline
+~~~~~~ -- $\geqslant10$: & \numprint[\%]{#8} \\ \hline
+~~~~~~ -- среднее: & \numprint[прочтений/позицию]{#9} \\ \hline
+\end{tabular}}
+
+\newenvironment{albumtable}[2]
+{\begin{sidewaystable}\caption{\label{#2}#1}\vspace{0.5em}\setlength\arrayrulewidth{1pt}\begin{lrbox}{\defaultsavebox}\bgroup\def\arraystretch{1}\rowcolors{2}{tableoddrowcolor}{tableevenrowcolor}}
+			{\egroup\end{lrbox}\resizebox{1\textheight}{!}{\usebox{\defaultsavebox}}\end{sidewaystable}}
+
+\newenvironment{albumtablewidth}[2]
+{\begin{sidewaystable}\caption{\label{#2}#1}\vspace{0.5em}\setlength\arrayrulewidth{1pt}\begin{lrbox}{\defaultsavebox}\bgroup\def\arraystretch{1}\rowcolors{2}{tableoddrowcolor}{tableevenrowcolor}}
+			{\egroup\end{lrbox}\resizebox{0.8\textheight}{!}{\usebox{\defaultsavebox}}\end{sidewaystable}}
+
+% ------ FIGURES ------
+
+\usepackage{graphicx}
+
+\newcommand{\intextfigure}[5]
+{\begin{wrapfigure}{#1}{#2\textwidth}\centering\includegraphics[width=#2\textwidth]{#3}\caption{\label{#4}#5}\end{wrapfigure}}
+
+\newcommand{\centerfigure}[5]
+{\begin{figure}[#1]\centering\includegraphics[width=#5\textwidth]{#2}\caption{\label{#3}#4}\end{figure}}
+
+% ------ FORMULAE ------
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{numprint}
+\npthousandsep{\,}
+\npdecimalsign{,}
+
+\newcommand{\thousands}{тыс.}
+\newcommand{\hours}{ч.}
+\newcommand{\mln}{млн}
+\newcommand{\ml}{мл}
+\newcommand{\kilogramm}{кг}
+\newcommand{\gramm}{г}
+\newcommand{\mug}{мкг}
+\newcommand{\grammliter}{г/л}
+\newcommand{\mgpl}{мг/л}
+\newcommand{\mugpl}{мкг/л}
+\newcommand{\KOEpml}{КОЕ/мл}
+\newcommand{\mugpdl}{мкг/дл}
+\newcommand{\eliter}{Ед/л}
+\newcommand{\pliter}{кл/л}
+\newcommand{\secs}{сек}
+\newcommand{\mmolpl}{ммоль/л}
+\newcommand{\mkmolpl}{мкмоль/л}
+\newcommand{\pgpml}{пг/мл}
+\newcommand{\pmolpl}{пмоль/л}
+\newcommand{\nmolpl}{нмоль/л}
+\newcommand{\ngpml}{нг/мл}
+\newcommand{\ngpdl}{нг/дл}
+\newcommand{\mgpkg}{мг/кг}
+\newcommand{\mgpdl}{мг/дл}
+\newcommand{\mgpd}{мг/сут.}
+\newcommand{\mugpd}{мкг/сут.}
+\newcommand{\mmolpd}{ммоль/сут}
+\newcommand{\mkmolpd}{мкмоль/сут}
+\newcommand{\copypml}{копий/мл}
+\newcommand{\mugpkg}{мкг/кг}
+\newcommand{\pov}{в~п/з}
+\newcommand{\tablets}{табл.}
+\newcommand{\mg}{мг}
+\newcommand{\fliter}{фл}
+\newcommand{\hz}{Гц}
+\newcommand{\cm}{см}
+\newcommand{\mm}{мм}
+\newcommand{\months}{мес.}
+\newcommand{\weeks}{нед.}
+\newcommand{\oCelsius}{\tcdegree{}C}
+\newcommand{\bpm}{уд/мин}
+\newcommand{\mpm}{/мин}
+\newcommand{\torr}{торр}
+\newcommand{\mmph}{мм/ч}
+\newcommand{\me}{ME/л}
+\newcommand{\mme}{мME/л}
+\newcommand{\mosmpkg}{мОсм/кг}
+\newcommand{\genename}[1]{\textit{#1}}
+\newcommand{\utilname}[1]{\textenglish{#1}}
+
+\newcommand{\pdate}[1]{\emph{#1:} }
+\newcommand{\cdate}[2]{\strong{#2 от #1:} }
+\newcommand{\DS}[2]{[#2] #1}
+
+% ------ BIBLIOGRAPHY ------
+
+\usepackage[square,sort,semicolon,authoryear]{natbib}
+% \bibliographystyle{naturemag}
+\bibliographystyle{ugost2008ns}
+\makeatletter
+\renewcommand{\@biblabel}[1]{#1.}
+\makeatother
+
+\newcommand{\ecitep}[1]{\textenglish{\citep{#1}}}
+
+% ------ LINKS ------
+
+\usepackage{hyperref}
+\definecolor{linkcolor}{RGB}{0,102,153}
+\hypersetup{colorlinks=true, linkcolor=linkcolor, citecolor=linkcolor, filecolor=linkcolor, urlcolor=linkcolor}
+\renewcommand{\url}[1]{\href{#1}{#1}}
+
+% ------ REFERENCES ------
+
+\newcommand{\picref}[1]{Рис.~\ref{#1}}
+\newcommand{\tableref}[1]{Табл.~\ref{#1}}
+\newcommand{\formularef}[1]{Формула~\ref{#1}}
+\newcommand{\engterm}[1]{англ. \textenglish{\textit{#1}}}
+
+\usepackage{titlesec}
+\titleformat{\section}{\newpage\normalfont\huge\bfseries\filcenter}{Глава~\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalfont\Large\bfseries\filcenter}{\thesubsection.}{0.5em}{}
+\titleformat{\subsubsection}{\normalfont\large\bfseries\filcenter}{\thesubsubsection.}{0.5em}{}
+
+\begin{document}
+
+\begin{titlepage}
+	\centering
+	{\par\small{ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ АВТОНОМНОЕ ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ <<НОВОСИБИРСКИЙ НАЦИОНАЛЬНЫЙ ИССЛЕДОВАТЕЛЬСКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ>> (НОВОСИБИРСКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ, НГУ)}}
+	{\par\small{Институт медицины и психологии В.\,Зельмана НГУ}}
+	{\par\small{Направление подготовки: 31.05.01 Лечебное дело}}
+
+	\vspace{5cm}
+
+	{\par\Large\textbf{ДНЕВНИК-ОТЧЕТ\\по производственной практике 5 курса}}
+
+	\vspace{0.5cm}
+
+	ФИО: \hrulefill\\
+	Группа \hrulefill Срок прохождения практики с \hrulefill по \hrulefill
+
+	\vfill
+
+	{\centering\small{Новосибирск, 2021}}
+\end{titlepage}
+
+\newpage
+
+\subsection*{ПРАВИЛА ВЕДЕНИЯ ДНЕВНИКА}
+
+Дневник является официальным документом по производственной практике. 
+Он должен быть написан разборчиво, грамотно, медицинским языком.
+Студенты работают по пятидневной рабочей неделе.
+Записи в дневнике ведутся ежедневно в конце рабочего дня и должны отражать всю 
+выполненную работу в подразделениях больницы с примерами.
+Выполненная работа ежедневно заверяется подписью медицинской сестры (постовой, процедурного кабинета, перевязочной и т.~д.).
+В начале дневника даётся краткая характеристика отделения: профиль отделения, количество коек, штат отделения, наличие вспомогательных кабинетов и пр.
+После окончания практики, студент, на основании записей в дневнике, должен заполнить сводный цифровой отчёт о проделанной работе.
+Санитарно\hyp{}просветительная работа проводится в форме бесед, санбюллютеней;
+ее содержание, место и время проведения должны быть отражены в дневнике и заверены подписью непосредственного руководителя практики.
+УИРС выполняется в виде реферата и сдается вместе с дневником для проверки ассистенту\hyp{}руководителю практики.
+После окончания практики непосредственный руководитель дает характеристику работы студента и оценивает ее по пятибалльной шкале. 
+Характеристика и оценка практики заверяются подписью непосредственного руководителя, главной медицинской сестры и заверяются печатью лечебного учреждения.
+
+Дневник практики должен быть сдан для проверки ассистентуу\hyp{}руководителю практики:
+
+\begin{itemize}
+\item Студентами, проходившими практику на клинических базах Новосибирска "--- в последние два дня практики;
+\item Студентами, проходившими практику вне клинических баз "--- в течение первой недели, после начала осеннего семестра.
+\end{itemize}
+
+Не допускается:
+
+\begin{itemize}
+\item Изменение сроков прохождения практики без уважительной причины или без согласования с ответственным руководителем практики.
+\item Изменение объема рекомендуемой работы.
+\end{itemize}
+
+Итоговая оценка по практике ставится ассистентому\hyp{}руководителем на основании характеристики студента, оценки качества ведения дневника и выполненного объема работы (соответствие программе), результатов зачета.
+
+\subsection*{Инструкция по технике безопасности для обучающихся ИМП НГУ при работе в лечебно-профилактических учреждениях во время прохождения летней производственной практикина 1--5 курсах}
+
+\begin{enumerate}
+\item Каждый обучающийся обязан пройти инструктаж по технике безопасности в лечебно-профилактическом учреждении (ЛПУ), перед тем, как приступить к работе.
+\item Перед  началом  работы  в  отделении  стационара  необходимо  переодеться.
+Форма одежды: медицинский халат, хирургический костюм, медицинская шапочка, медицинская маска, сменная обувь (моющаяся и на устойчивом каблуке).
+Ногти должны быть коротко острижены, волосы убраны под шапочку, украшения не должны касаться одежды.
+При повреждении кожи рук, места повреждений  должны быть закрыты лейкопластырем или повязкой.
+\item Требования безопасности во время работы:
+
+\begin{enumerate}
+\item всех  пациентов  необходимо  рассматривать  как  потенциально  инфицированных ВИЧ-инфекцией  и  другими инфекциями,  передающимися  через  кровь.  Следует помнить и применять правила безопасности для защиты кожи и слизистых при контакте  с  кровью  и  жидкими  выделениями  любого  пациента;  все  виды  работ выполняются в перчатках;
+\item необходимо мыть руки до и после любого контакта с пациентом;
+\item работать с кровью и жидкими выделениями всех пациентов только в перчатках;
+\item сразу после проведения инвазивных манипуляций дезинфицировать инструменты, приборы,   материалы   в   соответствии   с   требованиями   санитарно-противоэпидемического  режима.  Не  производить  никакие  манипуляции  с использованными иглами и другими режущими и колющими инструментами, сразу после использования –дезинфицировать их; 
+\item пользоваться средствами защиты глаз и масками для предотвращения попадания брызг крови и жидких выделений в лицо (во время манипуляций, катетеризаций и других лечебных процедур);
+\item рассматривать всё бельё, загрязнённое кровью или другими жидкими выделениями пациентов, какпотенциально инфицированное;
+\item рассматривать  все  образцы  лабораторных  анализов  как  потенциально инфицированные.  Транспортировку  биоматериала  осуществлять  в  специальных контейнерах;
+\item разборку,  мойку  и  полоскание  инструментов,  лабораторной  посуды  и  всего, соприкасавшегося  с  кровью  или  другими  жидкими  выделениями  пациента проводить только после дезинфекции, в перчатках;
+\item в рабочих помещениях, где существует риск инфицирования, запрещено есть, пить, курить, наносить косметику и брать в руки контактные линзы;
+\item пользоваться  электроприборами  и  оборудованием  разрешается  только  после дополнительного  инструктажа  по  технике  безопасности  на  рабочем  месте,  под руководством  непосредственного  руководителя  практики  и  при  условии  полной исправности приборов. В случае обнаружениялюбых неисправностей необходимо срочно сообщить непосредственному  руководителю практики, не предпринимая попыток устранить неисправность;
+\item необходимо  использовать  индивидуальные  средства  защиты  при  работе  с дезинфицирующими и моющими средствами (перчатки,халат, маска, респиратор при необходимости, очки);
+\item при работе с кислородом:запрещено работать с кислородом лицам моложе 18 лет. При  работе  с  кислородом  руки  должны  быть  сухими,  чистыми,  без  крема. Кислород разрешено давать только с разрешения и в присутствии врача.
+\item соблюдать  универсальные  меры  предосторожности  при  работе  с  бьющимися острыми и режущими предметами;
+\item соблюдать  правильную  биомеханику  тела  для  предотвращения  травм  опорно-двигательного аппарата при транспортировке пациентов и уходе за ними.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     \end{enumerate}
+\item Требования безопасности по окончании работы:
+\begin{enumerate}
+\item использованные перчатки подлежат дезинфекции перед утилизацией;
+\item сменная рабочая одежда стирается отдельно от другого белья, при максимально допустимом температурном  режиме, желательно кипячение;
+\item сменная обувь обрабатывается дезинфицирующим средством,
+\item после окончания работы необходимо принять гигиенический душ.                                                                                                                                                                                                                                                                                                                                                                                \end{enumerate}
+\item Требования безопасности в аварийной ситуации:
+
+\begin{enumerate}
+\item при загрязнении перчаток кровью, необходимо обработать её настолько быстро, насколько позволяет безопасность пациента, затем: перед снятием перчаток с рук необходимо обработать их раствором дезинфектанта, перчатки снять, руки вымыть гигиеническим способом;
+\item при повреждении перчаток и кожных покровов: немедленно обработать перчатки раствором дезинфектанта, снять их с рук, не останавливая кровотечение из ранки, вымыть  руки  с  мылом  под  проточной  водой,  затем,  обработать  кожу  70\% раствором спирта или 5\% спиртовым раствором йода. О происшедшем аварийном случае сообщить заведующему, старшей медсестре отделения, ответственному по производственной практике;
+\item при попадании крови на кожу рук, немедленно вымыть руки дважды под тёплой проточной водой, затем обработать руки 70\% раствором спирта;
+\item при попадании крови на слизистую оболочку глаз –немедленно промыть водой и обработать  1\%  раствором  борной  кислоты  или    0,05\%  раствором  перманганата калия;
+\item при попадании крови на слизистую оболочку носа –не заглатывая воду, промыть нос проточной водой, затем закапать 1\% раствор протаргола;
+\item при  попадании  крови  на  одежду  место  загрязнения  немедленно  обработать раствором  дезинфектанта,  затем  снять  загрязненную  одежду    погрузить  её  в дезинфицирующий раствор. Кожу рук и других участков тела под загрязненной одеждой  обработать  спиртом.  Обувь  обрабатывается  путём  двукратного протирания ветошью, смоченной в дезинфицирующем растворе;
+\item при загрязнении кровью или другими биологическими жидкостями поверхностей необходимо обработать их раствором дезинфектанта;
+\item при  попадании  дезинфицирующих  и  моющих  средств  на  кожу  или  слизистые немедленно промыть ихводой. При попадании в дыхательные пути прополоскать рот и носоглотку водой и выйти на свежий воздух.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       \end{enumerate}
+\item Требования безопасности при пожаре и аварийной ситуации:
+
+\begin{enumerate}
+\item немедленно прекратить работу, насколько это позволяет безопасность пациента;
+\item сообщить о случившемся администрации отделения или дежурному персоналу;
+\item в кратчайшие сроки покинуть здание.
+\end{enumerate}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               \end{enumerate}
+С техникой безопасности ознакомлен: \hrulefill (\hrulefill)\\
+
+\subsection*{В КАЧЕСТВЕ ПОМОЩНИКА ВРАЧА ТЕРАПЕВТА(2 РАБОЧИХ НЕДЕЛИ, 72 ЧАСА)}
+
+
+Срок прохождения практики: с \hrulefill по \hrulefill
+
+Место прохождения практики: \hrulefill
+
+Название больницы: \hrulefill
+
+Отделение: \hrulefill
+
+Базовый руководитель (ассистент-доцент НГУ): \hrulefill
+
+~\hrulefill
+
+Непосредственный руководитель (зав.отделения): \hrulefill
+
+~\hrulefill
+
+\subsection*{СХЕМА ИСТОРИИ БОЛЕЗНИ ПО ТЕРАПИИ}
+
+\begin{itemize}
+\item Номер истории  болезни,  первая  буква  фамилии  больного,  возраст,  профессия больного, дата госпитализации;
+\item клинический  диагноз:  основное  заболевание,  осложнения,  сопутствующие заболевания;
+\item жалобы на момент начала курации больного;
+\item анамнез заболевания: течение болезни от момента появления первых ее признаков до начала курации, включая период пребывания в стационаре;
+\item наиболее существенные для постановки диагноза сведения из анамнеза жизни;
+\item объективное состояние больного на момент начала курации (коротко, с несколько более расширенным описанием страдающей системы организма);
+\item основные результаты дополнительных методов исследования, подтверждающие диагноз;
+\item проводимая  терапия:  режим,  диета,  лекарственные  средства  (по  латыни)  с указанием дозы, другие виды лечения.\end{itemize}
+
+\subsection*{Индивидуальный график прохождения практики по терапии (по пятидневной рабочей неделе)}
+
+\begin{booktable}{Индивидуальный график}{tab:exoc-enrichment}
+	\begin{tabular}{| l | l | l |}
+		\hline
+		\rowcolor{tableheadcolor}
+		\textbf{Работа в подразделениях больницы} &
+		\textbf{Часов} &
+		\textbf{Дата} \\ \hline
+		\hline
+Курация больных & ежедневно & ежедневно \\ \hline
+Палата  или  блок  интенсивной  терапии  терапевтического профиля & 3 & ~ \\ \hline
+Рентгеновский кабинет & 3 & ~ \\ \hline
+Кабинет УЗИ & 3 & ~ \\ \hline
+Кабинет ЭКГ & 3 &  \\ \hline
+Кабинет функциональной диагностики & 3 & ~ \\ \hline
+Физиотерапевтический кабинет & 3 & ~ \\ \hline
+		\hline
+	\end{tabular}
+\end{booktable}
+
+
+\subsection*{Краткая характеристика отделения}
+
+~\hrulefill
+
+~\hrulefill
+
+~\hrulefill
+
+~\hrulefill
+
+~\hrulefill
+
+~\hrulefill
+
+~\hrulefill
+
+~\hrulefill
+
+~\hrulefill
+
+~\hrulefill
+
+~\hrulefill
+
+~\hrulefill
+
+~\hrulefill
+
+~\hrulefill
+
+~\hrulefill
+
+~\hrulefill
+
+~\hrulefill
+
+~\hrulefill
+
+\begin{booktable}{Содержание выполненной работы}{tab:exoc-enrichment}
+	\begin{tabular}{| l | l | }
+		\hline
+		\rowcolor{tableheadcolor}
+		\textbf{Дата и время} &
+		\textbf{Содержание выполненной работы~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}\\
+		\hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+
+		\hline
+	\end{tabular}
+\end{booktable}
+\begin{booktable}{Содержание выполненной работы}{tab:exoc-enrichment}
+	\begin{tabular}{| l | l | }
+		\hline
+		\rowcolor{tableheadcolor}
+		\textbf{Дата и время} &
+		\textbf{Содержание выполненной работы~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}\\
+		\hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+
+		\hline
+	\end{tabular}
+\end{booktable}
+Подпись непосредственного руководителя практики \hrulefill
+
+\begin{booktable}{Содержание выполненной работы}{tab:exoc-enrichment}
+	\begin{tabular}{| l | l | }
+		\hline
+		\rowcolor{tableheadcolor}
+		\textbf{Дата и время} &
+		\textbf{Содержание выполненной работы~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}\\
+		\hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+
+		\hline
+	\end{tabular}
+\end{booktable}
+Подпись непосредственного руководителя практики \hrulefill
+
+\begin{booktable}{Содержание выполненной работы}{tab:exoc-enrichment}
+	\begin{tabular}{| l | l | }
+		\hline
+		\rowcolor{tableheadcolor}
+		\textbf{Дата и время} &
+		\textbf{Содержание выполненной работы~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}\\
+		\hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+~ & ~ \\ \hline
+
+		\hline
+	\end{tabular}
+\end{booktable}
+Подпись непосредственного руководителя практики \hrulefill
+
+\subsection*{ОТЧЕТ О ПРОИЗВОДСТВЕННОЙ ПРАКТИКЕ ПО ТЕРАПИИ}
+
+\begin{booktable}{Отчет о практике}{tab:exoc-enrichment}
+	\begin{tabular}{| l | l | l | l | l |}
+		\hline
+		\rowcolor{tableheadcolor}
+		\textbf{№ п/п} &
+		\textbf{Вид выполненной работы} &
+		\headerbigrow{Уровень освоения}{Уровень освоения умения} &
+		\headerbigrow{Рекомендуемый}{Рекомендуемый объем} &
+		\headerbigrow{Фактическое}{Фактическое выполнение} \\ \hline
+		\hline
+
+1 & Курация больных в стационаре & 2-3 & 4-5 & ~ \\ \hline
+2 & Заполнение истории болезни & 2-3 & 6-8 & ~ \\ \hline
+3 & Оформление эпикриза & 2-3 & 6-8 & ~ \\ \hline
+4 & Проведение дежурств & 2 & 24 часа & ~ \\ \hline
+5 & Доклад о дежурстве & 2-3 & 2 & ~ \\ \hline
+6 & Присутствие на утренней конференции & 2 & 10-12 & ~ \\ \hline
+7 & Рентгеновские исследования & 2 & 4-5 & ~ \\ \hline
+8 & Запись ЭКГ & 2-3 & 4-6 & ~ \\ \hline
+9 & Расшифровка ЭКГ & 2-3 & 10-15 & ~ \\ \hline
+10 & Проведение функциональных исследований & 1-2 & 4-6 & ~ \\ \hline
+11 & УЗИ & 1-2 & 3-4 & ~ \\ \hline
+12 & Физиопроцедуры & 1-2 & 4-6 & ~ \\ \hline
+13 & Внутривенные вливания & 3 & 8-10 & ~ \\ \hline
+14 & Переливание компонентов крови & 2-3 & 1-2 & ~ \\ \hline
+15 & Пункции (плевральные, стернальные и др.) & 1-2 & 1-2 & ~ \\ \hline
+16 & \bigrow{Участие в научно-практических конференциях}{Купирование неотложных состояний (приступ стенокардии, отек легких и др.)} & 2-3 & 3-4 & ~ \\ \hline
+17 & Участие в научно-практических конференциях & 2-3 & 1-2 & ~ \\ \hline
+18 & Патологоанатомическое вскрытие & 1 & 1-2 & ~ \\ \hline
+19 & Прочие виды работы & ~ & ~ \\ \hline
+		\hline
+	\end{tabular}
+\end{booktable}
+
+Уровни освоения умений:
+
+\begin{enumerate}
+\item Иметь представление, профессионально ориентироваться, знать показания к проведению.
+\item Знать, оценить, принять участие.
+\item Выполнить самостоятельно.
+\end{enumerate}
+Подпись непосредственного руководителя практики \hrulefill
+
+\subsection*{ОТЧЕТ О ПРОИЗВОДСТВЕННОЙ ПРАКТИКЕ ПО ТЕРАПИИ}
+
+\begin{booktable}{Отчет о практике}{tab:exoc-enrichment}
+	\begin{tabular}{| l | l | l |}
+		\hline
+		\rowcolor{tableheadcolor}
+		\textbf{Дата и время} &
+		\textbf{Название лекции, беседы, санбюллетеня} &
+		\headerbigrow{присутствующих}{Количество присутствующих} \\ \hline
+		\hline
+~ & ~ & ~ \\ \hline
+~ & ~ & ~ \\ \hline
+~ & ~ & ~ \\ \hline
+~ & ~ & ~ \\ \hline
+~ & ~ & ~ \\ \hline
+~ & ~ & ~ \\ \hline
+~ & ~ & ~ \\ \hline
+~ & ~ & ~ \\ \hline
+~ & ~ & ~ \\ \hline
+~ & ~ & ~ \\ \hline
+		\hline
+	\end{tabular}
+\end{booktable}
+Подпись непосредственного руководителя практики \hrulefill
+
+\newpage
+\subsection*{ХАРАКТЕРИСТИКА СТУДЕНТА}
+
+Студент ИМПЗ НГУ \hrulefill
+
+~\hrulefill 
+
+прошел практику в ~\hrulefill 
+
+~\hrulefill 
+
+в течение \hrulefill недель. За время прохождения практики выполнил весь спектр требуемых работ в полном объеме, а именно: \hrulefill 
+
+~\hrulefill 
+
+~\hrulefill 
+
+~\hrulefill 
+
+~\hrulefill 
+
+~\hrulefill 
+
+~\hrulefill
+
+~\hrulefill
+
+~\hrulefill
+
+~\hrulefill
+
+~
+
+За время прохождения практики студент зарекомендовал себя \hrulefill 
+
+~\hrulefill 
+
+~\hrulefill 
+
+~\hrulefill 
+
+~
+
+Оценка по терапии: \hrulefill
+
+~
+
+Руководитель практики:\hrulefill (\hrulefill)
+
+~
+
+Курирующий врач:\hrulefill (\hrulefill)
+
+~
+
+Место печати лечебного учреждения
+
+\end{document}
