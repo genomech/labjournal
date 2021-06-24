@@ -18,6 +18,7 @@
 * [HGMD](http://www.hgmd.cf.ac.uk/ac/index.php): Клиническая информация по вариантам
 * [ClinVar](https://ncbi.nlm.nih.gov/clinvar/): Клиническая информация по вариантам
 * [MITOMAP](https://www.mitomap.org/MITOMAP): Митохондриальные варианты
+* [SpliceAI](https://spliceailookup.broadinstitute.org/): Предсказание сплайсинга
 * Онкологические БД: LOVD, COSMIC, ICGC, PMKB, CGI, CIViC, VIC, CRAVAT, PCGR.
 
 3. Поиск по симптомам: [HPO](https://hpo.jax.org/app/) 
